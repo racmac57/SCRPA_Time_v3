@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Wednesday, May 7, 2025 1:53:11 PM</msg><msg code="-2147467259" type="100">﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 23
+    return ["7_Day", "28_Day", "YTD"]
+    ^
+﻿IndentationError: expected an indented block after function definition on line 22
+</msg><msg code="0" type="0">Failed script Updated Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeExport).</msg><msg code="0" type="3">Failed at Wednesday, May 7, 2025 1:53:11 PM (Elapsed Time: 0.05 seconds)</msg></messages>

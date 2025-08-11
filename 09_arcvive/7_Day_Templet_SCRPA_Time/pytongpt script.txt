@@ -1,0 +1,192 @@
+2025-05-05-21-45-00-Python GPT script
+import arcpy
+import pandas as pd
+from datetime import datetime
+import os
+import time
+
+# Set paths
+csv_path = r"C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\Refrence\TimeSCRPT\DateRelated\7Day_28Day_Cycle_20250414.csv"
+export_root = r"C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\Reports"
+project_path = r"C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx"
+
+if not os.path.exists(project_path):
+    raise FileNotFoundError(f"Project file not found: {project_path}")
+
+project = arcpy.mp.ArcGISProject(project_path)
+map_obj = project.listMaps()[0]
+
+cycle_df = pd.read_csv(csv_path)
+if not any(cycle_df['Is_Due'] == True):
+    raise ValueError("No cycle is marked as 'Is_Due = True' in the cycle table.")
+current_cycle = cycle_df[cycle_df['Is_Due'] == True].iloc[0]
+
+seven_day_start = pd.to_datetime(current_cycle['7_Day_Start']).strftime('%Y-%m-%d')
+seven_day_end = pd.to_datetime(current_cycle['7_Day_End']).strftime('%Y-%m-%d')
+twenty_eight_day_start = pd.to_datetime(current_cycle['28_Day_Start']).strftime('%Y-%m-%d')
+twenty_eight_day_end = pd.to_datetime(current_cycle['28_Day_End']).strftime('%Y-%m-%d')
+ytd_start = '2024-12-31'
+report_name = current_cycle['Report_Name']
+report_due_date = pd.to_datetime(current_cycle['Report_Due_Date']).strftime('%Y_%m_%d')
+
+report_folder = os.path.join(export_root, f"{report_name}_{report_due_date}")
+os.makedirs(report_folder, exist_ok=True)
+
+for file in os.listdir(report_folder):
+    file_path = os.path.join(report_folder, file)
+    if os.path.isfile(file_path):
+        os.remove(file_path)
+
+keywords_by_crime = {
+    "Burglary - Auto": ['auto'],
+    "Burglary - Comm & Res": ['residence', 'commercial'],
+    "Robbery": ['robbery'],
+    "Sexual Offenses": ['sexual'],
+    "MV Theft": ['motor vehicle theft']
+}
+
+def build_sql(start_date, end_date, keywords):
+    clause = " OR ".join([f"calltype LIKE '%{kw}%'" for kw in keywords])
+    return f"calldate >= date '{start_date}' AND calldate <= date '{end_date}' AND disposition LIKE '%report%' AND ({clause})"
+
+def build_sql_ytd(keywords):
+    clause = " OR ".join([f"calltype LIKE '%{kw}%'" for kw in keywords])
+    return f"calldate >= date '{ytd_start}' AND disposition LIKE '%report%' AND ({clause})"
+
+layer_query_mapping = {}
+for crime, keywords in keywords_by_crime.items():
+    layer_query_mapping[f"{crime} 7-Day"] = build_sql(seven_day_start, seven_day_end, keywords)
+    layer_query_mapping[f"{crime} 28-Day"] = build_sql(twenty_eight_day_start, twenty_eight_day_end, keywords)
+    layer_query_mapping[f"{crime} YTD"] = build_sql_ytd(keywords)
+
+for lname, sql in layer_query_mapping.items():
+    try:
+        lyr = map_obj.listLayers(lname)[0]
+        lyr.definitionQuery = sql
+    except IndexError:
+        arcpy.AddWarning(f"[WARNING] Layer not found: {lname}")
+
+layout = next((lyt for lyt in project.listLayouts() if lyt.name == "Crime Report Legend"), None)
+if layout is None:
+    raise ValueError("Layout 'Crime Report Legend' not found in project")
+
+legend_list = layout.listElements("LEGEND_ELEMENT")
+legend_names = [l.name for l in legend_list]
+arcpy.AddMessage(f"Legend elements found: {legend_names}")
+legend = next((l for l in legend_list if l.name.strip().lower() == "mainlegend"), None)
+if legend is None:
+    raise ValueError(f"Legend element 'MainLegend' not found in layout. Found: {legend_names}")
+
+map_frame = next((mf for mf in layout.listElements("MAPFRAME_ELEMENT") if mf.name == "Map Frame"), None)
+if map_frame:
+    map_frame.map = map_obj
+    arcpy.AddMessage("[INFO] Map Frame successfully re-linked to map.")
+else:
+    arcpy.AddWarning("[WARNING] Map Frame named 'Map Frame' not found.")
+
+crime_types = list(keywords_by_crime.keys())
+base_layer_names = [
+    "City Boundaries",
+    "OpenStreetMap Light Gray Canvas Reference",
+    "Light Gray Canvas (for Export)",
+    "World Light Gray Canvas Base",
+    "OpenStreetMap",
+    "Streets"
+]
+
+for crime in crime_types:
+    for lyr in map_obj.listLayers():
+        lyr.visible = False
+    for lyr in map_obj.listLayers():
+        if any(base_name in lyr.name for base_name in base_layer_names) or lyr.isBasemapLayer:
+            lyr.visible = True
+            lyr.transparency = 0
+
+    visible_layers = []
+    for lyr in map_obj.listLayers():
+        if crime in lyr.name:
+            lyr.visible = True
+            visible_layers.append(lyr)
+            if "7-Day" in lyr.name:
+                lyr.transparency = 0
+                sym_layer_path = r"C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\Symbology\7Day.lyrx"
+                if os.path.exists(sym_layer_path):
+                    try:
+                        sym_layer = arcpy.mp.LayerFile(sym_layer_path).listLayers()[0]
+                        arcpy.management.ApplySymbologyFromLayer(lyr, sym_layer)
+                    except:
+                        arcpy.AddWarning(f"Could not apply symbology to {lyr.name}")
+            elif "28-Day" in lyr.name:
+                lyr.transparency = 30
+            else:
+                lyr.transparency = 60
+
+    # NEW: Improved zoom and extent logic using geometry buffer
+    from arcpy import Extent
+    extent = None
+    buffer_distance = 75
+
+    for lyr in visible_layers:
+        if lyr.supports("DATASOURCE"):
+            with arcpy.da.SearchCursor(lyr, ["SHAPE@"]) as cursor:
+                for row in cursor:
+                    geom = row[0].buffer(buffer_distance)
+                    geom_extent = geom.extent
+                    if extent:
+                        extent = Extent(
+                            min(extent.XMin, geom_extent.XMin),
+                            min(extent.YMin, geom_extent.YMin),
+                            max(extent.XMax, geom_extent.XMax),
+                            max(extent.YMax, geom_extent.YMax)
+                        )
+                    else:
+                        extent = geom_extent
+
+    if extent:
+        map_frame.camera.setExtent(extent)
+        map_frame.camera.scale *= 0.85
+
+        city_boundary = next((lyr for lyr in map_obj.listLayers() if "City Boundaries" in lyr.name), None)
+        if city_boundary and city_boundary.supports("DATASOURCE"):
+            with arcpy.da.SearchCursor(city_boundary, ["SHAPE@"]) as cursor:
+                for row in cursor:
+                    boundary_extent = row[0].extent
+                    center_x = (boundary_extent.XMin + boundary_extent.XMax) / 2
+                    center_y = (boundary_extent.YMin + boundary_extent.YMax) / 2
+
+                    current_extent = map_frame.camera.getExtent()
+                    current_width = current_extent.XMax - current_extent.XMin
+                    current_height = current_extent.YMax - current_extent.YMin
+
+                    centered_extent = Extent(
+                        center_x - current_width / 2,
+                        center_y - current_height / 2,
+                        center_x + current_width / 2,
+                        center_y + current_height / 2
+                    )
+                    map_frame.camera.setExtent(centered_extent)
+                    break
+    else:
+        for lyr in map_obj.listLayers("City Boundaries"):
+            if lyr.supports("DATASOURCE"):
+                with arcpy.da.SearchCursor(lyr, ["SHAPE@"]) as cursor:
+                    for row in cursor:
+                        map_frame.camera.setExtent(row[0].extent)
+                        break
+
+    project.saveACopy(project_path)
+    output_jpg = os.path.join(report_folder, f"{crime.replace(' ', '_')}_{report_name}_{report_due_date}.jpg")
+    try:
+        temp_pdf = os.path.join(report_folder, "temp.pdf")
+        layout.exportToPDF(temp_pdf, resolution=150)
+        time.sleep(1)
+        layout.exportToJPEG(output_jpg, resolution=150, jpeg_quality=95, jpeg_color_mode="24-BIT_TRUE_COLOR")
+        if os.path.exists(temp_pdf):
+            os.remove(temp_pdf)
+    except Exception as e:
+        arcpy.AddWarning(f"Error in PDF/JPEG export: {str(e)}")
+        layout.exportToJPEG(output_jpg, resolution=150)
+
+    time.sleep(2)
+
+arcpy.AddMessage(f"Reports exported to: {report_folder}")

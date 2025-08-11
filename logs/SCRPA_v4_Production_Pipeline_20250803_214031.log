@@ -1,0 +1,50 @@
+2025-08-03 21:40:31,090 - INFO - SCRPA v4 Production Pipeline Started - 20250803_214031
+2025-08-03 21:40:31,269 - INFO - Loaded CallType categories: 592 records
+2025-08-03 21:40:31,278 - INFO - Created mapping for 574 incident types
+2025-08-03 21:40:31,330 - INFO - Loaded cycle reference: 52 records
+2025-08-03 21:40:31,330 - INFO - Starting Complete SCRPA v4 Production Pipeline
+2025-08-03 21:40:31,332 - INFO - Processing files: RMS=C08W31_20250803_051051_rms_data_fixed.csv, CAD=C08W31_20250803_051051_cad_data_fixed.csv
+2025-08-03 21:40:31,344 - INFO - Loaded data - RMS: 140 records, CAD: 114 records
+2025-08-03 21:40:31,345 - INFO - Production RMS processing: 140 records
+2025-08-03 21:40:31,345 - INFO - Using existing processed date/time columns
+2025-08-03 21:40:31,345 - INFO - Applying time-of-day and location processing
+2025-08-03 21:40:31,345 - INFO - Processing time-of-day and location for 140 records
+2025-08-03 21:40:31,345 - INFO - Using location column: location
+2025-08-03 21:40:31,346 - INFO - Processing time-of-day categorization
+2025-08-03 21:40:31,347 - INFO - Time categorization: 135 successful, 5 unknown
+2025-08-03 21:40:31,348 - INFO - Processing block calculation
+2025-08-03 21:40:31,349 - INFO - Block processing: 138 calculated, 5 intersections, 2 need review
+2025-08-03 21:40:31,349 - INFO - Applying incident type tagging
+2025-08-03 21:40:31,349 - INFO - Processing incident tagging for 140 records
+2025-08-03 21:40:31,349 - INFO - Using 'all_incidents' column for tagging
+2025-08-03 21:40:31,350 - INFO - Incident tagging complete - Tagged: 129, Untagged: 11, Multiple tags: 0
+2025-08-03 21:40:31,351 - INFO - Calculating date-derived fields
+2025-08-03 21:40:31,420 - INFO - Date-derived fields calculated successfully
+2025-08-03 21:40:31,421 - INFO - Complete RMS processing finished: 140 records
+2025-08-03 21:40:31,421 - INFO - Production CAD processing: 114 records
+2025-08-03 21:40:31,421 - INFO - Applying CAD CallType mapping
+2025-08-03 21:40:31,421 - INFO - Processing 114 CAD records
+2025-08-03 21:40:31,421 - INFO - CallType mapping: 114/114 (100.0%)
+2025-08-03 21:40:31,422 - INFO - how_reported cleaning: 29 records normalized to '9-1-1'
+2025-08-03 21:40:31,422 - WARNING - No CAD notes column found. Checked: cad_notes_raw, cad_notes, notes
+2025-08-03 21:40:31,422 - INFO - Applying CAD time-of-day and location processing
+2025-08-03 21:40:31,422 - INFO - Processing time-of-day and location for 114 records
+2025-08-03 21:40:31,422 - INFO - Using location column: location
+2025-08-03 21:40:31,422 - WARNING - 'incident_time' column not found
+2025-08-03 21:40:31,422 - INFO - Processing block calculation
+2025-08-03 21:40:31,423 - INFO - Block processing: 113 calculated, 5 intersections, 1 need review
+2025-08-03 21:40:31,423 - INFO - Applying CAD incident type tagging
+2025-08-03 21:40:31,423 - INFO - Processing incident tagging for 114 records
+2025-08-03 21:40:31,423 - INFO - Using 'incident' column for tagging
+2025-08-03 21:40:31,424 - INFO - Incident tagging complete - Tagged: 114, Untagged: 0, Multiple tags: 0
+2025-08-03 21:40:31,424 - INFO - Complete CAD processing finished: 114 records
+2025-08-03 21:40:31,424 - INFO - Creating matched dataset - RMS: 140, CAD: 114
+2025-08-03 21:40:31,453 - INFO - Matched dataset created: 140 records, 87 matches
+2025-08-03 21:40:31,453 - INFO - Generating production files
+2025-08-03 21:40:31,458 - INFO - Generated production file: C08W31_20250803_214031_rms_data_final.csv (140 records)
+2025-08-03 21:40:31,461 - INFO - Generated production file: C08W31_20250803_214031_cad_data_final.csv (114 records)
+2025-08-03 21:40:31,467 - INFO - Generated production file: C08W31_20250803_214031_cad_rms_matched_final.csv (140 records)
+2025-08-03 21:40:31,471 - INFO - All production files generated successfully
+2025-08-03 21:40:31,472 - INFO - Complete SCRPA v4 Pipeline completed successfully in 0.14 seconds
+2025-08-03 21:40:31,472 - INFO - Generated 5 output files
+2025-08-03 21:40:31,472 - INFO - Final datasets - RMS: 140, CAD: 114, Matched: 140

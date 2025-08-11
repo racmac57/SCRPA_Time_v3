@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 2:07:07 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 158, in &lt;module&gt;
+﻿    group_data.to_excel(writer, sheet_name=str(group_name)[:31], index=False)
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\generic.py", line 2252, in to_excel
+﻿    formatter.write(
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\formats\excel.py", line 940, in write
+﻿    writer._write_cells(
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 477, in _write_cells
+﻿    wks.title = sheet_name
+﻿    ^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\openpyxl\workbook\child.py", line 93, in title
+﻿    raise ValueError(msg)
+﻿ValueError: Invalid character : found in sheet title
+</msg><msg code="0" type="0">Failed script Weekly Crime ReportWith Table...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReportables).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 2:07:11 PM (Elapsed Time: 4.21 seconds)</msg></messages>

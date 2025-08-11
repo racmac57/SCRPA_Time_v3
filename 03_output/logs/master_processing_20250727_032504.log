@@ -1,0 +1,25 @@
+2025-07-27 03:25:04,842 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_032504.log
+2025-07-27 03:25:04,848 - MasterProcessor - INFO - Master SCRPA Processor initialized
+2025-07-27 03:25:04,849 - MasterProcessor - INFO - ================================================================================
+2025-07-27 03:25:04,850 - MasterProcessor - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:25:04,851 - MasterProcessor - INFO - ================================================================================
+2025-07-27 03:25:04,851 - MasterProcessor - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 03:25:04,852 - MasterProcessor - INFO - Searching for latest RMS export file...
+2025-07-27 03:25:04,854 - MasterProcessor - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 03:25:05,092 - MasterProcessor - INFO - Searching for latest CAD export file...
+2025-07-27 03:25:05,093 - MasterProcessor - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:25:05,113 - MasterProcessor - INFO -    Joining RMS and CAD data...
+2025-07-27 03:25:05,115 - MasterProcessor - INFO -    Join complete. Total records: 131
+2025-07-27 03:25:05,116 - MasterProcessor - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 03:25:05,134 - MasterProcessor - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 03:25:05,134 - MasterProcessor - INFO - Step 3: Adding derived columns
+2025-07-27 03:25:05,164 - MasterProcessor - INFO -    Adding vehicle columns
+2025-07-27 03:25:05,171 - MasterProcessor - INFO -    All enhancements complete
+2025-07-27 03:25:05,172 - MasterProcessor - INFO - Step 4: Data validation and cleanup
+2025-07-27 03:25:05,177 - MasterProcessor - INFO -    Validation complete: 131 clean records
+2025-07-27 03:25:05,178 - MasterProcessor - INFO - Step 5: Exporting for Power BI
+2025-07-27 03:25:05,186 - MasterProcessor - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 03:25:05,188 - MasterProcessor - INFO - ================================================================================
+2025-07-27 03:25:05,190 - MasterProcessor - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 03:25:05,192 - MasterProcessor - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 03:25:05,194 - MasterProcessor - INFO - ================================================================================

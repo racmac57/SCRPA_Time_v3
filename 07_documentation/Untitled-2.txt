@@ -1,0 +1,72 @@
+Normalize column column headers for CAD and RMS Exports
+```
+rsm column headers
+    rms_case_number
+    rms_incident_date
+    rms_incident_time
+    rms_incident_date_between
+    rms_incident_time_between
+    rms_report_date
+    rms_report_time
+    rms_incident_type_1
+    rms_incident_type_2
+    rms_incident_type_3
+    rms_fulladdress
+    rms_grid
+    rms_zone
+    rms_narrative
+    rms_total_value_stolen
+    rms_total_value_recover
+    rms_registration_1
+    rms_make1
+    rms_model1
+    rms_reg_state_1
+    rms_registration_2
+    rms_reg_state_2
+    rms_make2
+    rms_model2
+    rms_reviewed_by
+    rms_completecalc
+    rms_officer_of_record
+    rms_squad
+    rms_det_assigned
+    rms_case_status
+    rms_nibrs_classification
+
+cad column headers
+    cad_reportnumbernew
+    cad_incident
+    cad_how_reported
+    cad_fulladdress2
+    cad_pdzone
+    cad_grid
+    cad_time_of_call
+    cad_cyear
+    cad_cmonth
+    cad_hourminuetscalc
+    cad_dayofweek
+    cad_time_dispatched
+    cad_time_out
+    cad_time_in
+    cad_time_spent
+    cad_time_response
+    cad_officer
+    cad_disposition
+    cad_response_type
+    cad_cadnotes
+```
+
+1. cad_reportnumbernew map to rms_case_number, once mapped take value and make a new column named "case_number"
+2. cad_incident is the reference column for new column "response_type". use "c:\users\carucci_r\onedrive - city of hackensack\09_reference\classifications\calltypes\calltype_categories.xlsx" for the mapping, use the file to backfill null values in "response_type"
+3. cad_how_reported make sure value "9-1-1" is not mistakenly recognized as a date calltype_categories
+4. cad_fulladdress2 and rms_fulladdress when the records are mapped these values should be the same so they can be used for backfilling. when backfilling is complete the remaining value will be added to a new column "location"; the other columns can be removed.
+5. cad_pdzone and rms_zone are the same and can be used for backfilling. the remaining value after backfilling will be added to a new column "post"; remove original columns.
+6. cad_grid and rms_grid will be handled in the same way as cad_pdzone and rms_zone.
+7. cad_time_of_call is a mm/dd/yyyy hh:mm:ss
+8. cad_time_dispatched, cad_time_out, cad_time_in is a mm/dd/yyyy hh:mm:ss
+9. cad_time_spent new column name  H:mm:ss in a bew column named time_spent and a new column "time_spent_formatted" 0Hrs. 00Mins round to nearest minute (duration data type)
+10. cad_time_response new column name H:mm:ss in a bew column named time_response and a new column "time_response_formatted" 0Hrs. 00Mins round to nearest minute (duration data type)
+
+
+
+

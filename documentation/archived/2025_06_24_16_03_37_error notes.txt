@@ -1,0 +1,48 @@
+Here’s a concise summary of the full log session for June 24, 2025:
+
+---
+
+## ✅ CAD/NIBRS Weekly Chart Pipeline – Summary Log
+
+**Date:** `2025-06-24`
+**Project:** `SCRPA_LAPTOP/scripts`
+**Main script:** `main.py`
+
+---
+
+### 🔁 Workflow Highlights
+
+* ✅ Scripts loaded: `map_export.py`, `chart_export.py`
+* 📅 Reporting for 7-Day period: **2025-06-17 to 2025-06-23**
+* ✅ ArcGIS Pro layers found for all chart types
+* ✅ Matching SQL filters applied consistently across chart + map exports
+* ✅ All charts saved successfully for:
+
+  * **MV Theft** (7:3 / 28:6 / YTD:30)
+  * **Burglary - Auto** (7:0 / 28:0 / YTD:11)
+  * **Burglary - Comm & Res** (7:0 / 28:0 / YTD:13)
+  * **Robbery** (7:0 / 28:1 / YTD:6)
+  * **Sexual Offenses** (7:1 / 28:3 / YTD:11)
+
+---
+
+### ⚠️ Warnings Logged
+
+* `No incident table found` warnings:
+
+  * Affects all 5 categories
+  * Suggests missing `.csv` or `.xlsx` source file for incident-level detail matching each crime type
+
+---
+
+### 🧪 Test Commands Run
+
+* Confirmed `get_sql_pattern_for_crime('MV Theft')` returns `'Motor Vehicle Theft'`
+* Manually re-ran `export_chart('MV Theft')` and `export_chart('MV Theft', '2025_06_24')` — all successful
+
+---
+
+✅ **No errors**, all exports complete, and logs confirm correct timestamp alignment and SQL pattern reuse.
+
+**a.** Want this summary copied into a `.md` log report file?
+**b.** Want a script to auto-check for missing incident tables next time?

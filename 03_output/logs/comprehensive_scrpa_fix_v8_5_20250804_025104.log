@@ -1,0 +1,32 @@
+2025-08-04 02:51:04,060 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,360 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,361 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,361 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,424 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,436 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,437 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,439 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:51:04,497 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,519 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,520 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,521 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,576 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,585 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,588 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,590 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:51:04,714 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,737 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,738 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,739 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,806 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,814 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,814 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,820 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:51:04,851 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,881 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,881 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,885 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,956 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,965 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,967 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,973 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W31, Date: 20250804

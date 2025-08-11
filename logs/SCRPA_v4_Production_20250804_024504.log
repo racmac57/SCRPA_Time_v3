@@ -1,0 +1,67 @@
+2025-08-04 02:45:04,126 - INFO - SCRPA v4 Production Pipeline Started - 20250804_024504
+2025-08-04 02:45:04,225 - ERROR - Non-compliant columns: ['CaseNumber', 'IncidentDate', 'ResponseType']
+2025-08-04 02:45:04,275 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:45:04,328 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:45:04,330 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:45:04,332 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:45:04,437 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:45:04,452 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:45:04,452 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:45:04,454 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:45:04,457 - WARNING - Error getting cycle for date 2025-08-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,458 - WARNING - Error getting cycle for date 2025-08-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,462 - WARNING - Error getting cycle for date 2025-08-10 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,465 - WARNING - Error getting cycle for date 2025-08-20 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,468 - WARNING - Error getting cycle for date 2025-08-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,473 - WARNING - Error getting cycle for date 2025-09-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,480 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:45:04,487 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:45:04,530 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:45:04,532 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:45:04,534 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:45:04,635 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:45:04,641 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:45:04,642 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:45:04,649 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:45:04,655 - ERROR - Non-compliant columns: ['CaseNumber', 'IncidentDate']
+2025-08-04 02:45:04,679 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:45:04,719 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:45:04,720 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:45:04,721 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:45:04,816 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:45:04,830 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:45:04,832 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:45:04,835 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:45:04,836 - WARNING - Error getting cycle for date 2025-08-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,838 - WARNING - Error getting cycle for date 2025-08-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,840 - WARNING - Error getting cycle for date 2025-08-10 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,847 - WARNING - Error getting cycle for date 2025-08-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,849 - WARNING - Error getting cycle for date 2025-08-20 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,866 - WARNING - Error getting cycle for date 2025-08-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,870 - WARNING - Error getting cycle for date 2025-08-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,874 - WARNING - Error getting cycle for date 2025-08-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,879 - WARNING - Error getting cycle for date 2025-08-04 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,881 - WARNING - Error getting cycle for date 2025-08-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,884 - WARNING - Error getting cycle for date 2025-08-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,886 - WARNING - Error getting cycle for date 2025-08-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,888 - WARNING - Error getting cycle for date 2025-08-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,896 - WARNING - Error getting cycle for date 2025-08-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,899 - WARNING - Error getting cycle for date 2025-08-10 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,902 - WARNING - Error getting cycle for date 2025-08-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,909 - WARNING - Error getting cycle for date 2025-08-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,916 - WARNING - Error getting cycle for date 2025-08-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,919 - WARNING - Error getting cycle for date 2025-08-14 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,921 - WARNING - Error getting cycle for date 2025-08-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,924 - WARNING - Error getting cycle for date 2025-08-16 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,931 - WARNING - Error getting cycle for date 2025-08-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,933 - WARNING - Error getting cycle for date 2025-08-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,936 - WARNING - Error getting cycle for date 2025-08-19 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,942 - WARNING - Error getting cycle for date 2025-08-20 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,947 - WARNING - Error getting cycle for date 2025-08-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,951 - WARNING - Error getting cycle for date 2025-08-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,953 - WARNING - Error getting cycle for date 2025-08-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,957 - WARNING - Error getting cycle for date 2025-08-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,965 - WARNING - Error getting cycle for date 2025-08-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,967 - WARNING - Error getting cycle for date 2025-08-26 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,970 - WARNING - Error getting cycle for date 2025-08-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-04 02:45:04,973 - WARNING - Error getting cycle for date 2025-08-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.

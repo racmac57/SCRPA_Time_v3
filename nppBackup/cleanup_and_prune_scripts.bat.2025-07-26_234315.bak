@@ -1,0 +1,62 @@
+@echo off
+REM cleanup\_and\_prune\_scripts.bat
+REM Batch file to archive non-Arcpy scripts and generate a duplicate script report
+REM Usage: Run this from a standard Command Prompt (cmd.exe).
+
+SETLOCAL ENABLEEXTENSIONS
+
+REM ==== Configuration ====
+SET "ROOT=%\~dp0"
+SET "SCRIPTS\_DIR=%ROOT%01\_scripts"
+SET "ARCHIVE\_DIR=%ROOT%02\_old\_tools"
+SET "DUP\_REPORT=%ROOT%duplicate\_report.txt"
+REM =======================
+
+echo Starting cleanup and prune process...
+echo ROOT directory is %ROOT%
+echo Scripts directory is %SCRIPTS\_DIR%
+echo Archive directory is %ARCHIVE\_DIR%
+echo Duplicate report path is %DUP\_REPORT%
+echo.
+
+REM 1) Create archive folder if it doesn't exist
+if not exist "%ARCHIVE\_DIR%" (
+md "%ARCHIVE\_DIR%"
+echo Created archive folder "%ARCHIVE\_DIR%"
+)
+echo.
+
+REM 2) Move all .py without "import arcpy" into the archive folder
+echo Archiving non-Arcpy scripts to %ARCHIVE\_DIR%...
+for /r "%SCRIPTS\_DIR%" %%F in (\*.py) do (
+findstr /i "import arcpy" "%%F" >nul
+if errorlevel 1 (
+echo Moving %%\~fF
+move /y "%%\~fF" "%ARCHIVE\_DIR%" >nul
+)
+)
+echo.
+
+REM 3) Generate duplicate report of older duplicates
+echo Generating duplicate report in %DUP\_REPORT%...
+if exist "%DUP\_REPORT%" del "%DUP\_REPORT%"
+
+powershell -NoProfile -Command ^
+"Get-ChildItem -Path '%SCRIPTS\_DIR%' -Recurse -Filter '\*.py' ^|
+Group-Object -Property Name ^|
+Where-Object { \$*.Count -gt 1 } ^|
+ForEach-Object { \$*.Group | Sort-Object LastWriteTime -Descending | Select-Object -Skip 1 } ^|
+Select-Object -ExpandProperty FullName ^|
+Out-File -FilePath '%DUP\_REPORT%' -Encoding UTF8"
+echo.
+
+if exist "%DUP\_REPORT%" (
+echo Duplicate report created: %DUP\_REPORT%
+) else (
+echo No duplicates found or error generating report.
+)
+echo.
+echo Done. Please review %DUP\_REPORT%
+echo.
+zendlocal
+pause

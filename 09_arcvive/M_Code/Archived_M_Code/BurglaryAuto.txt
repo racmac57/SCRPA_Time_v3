@@ -1,0 +1,14 @@
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files1" = Table.SelectRows(Source, each Record.FieldOrDefault([Attributes], "Hidden", false) <> true),
+    #"Invoke Transform File" = Table.AddColumn(#"Filtered Hidden Files1", "TransformedData", each Transform_File([Content]), type table),
+    #"Expand Transformed Data" = Table.ExpandTableColumn(#"Invoke Transform File", "TransformedData", {"CaseNumber", "FullAddress", "CaseNumberLength", "IncDate", "IncTime", "StartOfHour", "TimeOfDay"}),
+    #"Filtered Hidden Files2" = Table.SelectRows(#"Expand Transformed Data", each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files2", "Transform File", each #"Transform File"([Content])),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Invoke Custom Function1", {"Transform File"}),
+    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File (2)"))),
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Case Number", type text}, {"Incident Date", type date}, {"Incident Time", type datetime}, {"Incident Date_Between", type date}, {"Incident Time_Between", type datetime}, {"Report Date", type date}, {"Report Time", type datetime}, {"Incident Type_1", type text}, {"Incident Type_2", type text}, {"Incident Type_3", type text}, {"FullAddress", type text}, {"Grid", type text}, {"Zone", Int64.Type}, {"Narrative", type text}, {"Total Value Stolen", type any}, {"Total Value Recover", type any}, {"Registration 1", type text}, {"Make1", type text}, {"Model1", type text}, {"Reg State 1", type text}, {"Registration 2", type any}, {"Reg State 2", type any}, {"Make2", type any}, {"Model2", type any}, {"Reviewed By", type text}, {"CompleteCalc", type text}, {"Officer of Record", type text}, {"Squad", type text}, {"Det_Assigned", type text}, {"Case_Status", type text}, {"NIBRS Classification", type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"Narrative", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+in
+    #"Cleaned Text"

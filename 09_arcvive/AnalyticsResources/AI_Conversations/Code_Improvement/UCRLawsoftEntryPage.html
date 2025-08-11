@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS Incident Details Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c2526;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 10px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #0055a5;
+            margin-bottom: 10px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: #2e3a3b;
+            cursor: pointer;
+            border: 1px solid #0055a5;
+            border-bottom: none;
+            margin-right: 5px;
+        }
+        .tab.active {
+            background-color: #0055a5;
+        }
+        .tab-content {
+            display: none;
+            background-color: #e6f0fa;
+            color: #000000;
+            padding: 15px;
+            border: 1px solid #0055a5;
+            border-radius: 5px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .section label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+        .section input, .section select {
+            width: 200px;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .section input[type="checkbox"] {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="openTab('sexual-assault')">Sexual Assault</div>
+            <div class="tab" onclick="openTab('theft-from-auto')">Theft from Auto</div>
+            <div class="tab" onclick="openTab('robbery')">Robbery</div>
+            <div class="tab" onclick="openTab('commercial-burglary')">Commercial Burglary</div>
+            <div class="tab" onclick="openTab('residential-burglary')">Residential Burglary</div>
+        </div>
+
+        <!-- Sexual Assault Tab -->
+        <div id="sexual-assault" class="tab-content active">
+            <div class="section">
+                <h3>Type of Offense</h3>
+                <label>Type of Assault:</label>
+                <select>
+                    <option>Rape</option>
+                    <option>Sodomy</option>
+                    <option>Sexual Assault With An Object</option>
+                    <option>Fondling</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Incident Details</h3>
+                <label>Date and Time:</label>
+                <input type="text" placeholder="YYYY-MM-DD HH:MM"><br>
+                <label>Location Type:</label>
+                <select>
+                    <option>Residence</option>
+                    <option>Public Place</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Use of Force/Weapon:</label>
+                <input type="checkbox" id="force-sexual">
+                <select id="weapon-sexual" disabled>
+                    <option>Firearm</option>
+                    <option>Knife</option>
+                    <option>None</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Victim Information</h3>
+                <label>Number of Victims:</label>
+                <input type="number" min="0"><br>
+                <label>Age:</label>
+                <select>
+                    <option>Juvenile</option>
+                    <option>Adult</option>
+                </select><br>
+                <label>Sex:</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Relationship to Offender:</label>
+                <select>
+                    <option>Ex-Relationship</option>
+                    <option>Stranger</option>
+                    <option>Acquaintance</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Offender Information</h3>
+                <label>Number of Offenders:</label>
+                <input type="number" min="0"><br>
+                <label>Age:</label>
+                <select>
+                    <option>Juvenile</option>
+                    <option>Adult</option>
+                </select><br>
+                <label>Sex:</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Relationship to Victim:</label>
+                <select>
+                    <option>Ex-Relationship</option>
+                    <option>Stranger</option>
+                    <option>Acquaintance</option>
+                </select><br>
+                <label>Description:</label>
+                <input type="text" placeholder="Physical description">
+            </div>
+            <div class="section">
+                <h3>Clearance Status</h3>
+                <label>Status:</label>
+                <select>
+                    <option>Cleared by Arrest</option>
+                    <option>Exceptionally Cleared</option>
+                    <option>Uncleared</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Theft from Auto Tab -->
+        <div id="theft-from-auto" class="tab-content">
+            <div class="section">
+                <h3>Type of Offense</h3>
+                <label>Type of Theft:</label>
+                <select>
+                    <option>Theft From Motor Vehicle</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Incident Details</h3>
+                <label>Date and Time:</label>
+                <input type="text" placeholder="YYYY-MM-DD HH:MM"><br>
+                <label>Location Type:</label>
+                <select>
+                    <option>Parking Lot</option>
+                    <option>Street</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Method of Entry:</label>
+                <select>
+                    <option>Forced</option>
+                    <option>Unforced</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Property Information</h3>
+                <label>Description:</label>
+                <input type="text" placeholder="Items stolen"><br>
+                <label>Estimated Value:</label>
+                <input type="number" min="0" placeholder="$"><br>
+                <label>Vehicle Make:</label>
+                <select>
+                    <option>Toyota</option>
+                    <option>Ford</option>
+                    <option>Honda</option>
+                </select><br>
+                <label>Vehicle Model:</label>
+                <select>
+                    <option>Camry</option>
+                    <option>F-150</option>
+                    <option>Civic</option>
+                </select><br>
+                <label>Vehicle Year:</label>
+                <input type="number" min="1900" max="2025"><br>
+                <label>License Plate:</label>
+                <input type="text" placeholder="ABC-123"><br>
+                <label>VIN:</label>
+                <input type="text" placeholder="Vehicle VIN">
+            </div>
+            <div class="section">
+                <h3>Suspect Information</h3>
+                <label>Number of Suspects:</label>
+                <input type="number" min="0"><br>
+                <label>Description:</label>
+                <input type="text" placeholder="Physical description">
+            </div>
+            <div class="section">
+                <h3>Clearance Status</h3>
+                <label>Status:</label>
+                <select>
+                    <option>Cleared by Arrest</option>
+                    <option>Exceptionally Cleared</option>
+                    <option>Uncleared</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Robbery Tab -->
+        <div id="robbery" class="tab-content">
+            <div class="section">
+                <h3>Type of Offense</h3>
+                <label>Type of Robbery:</label>
+                <select>
+                    <option>Armed Robbery</option>
+                    <option>Strong-Arm Robbery</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Incident Details</h3>
+                <label>Date and Time:</label>
+                <input type="text" placeholder="YYYY-MM-DD HH:MM"><br>
+                <label>Location Type:</label>
+                <select>
+                    <option>Street</option>
+                    <option>Business</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Use of Force/Weapon:</label>
+                <input type="checkbox" id="force-robbery">
+                <select id="weapon-robbery" disabled>
+                    <option>Firearm</option>
+                    <option>Knife</option>
+                    <option>Strong-Arm</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Victim Information</h3>
+                <label>Number of Victims:</label>
+                <input type="number" min="0"><br>
+                <label>Age:</label>
+                <select>
+                    <option>Juvenile</option>
+                    <option>Adult</option>
+                </select><br>
+                <label>Sex:</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Relationship to Offender:</label>
+                <select>
+                    <option>Ex-Relationship</option>
+                    <option>Stranger</option>
+                    <option>Acquaintance</option>
+                </select><br>
+                <label>Injuries Sustained:</label>
+                <select>
+                    <option>Minor</option>
+                    <option>Severe</option>
+                    <option>None</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Offender Information</h3>
+                <label>Number of Offenders:</label>
+                <input type="number" min="0"><br>
+                <label>Age:</label>
+                <select>
+                    <option>Juvenile</option>
+                    <option>Adult</option>
+                </select><br>
+                <label>Sex:</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Relationship to Victim:</label>
+                <select>
+                    <option>Ex-Relationship</option>
+                    <option>Stranger</option>
+                    <option>Acquaintance</option>
+                </select><br>
+                <label>Description:</label>
+                <input type="text" placeholder="Physical description">
+            </div>
+            <div class="section">
+                <h3>Property Information</h3>
+                <label>Description:</label>
+                <input type="text" placeholder="Items stolen"><br>
+                <label>Estimated Value:</label>
+                <input type="number" min="0" placeholder="$">
+            </div>
+            <div class="section">
+                <h3>Clearance Status</h3>
+                <label>Status:</label>
+                <select>
+                    <option>Cleared by Arrest</option>
+                    <option>Exceptionally Cleared</option>
+                    <option>Uncleared</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Commercial Burglary Tab -->
+        <div id="commercial-burglary" class="tab-content">
+            <div class="section">
+                <h3>Type of Offense</h3>
+                <label>Type of Burglary:</label>
+                <select>
+                    <option>Commercial Building Entry</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Incident Details</h3>
+                <label>Date and Time:</label>
+                <input type="text" placeholder="YYYY-MM-DD HH:MM"><br>
+                <label>Location Type:</label>
+                <select>
+                    <option>Commercial Building</option>
+                </select><br>
+                <label>Method of Entry:</label>
+                <select>
+                    <option>Forced</option>
+                    <option>Unforced</option>
+                </select><br>
+                <label>Point of Entry:</label>
+                <input type="text" placeholder="e.g., Front Door">
+            </div>
+            <div class="section">
+                <h3>Business Information</h3>
+                <label>Business Name:</label>
+                <input type="text" placeholder="Business Name"><br>
+                <label>Business Type:</label>
+                <select>
+                    <option>Retail</option>
+                    <option>Office</option>
+                    <option>Warehouse</option>
+                </select><br>
+                <label>Business Address:</label>
+                <input type="text" placeholder="Address">
+            </div>
+            <div class="section">
+                <h3>Property Information</h3>
+                <label>Description:</label>
+                <input type="text" placeholder="Items stolen"><br>
+                <label>Estimated Value:</label>
+                <input type="number" min="0" placeholder="$">
+            </div>
+            <div class="section">
+                <h3>Suspect Information</h3>
+                <label>Number of Suspects:</label>
+                <input type="number" min="0"><br>
+                <label>Description:</label>
+                <input type="text" placeholder="Physical description"><br>
+                <label>Use of Tools:</label>
+                <input type="checkbox" id="tools-commercial">
+                <select id="tool-type-commercial" disabled>
+                    <option>Crowbar</option>
+                    <option>Lockpick</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Clearance Status</h3>
+                <label>Status:</label>
+                <select>
+                    <option>Cleared by Arrest</option>
+                    <option>Exceptionally Cleared</option>
+                    <option>Uncleared</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Residential Burglary Tab -->
+        <div id="residential-burglary" class="tab-content">
+            <div class="section">
+                <h3>Type of Offense</h3>
+                <label>Type of Burglary:</label>
+                <select>
+                    <option>Residential Entry</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Incident Details</h3>
+                <label>Date and Time:</label>
+                <input type="text" placeholder="YYYY-MM-DD HH:MM"><br>
+                <label>Location Type:</label>
+                <select>
+                    <option>Residence</option>
+                </select><br>
+                <label>Method of Entry:</label>
+                <select>
+                    <option>Forced</option>
+                    <option>Unforced</option>
+                </select><br>
+                <label>Point of Entry:</label>
+                <input type="text" placeholder="e.g., Window">
+            </div>
+            <div class="section">
+                <h3>Residence Information</h3>
+                <label>Residence Address:</label>
+                <input type="text" placeholder="Address"><br>
+                <label>Residence Type:</label>
+                <select>
+                    <option>Apartment</option>
+                    <option>Single-Family Home</option>
+                    <option>Other</option>
+                </select><br>
+                <label>Occupancy Status:</label>
+                <select>
+                    <option>Occupied</option>
+                    <option>Vacant</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Property Information</h3>
+                <label>Description:</label>
+                <input type="text" placeholder="Items stolen"><br>
+                <label>Estimated Value:</label>
+                <input type="number" min="0" placeholder="$">
+            </div>
+            <div class="section">
+                <h3>Suspect Information</h3>
+                <label>Number of Suspects:</label>
+                <input type="number" min="0"><br>
+                <label>Description:</label>
+                <input type="text" placeholder="Physical description"><br>
+                <label>Use of Tools:</label>
+                <input type="checkbox" id="tools-residential">
+                <select id="tool-type-residential" disabled>
+                    <option>Crowbar</option>
+                    <option>Lockpick</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="section">
+                <h3>Clearance Status</h3>
+                <label>Status:</label>
+                <select>
+                    <option>Cleared by Arrest</option>
+                    <option>Exceptionally Cleared</option>
+                    <option>Uncleared</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+            // Add active class to the clicked tab
+            event.target.classList.add('active');
+        }
+
+        // Enable/disable weapon dropdown based on checkbox
+        document.getElementById('force-sexual').addEventListener('change', function() {
+            document.getElementById('weapon-sexual').disabled = !this.checked;
+        });
+        document.getElementById('force-robbery').addEventListener('change', function() {
+            document.getElementById('weapon-robbery').disabled = !this.checked;
+        });
+
+        // Enable/disable tool dropdown based on checkbox
+        document.getElementById('tools-commercial').addEventListener('change', function() {
+            document.getElementById('tool-type-commercial').disabled = !this.checked;
+        });
+        document.getElementById('tools-residential').addEventListener('change', function() {
+            document.getElementById('tool-type-residential').disabled = !this.checked;
+        });
+    </script>
+</body>
+</html>

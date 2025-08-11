@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 12:38:09 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 124, in &lt;module&gt;
+﻿    pivot_28, flat_28 = create_summary_tables(layer_28)
+﻿                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 78, in create_summary_tables
+﻿    df = pd.DataFrame(arcpy.da.TableToNumPyArray(layer_name, fields))
+﻿                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿RuntimeError: Cannot find field 'fulladd'
+</msg><msg code="0" type="0">Failed script Weekly Crime ReportWith Table...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReportables).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 12:38:11 PM (Elapsed Time: 1.32 seconds)</msg></messages>

@@ -1,0 +1,201 @@
+2025-07-28 03:21:54,829 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250728_032154.log
+2025-07-28 03:21:54,834 - MasterProcessor - INFO - Master SCRPA Processor initialized
+Running full processing mode...
+2025-07-28 03:21:54,835 - MasterProcessor - INFO - ========================================
+2025-07-28 03:21:54,835 - MasterProcessor - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-28 03:21:54,835 - MasterProcessor - INFO - ========================================
+2025-07-28 03:21:54,836 - MasterProcessor - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-28 03:21:54,836 - MasterProcessor - INFO - Searching for latest auto export files
+2025-07-28 03:21:54,839 - MasterProcessor - INFO - Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-28 03:21:54,839 - MasterProcessor - INFO - Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-28 03:21:55,161 - INFO - Detected CAD structure (score: 5/5)
+2025-07-28 03:21:55,170 - MasterProcessor - INFO - Removed column: cYear
+2025-07-28 03:21:55,171 - MasterProcessor - INFO - Removed column: cMonth
+2025-07-28 03:21:55,171 - MasterProcessor - INFO - Removed column: DayofWeek
+2025-07-28 03:21:55,171 - MasterProcessor - INFO - Detected CAD structure with 112 records
+2025-07-28 03:21:55,171 - MasterProcessor - INFO - Step 2: Processing CAD data structure
+2025-07-28 03:21:55,171 - MasterProcessor - INFO - Processing CAD structure (no unpivoting needed)
+2025-07-28 03:21:55,174 - INFO - CAD disposition filtering: 112 → 112 records
+2025-07-28 03:21:55,174 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-28 03:21:55,176 - MasterProcessor - INFO - CAD processing complete: 112 records
+2025-07-28 03:21:55,176 - MasterProcessor - INFO - Comprehensive validation for initial processing
+2025-07-28 03:21:55,176 - MasterProcessor - INFO - Row count validation: 112 → 112 records
+2025-07-28 03:21:55,176 - MasterProcessor - INFO - ✓ Found core_id: Case_Number
+2025-07-28 03:21:55,176 - MasterProcessor - INFO - ✓ Found incident_type: IncidentType
+2025-07-28 03:21:55,176 - MasterProcessor - ERROR - Missing required column: all_incidents - Combined incident types
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - Missing required column: crime_category - Categorized crime type
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - Missing required column: incident_date - Incident occurrence date
+2025-07-28 03:21:55,177 - MasterProcessor - INFO - ○ Optional column incident_time not found
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - Missing required column: time_of_day - Time period categorization
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - Missing required column: period - Period classification (7-Day, 28-Day, YTD, Historical)
+2025-07-28 03:21:55,177 - MasterProcessor - INFO - ✓ Found address: FullAddress2
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - Missing required column: enhanced_block - Enhanced block designation
+2025-07-28 03:21:55,177 - MasterProcessor - INFO - ○ Optional column response_time not found
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - ✗ Validation FAILED for initial processing
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR - Issues found: 6
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR -   - MISSING REQUIRED COLUMN: all_incidents (Combined incident types)
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR -   - MISSING REQUIRED COLUMN: crime_category (Categorized crime type)
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR -   - MISSING REQUIRED COLUMN: incident_date (Incident occurrence date)
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR -   - MISSING REQUIRED COLUMN: time_of_day (Time period categorization)
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR -   - MISSING REQUIRED COLUMN: period (Period classification (7-Day, 28-Day, YTD, Historical))
+2025-07-28 03:21:55,177 - MasterProcessor - ERROR -   - MISSING REQUIRED COLUMN: enhanced_block (Enhanced block designation)
+2025-07-28 03:21:55,177 - MasterProcessor - INFO - Retention rate: 100.00%
+2025-07-28 03:21:55,177 - MasterProcessor - INFO - Final record count: 112
+2025-07-28 03:21:55,177 - MasterProcessor - INFO - Step 3: Enhanced CADNotes processing
+2025-07-28 03:21:55,178 - INFO - 🔄 Processing CADNotes for 112 records
+2025-07-28 03:21:55,183 - INFO - ✅ CADNotes processing complete in 0.01 seconds
+2025-07-28 03:21:55,184 - INFO - 📊 CADNotes Processing Statistics:
+2025-07-28 03:21:55,184 - INFO -    Total records: 112
+2025-07-28 03:21:55,184 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-28 03:21:55,184 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-28 03:21:55,184 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-28 03:21:55,184 - INFO -    Average quality score: 84.8/100
+2025-07-28 03:21:55,184 - MasterProcessor - INFO - Processed CADNotes from CADNotes column
+2025-07-28 03:21:55,184 - MasterProcessor - INFO - CADNotes processing complete: 95 notes processed
+2025-07-28 03:21:55,185 - MasterProcessor - INFO - Step 4: Adding derived columns (replaces M Code logic)
+2025-07-28 03:21:55,185 - MasterProcessor - INFO - Processing workflow: column mapping → unpivoting → ALL_INCIDENTS → crime categorization → period assignment → time categorization → final processing
+2025-07-28 03:21:55,185 - MasterProcessor - INFO - Step 4a: Standardizing column names
+2025-07-28 03:21:55,185 - MasterProcessor - INFO - Standardized column: Time of Call → Time_of_Call
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Standardized column: FullAddress2 → FullAddress
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Standardized column: How Reported → How_Reported
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Standardized column: Time Dispatched → Time_Dispatched
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Standardized column: Time In → Time_In
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Standardized column: Time Out → Time_Out
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Column standardization complete. Found 11 mapped columns.
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Step 4b: Unpivoting incident types if needed
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - No multiple incident type columns found - skipping unpivot
+2025-07-28 03:21:55,186 - MasterProcessor - INFO - Step 4c: Creating ALL_INCIDENTS column
+2025-07-28 03:21:55,187 - MasterProcessor - INFO - Created ALL_INCIDENTS from CAD IncidentType column
+2025-07-28 03:21:55,201 - MasterProcessor - INFO - Calculated Time_Response_Minutes from Time_Dispatched and Time_of_Call
+2025-07-28 03:21:55,202 - MasterProcessor - INFO - Calculated Time_On_Scene_Minutes from Time_Out and Time_In
+2025-07-28 03:21:55,203 - MasterProcessor - INFO - Step 4g: Adding remaining datetime enhancements
+2025-07-28 03:21:55,203 - MasterProcessor - INFO - Legacy datetime enhancements method - most functionality moved to dedicated methods
+2025-07-28 03:21:55,203 - MasterProcessor - INFO - Step 4h: Adding address and block enhancements
+2025-07-28 03:21:55,203 - MasterProcessor - INFO - Created Enhanced_Block from FullAddress column
+2025-07-28 03:21:55,203 - MasterProcessor - INFO - Step 4d: Applying crime categorization
+2025-07-28 03:21:55,205 - MasterProcessor - INFO - Applied crime categorization logic
+2025-07-28 03:21:55,205 - MasterProcessor - INFO - Step 4e: Applying period classification
+2025-07-28 03:21:55,205 - MasterProcessor - INFO - Assigned periods based on Incident_Date column
+2025-07-28 03:21:55,205 - MasterProcessor - INFO - Step 4f: Applying TimeOfDay categorization
+2025-07-28 03:21:55,205 - MasterProcessor - INFO - Created TimeOfDay categorization from Incident_Time column
+2025-07-28 03:21:55,205 - MasterProcessor - INFO - Step 4i: Adding time formatting
+2025-07-28 03:21:55,206 - MasterProcessor - INFO - Step 4j: Adding geographic enhancements
+2025-07-28 03:21:55,206 - MasterProcessor - INFO - Standardized Grid from Grid
+2025-07-28 03:21:55,206 - MasterProcessor - INFO - Standardized PDZone from PDZone
+2025-07-28 03:21:55,207 - MasterProcessor - INFO - Standardized Officer from Officer
+2025-07-28 03:21:55,207 - MasterProcessor - INFO - Step 4k: Cleaning up intermediate columns
+2025-07-28 03:21:55,208 - MasterProcessor - INFO - Dropped intermediate column: case_number
+2025-07-28 03:21:55,208 - MasterProcessor - INFO - Dropped intermediate column: Incident
+2025-07-28 03:21:55,208 - MasterProcessor - INFO - Dropped intermediate column: address
+2025-07-28 03:21:55,209 - MasterProcessor - INFO - Dropped intermediate column: HourMinuetsCalc
+2025-07-28 03:21:55,209 - MasterProcessor - INFO - Step 4l: Selecting final output columns
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - Selected 21 final columns for output: ['Case_Number', 'FullAddress', 'How_Reported', 'PDZone', 'Time_of_Call', 'Incident_Date', 'Incident_Time', 'Incident_DateTime', 'TimeOfDay', 'Enhanced_Block', 'Period', 'ALL_INCIDENTS', 'IncidentType', 'Crime_Category', 'Time_Response_Minutes', 'Response_Time_Formatted', 'Time_On_Scene_Minutes', 'Time_On_Scene_Formatted', 'CAD_Username', 'CAD_Timestamp', 'CAD_Notes_Cleaned']
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - All enhancements complete - workflow finished successfully
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - Comprehensive validation for data enhancements
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - Row count validation: 112 → 112 records
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found core_id: Case_Number
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found incident_type: IncidentType
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found all_incidents: ALL_INCIDENTS
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found crime_category: Crime_Category
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found incident_date: Incident_Date
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found incident_time: Incident_Time
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found time_of_day: TimeOfDay
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found period: Period
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found address: FullAddress
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found enhanced_block: Enhanced_Block
+2025-07-28 03:21:55,210 - MasterProcessor - INFO - ✓ Found response_time: Time_Response_Minutes
+2025-07-28 03:21:55,211 - MasterProcessor - INFO - Crime category distribution:
+2025-07-28 03:21:55,212 - MasterProcessor - INFO -   Motor Vehicle Theft: 30 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO -   Burglary - Auto: 24 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO -   Burglary - Residence: 22 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO -   Sexual Offenses: 18 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO -   Robbery: 11 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO -   Burglary - Commercial: 7 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - ✓ Validation PASSED for data enhancements
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - Retention rate: 100.00%
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - Final record count: 112
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - Step 5a: Applying crime filters
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - Applying crime filters for key crime types
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - Starting crime filtering with 112 records
+2025-07-28 03:21:55,212 - MasterProcessor - INFO - Using IncidentType column for crime filtering
+2025-07-28 03:21:55,214 - MasterProcessor - INFO - Motor Vehicle Theft: 30 records matched
+2025-07-28 03:21:55,214 - MasterProcessor - INFO - Robbery: 11 records matched
+2025-07-28 03:21:55,215 - MasterProcessor - INFO - Burglary – Auto: 24 records matched
+2025-07-28 03:21:55,216 - MasterProcessor - INFO - Sexual: 18 records matched
+2025-07-28 03:21:55,216 - MasterProcessor - INFO - Burglary – Commercial: 7 records matched
+2025-07-28 03:21:55,217 - MasterProcessor - INFO - Burglary – Residence: 22 records matched
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - Crime filtering results:
+2025-07-28 03:21:55,221 - MasterProcessor - INFO -   Motor Vehicle Theft: 30 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO -   Robbery: 11 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO -   Burglary – Auto: 24 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO -   Sexual: 18 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO -   Burglary – Commercial: 7 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO -   Burglary – Residence: 22 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - Filter validation: 112 → 112 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - Records removed: 0
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - Retention rate: 100.00%
+2025-07-28 03:21:55,221 - MasterProcessor - WARNING - WARNING: No records were filtered. Check if crime types exist in data.
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - Comprehensive validation for crime filtering
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - Row count validation: 112 → 112 records
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found core_id: Case_Number
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found incident_type: IncidentType
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found all_incidents: ALL_INCIDENTS
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found crime_category: Crime_Category
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found incident_date: Incident_Date
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found incident_time: Incident_Time
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found time_of_day: TimeOfDay
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found period: Period
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found address: FullAddress
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found enhanced_block: Enhanced_Block
+2025-07-28 03:21:55,221 - MasterProcessor - INFO - ✓ Found response_time: Time_Response_Minutes
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Crime category distribution:
+2025-07-28 03:21:55,222 - MasterProcessor - INFO -   Motor Vehicle Theft: 30 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO -   Burglary - Auto: 24 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO -   Burglary - Residence: 22 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO -   Sexual Offenses: 18 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO -   Robbery: 11 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO -   Burglary - Commercial: 7 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Validation PASSED for crime filtering
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Retention rate: 100.00%
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Final record count: 112
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Step 5: Data validation and cleanup
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Validation complete: 112 clean records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Comprehensive validation for complete pipeline
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - Row count validation: 112 → 112 records
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found core_id: Case_Number
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found incident_type: IncidentType
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found all_incidents: ALL_INCIDENTS
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found crime_category: Crime_Category
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found incident_date: Incident_Date
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found incident_time: Incident_Time
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found time_of_day: TimeOfDay
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found period: Period
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found address: FullAddress
+2025-07-28 03:21:55,222 - MasterProcessor - INFO - ✓ Found enhanced_block: Enhanced_Block
+2025-07-28 03:21:55,223 - MasterProcessor - INFO - ✓ Found response_time: Time_Response_Minutes
+2025-07-28 03:21:55,223 - MasterProcessor - INFO - Crime category distribution:
+2025-07-28 03:21:55,223 - MasterProcessor - INFO -   Motor Vehicle Theft: 30 records
+2025-07-28 03:21:55,223 - MasterProcessor - INFO -   Burglary - Auto: 24 records
+2025-07-28 03:21:55,223 - MasterProcessor - INFO -   Burglary - Residence: 22 records
+2025-07-28 03:21:55,223 - MasterProcessor - INFO -   Sexual Offenses: 18 records
+2025-07-28 03:21:55,223 - MasterProcessor - INFO -   Robbery: 11 records
+2025-07-28 03:21:55,223 - MasterProcessor - INFO -   Burglary - Commercial: 7 records
+2025-07-28 03:21:55,223 - MasterProcessor - INFO - ✓ Validation PASSED for complete pipeline
+2025-07-28 03:21:55,223 - MasterProcessor - INFO - Retention rate: 100.00%
+2025-07-28 03:21:55,223 - MasterProcessor - INFO - Final record count: 112
+2025-07-28 03:21:55,223 - MasterProcessor - INFO - Step 6: Exporting for Power BI
+2025-07-28 03:21:55,229 - MasterProcessor - INFO - Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-28 03:21:55,229 - MasterProcessor - INFO - ========================================
+2025-07-28 03:21:55,229 - MasterProcessor - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-28 03:21:55,229 - MasterProcessor - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-28 03:21:55,229 - MasterProcessor - INFO - ========================================
+
+Processing complete!
+Final statistics:
+   Data Source Detected: None
+   Total Input Records: 112
+   Total Output Records: 0
+   Cadnotes Processed: 95
+   Quality Score Avg: 0.0
+   Processing Duration: 0.0
+   Validation Results: {'processing': {'step_name': 'initial processing', 'initial_count': 112, 'final_count': 112, 'records_lost': 0, 'retention_rate': 100.0, 'validation_passed': False, 'issues': ['MISSING REQUIRED COLUMN: all_incidents (Combined incident types)', 'MISSING REQUIRED COLUMN: crime_category (Categorized crime type)', 'MISSING REQUIRED COLUMN: incident_date (Incident occurrence date)', 'MISSING REQUIRED COLUMN: time_of_day (Time period categorization)', 'MISSING REQUIRED COLUMN: period (Period classification (7-Day, 28-Day, YTD, Historical))', 'MISSING REQUIRED COLUMN: enhanced_block (Enhanced block designation)'], 'column_validation': {'core_id': {'found': True, 'column_name': 'Case_Number', 'required': True, 'description': 'Case identification number'}, 'incident_type': {'found': True, 'column_name': 'IncidentType', 'required': True, 'description': 'Primary incident type'}, 'all_incidents': {'found': False, 'column_name': None, 'required': True, 'description': 'Combined incident types'}, 'crime_category': {'found': False, 'column_name': None, 'required': True, 'description': 'Categorized crime type'}, 'incident_date': {'found': False, 'column_name': None, 'required': True, 'description': 'Incident occurrence date'}, 'incident_time': {'found': False, 'column_name': None, 'required': False, 'description': 'Incident occurrence time'}, 'time_of_day': {'found': False, 'column_name': None, 'required': True, 'description': 'Time period categorization'}, 'period': {'found': False, 'column_name': None, 'required': True, 'description': 'Period classification (7-Day, 28-Day, YTD, Historical)'}, 'address': {'found': True, 'column_name': 'FullAddress2', 'required': False, 'description': 'Incident location address'}, 'enhanced_block': {'found': False, 'column_name': None, 'required': True, 'description': 'Enhanced block designation'}, 'response_time': {'found': False, 'column_name': None, 'required': False, 'description': 'Response time metrics'}}}, 'enhancements': {'step_name': 'data enhancements', 'initial_count': 112, 'final_count': 112, 'records_lost': 0, 'retention_rate': 100.0, 'validation_passed': True, 'issues': [], 'column_validation': {'core_id': {'found': True, 'column_name': 'Case_Number', 'required': True, 'description': 'Case identification number'}, 'incident_type': {'found': True, 'column_name': 'IncidentType', 'required': True, 'description': 'Primary incident type'}, 'all_incidents': {'found': True, 'column_name': 'ALL_INCIDENTS', 'required': True, 'description': 'Combined incident types'}, 'crime_category': {'found': True, 'column_name': 'Crime_Category', 'required': True, 'description': 'Categorized crime type'}, 'incident_date': {'found': True, 'column_name': 'Incident_Date', 'required': True, 'description': 'Incident occurrence date'}, 'incident_time': {'found': True, 'column_name': 'Incident_Time', 'required': False, 'description': 'Incident occurrence time'}, 'time_of_day': {'found': True, 'column_name': 'TimeOfDay', 'required': True, 'description': 'Time period categorization'}, 'period': {'found': True, 'column_name': 'Period', 'required': True, 'description': 'Period classification (7-Day, 28-Day, YTD, Historical)'}, 'address': {'found': True, 'column_name': 'FullAddress', 'required': False, 'description': 'Incident location address'}, 'enhanced_block': {'found': True, 'column_name': 'Enhanced_Block', 'required': True, 'description': 'Enhanced block designation'}, 'response_time': {'found': True, 'column_name': 'Time_Response_Minutes', 'required': False, 'description': 'Response time metrics'}}}, 'filtering': {'step_name': 'crime filtering', 'initial_count': 112, 'final_count': 112, 'records_lost': 0, 'retention_rate': 100.0, 'validation_passed': True, 'issues': [], 'column_validation': {'core_id': {'found': True, 'column_name': 'Case_Number', 'required': True, 'description': 'Case identification number'}, 'incident_type': {'found': True, 'column_name': 'IncidentType', 'required': True, 'description': 'Primary incident type'}, 'all_incidents': {'found': True, 'column_name': 'ALL_INCIDENTS', 'required': True, 'description': 'Combined incident types'}, 'crime_category': {'found': True, 'column_name': 'Crime_Category', 'required': True, 'description': 'Categorized crime type'}, 'incident_date': {'found': True, 'column_name': 'Incident_Date', 'required': True, 'description': 'Incident occurrence date'}, 'incident_time': {'found': True, 'column_name': 'Incident_Time', 'required': False, 'description': 'Incident occurrence time'}, 'time_of_day': {'found': True, 'column_name': 'TimeOfDay', 'required': True, 'description': 'Time period categorization'}, 'period': {'found': True, 'column_name': 'Period', 'required': True, 'description': 'Period classification (7-Day, 28-Day, YTD, Historical)'}, 'address': {'found': True, 'column_name': 'FullAddress', 'required': False, 'description': 'Incident location address'}, 'enhanced_block': {'found': True, 'column_name': 'Enhanced_Block', 'required': True, 'description': 'Enhanced block designation'}, 'response_time': {'found': True, 'column_name': 'Time_Response_Minutes', 'required': False, 'description': 'Response time metrics'}}}, 'final': {'step_name': 'complete pipeline', 'initial_count': 112, 'final_count': 112, 'records_lost': 0, 'retention_rate': 100.0, 'validation_passed': True, 'issues': [], 'column_validation': {'core_id': {'found': True, 'column_name': 'Case_Number', 'required': True, 'description': 'Case identification number'}, 'incident_type': {'found': True, 'column_name': 'IncidentType', 'required': True, 'description': 'Primary incident type'}, 'all_incidents': {'found': True, 'column_name': 'ALL_INCIDENTS', 'required': True, 'description': 'Combined incident types'}, 'crime_category': {'found': True, 'column_name': 'Crime_Category', 'required': True, 'description': 'Categorized crime type'}, 'incident_date': {'found': True, 'column_name': 'Incident_Date', 'required': True, 'description': 'Incident occurrence date'}, 'incident_time': {'found': True, 'column_name': 'Incident_Time', 'required': False, 'description': 'Incident occurrence time'}, 'time_of_day': {'found': True, 'column_name': 'TimeOfDay', 'required': True, 'description': 'Time period categorization'}, 'period': {'found': True, 'column_name': 'Period', 'required': True, 'description': 'Period classification (7-Day, 28-Day, YTD, Historical)'}, 'address': {'found': True, 'column_name': 'FullAddress', 'required': False, 'description': 'Incident location address'}, 'enhanced_block': {'found': True, 'column_name': 'Enhanced_Block', 'required': True, 'description': 'Enhanced block designation'}, 'response_time': {'found': True, 'column_name': 'Time_Response_Minutes', 'required': False, 'description': 'Response time metrics'}}}}

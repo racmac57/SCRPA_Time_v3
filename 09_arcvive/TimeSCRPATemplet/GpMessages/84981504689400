@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Sunday, May 4, 2025 4:41:06 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\Refrence\TimeSCRPT\Code\Python\weekly_crime_report.py", line 61, in &lt;module&gt;
+﻿    legend = next((l for l in legend_list if l.name.strip().lower() == "mainlegend"), None)
+﻿                              ^^^^^^^^^^^
+﻿NameError: name 'legend_list' is not defined
+</msg><msg code="0" type="0">Failed script ScriptWeekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Sunday, May 4, 2025 4:41:11 PM (Elapsed Time: 4.53 seconds)</msg></messages>

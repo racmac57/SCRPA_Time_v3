@@ -1,0 +1,36 @@
+2025-08-03 17:36:50,981 - SCRPA_Enhanced_Production - INFO - Enhanced production pipeline initialized
+2025-08-03 17:36:50,982 - SCRPA_Enhanced_Production - INFO - Starting SCRPA Enhanced Production Pipeline
+2025-08-03 17:36:50,982 - SCRPA_Enhanced_Production - INFO - Step 1: Processing RMS data with enhanced column mapping
+2025-08-03 17:36:50,982 - SCRPA_Enhanced_Production - INFO - Processing RMS data with enhanced column mapping
+2025-08-03 17:36:50,982 - SCRPA_Enhanced_Production - INFO - Processing RMS file: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-03 17:36:50,994 - SCRPA_Enhanced_Production - ERROR - Error processing RMS data: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\2025_08_01_19_38_12_SCRPA_RMS.xlsx'
+2025-08-03 17:36:51,018 - SCRPA_Enhanced_Production - ERROR - Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Production_Pipeline_Enhanced.py", line 305, in process_rms_data_enhanced
+    raw_df = pd.read_excel(latest_export)
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 1550, in __init__
+    ext = inspect_excel_format(
+        content_or_path=path_or_buffer, storage_options=storage_options
+    )
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\excel\_base.py", line 1402, in inspect_excel_format
+    with get_handle(
+         ~~~~~~~~~~^
+        content_or_path, "rb", storage_options=storage_options, is_text=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handle:
+    ^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\2025_08_01_19_38_12_SCRPA_RMS.xlsx'
+
+2025-08-03 17:36:51,018 - SCRPA_Enhanced_Production - ERROR - Enhanced pipeline failed: RMS data processing failed
+2025-08-03 17:36:51,018 - SCRPA_Enhanced_Production - ERROR - Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Production_Pipeline_Enhanced.py", line 687, in run_enhanced_production_pipeline
+    raise ValueError("RMS data processing failed")
+ValueError: RMS data processing failed
+

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 13, 2025 2:59:54 AM</msg><msg code="-2147467259" type="100">﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 11
+    def **init**(self):
+    ^
+﻿IndentationError: expected an indented block after class definition on line 10
+</msg><msg code="0" type="0">Failed script Updated Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeExport).</msg><msg code="0" type="3">Failed at Tuesday, May 13, 2025 2:59:54 AM (Elapsed Time: 0.14 seconds)</msg></messages>

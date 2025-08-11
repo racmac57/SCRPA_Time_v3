@@ -1,0 +1,6 @@
+(TextToSearch as text, Keyword as text) as nullable text =>
+let
+    KeywordPosition = Text.PositionOf(TextToSearch, Keyword, Occurrence.First),
+    ExtractedText = if KeywordPosition = -1 then null else Text.Middle(TextToSearch, KeywordPosition + Text.Length(Keyword))
+in
+    ExtractedText

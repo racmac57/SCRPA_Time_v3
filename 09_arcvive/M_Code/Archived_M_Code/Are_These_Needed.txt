@@ -1,0 +1,728 @@
+EXPORT_RMS
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files1" = Table.SelectRows(Source, each Record.FieldOrDefault([Attributes], "Hidden", false) <> true),
+    #"Invoke Transform File" = Table.AddColumn(#"Filtered Hidden Files1", "TransformedData", each Transform_File([Content]), type table),
+    #"Expand Transformed Data" = Table.ExpandTableColumn(#"Invoke Transform File", "TransformedData", {"CaseNumber", "FullAddress", "CaseNumberLength", "IncDate", "IncTime", "StartOfHour", "TimeOfDay"})
+in
+    #"Expand Transformed Data"
+	
+
+
+BurglaryAuto
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files1" = Table.SelectRows(Source, each Record.FieldOrDefault([Attributes], "Hidden", false) <> true),
+    #"Invoke Transform File" = Table.AddColumn(#"Filtered Hidden Files1", "TransformedData", each Transform_File([Content]), type table),
+    #"Expand Transformed Data" = Table.ExpandTableColumn(#"Invoke Transform File", "TransformedData", {"CaseNumber", "FullAddress", "CaseNumberLength", "IncDate", "IncTime", "StartOfHour", "TimeOfDay"}),
+    #"Filtered Hidden Files2" = Table.SelectRows(#"Expand Transformed Data", each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files2", "Transform File", each #"Transform File"([Content])),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Invoke Custom Function1", {"Transform File"}),
+    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File (2)"))),
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Case Number", type text}, {"Incident Date", type date}, {"Incident Time", type datetime}, {"Incident Date_Between", type date}, {"Incident Time_Between", type datetime}, {"Report Date", type date}, {"Report Time", type datetime}, {"Incident Type_1", type text}, {"Incident Type_2", type text}, {"Incident Type_3", type text}, {"FullAddress", type text}, {"Grid", type text}, {"Zone", Int64.Type}, {"Narrative", type text}, {"Total Value Stolen", type any}, {"Total Value Recover", type any}, {"Registration 1", type text}, {"Make1", type text}, {"Model1", type text}, {"Reg State 1", type text}, {"Registration 2", type any}, {"Reg State 2", type any}, {"Make2", type any}, {"Model2", type any}, {"Reviewed By", type text}, {"CompleteCalc", type text}, {"Officer of Record", type text}, {"Squad", type text}, {"Det_Assigned", type text}, {"Case_Status", type text}, {"NIBRS Classification", type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Changed Type",{{"Narrative", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+in
+    #"Cleaned Text"
+	
+	
+	
+Bur_Auto
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    InvokedTransform = Table.AddColumn(FilteredHiddenFiles, "Transform File", each Transform_File([Content])),
+    RenamedColumns1 = Table.RenameColumns(InvokedTransform, {"Name", "Source.Name"}),
+    RemovedOtherColumns = Table.SelectColumns(RenamedColumns1, {"Source.Name", "Transform File"}),
+    ExpandedTable = Table.ExpandTableColumn(RemovedOtherColumns, "Transform File", Table.ColumnNames(Transform_File(#"Sample File"))),
+    FixedColumns = Table.RenameColumns(ExpandedTable, {
+        {"CaseNumber", "Case Number"},
+        {"IncDate", "Incident Date"},
+        {"IncidentTime", "Incident Time"},
+        {"IncidentDateBetween", "Incident Date_Between"},
+        {"IncidentTimeBetween", "Incident Time_Between"},
+        {"ReportDate", "Report Date"},
+        {"ReportTime", "Report Time"},
+        {"IncidentType1", "Incident Type_1"},
+        {"IncidentType2", "Incident Type_2"},
+        {"IncidentType3", "Incident Type_3"},
+        {"TotalValueStolen", "Total Value Stolen"},
+        {"TotalValueRecover", "Total Value Recover"},
+        {"Registration1", "Registration 1"},
+        {"RegState1", "Reg State 1"},
+        {"Registration2", "Registration 2"},
+        {"RegState2", "Reg State 2"},
+        {"ReviewedBy", "Reviewed By"},
+        {"OfficerOfRecord", "Officer of Record"}
+    }),
+    ChangedType = Table.TransformColumnTypes(FixedColumns,{
+        {"Source.Name", type text},
+        {"Case Number", type text},
+        {"Incident Date", type date},
+        {"Incident Time", type datetime},
+        {"Incident Date_Between", type date},
+        {"Incident Time_Between", type datetime},
+        {"Report Date", type date},
+        {"Report Time", type datetime},
+        {"Incident Type_1", type text},
+        {"Incident Type_2", type text},
+        {"Incident Type_3", type text},
+        {"FullAddress", type text},
+        {"Grid", type text},
+        {"Zone", Int64.Type},
+        {"Narrative", type text},
+        {"Total Value Stolen", type any},
+        {"Total Value Recover", type any},
+        {"Registration 1", type text},
+        {"Make1", type text},
+        {"Model1", type text},
+        {"Reg State 1", type text},
+        {"Registration 2", type any},
+        {"Reg State 2", type any},
+        {"Make2", type any},
+        {"Model2", type any},
+        {"Reviewed By", type text},
+        {"CompleteCalc", type text},
+        {"Officer of Record", type text},
+        {"Squad", type text},
+        {"Det_Assigned", type text},
+        {"Case_Status", type text}
+    }),
+    RemovedSourceName = Table.RemoveColumns(ChangedType,{"Source.Name"}),
+    ChangedType1 = Table.TransformColumnTypes(RemovedSourceName,{
+        {"Total Value Stolen", Currency.Type},
+        {"Total Value Recover", Currency.Type}
+    }),
+    RemovedDuplicates = Table.Distinct(ChangedType1, {"Case Number"}),
+    Result = RemovedDuplicates,
+    #"Trimmed Text" = Table.TransformColumns(Result,{{"Narrative", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+in
+    #"Cleaned Text"
+	
+	
+	
+Bur_C_R
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function" = Table.AddColumn(#"Filtered Hidden Files", "Transform File", each #"Transform File"([Content])),
+    #"Renamed Columns" = Table.RenameColumns(#"Invoke Custom Function", {"Name", "Source.Name"}),
+    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns", {"Source.Name", "Transform File"}),
+    #"Expanded Table Column" = Table.ExpandTableColumn(#"Removed Other Columns", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+    
+    // Corrected data type transformations with proper null handling
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column",{
+        {"Source.Name", type text}, 
+        {"Case Number", type text}, 
+        {"Incident Date", type date}, 
+        {"Incident Time", type datetime}, 
+        {"Incident Date_Between", type date}, 
+        {"Incident Time_Between", type datetime}, 
+        {"Report Date", type date}, 
+        {"Report Time", type datetime}, 
+        {"Incident Type_1", type text}, 
+        {"Incident Type_2", type text}, 
+        {"Incident Type_3", type text}, 
+        {"FullAddress", type text}, 
+        {"Grid", type text}, 
+        {"Zone", Int64.Type}, 
+        {"Narrative", type text}, 
+        {"Total Value Stolen", Currency.Type}, 
+        {"Total Value Recover", Currency.Type}, 
+        {"Registration 1", type text}, 
+        {"Make1", type text}, 
+        {"Model1", type text}, 
+        {"Reg State 1", type text}, 
+        {"Registration 2", type text}, 
+        {"Reg State 2", type text}, 
+        {"Make2", type text}, 
+        {"Model2", type text}, 
+        {"Reviewed By", type text}, 
+        {"CompleteCalc", type text}, 
+        {"Officer of Record", type text}, 
+        {"Squad", type text}, 
+        {"Det_Assigned", type text}, 
+        {"Case_Status", type text}, 
+        {"NIBRS Classification", type text}
+    }),
+    
+    #"Removed Source Column" = Table.RemoveColumns(#"Changed Type",{"Source.Name"}),
+    
+    // Additional calculated columns for time analysis
+    #"Added Custom Columns" = Table.AddColumn(#"Removed Source Column", "Start of Hour", 
+        each if [Incident Time] <> null then Time.From(DateTime.Time([Incident Time])) else null, type time),
+    #"Added INC_TIME" = Table.AddColumn(#"Added Custom Columns", "INC_TIME", 
+        each if [Incident Time] <> null then Time.From(DateTime.Time([Incident Time])) else null, type time),
+    #"Added INC_DATE" = Table.AddColumn(#"Added INC_TIME", "INC_DATE", 
+        each if [Incident Date] <> null then Date.From([Incident Date]) else null, type date),
+    #"Added INC_DATE_AND_TIME" = Table.AddColumn(#"Added INC_DATE", "INC_DATE_AND_TIME", 
+        each if [Incident Date] <> null and [Incident Time] <> null 
+             then DateTime.From([Incident Date]) + Duration.From([Incident Time]) 
+             else null, type datetime),
+    
+    // Add derived date/time columns
+    #"Added Date Components" = Table.AddColumn(#"Added INC_DATE_AND_TIME", "Day Name", 
+        each if [INC_DATE] <> null then Date.DayOfWeekName([INC_DATE]) else null, type text),
+    #"Added Month Name" = Table.AddColumn(#"Added Date Components", "Month Name", 
+        each if [INC_DATE] <> null then Date.MonthName([INC_DATE]) else null, type text),
+    #"Added Year" = Table.AddColumn(#"Added Month Name", "Year", 
+        each if [INC_DATE] <> null then Date.Year([INC_DATE]) else null, Int64.Type),
+    #"Added Week of Year" = Table.AddColumn(#"Added Year", "Week of Year", 
+        each if [INC_DATE] <> null then Date.WeekOfYear([INC_DATE]) else null, Int64.Type),
+    #"Added Day" = Table.AddColumn(#"Added Week of Year", "Day", 
+        each if [INC_DATE] <> null then Date.Day([INC_DATE]) else null, Int64.Type),
+    #"Added Day of Year" = Table.AddColumn(#"Added Day", "Day of Year", 
+        each if [INC_DATE] <> null then Date.DayOfYear([INC_DATE]) else null, Int64.Type),
+    
+    // Filter for Commercial and Residence incidents (assuming ALL_INCIDENTS column exists)
+    #"Filtered Incidents" = if Table.HasColumns(#"Added Day of Year", {"ALL_INCIDENTS"}) 
+        then Table.SelectRows(#"Added Day of Year", each 
+            [ALL_INCIDENTS] <> null and 
+            (Text.Contains(Text.Upper([ALL_INCIDENTS]), "COMMERCIAL") or 
+             Text.Contains(Text.Upper([ALL_INCIDENTS]), "RESIDENCE")))
+        else #"Added Day of Year",
+    
+    // Remove duplicates based on Case Number
+    #"Removed Duplicates" = Table.Distinct(#"Filtered Incidents", {"Case Number"}),
+    
+    // Apply final filters
+    #"Final Filtered Rows" = Table.SelectRows(#"Removed Duplicates", each 
+        ([Incident Type_3] <> "Domestic Violence") and 
+        ([Incident Type_1] <> "Violation of Court Order") and 
+        ([Case Number] <> "25-021703")),
+    
+    // Reorder columns for better organization
+    #"Reordered Columns" = Table.ReorderColumns(#"Final Filtered Rows", {
+        "Case Number", "INC_DATE", "INC_TIME", "Start of Hour", "Day Name", "Month Name", 
+        "Year", "Week of Year", "Day", "Day of Year", "INC_DATE_AND_TIME",
+        "Incident Type_1", "Incident Type_2", "Incident Type_3", 
+        "FullAddress", "Grid", "Zone", "Narrative", 
+        "Total Value Stolen", "Total Value Recover",
+        "Registration 1", "Make1", "Model1", "Reg State 1", 
+        "Registration 2", "Reg State 2", "Make2", "Model2",
+        "Reviewed By", "CompleteCalc", "Officer of Record", "Squad", 
+        "Det_Assigned", "Case_Status", "NIBRS Classification",
+        "Incident Date", "Incident Time", "Incident Date_Between", 
+        "Incident Time_Between", "Report Date", "Report Time"
+    }),
+    #"Trimmed Text" = Table.TransformColumns(#"Reordered Columns",{{"Narrative", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+in
+    #"Cleaned Text"
+	
+	
+	
+MV_Theft
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    InvokedTransform = Table.AddColumn(FilteredHiddenFiles, "Transform File", each Transform_File([Content])),
+    RenamedColumns1 = Table.RenameColumns(InvokedTransform, {"Name", "Source.Name"}),
+    RemovedOtherColumns = Table.SelectColumns(RenamedColumns1, {"Source.Name", "Transform File"}),
+    ExpandedTable = Table.ExpandTableColumn(RemovedOtherColumns, "Transform File", Table.ColumnNames(Transform_File(#"Sample File"))),
+    FixedColumns = Table.RenameColumns(ExpandedTable, {
+        {"CaseNumber", "Case Number"},
+        {"IncDate", "Incident Date"},
+        {"IncidentTime", "Incident Time"},
+        {"IncidentDateBetween", "Incident Date_Between"},
+        {"IncidentTimeBetween", "Incident Time_Between"},
+        {"ReportDate", "Report Date"},
+        {"ReportTime", "Report Time"},
+        {"IncidentType1", "Incident Type_1"},
+        {"IncidentType2", "Incident Type_2"},
+        {"IncidentType3", "Incident Type_3"},
+        {"TotalValueStolen", "Total Value Stolen"},
+        {"TotalValueRecover", "Total Value Recover"},
+        {"Registration1", "Registration 1"},
+        {"RegState1", "Reg State 1"},
+        {"Registration2", "Registration 2"},
+        {"RegState2", "Reg State 2"},
+        {"ReviewedBy", "Reviewed By"},
+        {"OfficerOfRecord", "Officer of Record"}
+    }),
+    ChangedType = Table.TransformColumnTypes(FixedColumns,{
+        {"Source.Name", type text},
+        {"Case Number", type text},
+        {"Incident Date", type date},
+        {"Incident Time", type datetime},
+        {"Incident Date_Between", type date},
+        {"Incident Time_Between", type datetime},
+        {"Report Date", type date},
+        {"Report Time", type datetime},
+        {"Incident Type_1", type text},
+        {"Incident Type_2", type text},
+        {"Incident Type_3", type text},
+        {"FullAddress", type text},
+        {"Grid", type text},
+        {"Zone", Int64.Type},
+        {"Narrative", type text},
+        {"Total Value Stolen", type any},
+        {"Total Value Recover", type any},
+        {"Registration 1", type text},
+        {"Make1", type text},
+        {"Model1", type text},
+        {"Reg State 1", type text},
+        {"Registration 2", type any},
+        {"Reg State 2", type any},
+        {"Make2", type any},
+        {"Model2", type any},
+        {"Reviewed By", type text},
+        {"CompleteCalc", type text},
+        {"Officer of Record", type text},
+        {"Squad", type text},
+        {"Det_Assigned", type text},
+        {"Case_Status", type text}
+    }),
+    RemovedSourceName = Table.RemoveColumns(ChangedType,{"Source.Name"}),
+    ChangedType1 = Table.TransformColumnTypes(RemovedSourceName,{
+        {"Total Value Stolen", Currency.Type},
+        {"Total Value Recover", Currency.Type}
+    }),
+    RemovedDuplicates = Table.Distinct(ChangedType1, {"Case Number"}),
+    Result = RemovedDuplicates,
+    #"Cleaned Text" = Table.TransformColumns(Result,{{"Narrative", Text.Clean, type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Cleaned Text",{{"Narrative", Text.Trim, type text}})
+in
+    #"Trimmed Text"
+	
+	
+	
+Robbery_
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    InvokedTransform = Table.AddColumn(FilteredHiddenFiles, "Transform File", each Transform_File([Content])),
+    RenamedColumns1 = Table.RenameColumns(InvokedTransform, {"Name", "Source.Name"}),
+    RemovedOtherColumns = Table.SelectColumns(RenamedColumns1, {"Source.Name", "Transform File"}),
+    ExpandedTable = Table.ExpandTableColumn(RemovedOtherColumns, "Transform File", Table.ColumnNames(Transform_File(#"Sample File"))),
+    FixedColumns = Table.RenameColumns(ExpandedTable, {
+        {"CaseNumber", "Case Number"},
+        {"IncDate", "Incident Date"},
+        {"IncidentTime", "Incident Time"},
+        {"IncidentDateBetween", "Incident Date_Between"},
+        {"IncidentTimeBetween", "Incident Time_Between"},
+        {"ReportDate", "Report Date"},
+        {"ReportTime", "Report Time"},
+        {"IncidentType1", "Incident Type_1"},
+        {"IncidentType2", "Incident Type_2"},
+        {"IncidentType3", "Incident Type_3"},
+        {"TotalValueStolen", "Total Value Stolen"},
+        {"TotalValueRecover", "Total Value Recover"},
+        {"Registration1", "Registration 1"},
+        {"RegState1", "Reg State 1"},
+        {"Registration2", "Registration 2"},
+        {"RegState2", "Reg State 2"},
+        {"ReviewedBy", "Reviewed By"},
+        {"OfficerOfRecord", "Officer of Record"}
+    }),
+    ChangedType = Table.TransformColumnTypes(FixedColumns,{
+        {"Source.Name", type text},
+        {"Case Number", type text},
+        {"Incident Date", type date},
+        {"Incident Time", type datetime},
+        {"Incident Date_Between", type date},
+        {"Incident Time_Between", type datetime},
+        {"Report Date", type date},
+        {"Report Time", type datetime},
+        {"Incident Type_1", type text},
+        {"Incident Type_2", type text},
+        {"Incident Type_3", type text},
+        {"FullAddress", type text},
+        {"Grid", type text},
+        {"Zone", Int64.Type},
+        {"Narrative", type text},
+        {"Total Value Stolen", type any},
+        {"Total Value Recover", type any},
+        {"Registration 1", type text},
+        {"Make1", type text},
+        {"Model1", type text},
+        {"Reg State 1", type text},
+        {"Registration 2", type any},
+        {"Reg State 2", type any},
+        {"Make2", type any},
+        {"Model2", type any},
+        {"Reviewed By", type text},
+        {"CompleteCalc", type text},
+        {"Officer of Record", type text},
+        {"Squad", type text},
+        {"Det_Assigned", type text},
+        {"Case_Status", type text}
+    }),
+    RemovedSourceName = Table.RemoveColumns(ChangedType,{"Source.Name"}),
+    ChangedType1 = Table.TransformColumnTypes(RemovedSourceName,{
+        {"Total Value Stolen", Currency.Type},
+        {"Total Value Recover", Currency.Type}
+    }),
+    RemovedDuplicates = Table.Distinct(ChangedType1, {"Case Number"}),
+    Result = RemovedDuplicates,
+    #"Cleaned Text" = Table.TransformColumns(Result,{{"Narrative", Text.Clean, type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Cleaned Text",{{"Narrative", Text.Trim, type text}})
+in
+    #"Trimmed Text"
+	
+	
+	
+Sexual_Offenses_
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    InvokedTransform = Table.AddColumn(FilteredHiddenFiles, "Transform File", each Transform_File([Content])),
+    RenamedColumns1 = Table.RenameColumns(InvokedTransform, {"Name", "Source.Name"}),
+    RemovedOtherColumns = Table.SelectColumns(RenamedColumns1, {"Source.Name", "Transform File"}),
+    ExpandedTable = Table.ExpandTableColumn(RemovedOtherColumns, "Transform File", Table.ColumnNames(Transform_File(#"Sample File"))),
+    FixedColumns = Table.RenameColumns(ExpandedTable, {
+        {"CaseNumber", "Case Number"},
+        {"IncDate", "Incident Date"},
+        {"IncidentTime", "Incident Time"},
+        {"IncidentDateBetween", "Incident Date_Between"},
+        {"IncidentTimeBetween", "Incident Time_Between"},
+        {"ReportDate", "Report Date"},
+        {"ReportTime", "Report Time"},
+        {"IncidentType1", "Incident Type_1"},
+        {"IncidentType2", "Incident Type_2"},
+        {"IncidentType3", "Incident Type_3"},
+        {"TotalValueStolen", "Total Value Stolen"},
+        {"TotalValueRecover", "Total Value Recover"},
+        {"Registration1", "Registration 1"},
+        {"RegState1", "Reg State 1"},
+        {"Registration2", "Registration 2"},
+        {"RegState2", "Reg State 2"},
+        {"ReviewedBy", "Reviewed By"},
+        {"OfficerOfRecord", "Officer of Record"}
+    }),
+    ChangedType = Table.TransformColumnTypes(FixedColumns,{
+        {"Source.Name", type text},
+        {"Case Number", type text},
+        {"Incident Date", type date},
+        {"Incident Time", type datetime},
+        {"Incident Date_Between", type date},
+        {"Incident Time_Between", type datetime},
+        {"Report Date", type date},
+        {"Report Time", type datetime},
+        {"Incident Type_1", type text},
+        {"Incident Type_2", type text},
+        {"Incident Type_3", type text},
+        {"FullAddress", type text},
+        {"Grid", type text},
+        {"Zone", Int64.Type},
+        {"Narrative", type text},
+        {"Total Value Stolen", type any},
+        {"Total Value Recover", type any},
+        {"Registration 1", type text},
+        {"Make1", type text},
+        {"Model1", type text},
+        {"Reg State 1", type text},
+        {"Registration 2", type any},
+        {"Reg State 2", type any},
+        {"Make2", type any},
+        {"Model2", type any},
+        {"Reviewed By", type text},
+        {"CompleteCalc", type text},
+        {"Officer of Record", type text},
+        {"Squad", type text},
+        {"Det_Assigned", type text},
+        {"Case_Status", type text}
+    }),
+    RemovedSourceName = Table.RemoveColumns(ChangedType,{"Source.Name"}),
+    ChangedType1 = Table.TransformColumnTypes(RemovedSourceName,{
+        {"Total Value Stolen", Currency.Type},
+        {"Total Value Recover", Currency.Type}
+    }),
+    RemovedDuplicates = Table.Distinct(ChangedType1, {"Case Number"}),
+    Result = RemovedDuplicates,
+    #"Cleaned Text" = Table.TransformColumns(Result,{{"Narrative", Text.Clean, type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Cleaned Text",{{"Narrative", Text.Trim, type text}})
+in
+    #"Trimmed Text"
+
+
+
+
+ESRI_Export
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    InvokedTransform = Table.AddColumn(FilteredHiddenFiles, "Transform File", each Transform_File([Content])),
+    RenamedColumns1 = Table.RenameColumns(InvokedTransform, {"Name", "Source.Name"}),
+    RemovedOtherColumns = Table.SelectColumns(RenamedColumns1, {"Source.Name", "Transform File"}),
+    ExpandedTable = Table.ExpandTableColumn(RemovedOtherColumns, "Transform File", Table.ColumnNames(Transform_File(#"Sample File"))),
+    FixedColumns = Table.RenameColumns(ExpandedTable, {
+        {"CaseNumber", "Case Number"},
+        {"IncDate", "Incident Date"},
+        {"IncidentTime", "Incident Time"},
+        {"IncidentDateBetween", "Incident Date_Between"},
+        {"IncidentTimeBetween", "Incident Time_Between"},
+        {"ReportDate", "Report Date"},
+        {"ReportTime", "Report Time"},
+        {"IncidentType1", "Incident Type_1"},
+        {"IncidentType2", "Incident Type_2"},
+        {"IncidentType3", "Incident Type_3"},
+        {"TotalValueStolen", "Total Value Stolen"},
+        {"TotalValueRecover", "Total Value Recover"},
+        {"Registration1", "Registration 1"},
+        {"RegState1", "Reg State 1"},
+        {"Registration2", "Registration 2"},
+        {"RegState2", "Reg State 2"},
+        {"ReviewedBy", "Reviewed By"},
+        {"OfficerOfRecord", "Officer of Record"}
+    }),
+    ChangedType = Table.TransformColumnTypes(FixedColumns,{
+        {"Source.Name", type text},
+        {"Case Number", type text},
+        {"Incident Date", type date},
+        {"Incident Time", type datetime},
+        {"Incident Date_Between", type date},
+        {"Incident Time_Between", type datetime},
+        {"Report Date", type date},
+        {"Report Time", type datetime},
+        {"Incident Type_1", type text},
+        {"Incident Type_2", type text},
+        {"Incident Type_3", type text},
+        {"FullAddress", type text},
+        {"Grid", type text},
+        {"Zone", Int64.Type},
+        {"Narrative", type text},
+        {"Total Value Stolen", Currency.Type},
+        {"Total Value Recover", Currency.Type},
+        {"Registration 1", type text},
+        {"Make1", type text},
+        {"Model1", type text},
+        {"Reg State 1", type text},
+        {"Registration 2", type text},
+        {"Reg State 2", type text},
+        {"Make2", type text},
+        {"Model2", type text},
+        {"Reviewed By", type text},
+        {"CompleteCalc", type text},
+        {"Officer of Record", type text},
+        {"Squad", type text},
+        {"Det_Assigned", type text},
+        {"Case_Status", type text}
+    }),
+    Cleaned = Table.RemoveColumns(ChangedType,{"Source.Name"}),
+    RemovedDuplicates = Table.Distinct(Cleaned, {"Case Number"}),
+    SortedRows = Table.Sort(RemovedDuplicates, {{"Case Number", Order.Ascending}}),
+    Result = SortedRows,
+    #"Cleaned Text" = Table.TransformColumns(Result,{{"Narrative", Text.Clean, type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Cleaned Text",{{"Narrative", Text.Trim, type text}})
+in
+    #"Trimmed Text"
+	
+	
+
+Current_7D
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files1" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File", each #"Transform File"([Content])),
+    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File"}),
+    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+    
+    // Fixed data type transformations with proper types
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{
+        {"Source.Name", type text}, 
+        {"Case Number", type text}, 
+        {"Incident Date", type date}, 
+        {"Incident Time", type datetime}, 
+        {"Incident Date_Between", type date}, 
+        {"Incident Time_Between", type datetime}, 
+        {"Report Date", type date}, 
+        {"Report Time", type datetime}, 
+        {"Incident Type_1", type text}, 
+        {"Incident Type_2", type text}, 
+        {"Incident Type_3", type text}, 
+        {"FullAddress", type text}, 
+        {"Grid", type text}, 
+        {"Zone", Int64.Type}, 
+        {"Narrative", type text}, 
+        {"Total Value Stolen", Currency.Type}, 
+        {"Total Value Recover", Currency.Type}, 
+        {"Registration 1", type text}, 
+        {"Make1", type text}, 
+        {"Model1", type text}, 
+        {"Reg State 1", type text}, 
+        {"Registration 2", type text}, 
+        {"Reg State 2", type text}, 
+        {"Make2", type text}, 
+        {"Model2", type text}, 
+        {"Reviewed By", type text}, 
+        {"CompleteCalc", type text}, 
+        {"Officer of Record", type text}, 
+        {"Squad", type text}, 
+        {"Det_Assigned", type text}, 
+        {"Case_Status", type text}, 
+        {"NIBRS Classification", type text}
+    }),
+    
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Source.Name"}),
+    
+    // Add missing calculated columns before referencing them
+    #"Added Start of Hour" = Table.AddColumn(#"Removed Columns", "Start of Hour", 
+        each if [Incident Time] <> null then Time.From(DateTime.Time([Incident Time])) else null, type time),
+    #"Added INC_TIME" = Table.AddColumn(#"Added Start of Hour", "INC_TIME", 
+        each if [Incident Time] <> null then Time.From(DateTime.Time([Incident Time])) else null, type time),
+    #"Added INC_DATE" = Table.AddColumn(#"Added INC_TIME", "INC_DATE", 
+        each if [Incident Date] <> null then Date.From([Incident Date]) else null, type date),
+    #"Added INC_DATE_AND_TIME" = Table.AddColumn(#"Added INC_DATE", "INC_DATE_AND_TIME", 
+        each if [Incident Date] <> null and [Incident Time] <> null 
+             then DateTime.From([Incident Date]) + Duration.From([Incident Time]) 
+             else null, type datetime),
+    
+    // Add other missing calculated columns
+    #"Added TOD" = Table.AddColumn(#"Added INC_DATE_AND_TIME", "TOD", 
+        each if [INC_TIME] <> null then 
+            if Time.Hour([INC_TIME]) >= 6 and Time.Hour([INC_TIME]) < 14 then "Day"
+            else if Time.Hour([INC_TIME]) >= 14 and Time.Hour([INC_TIME]) < 22 then "Evening"
+            else "Night"
+        else null, type text),
+    #"Added Day Name" = Table.AddColumn(#"Added TOD", "Day Name", 
+        each if [INC_DATE] <> null then Date.DayOfWeekName([INC_DATE]) else null, type text),
+    #"Added Month Name" = Table.AddColumn(#"Added Day Name", "Month Name", 
+        each if [INC_DATE] <> null then Date.MonthName([INC_DATE]) else null, type text),
+    #"Added Year" = Table.AddColumn(#"Added Month Name", "Year", 
+        each if [INC_DATE] <> null then Date.Year([INC_DATE]) else null, Int64.Type),
+    #"Added Week of Year" = Table.AddColumn(#"Added Year", "Week of Year", 
+        each if [INC_DATE] <> null then Date.WeekOfYear([INC_DATE]) else null, Int64.Type),
+    #"Added Week of Month" = Table.AddColumn(#"Added Week of Year", "Week of Month", 
+        each if [INC_DATE] <> null then Date.WeekOfMonth([INC_DATE]) else null, Int64.Type),
+    #"Added Day" = Table.AddColumn(#"Added Week of Month", "Day", 
+        each if [INC_DATE] <> null then Date.Day([INC_DATE]) else null, Int64.Type),
+    #"Added Day of Year" = Table.AddColumn(#"Added Day", "Day of Year", 
+        each if [INC_DATE] <> null then Date.DayOfYear([INC_DATE]) else null, Int64.Type),
+    
+    // Add other missing columns that are referenced in the reorder step
+    #"Added BLOCK" = Table.AddColumn(#"Added Day of Year", "BLOCK", 
+        each if [FullAddress] <> null then Text.BeforeDelimiter([FullAddress], " ", 1) else null, type text),
+    #"Added Location" = Table.AddColumn(#"Added BLOCK", "Location", 
+        each [FullAddress], type text),
+    #"Added ALL_INCIDENTS" = Table.AddColumn(#"Added Location", "ALL_INCIDENTS", 
+        each [Incident Type_1] & " - " & (if [Incident Type_2] <> null then [Incident Type_2] else "") & 
+             (if [Incident Type_3] <> null then " - " & [Incident Type_3] else ""), type text),
+    #"Added CASE_NUMBER_LENGTH" = Table.AddColumn(#"Added ALL_INCIDENTS", "CASE_NUMBER_LENGTH", 
+        each if [Case Number] <> null then Text.Length([Case Number]) else null, Int64.Type),
+    #"Added St#" = Table.AddColumn(#"Added CASE_NUMBER_LENGTH", "St#", 
+        each null, type text),
+    #"Added Notes" = Table.AddColumn(#"Added St#", "Notes", 
+        each null, type text),
+    #"Added VEHICLE" = Table.AddColumn(#"Added Notes", "VEHICLE", 
+        each if [Make1] <> null then [Make1] & " " & (if [Model1] <> null then [Model1] else "") else null, type text),
+    #"Added Suspect" = Table.AddColumn(#"Added VEHICLE", "Suspect", 
+        each null, type text),
+    #"Added TOTAL_STOLEN_AMOUNT" = Table.AddColumn(#"Added Suspect", "TOTAL_STOLEN_AMOUNT", 
+        each [Total Value Stolen], Currency.Type),
+    #"Added REPORT_CYCLE" = Table.AddColumn(#"Added TOTAL_STOLEN_AMOUNT", "REPORT_CYCLE", 
+        each null, type text),
+    #"Added TIME_OF_DAY" = Table.AddColumn(#"Added REPORT_CYCLE", "TIME_OF_DAY", 
+        each [TOD], type text),
+    
+    // Apply filters with proper null checking
+    #"Filtered Rows" = Table.SelectRows(#"Added TIME_OF_DAY", each 
+        [ALL_INCIDENTS] <> null and 
+        (Text.Contains(Text.Upper([ALL_INCIDENTS]), "COMMERCIAL") or 
+         Text.Contains(Text.Upper([ALL_INCIDENTS]), "RESIDENCE"))),
+    
+    #"Removed Duplicates" = Table.Distinct(#"Filtered Rows", {"Case Number"}),
+    
+    #"Reordered Columns" = Table.ReorderColumns(#"Removed Duplicates",{
+        "Case Number", "INC_DATE", "TOD", "Start of Hour", "INC_TIME", "Day Name", "Month Name", 
+        "BLOCK", "Location", "ALL_INCIDENTS", "Incident Type_1", "Incident Type_2", "Incident Type_3", 
+        "FullAddress", "Grid", "Zone", "Narrative", "Total Value Stolen", "Total Value Recover", 
+        "Registration 1", "Make1", "Model1", "Reg State 1", "Registration 2", "Reg State 2", "Make2", "Model2", 
+        "Reviewed By", "CompleteCalc", "Officer of Record", "Squad", "Det_Assigned", "Case_Status", "NIBRS Classification", 
+        "CASE_NUMBER_LENGTH", "Incident Date", "Incident Time", "Incident Date_Between", "Incident Time_Between", 
+        "Report Date", "Report Time", "Year", "Week of Year", "Week of Month", "Day", "Day of Year", 
+        "INC_DATE_AND_TIME", "St#", "Notes", "VEHICLE", "Suspect", "TOTAL_STOLEN_AMOUNT", "REPORT_CYCLE", "TIME_OF_DAY"
+    }),
+    
+    #"Changed Type2" = Table.TransformColumnTypes(#"Reordered Columns",{
+        {"Report Time", type time}, 
+        {"Incident Time_Between", type time}, 
+        {"Incident Time", type time}
+    }),
+    
+    #"Filtered Rows1" = Table.SelectRows(#"Changed Type2", each 
+        ([Incident Type_3] <> "Domestic Violence") and 
+        ([Incident Type_1] <> "Violation of Court Order") and 
+        ([Case Number] <> "25-021703")),
+    #"Cleaned Text" = Table.TransformColumns(#"Filtered Rows1",{{"Narrative", Text.Clean, type text}}),
+    #"Trimmed Text" = Table.TransformColumns(#"Cleaned Text",{{"Narrative", Text.Trim, type text}})
+in
+    #"Trimmed Text"
+
+
+
+
+Current_28D
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    FilteredHiddenFiles = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    InvokedTransform = Table.AddColumn(FilteredHiddenFiles, "Transform File", each Transform_File([Content])),
+    RenamedColumns1 = Table.RenameColumns(InvokedTransform, {"Name", "Source.Name"}),
+    RemovedOtherColumns = Table.SelectColumns(RenamedColumns1, {"Source.Name", "Transform File"}),
+    ExpandedTable = Table.ExpandTableColumn(RemovedOtherColumns, "Transform File", Table.ColumnNames(Transform_File(#"Sample File"))),
+    FixedColumns = Table.RenameColumns(ExpandedTable, {
+        {"CaseNumber", "Case Number"},
+        {"IncDate", "Incident Date"},
+        {"IncidentTime", "Incident Time"},
+        {"IncidentDateBetween", "Incident Date_Between"},
+        {"IncidentTimeBetween", "Incident Time_Between"},
+        {"ReportDate", "Report Date"},
+        {"ReportTime", "Report Time"},
+        {"IncidentType1", "Incident Type_1"},
+        {"IncidentType2", "Incident Type_2"},
+        {"IncidentType3", "Incident Type_3"},
+        {"TotalValueStolen", "Total Value Stolen"},
+        {"TotalValueRecover", "Total Value Recover"},
+        {"Registration1", "Registration 1"},
+        {"RegState1", "Reg State 1"},
+        {"Registration2", "Registration 2"},
+        {"RegState2", "Reg State 2"},
+        {"ReviewedBy", "Reviewed By"},
+        {"OfficerOfRecord", "Officer of Record"}
+    }),
+    ChangedType = Table.TransformColumnTypes(FixedColumns,{
+        {"Source.Name", type text},
+        {"Case Number", type text},
+        {"Incident Date", type date},
+        {"Incident Time", type datetime},
+        {"Incident Date_Between", type date},
+        {"Incident Time_Between", type datetime},
+        {"Report Date", type date},
+        {"Report Time", type datetime},
+        {"Incident Type_1", type text},
+        {"Incident Type_2", type text},
+        {"Incident Type_3", type text},
+        {"FullAddress", type text},
+        {"Grid", type text},
+        {"Zone", Int64.Type},
+        {"Narrative", type text},
+        {"Total Value Stolen", Currency.Type},
+        {"Total Value Recover", Currency.Type},
+        {"Registration 1", type text},
+        {"Make1", type text},
+        {"Model1", type text},
+        {"Reg State 1", type text},
+        {"Registration 2", type text},
+        {"Reg State 2", type text},
+        {"Make2", type text},
+        {"Model2", type text},
+        {"Reviewed By", type text},
+        {"CompleteCalc", type text},
+        {"Officer of Record", type text},
+        {"Squad", type text},
+        {"Det_Assigned", type text},
+        {"Case_Status", type text}
+    }),
+    TwentyEightDayStart = #date(2025, 3, 17),
+    TwentyEightDayEnd = #date(2025, 4, 14),
+    Filtered28Day = Table.SelectRows(ChangedType, each [Incident Date] >= TwentyEightDayStart and [Incident Date] <= TwentyEightDayEnd),
+    Cleaned = Table.RemoveColumns(Filtered28Day,{"Source.Name"}),
+    RemovedDuplicates = Table.Distinct(Cleaned, {"Case Number"}),
+    SortedRows = Table.Sort(RemovedDuplicates, {{"Case Number", Order.Ascending}}),
+    Result = SortedRows,
+    #"Trimmed Text" = Table.TransformColumns(Result,{{"Narrative", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+in
+    #"Cleaned Text"

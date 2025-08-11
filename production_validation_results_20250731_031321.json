@@ -1,0 +1,127 @@
+{
+  "validation_metadata": {
+    "start_time": "2025-07-31T03:13:21.289765",
+    "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+    "system_info": {
+      "cpu_count": 12,
+      "memory_gb": 15.66,
+      "platform": "nt"
+    }
+  },
+  "performance_benchmarks": {
+    "RMS_100": {
+      "operation": "RMS_processing_100",
+      "duration_seconds": 0.001,
+      "records_processed": 100,
+      "records_per_second": 74051.98,
+      "memory_used_mb": 5.46,
+      "timestamp": "2025-07-31T03:13:21.311883"
+    },
+    "RMS_500": {
+      "operation": "RMS_processing_500",
+      "duration_seconds": 0.002,
+      "records_processed": 500,
+      "records_per_second": 237368.65,
+      "memory_used_mb": 5.61,
+      "timestamp": "2025-07-31T03:13:21.314591"
+    },
+    "RMS_1000": {
+      "operation": "RMS_processing_1000",
+      "duration_seconds": 0.004,
+      "records_processed": 1000,
+      "records_per_second": 265210.5,
+      "memory_used_mb": 5.92,
+      "timestamp": "2025-07-31T03:13:21.318881"
+    },
+    "RMS_2000": {
+      "operation": "RMS_processing_2000",
+      "duration_seconds": 0.009,
+      "records_processed": 2000,
+      "records_per_second": 214949.21,
+      "memory_used_mb": 7.04,
+      "timestamp": "2025-07-31T03:13:21.328838"
+    },
+    "RMS_5000": {
+      "operation": "RMS_processing_5000",
+      "duration_seconds": 0.017,
+      "records_processed": 5000,
+      "records_per_second": 294659.7,
+      "memory_used_mb": 8.91,
+      "timestamp": "2025-07-31T03:13:21.346488"
+    },
+    "CAD_100": {
+      "operation": "CAD_processing_100",
+      "duration_seconds": 0.002,
+      "records_processed": 100,
+      "records_per_second": 45829.37,
+      "memory_used_mb": 9.31,
+      "timestamp": "2025-07-31T03:13:21.349468"
+    },
+    "CAD_500": {
+      "operation": "CAD_processing_500",
+      "duration_seconds": 0.003,
+      "records_processed": 456,
+      "records_per_second": 172104.98,
+      "memory_used_mb": 9.3,
+      "timestamp": "2025-07-31T03:13:21.352959"
+    },
+    "CAD_1000": {
+      "operation": "CAD_processing_1000",
+      "duration_seconds": 0.002,
+      "records_processed": 912,
+      "records_per_second": 490410.93,
+      "memory_used_mb": 9.36,
+      "timestamp": "2025-07-31T03:13:21.355387"
+    },
+    "CAD_2000": {
+      "operation": "CAD_processing_2000",
+      "duration_seconds": 0.002,
+      "records_processed": 1710,
+      "records_per_second": 830122.67,
+      "memory_used_mb": 9.32,
+      "timestamp": "2025-07-31T03:13:21.358198"
+    },
+    "CAD_5000": {
+      "operation": "CAD_processing_5000",
+      "duration_seconds": 0.004,
+      "records_processed": 4218,
+      "records_per_second": 1047210.51,
+      "memory_used_mb": 10.12,
+      "timestamp": "2025-07-31T03:13:21.363236"
+    }
+  },
+  "geocoding_integration": {
+    "total_addresses": 8,
+    "successful_geocodes": 4,
+    "failed_geocodes": 4,
+    "validation_issues": 4,
+    "performance": {
+      "operation": "geocoding_batch",
+      "duration_seconds": 0.0,
+      "records_processed": 8,
+      "records_per_second": 135300.13,
+      "memory_used_mb": 9.03,
+      "timestamp": "2025-07-31T03:13:21.364093"
+    },
+    "batch_performance": {
+      "operation": "geocoding_batch_api",
+      "duration_seconds": 0.0,
+      "records_processed": 5,
+      "records_per_second": 699050.67,
+      "memory_used_mb": 9.03,
+      "timestamp": "2025-07-31T03:13:21.364431"
+    }
+  },
+  "arcgis_functionality": {
+    "arcpy_available": false,
+    "spatial_operations": {},
+    "errors": [
+      "ArcPy not available - install ArcGIS Pro or ArcMap"
+    ]
+  },
+  "quality_assurance": {
+    "data_integrity": {
+      "rms_records": 136,
+      "cad_records": 114,
+      "final_records": 163,
+      "rms_duplicates": 

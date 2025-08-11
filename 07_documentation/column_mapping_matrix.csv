@@ -1,0 +1,42 @@
+Raw_Column_Number,Raw_Column_Name,Fill_Rate_Percent,Sample_Data,Standardized_Column,Transformation_Type,Mapping_Status,Notes
+1,Case Number,100.0,25-000813,Case_Number,Direct_Rename,MAPPED,Primary key - direct mapping
+2,Incident Date,97.1,2025-01-03 00:00:00,Incident_Date,Date_Cascade,MAPPED,Combined with cascade logic from multiple date fields
+3,Incident Time,96.3,0 days 21:30:00,Incident_Time,Time_Cascade,MAPPED,Combined with cascade logic from multiple time fields + Timedelta conversion
+4,Incident Date_Between,44.9,2025-01-04 00:00:00,Incident_Date,Date_Cascade,COMBINED,Secondary date field - cascaded into Incident_Date
+5,Incident Time_Between,44.1,0 days 06:25:00,Incident_Time,Time_Cascade,COMBINED,Secondary time field - cascaded into Incident_Time
+6,Report Date,100.0,2025-01-04 00:00:00,Incident_Date,Date_Cascade,COMBINED,Tertiary date field - cascaded into Incident_Date
+7,Report Time,100.0,0 days 10:59:09,Incident_Time,Time_Cascade,COMBINED,Tertiary time field - cascaded into Incident_Time
+8,Incident Type_1,100.0,Motor Vehicle Theft - 2C:20-3,All_Incidents,Incident_Unpivot,COMBINED,Primary incident type - unpivoted into All_Incidents
+9,Incident Type_2,43.4,Juvenile Investigation,All_Incidents,Incident_Unpivot,COMBINED,Secondary incident type - unpivoted into All_Incidents
+10,Incident Type_3,19.1,Robbery - 2C:15-1,All_Incidents,Incident_Unpivot,COMBINED,Tertiary incident type - unpivoted into All_Incidents
+11,FullAddress,100.0,309 Lookout Avenue Hackensack NJ 07601,Location,Address_Standardization,MAPPED,Address standardized and mapped to Location
+12,Grid,94.9,I2,Grid,Direct_Rename,MAPPED,Geographic grid reference - direct mapping
+13,Zone,91.9,9.0,Post,Zone_To_Post,MAPPED,Zone field mapped to Post with numeric conversion
+14,Narrative,100.0,On Saturday January 4th 2025...,Narrative,Text_Cleaning,MAPPED,Text cleaned and mapped to Narrative
+15,Total Value Stolen,3.7,50300.0,Total_Value_Stolen,Direct_Rename,MAPPED,Financial field - direct mapping with formatting
+16,Total Value Recover,1.5,0.0,Total_Value_Recovered,Direct_Rename,MAPPED,Financial field - direct mapping with name correction
+17,Registration 1,52.2,W46uly,Vehicle_1,Vehicle_Combination,COMBINED,Primary vehicle registration - combined into Vehicle_1
+18,Make1,52.2,Honda,Vehicle_1,Vehicle_Combination,COMBINED,Primary vehicle make - combined into Vehicle_1
+19,Model1,51.5,ACC,Vehicle_1,Vehicle_Combination,COMBINED,Primary vehicle model - combined into Vehicle_1
+20,Reg State 1,50.7,NJ,Vehicle_1,Vehicle_Combination,COMBINED,Primary vehicle state - combined into Vehicle_1
+21,Registration 2,2.9,d48utt,Vehicle_2,Vehicle_Combination,COMBINED,Secondary vehicle registration - combined into Vehicle_2
+22,Reg State 2,2.2,NJ,Vehicle_2,Vehicle_Combination,COMBINED,Secondary vehicle state - combined into Vehicle_2
+23,Make2,2.9,Ford,Vehicle_2,Vehicle_Combination,COMBINED,Secondary vehicle make - combined into Vehicle_2
+24,Model2,2.2,XPL,Vehicle_2,Vehicle_Combination,COMBINED,Secondary vehicle model - combined into Vehicle_2
+25,Reviewed By,99.3,klosk_j,UNMAPPED,Administrative,DROPPED,Administrative field - not needed for analysis
+26,CompleteCalc,100.0,Complete,UNMAPPED,Administrative,DROPPED,Administrative completion status - not needed for analysis
+27,Officer of Record,100.0,P.O. Nicholas Mazzaccaro 377,Officer_Of_Record,Direct_Rename,MAPPED,Officer information - direct mapping with standardization
+28,Squad,99.3,B4,Squad,Direct_Rename,MAPPED,Squad assignment - direct mapping
+29,Det_Assigned,96.3,Det. Robert Ghirardi 150,UNMAPPED,Administrative,DROPPED,Detective assignment - administrative field not needed for primary analysis
+30,Case_Status,96.3,Active/Administratively Closed,UNMAPPED,Administrative,DROPPED,Case status - administrative field not needed for primary analysis
+31,NIBRS Classification,77.9,240 = Theft of Motor Vehicle,NIBRS_Classification,Direct_Rename,MAPPED,Legal classification - direct mapping
+DERIVED,Time_Of_Day,100.0,12:00-15:59 Afternoon,Time_Of_Day,Time_Calculation,GENERATED,Calculated from Incident_Time using time-of-day logic
+DERIVED,Period,100.0,YTD,Period,Date_Calculation,GENERATED,Calculated from Incident_Date using period logic
+DERIVED,Season,100.0,Winter,Season,Date_Calculation,GENERATED,Calculated from Incident_Date using seasonal logic
+DERIVED,Day_Of_Week,100.0,Friday,Day_Of_Week,Date_Calculation,GENERATED,Calculated from Incident_Date using weekday logic
+DERIVED,Day_Type,100.0,Weekday,Day_Type,Date_Calculation,GENERATED,Calculated from Day_Of_Week using weekday/weekend logic
+DERIVED,Block,100.0,Lookout Avenue 300 Block,Block,Address_Parsing,GENERATED,Calculated from Location using block extraction logic
+DERIVED,All_Incidents,100.0,Motor Vehicle Theft,All_Incidents,Incident_Processing,GENERATED,Primary incident from unpivoted incident types
+DERIVED,Incident_Type,100.0,Motor Vehicle Theft,Incident_Type,Incident_Processing,GENERATED,Clean incident type from All_Incidents
+DERIVED,Crime_Category,100.0,Motor Vehicle Theft,Crime_Category,Crime_Classification,GENERATED,Classified from Incident_Type using lookup tables
+DERIVED,Vehicle_1_And_Vehicle_2,45.0,NJ - W46uly Honda/ACC,Vehicle_1_And_Vehicle_2,Vehicle_Combination,GENERATED,Combined Vehicle_1 and Vehicle_2 when both present

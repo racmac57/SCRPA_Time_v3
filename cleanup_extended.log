@@ -1,0 +1,16 @@
+2025-07-26 21:04:10,262 INFO: Starting extended cleanup under C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2
+2025-07-26 21:04:10,265 INFO: Moved: cleanup_extended_flattened.py \u2192 cleanup_extended_flattened_d17bd5c5.py
+2025-07-26 21:04:10,352 INFO: Moved: standalone_crime_report_script.py \u2192 standalone_crime_report_script_898a068a.py
+2025-07-26 21:04:10,356 INFO: Moved: standalone_crime_report_script.py \u2192 standalone_crime_report_script_e4a0249e.py
+2025-07-26 21:04:10,359 INFO: Moved: standalone_crime_report_script.py \u2192 standalone_crime_report_script_9273bdd0.py
+2025-07-26 21:04:10,365 INFO: Moved: arcpy_dynamic_folder_script.py \u2192 arcpy_dynamic_folder_script_b5c930d8.py
+2025-07-26 21:04:10,367 INFO: Moved: Hybrid_Dynamic_Folder_Script.py \u2192 Hybrid_Dynamic_Folder_Script_fae947e7.py
+2025-07-26 21:04:10,389 INFO: Moved: Updated_Weekly_Crime_Report.py \u2192 Updated_Weekly_Crime_Report_9c538ede.py
+2025-07-26 21:04:10,395 INFO: Moved: config.py \u2192 config_d69596a1.py
+2025-07-26 21:04:10,400 INFO: Moved: logger.py \u2192 logger_0d18e790.py
+2025-07-26 21:04:10,403 INFO: Moved: main.py \u2192 main_310676cd.py
+2025-07-26 21:04:10,421 INFO: Moved: update_pbix_parameter_enhanced_with_json.py \u2192 update_pbix_parameter_enhanced_with_json_c6d519d6.py
+2025-07-26 21:04:10,424 INFO: Moved: arcpy_dynamic_folder_script.py \u2192 arcpy_dynamic_folder_script_385070d4.py
+2025-07-26 21:04:10,427 INFO: Moved: Hybrid_Dynamic_Folder_Script.py \u2192 Hybrid_Dynamic_Folder_Script_dafb4159.py
+2025-07-26 21:04:10,432 INFO: Moved: Updated_Weekly_Crime_Report.py \u2192 Updated_Weekly_Crime_Report_1b9f1f06.py
+2025-07-26 21:04:10,436 INFO: Extended cleanup complete.

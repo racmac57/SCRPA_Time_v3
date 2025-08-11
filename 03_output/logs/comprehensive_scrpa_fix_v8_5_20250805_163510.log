@@ -1,0 +1,22 @@
+2025-08-05 16:35:10,454 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-05 16:35:10,897 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-05 16:35:10,898 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-05 16:35:10,898 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-05 16:35:10,968 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-05 16:35:10,986 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-05 16:35:10,986 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-05 16:35:10,987 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W32, Date: 20250805
+2025-08-05 16:35:10,988 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Complete SCRPA Pipeline V8.5... (Memory: 95.3MB)
+2025-08-05 16:35:10,988 - ComprehensiveSCRPAFixV8_5 - INFO - Starting Comprehensive SCRPA Fix V8.5 pipeline...
+2025-08-05 16:35:10,988 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Complete SCRPA Pipeline V8.5 (Fast):
+2025-08-05 16:35:10,988 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 16:35:10,988 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 95.3MB (Δ+0.0MB)
+2025-08-05 16:35:10,988 - ComprehensiveSCRPAFixV8_5 - ERROR - No CAD or RMS excel files found in C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\02_exports
+2025-08-05 16:35:10,989 - ComprehensiveSCRPAFixV8_5 - ERROR - Fatal error in main execution: No data files found to process
+Traceback (most recent call last):
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Fix_v9_Standardized.py", line 2624, in <module>
+    results = processor.process_final_pipeline()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Fix_v9_Standardized.py", line 2458, in process_final_pipeline
+    raise ValueError("No data files found to process")
+ValueError: No data files found to process

@@ -1,0 +1,11 @@
+AddressID,Address,X,Y,Score,Status,Match_addr
+0,"1 Park Avenue, Hackensack, NJ, 07601",634234.12,767543.89,95.5,M,"1 Park Ave, Hackensack, NJ, 07601"
+1,"1 University Plaza Drive, Hackensack, NJ, 07601",634567.34,767234.56,92.3,M,"1 University Plaza Dr, Hackensack, NJ, 07601"
+2,"10 Sussex Street, Hackensack, NJ, 07601",634123.45,767890.12,88.7,M,"10 Sussex St, Hackensack, NJ, 07601"
+3,"100 Essex Street, Hackensack, NJ, 07601",634456.78,767678.90,91.2,M,"100 Essex St, Hackensack, NJ, 07601"
+4,"100 John Street, Hackensack, NJ, 07601",634789.01,767345.67,89.4,M,"100 John St, Hackensack, NJ, 07601"
+5,"100 Second Street, Hackensack, NJ, 07601",634321.56,767789.23,93.8,M,"100 2nd St, Hackensack, NJ, 07601"
+6,"100 State Street, Hackensack, NJ, 07601",634654.89,767456.78,96.1,M,"100 State St, Hackensack, NJ, 07601"
+7,"11 East Anderson Street, Hackensack, NJ, 07601",634987.12,767123.45,87.9,M,"11 E Anderson St, Hackensack, NJ, 07601"
+8,"11 Passaic Street, Hackensack, NJ, 07601",634234.67,767567.89,90.6,M,"11 Passaic St, Hackensack, NJ, 07601"
+9,"111 River Street, Hackensack, NJ, 07601",634567.90,767234.12,94.3,M,"111 River St, Hackensack, NJ, 07601"

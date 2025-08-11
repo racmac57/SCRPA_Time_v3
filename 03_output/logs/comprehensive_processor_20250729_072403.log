@@ -1,0 +1,17 @@
+2025-07-29 07:24:03,303 - ComprehensiveProcessor - INFO - Comprehensive SCRPA Processor initialized
+2025-07-29 07:24:03,304 - ComprehensiveProcessor - INFO - Starting comprehensive SCRPA processing with all fixes
+2025-07-29 07:24:03,304 - ComprehensiveProcessor - INFO - Latest CAD file: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 07:24:03,304 - ComprehensiveProcessor - INFO - Latest RMS file: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 07:24:03,305 - ComprehensiveProcessor - INFO - Processing CAD data: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 07:24:03,776 - ComprehensiveProcessor - INFO - CAD processing complete: 114 records
+2025-07-29 07:24:03,779 - ComprehensiveProcessor - INFO - Formatted Incident_DateTime to standard format
+2025-07-29 07:24:03,780 - ComprehensiveProcessor - INFO - Formatted Incident_Date to standard format
+2025-07-29 07:24:03,780 - ComprehensiveProcessor - INFO - Formatted Incident_Time to standard format
+2025-07-29 07:24:03,780 - ComprehensiveProcessor - INFO - Processing RMS data: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 07:24:03,840 - ComprehensiveProcessor - INFO - RMS unpivoting: 134 → 219 records after unpivot
+2025-07-29 07:24:03,840 - ComprehensiveProcessor - INFO - RMS processing complete: 219 records
+2025-07-29 07:24:03,844 - ComprehensiveProcessor - INFO - Formatted Incident_DateTime to standard format
+2025-07-29 07:24:03,845 - ComprehensiveProcessor - INFO - Formatted Incident_Date to standard format
+2025-07-29 07:24:03,845 - ComprehensiveProcessor - INFO - Formatted Incident_Time to standard format
+2025-07-29 07:24:03,918 - ComprehensiveProcessor - INFO - Reordered columns with Case_Number first: ['Incident_DateTime', 'ALL_INCIDENTS', 'IncidentType', 'Crime_Category', 'TimeOfDay']...
+2025-07-29 07:24:03,936 - ComprehensiveProcessor - INFO - Processing complete: 333 records exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv

@@ -1,0 +1,46 @@
+2025-07-31 23:50:28,275 - INFO - === SCRPA Pipeline Validator Starting ===
+2025-07-31 23:50:28,276 - INFO - Starting complete SCRPA validation...
+2025-07-31 23:50:28,276 - INFO - Step 1: Checking existing output files...
+2025-07-31 23:50:28,280 - INFO - Found cad_data_standardized.csv: 114 records, 18 columns
+2025-07-31 23:50:28,287 - INFO - Found rms_data_standardized.csv: 134 records, 23 columns
+2025-07-31 23:50:28,295 - INFO - Found cad_rms_matched_standardized.csv: 299 records, 44 columns
+2025-07-31 23:50:28,295 - INFO - Step 2: Validating record counts...
+2025-07-31 23:50:28,295 - INFO - Validating record counts...
+2025-07-31 23:50:28,295 - INFO - Record count validation: FAIL
+2025-07-31 23:50:28,295 - WARNING -   Issue: Matched count 299 != RMS count 134
+2025-07-31 23:50:28,295 - INFO - Step 3: Validating column compliance...
+2025-07-31 23:50:28,295 - INFO - Validating column compliance...
+2025-07-31 23:50:28,296 - INFO -   cad_data_standardized: 100.0% compliant
+2025-07-31 23:50:28,296 - INFO -   rms_data_standardized: 100.0% compliant
+2025-07-31 23:50:28,296 - INFO -   cad_rms_matched_standardized: 0.0% compliant
+2025-07-31 23:50:28,296 - WARNING -     Non-compliant columns: ['Case_Number', 'Incident_Date', 'Incident_Time', 'Time_Of_Day', 'Period']
+2025-07-31 23:50:28,296 - WARNING - Column compliance FAILED: 48.2%
+2025-07-31 23:50:28,296 - INFO - Step 4: Validating CAD-RMS matching...
+2025-07-31 23:50:28,296 - INFO - Validating CAD-RMS matching...
+2025-07-31 23:50:28,304 - INFO -   CAD columns found: 18
+2025-07-31 23:50:28,304 - INFO -   Match rate: 0.0%
+2025-07-31 23:50:28,304 - INFO - CAD-RMS matching validation: FAIL
+2025-07-31 23:50:28,304 - WARNING -   Issue: CAD-RMS match rate too low: 0.0%
+2025-07-31 23:50:28,304 - INFO - Step 5: Preparing spatial enhancement...
+2025-07-31 23:50:28,304 - INFO - Preparing spatial enhancement...
+2025-07-31 23:50:28,305 - INFO - ArcGIS Pro template found: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\10_Refrence_Files\7_Day_Templet_SCRPA_Time.aprx
+2025-07-31 23:50:28,309 - INFO -   rms_data_standardized.csv: 115 unique addresses
+2025-07-31 23:50:28,311 - INFO -   cad_data_standardized.csv: 99 unique addresses
+2025-07-31 23:50:28,311 - INFO - Total unique addresses: 144
+2025-07-31 23:50:28,311 - INFO - Estimated geocoding batches: 2
+2025-07-31 23:50:28,311 - INFO - Step 6: Creating geocoding script...
+2025-07-31 23:50:28,311 - INFO - Creating geocoding script...
+2025-07-31 23:50:28,313 - INFO - Enhanced geocoding script created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\scrpa_geocoding_enhanced.py
+2025-07-31 23:50:28,313 - INFO - Step 7: Generating validation report...
+2025-07-31 23:50:28,313 - INFO - Generating validation report...
+2025-07-31 23:50:28,316 - INFO - JSON report: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\scrpa_validation_report_20250731_235028.json
+2025-07-31 23:50:28,316 - INFO - Markdown summary: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\scrpa_validation_summary_20250731_235028.md
+2025-07-31 23:50:28,316 - INFO - ============================================================
+2025-07-31 23:50:28,316 - INFO - SCRPA VALIDATION COMPLETE
+2025-07-31 23:50:28,316 - INFO - ============================================================
+2025-07-31 23:50:28,316 - INFO - Total time: 0.04 seconds
+2025-07-31 23:50:28,316 - INFO - Report: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\scrpa_validation_summary_20250731_235028.md
+2025-07-31 23:50:28,316 - INFO - Geocoding script: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\scrpa_geocoding_enhanced.py
+2025-07-31 23:50:28,316 - INFO - Validations passed: 0/3
+2025-07-31 23:50:28,316 - WARNING - SOME VALIDATIONS FAILED - REVIEW REPORT
+2025-07-31 23:50:28,317 - INFO - ============================================================

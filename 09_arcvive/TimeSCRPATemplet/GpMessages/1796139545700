@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Wednesday, May 14, 2025 6:08:22 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\run_crime_tool_PATCHED.py", line 6, in &lt;module&gt;
+﻿    # Add parent folder to sys.path so the module is discoverable
+﻿    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿ImportError: cannot import name 'main' from 'Updated_Weekly_Crime_Report' (C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated_Weekly_Crime_Report.py)
+</msg><msg code="0" type="0">Failed script RunCrimeTool...</msg><msg code="-2147467259" type="100">Failed to execute (GenerateCrimeCSVs).</msg><msg code="0" type="3">Failed at Wednesday, May 14, 2025 6:08:22 PM (Elapsed Time: 0.04 seconds)</msg></messages>

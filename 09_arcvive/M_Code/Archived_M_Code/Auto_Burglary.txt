@@ -1,0 +1,49 @@
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files" = Table.SelectRows(Source, each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function" = Table.AddColumn(#"Filtered Hidden Files", "Transform File", each #"Transform File"([Content])),
+    #"Renamed Columns" = Table.RenameColumns(#"Invoke Custom Function", {"Name", "Source.Name"}),
+    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns", {"Source.Name", "Transform File"}),
+    #"Expanded Table Column" = Table.ExpandTableColumn(#"Removed Other Columns", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column", {
+        {"Source.Name", type text}, {"Case Number", type text}, {"Incident Date", type date}, 
+        {"Incident Time", type datetime}, {"Incident Date_Between", type date}, 
+        {"Incident Time_Between", type datetime}, {"Report Date", type date}, 
+        {"Report Time", type datetime}, {"Incident Type_1", type text}, 
+        {"Incident Type_2", type text}, {"Incident Type_3", type text}, 
+        {"FullAddress", type text}, {"Grid", type text}, {"Zone", Int64.Type}, 
+        {"Narrative", type text}, {"Total Value Stolen", Currency.Type}, 
+        {"Total Value Recover", Currency.Type}, {"Registration 1", type text}, 
+        {"Make1", type text}, {"Model1", type text}, {"Reg State 1", type text}, 
+        {"Registration 2", type text}, {"Reg State 2", type text}, 
+        {"Make2", type text}, {"Model2", type text}, {"Reviewed By", type text}, 
+        {"CompleteCalc", type text}, {"Officer of Record", type text}, 
+        {"Squad", type text}, {"Det_Assigned", type text}, {"Case_Status", type text}, 
+        {"NIBRS Classification", type text}
+    }),
+    #"Removed Columns" = Table.RemoveColumns(#"Changed Type", {"Source.Name"}),
+    
+    // Add calculated columns
+    #"Added INC_TIME" = Table.AddColumn(#"Removed Columns", "INC_TIME", 
+        each if [Incident Time] <> null then Time.From(DateTime.Time([Incident Time])) else null, type time),
+    #"Added INC_DATE" = Table.AddColumn(#"Added INC_TIME", "INC_DATE", 
+        each if [Incident Date] <> null then Date.From([Incident Date]) else null, type date),
+    #"Added TimeOfDay" = Table.AddColumn(#"Added INC_DATE", "TimeOfDay", 
+        each if [INC_TIME] <> null then 
+            if Time.Hour([INC_TIME]) >= 0 and Time.Hour([INC_TIME]) < 4 then "Early Morning (00:00–03:59)"
+            else if Time.Hour([INC_TIME]) >= 4 and Time.Hour([INC_TIME]) < 8 then "Morning (04:00–07:59)"
+            else if Time.Hour([INC_TIME]) >= 8 and Time.Hour([INC_TIME]) < 12 then "Morning Peak (08:00–11:59)"
+            else if Time.Hour([INC_TIME]) >= 12 and Time.Hour([INC_TIME]) < 16 then "Afternoon (12:00–15:59)"
+            else if Time.Hour([INC_TIME]) >= 16 and Time.Hour([INC_TIME]) < 20 then "Evening Peak (16:00–19:59)"
+            else "Night (20:00–23:59)"
+        else "Unknown", type text),
+    #"Added ALL_INCIDENTS" = Table.AddColumn(#"Added TimeOfDay", "ALL_INCIDENTS", 
+        each [Incident Type_1] & (if [Incident Type_2] <> null then " - " & [Incident Type_2] else "") & 
+             (if [Incident Type_3] <> null then " - " & [Incident Type_3] else ""), type text),
+    
+    // Filter for auto burglary
+    #"Filtered Rows" = Table.SelectRows(#"Added ALL_INCIDENTS", each 
+        Text.Contains(Text.Upper([ALL_INCIDENTS]), "THEFT FROM MOTOR VEHICLE")),
+    #"Removed Duplicates" = Table.Distinct(#"Filtered Rows", {"Case Number"})
+in
+    #"Removed Duplicates"

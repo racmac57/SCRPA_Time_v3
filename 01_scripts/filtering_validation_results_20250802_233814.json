@@ -1,0 +1,211 @@
+{
+  "cad_filtering": {
+    "Motor Vehicle Theft": {
+      "total_records": 114,
+      "matched_records": 31,
+      "retention_rate": 27.192982456140353,
+      "incident_column_matches": 31,
+      "response_type_matches": 0,
+      "category_type_matches": 0
+    },
+    "Robbery": {
+      "total_records": 114,
+      "matched_records": 11,
+      "retention_rate": 9.649122807017543,
+      "incident_column_matches": 11,
+      "response_type_matches": 0,
+      "category_type_matches": 0
+    },
+    "Burglary \u2013 Auto": {
+      "total_records": 114,
+      "matched_records": 26,
+      "retention_rate": 22.807017543859647,
+      "incident_column_matches": 26,
+      "response_type_matches": 0,
+      "category_type_matches": 0
+    },
+    "Sexual": {
+      "total_records": 114,
+      "matched_records": 17,
+      "retention_rate": 14.912280701754385,
+      "incident_column_matches": 17,
+      "response_type_matches": 0,
+      "category_type_matches": 0
+    },
+    "Burglary \u2013 Commercial": {
+      "total_records": 114,
+      "matched_records": 7,
+      "retention_rate": 6.140350877192982,
+      "incident_column_matches": 7,
+      "response_type_matches": 0,
+      "category_type_matches": 0
+    },
+    "Burglary \u2013 Residence": {
+      "total_records": 114,
+      "matched_records": 22,
+      "retention_rate": 19.298245614035086,
+      "incident_column_matches": 22,
+      "response_type_matches": 0,
+      "category_type_matches": 0
+    }
+  },
+  "rms_filtering": {
+    "Motor Vehicle Theft": {
+      "total_records": 134,
+      "matched_records": 28,
+      "retention_rate": 20.8955223880597,
+      "incident_type_matches": 0,
+      "nibrs_matches": 28
+    },
+    "Robbery": {
+      "total_records": 134,
+      "matched_records": 15,
+      "retention_rate": 11.194029850746269,
+      "incident_type_matches": 0,
+      "nibrs_matches": 15
+    },
+    "Burglary \u2013 Auto": {
+      "total_records": 134,
+      "matched_records": 21,
+      "retention_rate": 15.671641791044777,
+      "incident_type_matches": 0,
+      "nibrs_matches": 21
+    },
+    "Sexual": {
+      "total_records": 134,
+      "matched_records": 4,
+      "retention_rate": 2.9850746268656714,
+      "incident_type_matches": 0,
+      "nibrs_matches": 4
+    },
+    "Burglary \u2013 Commercial": {
+      "total_records": 134,
+      "matched_records": 0,
+      "retention_rate": 0.0,
+      "incident_type_matches": 0,
+      "nibrs_matches": 0
+    },
+    "Burglary \u2013 Residence": {
+      "total_records": 134,
+      "matched_records": 0,
+      "retention_rate": 0.0,
+      "incident_type_matches": 0,
+      "nibrs_matches": 0
+    }
+  },
+  "hybrid_approach": {
+    "Motor Vehicle Theft": {
+      "cad_classified_cases": 31,
+      "rms_available_cases": 134,
+      "hybrid_matched_cases": 27,
+      "hybrid_success_rate": 87.09677419354838
+    },
+    "Robbery": {
+      "cad_classified_cases": 11,
+      "rms_available_cases": 134,
+      "hybrid_matched_cases": 10,
+      "hybrid_success_rate": 90.9090909090909
+    },
+    "Burglary \u2013 Auto": {
+      "cad_classified_cases": 26,
+      "rms_available_cases": 134,
+      "hybrid_matched_cases": 24,
+      "hybrid_success_rate": 92.3076923076923
+    },
+    "Sexual": {
+      "cad_classified_cases": 17,
+      "rms_available_cases": 134,
+      "hybrid_matched_cases": 9,
+      "hybrid_success_rate": 52.94117647058824
+    },
+    "Burglary \u2013 Commercial": {
+      "cad_classified_cases": 7,
+      "rms_available_cases": 134,
+      "hybrid_matched_cases": 4,
+      "hybrid_success_rate": 57.14285714285714
+    },
+    "Burglary \u2013 Residence": {
+      "cad_classified_cases": 22,
+      "rms_available_cases": 134,
+      "hybrid_matched_cases": 12,
+      "hybrid_success_rate": 54.54545454545454
+    }
+  },
+  "case_insensitive_validation": {
+    "Motor Vehicle Theft": true,
+    "MOTOR VEHICLE THEFT": true,
+    "motor vehicle theft": true,
+    "Motor VEHICLE theft": true,
+    "240 = Theft of Motor Vehicle": true,
+    "240 = THEFT OF MOTOR VEHICLE": true
+  },
+  "accuracy_metrics": {
+    "timestamp": "2025-08-02T23:38:14.090421",
+    "data_summary": {
+      "cad_total_records": 114,
+      "rms_total_records": 134,
+      "target_crimes_count": 6
+    },
+    "cad_overall_retention": 100.0,
+    "rms_overall_retention": 50.74626865671642,
+    "performance_comparison": {
+      "cad_filtering": {
+        "pros": [
+          "Direct incident classification",
+          "Real-time filtering"
+        ],
+        "cons": [
+          "May miss some incident types",
+          "Depends on CAD data quality"
+        ]
+      },
+      "rms_filtering": {
+        "pros": [
+          "NIBRS standardized codes",
+          "More consistent classification"
+        ],
+        "cons": [
+          "Less detailed incident descriptions",
+          "Delayed data entry"
+        ]
+      },
+      "hybrid_approach": {
+        "pros": [
+          "Best of both methods",
+          "Higher accuracy"
+        ],
+        "cons": [
+          "More complex processing",
+          "Requires both datasets"
+        ]
+      }
+    }
+  },
+  "production_recommendation": {
+    "recommended_approach": "Hybrid CAD Classification -> RMS Case Matching",
+    "reasoning": [
+      "Combines real-time CAD incident classification with RMS case validation",
+      "Provides highest accuracy for target crime identification",
+      "Maintains data integrity through cross-validation"
+    ],
+    "implementation_steps": [
+      "1. Apply CAD filtering using incident column as primary classifier",
+      "2. Use response_type and category_type as secondary filters",
+      "3. Match identified cases with RMS data using case_number",
+      "4. Validate using nibrs_classification for final confirmation",
+      "5. Implement case-insensitive pattern matching throughout"
+    ],
+    "performance_optimization": [
+      "Pre-compile regex patterns for faster matching",
+      "Use vectorized pandas operations where possible",
+      "Implement caching for frequently accessed patterns",
+      "Consider parallel processing for large datasets"
+    ],
+    "quality_assurance": [
+      "Implement automated testing for pattern updates",
+      "Regular validation against known good datasets",
+      "Monitor retention rates for unexpected changes",
+      "Maintain audit trail of filtering decisions"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+the instructions I received from Claude:
+📋 WHY PROMPT 5 IS CRITICAL NOW:
+
+Validates Migration Success - Confirms your migration actually secured the system
+Tests Data Sanitization - Ensures sensitive police data is properly masked
+Verifies No External Calls - Critical for police data compliance
+Creates Audit Trail - Documentation for security compliance
+Identifies Any Remaining Issues - Before processing real data
+
+🎯 AFTER PROMPT 5:
+Once you get the security validation suite from Claude Code:
+
+Run the validation suite to test your migrated system
+Fix any issues found before proceeding
+Then use PROMPT 6 to fix your Power BI integration
+Finally PROMPT 7 for the complete workflow automation
+
+This sequence ensures you have a fully secure, tested, and functional system before processing any real police data.
+
+
+🚨 PROMPT 6: POWER BI INTEGRATION FIX
+Update my Power BI M Code queries to work with the new secure SCRPA workflow:
+
+CURRENT ISSUES:
+- Crime categorization queries are empty
+- Reference table lookups not working  
+- Need to integrate with secure Python output
+
+REQUIREMENTS:
+1. Fix ALL_CRIMES query to include Crime_Category column
+2. Use CallTypeUpdatedWithCategories.csv for lookups
+3. Enable filtered queries: Motor_Vehicle_Theft, Burglary_Auto, etc.
+4. Connect to secure Python-generated CSV output
+5. Maintain 7-day cycle calculations
+
+M CODE STRUCTURE:
+- Source: 2025_06_24_10_32_17_ALL_RMS.xlsx (Sheet1)
+- Reference: CallTypeUpdatedWithCategories.csv
+- Columns: Incident_Type_1/2/3 → Crime_Category logic
+- Output: Filtered tables for each crime type
+
+Include complete M Code with error handling and performance optimization.
+
+🚨 PROMPT 7: COMPLETE WORKFLOW SCRIPT
+Create a master workflow script that orchestrates the entire secure SCRPA process:
+
+WORKFLOW PHASES:
+1. Security validation and system checks
+2. Data loading and initial processing  
+3. Mandatory sanitization and audit
+4. Local AI report generation
+5. Chart creation and visualization
+6. Power BI data export
+7. Final security verification
+
+FEATURES NEEDED:
+- Command-line interface with options
+- Progress tracking and status updates
+- Comprehensive error handling
+- Logging of all operations
+- Recovery from partial failures
+- Integration with existing file structure
+
+EXECUTION OPTIONS:
+- --security-check: Validate configuration only
+- --test-run: Process sample data  
+- --full-process: Complete workflow
+- --charts-only: Generate visualizations only
+- --export-powerbi: Create Power BI dataset
+
+Include timing estimates and resource usage monitoring.
+
+🚨 PROMPT 8: CONFIGURATION MANAGEMENT
+Create a centralized configuration system for the secure SCRPA workflow:
+
+CONFIGURATION AREAS:
+1. File paths and directory structure
+2. Secure LLM settings (local only)
+3. Data sanitization rules and patterns
+4. Power BI integration settings  
+5. Logging and audit preferences
+6. Security policy enforcement
+
+FILE STRUCTURE:
+- config.json: Main configuration file
+- security_policy.json: Data handling rules
+- sanitization_patterns.json: Regex patterns
+- powerbi_settings.json: BI integration config
+
+FEATURES:
+- Environment variable overrides
+- Configuration validation
+- Secure defaults with safety checks
+- Easy updates without code changes
+- Documentation for each setting
+- Import/export for different environments
+
+Include configuration schema validation and user-friendly documentation.

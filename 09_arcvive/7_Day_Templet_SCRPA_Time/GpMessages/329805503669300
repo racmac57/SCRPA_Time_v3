@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 13, 2025 9:25:31 PM</msg><msg code="0" type="0">Running test layout export...</msg><msg code="0" type="50">Legend issue: 'LegendElement' object has no attribute 'elementItems'</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 144, in &lt;module&gt;
+﻿    run_test_layout(base_folder, crime_types[0], chart_suffixes, args)
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 92, in run_test_layout
+﻿    aprx.save()
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\_mp.py", line 1338, in save
+﻿    return convertArcObjectToPythonObject(self._arc_object.save(*gp_fixargs((), True)))
+﻿                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿OSError: C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\_25_SCRPA\\TIME_Based\\TimeSCRPATemplet\\TimeSCRPATemplet.aprx
+</msg><msg code="0" type="0">Failed script Updated Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeExport).</msg><msg code="0" type="3">Failed at Tuesday, May 13, 2025 9:25:39 PM (Elapsed Time: 8.50 seconds)</msg></messages>

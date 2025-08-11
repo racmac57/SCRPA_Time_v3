@@ -1,0 +1,3 @@
+2025-07-26 20:12:11,750 - INFO - Starting SCRPA data validation process...
+2025-07-26 20:12:12,140 - ERROR - CAD export file not found at C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\latest_cad_export.xlsx
+2025-07-26 20:12:12,140 - ERROR - Validation failed: [Errno 2] No such file or directory: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\latest_cad_export.xlsx'

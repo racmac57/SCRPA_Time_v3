@@ -1,0 +1,26 @@
+2025-07-27 02:50:15,638 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_025015.log
+2025-07-27 02:50:15,641 - MasterProcessor - INFO - Master SCRPA Processor initialized
+2025-07-27 02:50:15,642 - MasterProcessor - INFO - ================================================================================
+2025-07-27 02:50:15,643 - MasterProcessor - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:50:15,644 - MasterProcessor - INFO - ================================================================================
+2025-07-27 02:50:15,646 - MasterProcessor - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:50:15,646 - MasterProcessor - INFO - Searching for latest auto export files
+2025-07-27 02:50:15,648 - MasterProcessor - INFO -    Most recent file: 2025_07_25_13_24_20_ALL_CADS.xlsx (CAD)
+2025-07-27 02:50:15,648 - MasterProcessor - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:50:15,803 - MasterProcessor - INFO - Detected CAD structure with 112 records
+2025-07-27 02:50:15,804 - MasterProcessor - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:50:15,804 - MasterProcessor - INFO -    Processing CAD structure
+2025-07-27 02:50:15,812 - MasterProcessor - INFO -    CAD processing complete: 112 records
+2025-07-27 02:50:15,812 - MasterProcessor - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:50:15,825 - MasterProcessor - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:50:15,825 - MasterProcessor - INFO - Step 4: Adding derived columns
+2025-07-27 02:50:15,848 - MasterProcessor - INFO -    Adding vehicle columns
+2025-07-27 02:50:15,861 - MasterProcessor - INFO -    All enhancements complete
+2025-07-27 02:50:15,862 - MasterProcessor - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:50:15,866 - MasterProcessor - INFO -    Validation complete: 112 clean records
+2025-07-27 02:50:15,866 - MasterProcessor - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:50:15,874 - MasterProcessor - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:50:15,874 - MasterProcessor - INFO - ================================================================================
+2025-07-27 02:50:15,875 - MasterProcessor - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:50:15,875 - MasterProcessor - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:50:15,875 - MasterProcessor - INFO - ================================================================================

@@ -1,0 +1,232 @@
+2025-08-05 00:41:59,985 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-05 00:42:01,118 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-05 00:42:01,118 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-05 00:42:01,147 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-05 00:42:01,281 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-05 00:42:01,299 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-05 00:42:01,299 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-05 00:42:01,302 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W32, Date: 20250805
+2025-08-05 00:42:01,302 - ComprehensiveSCRPAFixV8_5 - INFO - 🧪 Running Performance Monitoring Demo
+2025-08-05 00:42:01,308 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Performance Test Demo... (Memory: 98.6MB)
+2025-08-05 00:42:01,309 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Large DataFrame Creation... (Memory: 98.6MB)
+2025-08-05 00:42:01,317 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Large DataFrame Creation (Fast):
+2025-08-05 00:42:01,318 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.01s
+2025-08-05 00:42:01,318 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 99.6MB (Δ+1.0MB)
+2025-08-05 00:42:01,334 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Test DataFrame memory optimized: 0.7MB → 0.1MB (saved 0.6MB)
+2025-08-05 00:42:01,334 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting DataFrame Operations... (Memory: 99.9MB)
+2025-08-05 00:42:01,349 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed DataFrame Operations (Fast):
+2025-08-05 00:42:01,349 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.01s
+2025-08-05 00:42:01,349 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 100.1MB (Δ+0.2MB)
+2025-08-05 00:42:01,365 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 System Performance Summary: {'memory_rss_mb': 100.109375, 'memory_vms_mb': 426.171875, 'cpu_percent': 0.0, 'num_threads': 15, 'system_memory_percent': 79.5, 'system_cpu_percent': 67.6}
+2025-08-05 00:42:01,401 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Performance Test Demo (Fast):
+2025-08-05 00:42:01,401 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.09s
+2025-08-05 00:42:01,401 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 100.9MB (Δ+2.2MB)
+2025-08-05 00:42:01,401 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Performance monitoring demo completed successfully
+2025-08-05 00:42:01,402 - ComprehensiveSCRPAFixV8_5 - INFO - 🧪 Testing chunked processing functionality
+2025-08-05 00:42:01,407 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Creating test dataset... (Memory: 100.9MB)
+2025-08-05 00:42:01,433 - ComprehensiveSCRPAFixV8_5 - INFO - 📁 Created test file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\temp\test_large_dataset_2500_rows.csv (2,500 rows)
+2025-08-05 00:42:01,434 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Creating test dataset (Fast):
+2025-08-05 00:42:01,434 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.03s
+2025-08-05 00:42:01,434 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 101.5MB (Δ+0.7MB)
+2025-08-05 00:42:01,434 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunked processing test... (Memory: 101.5MB)
+2025-08-05 00:42:01,468 - ComprehensiveSCRPAFixV8_5 - INFO - 📚 Processing large dataset: 2500 rows in chunks of 500
+2025-08-05 00:42:01,469 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunked processing (2500 rows)... (Memory: 101.5MB)
+2025-08-05 00:42:01,480 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunk 1... (Memory: 102.7MB)
+2025-08-05 00:42:01,510 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Progress: 500/2,500 rows (20.0%)
+2025-08-05 00:42:01,511 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunk 1 (Fast):
+2025-08-05 00:42:01,511 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.03s
+2025-08-05 00:42:01,511 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 102.8MB (Δ+0.1MB)
+2025-08-05 00:42:01,516 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunk 2... (Memory: 103.4MB)
+2025-08-05 00:42:01,537 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Progress: 1,000/2,500 rows (40.0%)
+2025-08-05 00:42:01,539 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunk 2 (Fast):
+2025-08-05 00:42:01,540 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.02s
+2025-08-05 00:42:01,540 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.4MB (Δ+0.0MB)
+2025-08-05 00:42:01,548 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunk 3... (Memory: 103.6MB)
+2025-08-05 00:42:01,566 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Progress: 1,500/2,500 rows (60.0%)
+2025-08-05 00:42:01,567 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunk 3 (Fast):
+2025-08-05 00:42:01,567 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.02s
+2025-08-05 00:42:01,567 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.6MB (Δ+0.0MB)
+2025-08-05 00:42:01,577 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunk 4... (Memory: 103.7MB)
+2025-08-05 00:42:01,597 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Progress: 2,000/2,500 rows (80.0%)
+2025-08-05 00:42:01,598 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunk 4 (Fast):
+2025-08-05 00:42:01,598 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.02s
+2025-08-05 00:42:01,598 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.8MB (Δ+0.1MB)
+2025-08-05 00:42:01,601 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Chunk 5... (Memory: 103.9MB)
+2025-08-05 00:42:01,630 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Progress: 2,500/2,500 rows (100.0%)
+2025-08-05 00:42:01,631 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunk 5 (Fast):
+2025-08-05 00:42:01,631 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.03s
+2025-08-05 00:42:01,631 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.9MB (Δ+0.0MB)
+2025-08-05 00:42:01,632 - ComprehensiveSCRPAFixV8_5 - INFO - 🔗 Combining processed chunks...
+2025-08-05 00:42:01,681 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunked processing (2500 rows) (Fast):
+2025-08-05 00:42:01,682 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.21s
+2025-08-05 00:42:01,682 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.2MB (Δ+1.6MB)
+2025-08-05 00:42:01,682 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Large dataset processing complete: 2,500 total records
+2025-08-05 00:42:01,682 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Chunked processing test (Fast):
+2025-08-05 00:42:01,683 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.25s
+2025-08-05 00:42:01,683 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.2MB (Δ+1.6MB)
+2025-08-05 00:42:01,683 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Chunked processing test validation:
+2025-08-05 00:42:01,683 - ComprehensiveSCRPAFixV8_5 - INFO -   📊 Original rows: 2,500
+2025-08-05 00:42:01,683 - ComprehensiveSCRPAFixV8_5 - INFO -   📊 Processed rows: 2,500
+2025-08-05 00:42:01,683 - ComprehensiveSCRPAFixV8_5 - INFO -   📊 Columns: 8
+2025-08-05 00:42:01,685 - ComprehensiveSCRPAFixV8_5 - INFO -   📊 Memory usage: 0.6MB
+2025-08-05 00:42:01,685 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Data integrity check PASSED
+2025-08-05 00:42:01,691 - ComprehensiveSCRPAFixV8_5 - INFO - 🗑️ Cleaned up test file: test_large_dataset_2500_rows.csv
+2025-08-05 00:42:01,694 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Chunked processing test completed
+2025-08-05 00:42:01,695 - ComprehensiveSCRPAFixV8_5 - INFO - 🧪 Testing large file writing functionality
+2025-08-05 00:42:01,697 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Creating large test dataset... (Memory: 102.2MB)
+2025-08-05 00:42:01,713 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Created large test dataset: 5,000 rows, 10 columns
+2025-08-05 00:42:01,717 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Memory usage: 2.2MB
+2025-08-05 00:42:01,717 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Creating large test dataset (Fast):
+2025-08-05 00:42:01,717 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.02s
+2025-08-05 00:42:01,717 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.5MB (Δ+1.4MB)
+2025-08-05 00:42:01,718 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Writing large CSV: 5,000 rows in chunks of 1,000
+2025-08-05 00:42:01,718 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Large CSV write (5,000 rows)... (Memory: 103.5MB)
+2025-08-05 00:42:01,740 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Write progress: 1,000/5,000 rows (20.0%)
+2025-08-05 00:42:01,765 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Write progress: 2,000/5,000 rows (40.0%)
+2025-08-05 00:42:01,780 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Write progress: 3,000/5,000 rows (60.0%)
+2025-08-05 00:42:01,792 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Write progress: 4,000/5,000 rows (80.0%)
+2025-08-05 00:42:01,807 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Write progress: 5,000/5,000 rows (100.0%)
+2025-08-05 00:42:01,808 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Large CSV write (5,000 rows) (Fast):
+2025-08-05 00:42:01,809 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.09s
+2025-08-05 00:42:01,809 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 103.7MB (Δ+0.2MB)
+2025-08-05 00:42:01,811 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Large CSV write complete: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\temp\test_large_export_5000_rows.csv
+2025-08-05 00:42:01,812 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CSV file created: 0.7MB
+2025-08-05 00:42:01,851 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CSV verification: 5 sample rows read successfully
+2025-08-05 00:42:01,852 - ComprehensiveSCRPAFixV8_5 - INFO - 📊 Writing large Excel: 5,000 rows in chunks of 1,000
+2025-08-05 00:42:01,853 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Large Excel write (5,000 rows)... (Memory: 105.2MB)
+2025-08-05 00:42:01,896 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Excel write progress: 1,000/5,000 rows (20.0%)
+2025-08-05 00:42:01,928 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Excel write progress: 2,000/5,000 rows (40.0%)
+2025-08-05 00:42:01,960 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Excel write progress: 3,000/5,000 rows (60.0%)
+2025-08-05 00:42:01,982 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Excel write progress: 4,000/5,000 rows (80.0%)
+2025-08-05 00:42:02,023 - ComprehensiveSCRPAFixV8_5 - INFO - 📝 Excel write progress: 5,000/5,000 rows (100.0%)
+2025-08-05 00:42:02,649 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Large Excel write (5,000 rows) (Fast):
+2025-08-05 00:42:02,650 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.80s
+2025-08-05 00:42:02,650 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 119.4MB (Δ+14.2MB)
+2025-08-05 00:42:02,650 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Large Excel write complete: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\temp\test_large_export_5000_rows.xlsx
+2025-08-05 00:42:02,650 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Excel file created: 0.3MB
+2025-08-05 00:42:02,657 - ComprehensiveSCRPAFixV8_5 - INFO - 🗑️ Cleaned up test file: test_large_export_5000_rows.csv
+2025-08-05 00:42:02,661 - ComprehensiveSCRPAFixV8_5 - INFO - 🗑️ Cleaned up test file: test_large_export_5000_rows.xlsx
+2025-08-05 00:42:02,662 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Large file writing test completed
+2025-08-05 00:42:02,664 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Complete SCRPA Pipeline V8.5... (Memory: 116.5MB)
+2025-08-05 00:42:02,665 - ComprehensiveSCRPAFixV8_5 - INFO - Starting Comprehensive SCRPA Fix V8.5 pipeline...
+2025-08-05 00:42:02,665 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Complete SCRPA Pipeline V8.5 (Fast):
+2025-08-05 00:42:02,665 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 00:42:02,666 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 116.5MB (Δ+0.0MB)
+2025-08-05 00:42:02,667 - ComprehensiveSCRPAFixV8_5 - INFO - Latest CAD file: 2025_08_01_19_38_12_SCRPA_CAD.xlsx
+2025-08-05 00:42:02,667 - ComprehensiveSCRPAFixV8_5 - INFO - Latest RMS file: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-05 00:42:02,672 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS Data Processing - 2025_08_01_19_38_12_SCRPA_RMS.xlsx... (Memory: 116.5MB)
+2025-08-05 00:42:02,673 - ComprehensiveSCRPAFixV8_5 - INFO - Processing RMS data: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-05 00:42:02,674 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS File Loading... (Memory: 116.5MB)
+2025-08-05 00:42:02,730 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded RMS file with 140 rows and 31 columns
+2025-08-05 00:42:02,731 - ComprehensiveSCRPAFixV8_5 - INFO - RMS columns found: ['Case Number', 'Incident Date', 'Incident Time', 'Incident Date_Between', 'Incident Time_Between', 'Report Date', 'Report Time', 'Incident Type_1', 'Incident Type_2', 'Incident Type_3', 'FullAddress', 'Grid', 'Zone', 'Narrative', 'Total Value Stolen', 'Total Value Recover', 'Registration 1', 'Make1', 'Model1', 'Reg State 1', 'Registration 2', 'Reg State 2', 'Make2', 'Model2', 'Reviewed By', 'CompleteCalc', 'Officer of Record', 'Squad', 'Det_Assigned', 'Case_Status', 'NIBRS Classification']
+2025-08-05 00:42:02,731 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS File Loading (Fast):
+2025-08-05 00:42:02,731 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.06s
+2025-08-05 00:42:02,731 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 116.8MB (Δ+0.4MB)
+2025-08-05 00:42:02,732 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS Header Normalization & Column Mapping... (Memory: 116.8MB)
+2025-08-05 00:42:02,732 - ComprehensiveSCRPAFixV8_5 - INFO - Normalized RMS headers to lowercase snake_case: ['case_number', 'incident_date', 'incident_time', 'incident_date_between', 'incident_time_between', 'report_date', 'report_time', 'incident_type_1', 'incident_type_2', 'incident_type_3', 'full_address', 'grid', 'zone', 'narrative', 'total_value_stolen', 'total_value_recover', 'registration_1', 'make_1', 'model_1', 'reg_state_1', 'registration_2', 'reg_state_2', 'make_2', 'model_2', 'reviewed_by', 'complete_calc', 'officer_of_record', 'squad', 'det_assigned', 'case_status', 'nibrs_classification']
+2025-08-05 00:42:02,733 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS Header Normalization & Column Mapping (Fast):
+2025-08-05 00:42:02,734 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 00:42:02,734 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 116.9MB (Δ+0.0MB)
+2025-08-05 00:42:02,734 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS Data Processing - 2025_08_01_19_38_12_SCRPA_RMS.xlsx (Fast):
+2025-08-05 00:42:02,735 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.06s
+2025-08-05 00:42:02,736 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 116.9MB (Δ+0.4MB)
+2025-08-05 00:42:02,737 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping: {'full_address': 'full_address_raw'}
+2025-08-05 00:42:02,784 - ComprehensiveSCRPAFixV8_5 - INFO - Available date columns: ['incident_date', 'incident_date_between', 'report_date']
+2025-08-05 00:42:02,785 - ComprehensiveSCRPAFixV8_5 - INFO - incident_date populated: 136/140
+2025-08-05 00:42:02,789 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident_date values: [Timestamp('2025-01-03 00:00:00'), Timestamp('2025-01-07 00:00:00'), Timestamp('2025-01-06 00:00:00')]
+2025-08-05 00:42:02,791 - ComprehensiveSCRPAFixV8_5 - INFO - incident_date_between populated: 62/140
+2025-08-05 00:42:02,793 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident_date_between values: [Timestamp('2025-01-04 00:00:00'), Timestamp('2025-01-10 00:00:00'), Timestamp('2025-01-16 00:00:00')]
+2025-08-05 00:42:02,794 - ComprehensiveSCRPAFixV8_5 - INFO - report_date populated: 140/140
+2025-08-05 00:42:02,794 - ComprehensiveSCRPAFixV8_5 - INFO - Sample report_date values: [Timestamp('2025-01-04 00:00:00'), Timestamp('2025-01-10 00:00:00'), Timestamp('2025-01-10 00:00:00')]
+2025-08-05 00:42:02,800 - ComprehensiveSCRPAFixV8_5 - INFO - Incident dates after cascading and formatting: 140/140
+2025-08-05 00:42:02,800 - ComprehensiveSCRPAFixV8_5 - INFO - Sample formatted dates: ['01/03/25', '01/07/25', '01/06/25', '01/13/25', '01/14/25']
+2025-08-05 00:42:02,812 - ComprehensiveSCRPAFixV8_5 - INFO - Incident times after cascading: 0/140
+2025-08-05 00:42:02,830 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident_date values: ['01/03/25', '01/07/25', '01/06/25', '01/13/25', '01/14/25']
+2025-08-05 00:42:02,830 - ComprehensiveSCRPAFixV8_5 - INFO - Null incident_date count: 0
+2025-08-05 00:42:02,831 - ComprehensiveSCRPAFixV8_5 - INFO - Date types: object
+2025-08-05 00:42:02,862 - ComprehensiveSCRPAFixV8_5 - INFO - Period calculation results: {'YTD': 116, '28-Day': 21, '7-Day': 2, 'Historical': 1}
+2025-08-05 00:42:02,866 - ComprehensiveSCRPAFixV8_5 - INFO - Date/Period Analysis Summary:
+2025-08-05 00:42:02,866 - ComprehensiveSCRPAFixV8_5 - INFO -   - 7-Day period records: 2
+2025-08-05 00:42:02,866 - ComprehensiveSCRPAFixV8_5 - INFO -   - 28-Day period records: 21
+2025-08-05 00:42:02,867 - ComprehensiveSCRPAFixV8_5 - INFO -   - YTD period records: 116
+2025-08-05 00:42:02,867 - ComprehensiveSCRPAFixV8_5 - INFO -   - Historical period records: 1
+2025-08-05 00:42:02,867 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Date processing working correctly - mix of periods found
+2025-08-05 00:42:02,997 - ComprehensiveSCRPAFixV8_5 - WARNING - Removing Jersey City address: 128 Christopher Columbus Drive, Jersey City, NJ 07302, Hackensack, NJ, 07601
+2025-08-05 00:42:02,998 - ComprehensiveSCRPAFixV8_5 - INFO - Address validation: 139/140 addresses validated
+2025-08-05 00:42:02,998 - ComprehensiveSCRPAFixV8_5 - INFO - Block calculation: 140/140 blocks calculated
+2025-08-05 00:42:03,032 - ComprehensiveSCRPAFixV8_5 - INFO - Grid/Post backfill: 133/140 grids, 129/140 posts
+2025-08-05 00:42:03,112 - ComprehensiveSCRPAFixV8_5 - INFO - Narrative cleaning: 140/140 narratives cleaned
+2025-08-05 00:42:03,113 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ RMS header validation PASSED: All 50 columns follow lowercase snake_case
+2025-08-05 00:42:03,113 - ComprehensiveSCRPAFixV8_5 - INFO - RMS headers validation passed - all headers are lowercase snake_case
+2025-08-05 00:42:03,115 - ComprehensiveSCRPAFixV8_5 - INFO - RMS records before filtering: 140
+2025-08-05 00:42:03,116 - ComprehensiveSCRPAFixV8_5 - INFO - Period distribution: {'YTD': 116, '28-Day': 21, '7-Day': 2, 'Historical': 1}
+2025-08-05 00:42:03,116 - ComprehensiveSCRPAFixV8_5 - INFO - Non-historical records: 139
+2025-08-05 00:42:03,116 - ComprehensiveSCRPAFixV8_5 - INFO - Sample case numbers: ['25-000813', '25-002564', '25-002635', '25-003362', '25-003813']
+2025-08-05 00:42:03,117 - ComprehensiveSCRPAFixV8_5 - INFO - Records with excluded case number '25-057654': 1
+2025-08-05 00:42:03,120 - ComprehensiveSCRPAFixV8_5 - INFO - Incident dates populated: 140/140
+2025-08-05 00:42:03,125 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident dates: ['01/03/25', '01/07/25', '01/06/25', '01/13/25', '01/14/25']
+2025-08-05 00:42:03,128 - ComprehensiveSCRPAFixV8_5 - INFO - Date range: 01/03/25 to 07/31/25
+2025-08-05 00:42:03,129 - ComprehensiveSCRPAFixV8_5 - INFO - After case number filter: 139/140 records
+2025-08-05 00:42:03,130 - ComprehensiveSCRPAFixV8_5 - INFO - After period filter: 138/140 records
+2025-08-05 00:42:03,131 - ComprehensiveSCRPAFixV8_5 - INFO - After case status filter: 119/140 records
+2025-08-05 00:42:03,132 - ComprehensiveSCRPAFixV8_5 - INFO - RMS processing complete: 119 records after filtering
+2025-08-05 00:42:03,132 - ComprehensiveSCRPAFixV8_5 - INFO - Final RMS columns: ['case_number', 'incident_date', 'incident_time', 'time_of_day', 'time_of_day_sort_order', 'period', 'season', 'day_of_week', 'day_type', 'location', 'block', 'grid', 'post', 'incident_type', 'all_incidents', 'vehicle_1', 'vehicle_2', 'vehicle_1_and_vehicle_2', 'narrative', 'total_value_stolen', 'squad', 'officer_of_record', 'nibrs_classification', 'cycle_name', 'case_status']
+2025-08-05 00:42:03,132 - ComprehensiveSCRPAFixV8_5 - INFO - REMOVED CAD-specific columns: incident_type, crime_category, response_type
+2025-08-05 00:42:03,246 - ComprehensiveSCRPAFixV8_5 - INFO - Found 30 duplicate incidents in reference file.
+2025-08-05 00:42:03,247 - ComprehensiveSCRPAFixV8_5 - INFO - Applying priority-based duplicate resolution:
+2025-08-05 00:42:03,247 - ComprehensiveSCRPAFixV8_5 - INFO -   'DOMESTIC DISPUTE': 3 variants -> keeping highest priority
+2025-08-05 00:42:03,247 - ComprehensiveSCRPAFixV8_5 - INFO -   'SHOPLIFTING 2C:20-11': 3 variants -> keeping highest priority
+2025-08-05 00:42:03,248 - ComprehensiveSCRPAFixV8_5 - INFO -   'SIMPLE ASSAULT 2C:12-1A': 4 variants -> keeping highest priority
+2025-08-05 00:42:03,248 - ComprehensiveSCRPAFixV8_5 - INFO -   'TARGETED AREA PATROL': 3 variants -> keeping highest priority
+2025-08-05 00:42:03,248 - ComprehensiveSCRPAFixV8_5 - INFO -   'TERRORISTIC THREATS 2C:12-3': 3 variants -> keeping highest priority
+2025-08-05 00:42:03,248 - ComprehensiveSCRPAFixV8_5 - INFO -   'WEAPONS SEIZURE - 2C:25-21D': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,248 - ComprehensiveSCRPAFixV8_5 - INFO -   'WEATHER ALERTS': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,248 - ComprehensiveSCRPAFixV8_5 - INFO -   'WELFARE CHECK': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,249 - ComprehensiveSCRPAFixV8_5 - INFO -   'WIDESPREAD DAMAGE - 2C:17-2': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,249 - ComprehensiveSCRPAFixV8_5 - INFO -   'WIRE DOWN': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,249 - ComprehensiveSCRPAFixV8_5 - INFO -   'WITNESS TAMPERING - 2C:28-5': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,249 - ComprehensiveSCRPAFixV8_5 - INFO -   'WRONGFUL IMPERSONATING - 2C:21-1': 2 variants -> keeping highest priority
+2025-08-05 00:42:03,262 - ComprehensiveSCRPAFixV8_5 - INFO - Priority-based resolution completed: 30 duplicates resolved
+2025-08-05 00:42:03,279 - ComprehensiveSCRPAFixV8_5 - INFO - Enhanced call type reference loaded successfully:
+2025-08-05 00:42:03,279 - ComprehensiveSCRPAFixV8_5 - INFO -   - Total records: 592
+2025-08-05 00:42:03,279 - ComprehensiveSCRPAFixV8_5 - INFO -   - Unique incidents: 574
+2025-08-05 00:42:03,279 - ComprehensiveSCRPAFixV8_5 - INFO -   - Duplicates found: 30
+2025-08-05 00:42:03,280 - ComprehensiveSCRPAFixV8_5 - INFO -   - Duplicates resolved: 30
+2025-08-05 00:42:03,280 - ComprehensiveSCRPAFixV8_5 - INFO -   - Normalized columns: ['incident', 'category_type', 'response_type']
+2025-08-05 00:42:03,280 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting CAD Data Processing - 2025_08_01_19_38_12_SCRPA_CAD.xlsx... (Memory: 114.0MB)
+2025-08-05 00:42:03,280 - ComprehensiveSCRPAFixV8_5 - INFO - Processing CAD data: 2025_08_01_19_38_12_SCRPA_CAD.xlsx
+2025-08-05 00:42:03,280 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed CAD Data Processing - 2025_08_01_19_38_12_SCRPA_CAD.xlsx (Fast):
+2025-08-05 00:42:03,281 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 00:42:03,281 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 114.0MB (Δ+0.0MB)
+2025-08-05 00:42:03,326 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded CAD file with 115 rows and 20 columns
+2025-08-05 00:42:03,327 - ComprehensiveSCRPAFixV8_5 - INFO - CAD columns found: ['ReportNumberNew', 'Incident', 'How Reported', 'FullAddress2', 'PDZone', 'Grid', 'Time of Call', 'cYear', 'cMonth', 'HourMinuetsCalc', 'DayofWeek', 'Time Dispatched', 'Time Out', 'Time In', 'Time Spent', 'Time Response', 'Officer', 'Disposition', 'Response Type', 'CADNotes']
+2025-08-05 00:42:03,327 - ComprehensiveSCRPAFixV8_5 - INFO - Applied dtype={'How Reported': str} to prevent Excel auto-parsing '9-1-1' as date
+2025-08-05 00:42:03,329 - ComprehensiveSCRPAFixV8_5 - INFO - Applied enhanced fixes to prevent '9-1-1' date conversion
+2025-08-05 00:42:03,330 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping: {'ReportNumberNew': 'case_number', 'Incident': 'incident', 'How Reported': 'how_reported', 'FullAddress2': 'full_address_raw', 'PDZone': 'post', 'Grid': 'grid_raw', 'Time of Call': 'time_of_call', 'cYear': 'call_year', 'cMonth': 'call_month', 'HourMinuetsCalc': 'hour_minutes_calc', 'DayofWeek': 'day_of_week_raw', 'Time Dispatched': 'time_dispatched', 'Time Out': 'time_out', 'Time In': 'time_in', 'Time Spent': 'time_spent_raw', 'Time Response': 'time_response_raw', 'Officer': 'officer', 'Disposition': 'disposition', 'Response Type': 'response_type_fallback', 'CADNotes': 'cad_notes_raw'}
+2025-08-05 00:42:03,331 - ComprehensiveSCRPAFixV8_5 - INFO - Normalized CAD headers to lowercase snake_case: ['case_number', 'incident', 'how_reported', 'full_address_raw', 'post', 'grid_raw', 'time_of_call', 'call_year', 'call_month', 'hour_minutes_calc', 'day_of_week_raw', 'time_dispatched', 'time_out', 'time_in', 'time_spent_raw', 'time_response_raw', 'officer', 'disposition', 'response_type_fallback', 'cad_notes_raw']
+2025-08-05 00:42:03,345 - ComprehensiveSCRPAFixV8_5 - INFO - Starting proper CallType_Categories.xlsx mapping for 115 CAD records
+2025-08-05 00:42:03,345 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident values: ['Motor Vehicle Theft - 2C:20-3', 'Criminal Sexual Contact - 2C:14-3a', 'Burglary - Auto - 2C:18-2', 'Burglary - Residence - 2C:18-2', 'Motor Vehicle Theft - 2C:20-3']
+2025-08-05 00:42:03,364 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded CallType_Categories.xlsx with 592 records
+2025-08-05 00:42:03,365 - ComprehensiveSCRPAFixV8_5 - INFO - CallType columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-05 00:42:03,380 - ComprehensiveSCRPAFixV8_5 - INFO - Created mapping dictionary with 574 entries
+2025-08-05 00:42:03,382 - ComprehensiveSCRPAFixV8_5 - INFO - CallType_Categories.xlsx mapping results:
+2025-08-05 00:42:03,382 - ComprehensiveSCRPAFixV8_5 - INFO -   - Total incidents: 115
+2025-08-05 00:42:03,382 - ComprehensiveSCRPAFixV8_5 - INFO -   - Mapped incidents: 115
+2025-08-05 00:42:03,382 - ComprehensiveSCRPAFixV8_5 - INFO -   - Unmapped incidents: 0
+2025-08-05 00:42:03,383 - ComprehensiveSCRPAFixV8_5 - INFO -   - Mapping rate: 100.0%
+2025-08-05 00:42:03,383 - ComprehensiveSCRPAFixV8_5 - INFO - Category type distribution: {'Criminal Incidents': 115}
+2025-08-05 00:42:03,384 - ComprehensiveSCRPAFixV8_5 - INFO - Top 10 response types: {'Emergency': 81, 'Routine': 34}
+2025-08-05 00:42:03,389 - ComprehensiveSCRPAFixV8_5 - INFO - Final column coverage:
+2025-08-05 00:42:03,390 - ComprehensiveSCRPAFixV8_5 - INFO -   - response_type coverage: 100.0%
+2025-08-05 00:42:03,391 - ComprehensiveSCRPAFixV8_5 - INFO -   - category_type coverage: 100.0%
+2025-08-05 00:42:03,398 - ComprehensiveSCRPAFixV8_5 - INFO - Grid processing: 108/115 records have grid values
+2025-08-05 00:42:03,449 - ComprehensiveSCRPAFixV8_5 - INFO - CAD notes parsing complete: 115 records processed
+2025-08-05 00:42:03,526 - ComprehensiveSCRPAFixV8_5 - INFO - CAD response_type populated in 115/115 records
+2025-08-05 00:42:03,527 - ComprehensiveSCRPAFixV8_5 - INFO - CAD grid populated in 108/115 records
+2025-08-05 00:42:03,527 - ComprehensiveSCRPAFixV8_5 - INFO - CAD post populated in 111/115 records
+2025-08-05 00:42:03,528 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CAD header validation PASSED: All 36 columns follow lowercase snake_case
+2025-08-05 00:42:03,528 - ComprehensiveSCRPAFixV8_5 - INFO - CAD headers validation passed - all headers are lowercase snake_case
+2025-08-05 00:42:03,529 - ComprehensiveSCRPAFixV8_5 - INFO - CAD processing complete: 115 records
+2025-08-05 00:42:03,529 - ComprehensiveSCRPAFixV8_5 - INFO - Final CAD columns: ['case_number', 'incident', 'response_type', 'category_type', 'response_type_cad', 'category_type_cad', 'how_reported', 'location', 'block', 'grid', 'post', 'time_of_call', 'time_dispatched', 'time_out', 'time_in', 'time_spent_minutes', 'time_response_minutes', 'time_spent_formatted', 'time_response_formatted', 'officer', 'disposition', 'cad_notes_cleaned', 'cad_username', 'cad_timestamp', 'cycle_name']
+2025-08-05 00:42:03,579 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ RMS header validation PASSED: All 25 columns follow lowercase snake_case
+2025-08-05 00:42:03,580 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Writing standard CSV: 119 rows

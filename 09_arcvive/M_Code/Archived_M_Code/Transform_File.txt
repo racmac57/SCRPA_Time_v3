@@ -1,0 +1,56 @@
+let
+    Source = (Content as binary) =>
+    let
+        // Load the Excel workbook
+        Workbook = Excel.Workbook(Content, null, true),
+        Sheet1 = Workbook{[Item="Sheet1",Kind="Sheet"]}[Data],
+        // Promote headers
+        PromotedHeaders = Table.PromoteHeaders(Sheet1, [PromoteAllScalars=true]),
+        // Explicitly rename Fulladdress to FullAddress and Case Number to CaseNumber
+        FixedFullAddress = Table.RenameColumns(PromotedHeaders, {{"Fulladdress", "FullAddress"}, {"Case Number", "CaseNumber"}}, MissingField.Ignore),
+        // Standardize headers to PascalCase, preserving existing camelCase
+        CurrentColumns = Table.ColumnNames(FixedFullAddress),
+        PascalCaseNames = List.Transform(CurrentColumns, each 
+            if Text.Contains(_, " ") then
+                Text.Combine(
+                    List.Transform(Text.SplitAny(Text.Replace(_, " ", "_"), " _"), 
+                        each Text.Upper(Text.Start(_, 1)) & Text.Lower(Text.End(_, Text.Length(_) - 1))
+                    ), ""
+                )
+            else
+                _),
+        RenamePairs = List.Zip({CurrentColumns, PascalCaseNames}),
+        RenamedTable = Table.RenameColumns(FixedFullAddress, RenamePairs, MissingField.Ignore),
+        // Ensure CaseNumber exists
+        HasCaseNumber = Table.HasColumns(RenamedTable, "CaseNumber"),
+        AddedCaseNumber = if HasCaseNumber then RenamedTable else Table.AddColumn(RenamedTable, "CaseNumber", each "Missing"),
+        // Replace nulls in CaseNumber
+        ReplacedNulls = Table.TransformColumns(AddedCaseNumber, {
+            {"CaseNumber", each if _ is null then "Null" else Text.From(_), type text}
+        }),
+        // Add CaseNumberLength
+        AddedCaseNumberLength = Table.AddColumn(ReplacedNulls, "CaseNumberLength", each Text.Length([CaseNumber])),
+        // Add IncDate
+        AddedIncDate = Table.AddColumn(AddedCaseNumberLength, "IncDate", each 
+            if [IncidentDate] = null then 
+                (if [IncidentDateBetween] = null then [ReportDate] else [IncidentDateBetween]) 
+            else [IncidentDate]),
+        // Add IncTime
+        AddedIncTime = Table.AddColumn(AddedIncDate, "IncTime", each 
+            if [IncidentTime] = null then 
+                (if [IncidentTimeBetween] = null then [ReportTime] else [IncidentTimeBetween]) 
+            else [IncidentTime]),
+        // Add StartOfHour
+        AddedStartOfHour = Table.AddColumn(AddedIncTime, "StartOfHour", each Time.StartOfHour([IncTime]), type time),
+        // Add TimeOfDay from IncTime
+        AddedTimeOfDay = Table.AddColumn(AddedStartOfHour, "TimeOfDay", each 
+            if [IncTime] is null then "Unknown"
+            else if Time.Hour([IncTime]) < 12 then "Morning"
+            else if Time.Hour([IncTime]) < 18 then "Afternoon"
+            else "Evening", type text),
+        // Add ConvertedDate with error handling
+        ConvertedDate = Table.TransformColumns(AddedTimeOfDay, {{"IncDate", each try Number.From(_) otherwise null, type number}})
+    in
+        ConvertedDate
+in
+    Source

@@ -1,0 +1,10 @@
+2025-06-10 15:44:29,227 INFO Arguments parsed successfully
+2025-06-10 15:44:29,227 INFO Export Maps: True, Export Charts: True, Export Reports: False, Day Span: 30, Debug: False, Date: 2025-06-10
+2025-06-10 15:44:29,246 INFO Output folder: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\Reports\C06W23_2025_06_10_7Day
+2025-06-10 15:44:29,246 INFO Processing: MV Theft
+2025-06-10 15:44:35,058 INFO Processing: Burglary - Auto
+2025-06-10 15:44:37,201 INFO Processing: Burglary - Comm & Res
+2025-06-10 15:44:39,631 INFO Processing: Robbery
+2025-06-10 15:44:42,537 INFO Processing: Sexual Offenses
+2025-06-17 17:32:36,960 INFO Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+2025-06-17 17:32:36,961 INFO NumExpr defaulting to 16 threads.

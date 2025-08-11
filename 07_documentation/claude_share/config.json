@@ -1,0 +1,9 @@
+{
+  "BASE_DIR": "C:/Users/carucci_r/OneDrive - City of Hackensack/01_DataSources/SCRPA_Time_v2",
+  "CAD_EXPORT_DIR": "05_EXPORTS/_CAD/SCRPA",
+  "RMS_EXPORT_DIR": "05_EXPORTS/_RMS/SCRPA",
+  "SCRIPTS_DIR": "01_scripts",
+  "LOG_DIR": "03_output/logs",
+  "REPORT_DIR": "03_output/reports",
+  "POWERBI_CSV_PATH": "04_powerbi/enhanced_scrpa_data.csv"
+}

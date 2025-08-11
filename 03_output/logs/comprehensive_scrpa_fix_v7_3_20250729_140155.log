@@ -1,0 +1,22 @@
+2025-07-29 14:01:55,341 - ComprehensiveSCRPAFixV7_3 - INFO - Comprehensive SCRPA Fix V7.3 initialized.
+2025-07-29 14:01:55,341 - ComprehensiveSCRPAFixV7_3 - WARNING - Call type reference file not found. Will use fallback categorization.
+2025-07-29 14:01:55,341 - ComprehensiveSCRPAFixV7_3 - INFO - Starting Comprehensive SCRPA Fix V7.3 pipeline...
+2025-07-29 14:01:55,342 - ComprehensiveSCRPAFixV7_3 - INFO - Latest cad file: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-07-29 14:01:55,342 - ComprehensiveSCRPAFixV7_3 - INFO - Latest rms file: 2025_07_29_13_02_46_SCRPA_RMS.xlsx
+2025-07-29 14:01:55,342 - ComprehensiveSCRPAFixV7_3 - INFO - Processing CAD data: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-07-29 14:01:55,810 - ComprehensiveSCRPAFixV7_3 - INFO - Formatting datetime columns: ['Time of Call']
+2025-07-29 14:01:55,815 - ComprehensiveSCRPAFixV7_3 - INFO - Formatting time-only columns: ['Time Dispatched', 'Time Out', 'Time In', 'Time Spent', 'Time Response']
+2025-07-29 14:01:55,819 - ComprehensiveSCRPAFixV7_3 - INFO - Cleaning 'How Reported' column.
+2025-07-29 14:01:55,821 - ComprehensiveSCRPAFixV7_3 - WARNING - Applying fallback crime categorization.
+2025-07-29 14:01:55,822 - ComprehensiveSCRPAFixV7_3 - INFO - CAD processing complete: 114 records.
+2025-07-29 14:01:55,822 - ComprehensiveSCRPAFixV7_3 - INFO - Processing RMS data: 2025_07_29_13_02_46_SCRPA_RMS.xlsx
+2025-07-29 14:01:55,888 - ComprehensiveSCRPAFixV7_3 - INFO - Applied uppercase to vehicle data.
+2025-07-29 14:01:55,902 - ComprehensiveSCRPAFixV7_3 - INFO - Created derived vehicle columns.
+2025-07-29 14:01:55,902 - ComprehensiveSCRPAFixV7_3 - WARNING - Applying fallback crime categorization.
+2025-07-29 14:01:55,904 - ComprehensiveSCRPAFixV7_3 - INFO - RMS processing complete: 136 records.
+2025-07-29 14:01:55,919 - ComprehensiveSCRPAFixV7_3 - INFO - ============================================================
+2025-07-29 14:01:55,919 - ComprehensiveSCRPAFixV7_3 - INFO - COMPREHENSIVE SCRPA FIX V7.3 COMPLETE
+2025-07-29 14:01:55,919 - ComprehensiveSCRPAFixV7_3 - INFO - ✅ Total records processed: 250
+2025-07-29 14:01:55,920 - ComprehensiveSCRPAFixV7_3 - INFO - ✅ Null/Empty CaseNumbers: 0
+2025-07-29 14:01:55,920 - ComprehensiveSCRPAFixV7_3 - INFO - ✅ Output file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data_v7_3_final.csv
+2025-07-29 14:01:55,920 - ComprehensiveSCRPAFixV7_3 - INFO - ============================================================

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-07-25 17:21:51",
+  "environment": "dev",
+  "results": {
+    "main": {
+      "success": false,
+      "error": "Could not locate DataMashup file in PBIX archive. This PBIX file may not contain parameters or uses a different structure."
+    },
+    "legacy": {
+      "success": false,
+      "error": "Could not locate DataMashup file in PBIX archive. This PBIX file may not contain parameters or uses a different structure."
+    }
+  },
+  "project_directory": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2",
+  "pbix_files_processed": 0
+}

@@ -1,0 +1,5 @@
+2025-08-05 14:51:35,203 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-05 14:51:35,907 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-05 14:51:35,907 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-05 14:51:35,908 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-05 14:51:36,013 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records

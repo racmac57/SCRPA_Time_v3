@@ -1,0 +1,23 @@
+2025-08-04 01:58:19,214 - INFO - SCRPA v4 Production Pipeline Started - 20250804_015819
+2025-08-04 01:58:19,564 - INFO - Loaded CallType categories: 592 records
+2025-08-04 01:58:19,579 - INFO - Created mapping for 574 incident types
+2025-08-04 01:58:19,621 - INFO - Loaded cycle reference: 52 records
+2025-08-04 01:58:19,654 - INFO - SCRPA v4 Production Pipeline Started - 20250804_015819
+2025-08-04 01:58:19,655 - ERROR - CallType_Categories.xlsx not found at: C:\Users\CARUCC~1\AppData\Local\Temp\tmp3cdtsfe3\10_Refrence_Files\CallType_Categories.xlsx
+2025-08-04 01:58:19,658 - WARNING - Cycle reference file not found, using default calculations
+2025-08-04 01:58:19,661 - INFO - Starting Complete SCRPA v4 Production Pipeline
+2025-08-04 01:58:19,661 - INFO - Processing files: RMS=test_rms_data.csv, CAD=test_cad_data.csv
+2025-08-04 01:58:19,715 - INFO - Loaded data - RMS: 5 records, CAD: 5 records
+2025-08-04 01:58:19,718 - ERROR - Pipeline failed: 'period'
+2025-08-04 01:58:19,720 - ERROR - Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Complete_SCRPA_v4_Production_Pipeline.py", line 573, in run_full_pipeline
+    results = self.validate_pipeline_results()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Complete_SCRPA_v4_Production_Pipeline.py", line 673, in validate_pipeline_results
+    'period_distribution_valid': set(getattr(self, 'matched_data', pd.DataFrame())['period']) >= {'7-Day','28-Day','YTD'}
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\core\frame.py", line 4107, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'period'
+

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Friday, May 2, 2025 11:01:18 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\Refrence\TimeSCRPT\Code\Python\weekly_crime_report.py", line 99, in &lt;module&gt;
+﻿    new_legend = layout.listElements("MAPSURROUND_ELEMENT", "Legend")[0]
+﻿                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+﻿IndexError: list index out of range
+</msg><msg code="0" type="0">Failed script ScriptWeekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Friday, May 2, 2025 11:01:24 PM (Elapsed Time: 5.32 seconds)</msg></messages>

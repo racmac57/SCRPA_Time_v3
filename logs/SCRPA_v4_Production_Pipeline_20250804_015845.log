@@ -1,0 +1,92 @@
+2025-08-04 01:58:45,911 - INFO - SCRPA v4 Production Pipeline Started - 20250804_015845
+2025-08-04 01:58:46,173 - INFO - Loaded CallType categories: 592 records
+2025-08-04 01:58:46,183 - INFO - Created mapping for 574 incident types
+2025-08-04 01:58:46,192 - INFO - Loaded cycle reference: 52 records
+2025-08-04 01:58:46,195 - INFO - ==================================================
+2025-08-04 01:58:46,195 - INFO - SCRPA v4 PIPELINE PROCESSING SUMMARY
+2025-08-04 01:58:46,196 - INFO - ==================================================
+2025-08-04 01:58:46,196 - INFO - RMS records loaded:     100
+2025-08-04 01:58:46,196 - INFO - RMS records retained:   100
+2025-08-04 01:58:46,197 - INFO - CAD records processed:  150
+2025-08-04 01:58:46,197 - INFO - Matched records:        75
+2025-08-04 01:58:46,197 - INFO - Exports generated:
+2025-08-04 01:58:46,198 - INFO -   • file1.csv
+2025-08-04 01:58:46,199 - INFO -   • file2.csv
+2025-08-04 01:58:46,200 - INFO - ==================================================
+2025-08-04 01:58:46,210 - INFO - SCRPA v4 Production Pipeline Started - 20250804_015846
+2025-08-04 01:58:46,211 - ERROR - CallType_Categories.xlsx not found at: C:\Users\CARUCC~1\AppData\Local\Temp\tmpst39iew7\10_Refrence_Files\CallType_Categories.xlsx
+2025-08-04 01:58:46,211 - WARNING - Cycle reference file not found, using default calculations
+2025-08-04 01:58:46,212 - INFO - Starting Complete SCRPA v4 Production Pipeline
+2025-08-04 01:58:46,212 - INFO - Processing files: RMS=test_rms_data.csv, CAD=test_cad_data.csv
+2025-08-04 01:58:46,223 - INFO - Loaded data - RMS: 5 records, CAD: 5 records
+2025-08-04 01:58:46,223 - INFO - Data loading validation: {'rms_data_loaded': True, 'rms_data_retained': False, 'cad_data_processed': True, 'matching_successful': False, 'seven_day_export_generated': False, 'period_distribution_valid': False}
+2025-08-04 01:58:46,223 - INFO - Production RMS processing: 5 records
+2025-08-04 01:58:46,224 - INFO - Using existing processed date/time columns
+2025-08-04 01:58:46,224 - WARNING - incident_time column not found
+2025-08-04 01:58:46,224 - INFO - Applying incident type tagging
+2025-08-04 01:58:46,224 - INFO - Processing incident tagging for 5 records
+2025-08-04 01:58:46,224 - INFO - Creating all_incidents from columns: ['incident_type_1_raw', 'incident_type_2_raw', 'incident_type_3_raw']
+2025-08-04 01:58:46,226 - INFO - Incident tagging complete - Tagged: 1, Untagged: 4, Multiple tags: 0
+2025-08-04 01:58:46,226 - INFO - Calculating date-derived fields
+2025-08-04 01:58:46,226 - WARNING - incident_date column not found for derived field calculation
+2025-08-04 01:58:46,227 - INFO - Complete RMS processing finished: 5 records
+2025-08-04 01:58:46,227 - INFO - Production CAD processing: 5 records
+2025-08-04 01:58:46,227 - INFO - Applying CAD CallType mapping
+2025-08-04 01:58:46,227 - INFO - Processing 5 CAD records
+2025-08-04 01:58:46,228 - INFO - CallType mapping: 3/5 (60.0%)
+2025-08-04 01:58:46,229 - WARNING - Unmapped incidents: ['ASSAULT', 'VANDALISM']
+2025-08-04 01:58:46,230 - INFO - how_reported cleaning: 5 records normalized to '9-1-1'
+2025-08-04 01:58:46,230 - INFO - Processing CAD notes from column: cad_notes_raw
+2025-08-04 01:58:46,233 - INFO - CAD notes processing: 5 usernames, 3 timestamps extracted
+2025-08-04 01:58:46,233 - INFO - Applying CAD time-of-day and location processing
+2025-08-04 01:58:46,233 - INFO - Processing time-of-day and location for 5 records
+2025-08-04 01:58:46,234 - WARNING - No location columns found. Checked: ['FullAddress2', 'FullAddress', 'location', 'full_address']
+2025-08-04 01:58:46,234 - WARNING - 'incident_time' column not found
+2025-08-04 01:58:46,237 - INFO - Processing block calculation
+2025-08-04 01:58:46,241 - INFO - Block processing: 0 calculated, 0 intersections, 5 need review
+2025-08-04 01:58:46,241 - INFO - Applying CAD incident type tagging
+2025-08-04 01:58:46,241 - INFO - Processing incident tagging for 5 records
+2025-08-04 01:58:46,242 - INFO - Using 'incident' column for tagging
+2025-08-04 01:58:46,242 - INFO - Incident tagging complete - Tagged: 1, Untagged: 4, Multiple tags: 0
+2025-08-04 01:58:46,243 - INFO - Complete CAD processing finished: 5 records
+2025-08-04 01:58:46,243 - INFO - Data processing validation: {'rms_data_loaded': True, 'rms_data_retained': True, 'cad_data_processed': True, 'matching_successful': False, 'seven_day_export_generated': False, 'period_distribution_valid': False}
+2025-08-04 01:58:46,243 - INFO - Creating matched dataset - RMS: 5, CAD: 5
+2025-08-04 01:58:46,245 - INFO - Matched dataset created: 5 records, 0 matches
+2025-08-04 01:58:46,246 - INFO - Matching validation: {'rms_data_loaded': True, 'rms_data_retained': True, 'cad_data_processed': True, 'matching_successful': True, 'seven_day_export_generated': False, 'period_distribution_valid': False}
+2025-08-04 01:58:46,246 - INFO - Generating production files
+2025-08-04 01:58:46,249 - INFO - Generated production file: C08W31_20250804_015846_rms_data_final.csv (5 records)
+2025-08-04 01:58:46,252 - INFO - Generated production file: C08W31_20250804_015846_cad_data_final.csv (5 records)
+2025-08-04 01:58:46,256 - INFO - Generated production file: C08W31_20250804_015846_cad_rms_matched_final.csv (5 records)
+2025-08-04 01:58:46,258 - INFO - All production files generated successfully
+2025-08-04 01:58:46,258 - INFO - Final pipeline validation: {'rms_data_loaded': True, 'rms_data_retained': True, 'cad_data_processed': True, 'matching_successful': True, 'seven_day_export_generated': False, 'period_distribution_valid': False}
+2025-08-04 01:58:46,259 - INFO - ==================================================
+2025-08-04 01:58:46,259 - INFO - SCRPA v4 PIPELINE PROCESSING SUMMARY
+2025-08-04 01:58:46,259 - INFO - ==================================================
+2025-08-04 01:58:46,259 - INFO - RMS records loaded:     5
+2025-08-04 01:58:46,259 - INFO - RMS records retained:   5
+2025-08-04 01:58:46,259 - INFO - CAD records processed:  5
+2025-08-04 01:58:46,259 - INFO - Matched records:        5
+2025-08-04 01:58:46,259 - INFO - Exports generated:
+2025-08-04 01:58:46,259 - INFO -   • C08W31_20250804_015846_rms_data_final.csv
+2025-08-04 01:58:46,260 - INFO -   • C08W31_20250804_015846_cad_data_final.csv
+2025-08-04 01:58:46,260 - INFO -   • C08W31_20250804_015846_cad_rms_matched_final.csv
+2025-08-04 01:58:46,260 - INFO -   • SCRPA_Processing_Summary_20250804_015846.json
+2025-08-04 01:58:46,260 - INFO -   • SCRPA_Validation_Report_20250804_015846.json
+2025-08-04 01:58:46,260 - INFO - ==================================================
+2025-08-04 01:58:46,260 - INFO - Complete SCRPA v4 Pipeline completed successfully in 0.05 seconds
+2025-08-04 01:58:46,260 - INFO - Generated 5 output files
+2025-08-04 01:58:46,260 - INFO - Final datasets - RMS: 5, CAD: 5, Matched: 5
+2025-08-04 01:58:46,265 - INFO - ==================================================
+2025-08-04 01:58:46,266 - INFO - SCRPA v4 PIPELINE PROCESSING SUMMARY
+2025-08-04 01:58:46,266 - INFO - ==================================================
+2025-08-04 01:58:46,266 - INFO - RMS records loaded:     5
+2025-08-04 01:58:46,266 - INFO - RMS records retained:   5
+2025-08-04 01:58:46,266 - INFO - CAD records processed:  5
+2025-08-04 01:58:46,267 - INFO - Matched records:        5
+2025-08-04 01:58:46,267 - INFO - Exports generated:
+2025-08-04 01:58:46,267 - INFO -   • C08W31_20250804_015846_rms_data_final.csv
+2025-08-04 01:58:46,268 - INFO -   • C08W31_20250804_015846_cad_data_final.csv
+2025-08-04 01:58:46,268 - INFO -   • C08W31_20250804_015846_cad_rms_matched_final.csv
+2025-08-04 01:58:46,268 - INFO -   • SCRPA_Processing_Summary_20250804_015846.json
+2025-08-04 01:58:46,268 - INFO -   • SCRPA_Validation_Report_20250804_015846.json
+2025-08-04 01:58:46,269 - INFO - ==================================================

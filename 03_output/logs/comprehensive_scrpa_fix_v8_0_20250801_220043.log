@@ -1,0 +1,16 @@
+2025-08-01 22:00:43,486 - ComprehensiveSCRPAFixV8_0 - INFO - === Comprehensive SCRPA Fix V8.0 - Column Standardization Version ===
+2025-08-01 22:00:44,176 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded call type reference: 592 records
+2025-08-01 22:00:44,181 - ComprehensiveSCRPAFixV8_0 - INFO - Reference file columns after standardization: ['incident', 'category_type', 'response_type']
+2025-08-01 22:00:44,291 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-01 22:00:44,292 - ComprehensiveSCRPAFixV8_0 - DEBUG - Testing column: 'vehicle_1' against pattern: ^[a-z]+(_[a-z0-9]+)*$
+2025-08-01 22:00:44,294 - ComprehensiveSCRPAFixV8_0 - DEBUG - Column 'vehicle_1' PASSED validation
+2025-08-01 22:00:44,295 - ComprehensiveSCRPAFixV8_0 - DEBUG - Testing column: 'vehicle_2' against pattern: ^[a-z]+(_[a-z0-9]+)*$
+2025-08-01 22:00:44,295 - ComprehensiveSCRPAFixV8_0 - DEBUG - Column 'vehicle_2' PASSED validation
+2025-08-01 22:00:44,296 - ComprehensiveSCRPAFixV8_0 - DEBUG - Testing column: 'vehicle_1_and_vehicle_2' against pattern: ^[a-z]+(_[a-z0-9]+)*$
+2025-08-01 22:00:44,296 - ComprehensiveSCRPAFixV8_0 - DEBUG - Column 'vehicle_1_and_vehicle_2' PASSED validation
+2025-08-01 22:00:44,296 - ComprehensiveSCRPAFixV8_0 - DEBUG - Testing column: 'case_number' against pattern: ^[a-z]+(_[a-z0-9]+)*$
+2025-08-01 22:00:44,297 - ComprehensiveSCRPAFixV8_0 - DEBUG - Column 'case_number' PASSED validation
+2025-08-01 22:00:44,297 - ComprehensiveSCRPAFixV8_0 - DEBUG - Testing column: 'incident_date' against pattern: ^[a-z]+(_[a-z0-9]+)*$
+2025-08-01 22:00:44,297 - ComprehensiveSCRPAFixV8_0 - DEBUG - Column 'incident_date' PASSED validation
+2025-08-01 22:00:44,298 - ComprehensiveSCRPAFixV8_0 - DEBUG - Testing column: 'incident_type' against pattern: ^[a-z]+(_[a-z0-9]+)*$
+2025-08-01 22:00:44,298 - ComprehensiveSCRPAFixV8_0 - DEBUG - Column 'incident_type' PASSED validation

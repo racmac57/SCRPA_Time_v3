@@ -1,0 +1,134 @@
+# 🕒 2025-01-27-22-35-00
+# Police_Data_Analysis/date_parsing_fix
+# Author: R. A. Carucci
+# Purpose: Enhanced date parsing to handle 'today', 'yesterday', 'tomorrow' keywords
+
+def parse_date_string(date_str):
+    """
+    Parse date string with support for special keywords
+    
+    Args:
+        date_str (str): Date string in YYYY_MM_DD format or special keyword
+        
+    Returns:
+        date: Parsed date object
+    """
+    from datetime import date, timedelta
+    import re
+    
+    if not date_str:
+        return date.today()
+    
+    # Handle special keywords
+    if date_str.lower() == 'today':
+        return date.today()
+    elif date_str.lower() == 'yesterday':
+        return date.today() - timedelta(days=1)
+    elif date_str.lower() == 'tomorrow':
+        return date.today() + timedelta(days=1)
+    
+    # Handle YYYY_MM_DD format
+    try:
+        return dt_datetime.strptime(date_str, "%Y_%m_%d").date()
+    except ValueError:
+        # Try YYYY-MM-DD format (with dashes)
+        try:
+            return dt_datetime.strptime(date_str, "%Y-%m-%d").date()
+        except ValueError:
+            # Try MM/DD/YYYY format
+            try:
+                return dt_datetime.strptime(date_str, "%m/%d/%Y").date()
+            except ValueError:
+                raise ValueError(f"Invalid date format: {date_str}. Use YYYY_MM_DD, 'today', 'yesterday', or 'tomorrow'")
+
+# Updated main function with better date parsing
+def main(generate_maps=True, generate_charts=True, generate_tables=True, max_features=30, debug_mode=False, report_date_str=None):
+    """Main processing function with enhanced date parsing"""
+    batch_start = time.time()
+    overall_success = True
+    crime_results = {}
+    
+    try:
+        if report_date_str is None:
+            report_date_str = get_date_string()
+        
+        # Enhanced date parsing
+        report_date = parse_date_string(report_date_str)
+        formatted_date_str = report_date.strftime("%Y_%m_%d")
+        
+        logging.info(f"Processing date: {report_date} (formatted as: {formatted_date_str})")
+        
+    except Exception as e:
+        logging.error(f"Invalid date format. Use YYYY_MM_DD, 'today', 'yesterday', or 'tomorrow'. Error: {e}")
+        return False
+
+    logging.info(f"\nCRIME ANALYSIS SESSION STARTING")
+    logging.info(f"Date: {formatted_date_str}")
+    logging.info(f"Parameters:")
+    logging.info(f"  • Maps: {generate_maps}")
+    logging.info(f"  • Charts: {generate_charts}")
+    logging.info(f"  • Tables: {generate_tables}")
+    logging.info(f"  • Max Features: {max_features}")
+    logging.info(f"  • Debug Mode: {debug_mode}")
+
+    system_ready = validate_system_readiness()
+    if not system_ready:
+        logging.warning("System has issues but continuing...")
+
+    output_folder = create_output_folder_and_copy_template(formatted_date_str)
+    if not output_folder:
+        logging.error("Failed to create output folder - cannot continue")
+        return False
+
+    logging.info(f"\nPROCESSING {len(CRIME_TYPES)} CRIME TYPES")
+    logging.info("=" * 60)
+    
+    for i, crime_type in enumerate(CRIME_TYPES, 1):
+        logging.info(f"\n[{i}/{len(CRIME_TYPES)}] Starting {crime_type}")
+        
+        success = process_crime_type(
+            crime_type, 
+            report_date, 
+            formatted_date_str,  # Use formatted date string
+            generate_map=generate_maps, 
+            generate_chart=generate_charts, 
+            generate_table=generate_tables
+        )
+        
+        crime_results[crime_type] = success
+        overall_success &= success
+        
+        logging.info(f"[{i}/{len(CRIME_TYPES)}] {crime_type}: {'SUCCESS' if success else 'FAILED'}")
+
+    logging.info(f"\nASSEMBLING POWERPOINT PRESENTATION")
+    logging.info("=" * 50)
+    
+    try:
+        success_ppt = auto_assemble_powerpoint_final(output_folder, CRIME_TYPES, formatted_date_str)
+        if success_ppt:
+            logging.info("PowerPoint assembly completed successfully")
+        else:
+            logging.error("PowerPoint assembly failed")
+            overall_success = False
+    except Exception as e:
+        logging.error(f"PowerPoint assembly crashed: {e}")
+        import traceback
+        logging.error(traceback.format_exc())
+        overall_success = False
+
+    total_time = time.time() - batch_start
+    logging.info(f"\nSESSION COMPLETE")
+    logging.info("=" * 60)
+    logging.info(f"Total time: {total_time:.2f} seconds")
+    logging.info(f"Overall success: {'SUCCESS' if overall_success else 'FAILED'}")
+    logging.info(f"Output folder: {output_folder}")
+    
+    logging.info(f"\nCRIME TYPE RESULTS:")
+    for crime_type, success in crime_results.items():
+        status = "SUCCESS" if success else "FAILED"
+        logging.info(f"  • {crime_type}: {status}")
+    
+    successful_crimes = sum(1 for success in crime_results.values() if success)
+    logging.info(f"\nSUCCESS RATE: {successful_crimes}/{len(CRIME_TYPES)} crime types")
+    
+    return overall_success

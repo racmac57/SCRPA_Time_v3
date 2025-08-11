@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 6:20:17 PM</msg><msg code="0" type="0">CSV exists: True</msg><msg code="0" type="0">Project exists: True</msg><msg code="1" type="100">Critical failure: name 'crime_types' is not defined</msg><msg code="1" type="100">Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 72, in &lt;module&gt;
+    for crime in crime_types:
+                 ^^^^^^^^^^^
+NameError: name 'crime_types' is not defined
+</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 72, in &lt;module&gt;
+﻿    for crime in crime_types:
+﻿                 ^^^^^^^^^^^
+﻿NameError: name 'crime_types' is not defined
+</msg><msg code="0" type="0">Failed script Weekly Crime ReportWith Table...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReportables).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 6:20:17 PM (Elapsed Time: 0.19 seconds)</msg></messages>

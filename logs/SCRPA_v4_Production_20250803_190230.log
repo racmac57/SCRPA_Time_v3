@@ -1,0 +1,26 @@
+2025-08-03 19:02:30,461 - INFO - SCRPA v4 Production Pipeline Started - 20250803_190230
+2025-08-03 19:02:30,464 - INFO - Starting SCRPA v4 Production Pipeline
+2025-08-03 19:02:30,464 - INFO - Processing RMS data from: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\C08W31_20250803_051051_rms_data_fixed.csv
+2025-08-03 19:02:30,472 - INFO - Loaded 140 RMS records
+2025-08-03 19:02:30,481 - INFO - RMS processing complete: 140 records
+2025-08-03 19:02:30,481 - INFO - Processing CAD data from: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\C08W31_20250803_051051_cad_data_fixed.csv
+2025-08-03 19:02:30,483 - INFO - Loaded 114 CAD records
+2025-08-03 19:02:30,750 - INFO - Loaded 0 CallType categories
+2025-08-03 19:02:30,751 - INFO - CAD processing complete: 114 records
+2025-08-03 19:02:30,751 - INFO - Matching CAD and RMS data
+2025-08-03 19:02:30,778 - INFO - Matching complete: 87 direct matches found
+2025-08-03 19:02:30,779 - INFO - Generating 7-day export
+2025-08-03 19:02:30,785 - INFO - 7-day export: 0 records
+2025-08-03 19:02:30,785 - INFO - Performing data quality validation
+2025-08-03 19:02:30,786 - INFO - Validation complete - Overall status: FAILED
+2025-08-03 19:02:30,786 - INFO - Saving production outputs
+2025-08-03 19:02:30,794 - INFO - Saved rms_final: C08W31_20250803_190230_rms_data_final.csv (140 records)
+2025-08-03 19:02:30,798 - INFO - Saved cad_final: C08W31_20250803_190230_cad_data_final.csv (114 records)
+2025-08-03 19:02:30,804 - INFO - Saved matched_final: C08W31_20250803_190230_cad_rms_matched_final.csv (140 records)
+2025-08-03 19:02:30,805 - INFO - Saved 7day_export: C08W31_20250803_190230_SCRPA_7Day_Export.csv (0 records)
+2025-08-03 19:02:30,808 - INFO - All production outputs saved successfully
+2025-08-03 19:02:30,808 - INFO - Pipeline completed successfully in 0.34 seconds
+2025-08-03 19:02:30,809 - INFO - RMS: 140 records
+2025-08-03 19:02:30,809 - INFO - CAD: 114 records
+2025-08-03 19:02:30,809 - INFO - Matched: 140 records
+2025-08-03 19:02:30,809 - INFO - 7-day Export: 0 records

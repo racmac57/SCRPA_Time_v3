@@ -1,0 +1,19 @@
+2025-07-29 08:27:51,529 - ComprehensiveSCRPAFixV7 - INFO - Comprehensive SCRPA Fix V7 initialized.
+2025-07-29 08:27:51,530 - ComprehensiveSCRPAFixV7 - WARNING - Call type reference file not found. Will use fallback categorization.
+2025-07-29 08:27:51,530 - ComprehensiveSCRPAFixV7 - INFO - Starting Comprehensive SCRPA Fix V7 pipeline...
+2025-07-29 08:27:51,530 - ComprehensiveSCRPAFixV7 - INFO - Latest cad file: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 08:27:51,530 - ComprehensiveSCRPAFixV7 - INFO - Latest rms file: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 08:27:51,531 - ComprehensiveSCRPAFixV7 - INFO - Processing CAD data: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 08:27:51,996 - ComprehensiveSCRPAFixV7 - WARNING - Applying fallback crime categorization.
+2025-07-29 08:27:51,997 - ComprehensiveSCRPAFixV7 - INFO - CAD processing complete: 114 records.
+2025-07-29 08:27:51,997 - ComprehensiveSCRPAFixV7 - INFO - Processing RMS data: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 08:27:52,052 - ComprehensiveSCRPAFixV7 - INFO - Applied uppercase to vehicle data.
+2025-07-29 08:27:52,066 - ComprehensiveSCRPAFixV7 - INFO - Created derived vehicle columns.
+2025-07-29 08:27:52,066 - ComprehensiveSCRPAFixV7 - WARNING - Applying fallback crime categorization.
+2025-07-29 08:27:52,067 - ComprehensiveSCRPAFixV7 - INFO - RMS processing complete: 134 records.
+2025-07-29 08:27:52,083 - ComprehensiveSCRPAFixV7 - INFO - ============================================================
+2025-07-29 08:27:52,083 - ComprehensiveSCRPAFixV7 - INFO - COMPREHENSIVE SCRPA FIX V7 COMPLETE
+2025-07-29 08:27:52,083 - ComprehensiveSCRPAFixV7 - INFO - ✅ Total records processed: 248
+2025-07-29 08:27:52,083 - ComprehensiveSCRPAFixV7 - INFO - ✅ Null/Empty CaseNumbers: 0
+2025-07-29 08:27:52,083 - ComprehensiveSCRPAFixV7 - INFO - ✅ Output file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data_v7_fixed.csv
+2025-07-29 08:27:52,083 - ComprehensiveSCRPAFixV7 - INFO - ============================================================

@@ -1,0 +1,356 @@
+2025-07-25 15:23:29,118 - test_data_generator - INFO - Generating 3 test records with embedded PII
+2025-07-25 15:23:29,119 - test_data_generator - INFO - Generated test dataset with 3 records containing:
+2025-07-25 15:23:29,119 - test_data_generator - INFO -   - Names: ~12 embedded
+2025-07-25 15:23:29,119 - test_data_generator - INFO -   - Phone numbers: ~9 embedded
+2025-07-25 15:23:29,119 - test_data_generator - INFO -   - SSNs: ~6 embedded
+2025-07-25 15:23:29,119 - test_data_generator - INFO -   - Email addresses: ~6 embedded
+2025-07-25 15:23:29,119 - test_data_generator - INFO -   - License plates: ~6 embedded
+2025-07-25 15:23:29,119 - test_data_generator - INFO -   - Credit cards: ~3 embedded
+2025-07-25 15:23:29,119 - network_monitor - INFO - Network Security Monitor initialized (duration: 1s)
+2025-07-25 15:23:29,119 - security_report_generator - INFO - Security Report Generator initialized with compliance requirements
+2025-07-25 15:32:06,257 - __main__ - INFO - Security Validator initialized
+2025-07-25 15:32:06,258 - __main__ - INFO - Network monitoring started
+2025-07-25 15:32:06,260 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 15:32:06,261 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 15:32:06,262 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 15:32:06,262 - __main__ - INFO - PASS - External URL Rejection (http://api.openai.com:443): External URL correctly rejected
+2025-07-25 15:32:06,263 - __main__ - INFO - PASS - External URL Rejection (https://api.anthropic.com): External URL correctly rejected
+2025-07-25 15:32:06,263 - __main__ - INFO - PASS - External URL Rejection (http://192.168.1.100:11434): External URL correctly rejected
+2025-07-25 15:32:06,263 - __main__ - INFO - PASS - External URL Rejection (http://example.com:11434): External URL correctly rejected
+2025-07-25 15:32:08,284 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available on localhost:11434
+2025-07-25 15:32:08,285 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 15:32:08,287 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 15:32:08,288 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 15:32:08,288 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 15:32:08,288 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 15:32:08,288 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 15:32:08,288 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 15:32:08,289 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 15:32:08,333 - __main__ - INFO - PASS - Data Sanitization Effectiveness: All sensitive data properly sanitized
+2025-07-25 15:32:08,336 - comprehensive_data_sanitizer - WARNING -    names: 2 violations
+2025-07-25 15:32:08,336 - comprehensive_data_sanitizer - WARNING -    phones: 1 violations
+2025-07-25 15:32:08,336 - comprehensive_data_sanitizer - WARNING -    ssns: 1 violations
+2025-07-25 15:32:08,336 - comprehensive_data_sanitizer - WARNING -    emails: 1 violations
+2025-07-25 15:32:08,336 - comprehensive_data_sanitizer - WARNING -    license_plates: 2 violations
+2025-07-25 15:32:08,337 - __main__ - INFO - PASS - Sanitization Audit Function: Audit correctly detected 7 violations
+2025-07-25 15:32:08,340 - __main__ - ERROR - FAILED - Address Block-Level Sanitization: Address sanitization not working correctly
+2025-07-25 15:32:12,456 - __main__ - WARNING - WARNING - Local-Only LLM Processing: Report generated but security notices missing
+2025-07-25 15:32:12,456 - __main__ - INFO - ERROR - LLM Fallback Behavior: Fallback test failed: name 'SecureSCRPAGenerator' is not defined
+2025-07-25 15:32:12,457 - __main__ - INFO - PASS - External API Configuration Check: No external API configurations found
+2025-07-25 15:32:12,457 - __main__ - WARNING - WARNING - Secure Configuration Validation: secure_scrpa_config.json not found
+2025-07-25 15:32:12,460 - __main__ - INFO - PASS - Log File Security Check: No sensitive data found in log files
+2025-07-25 15:32:12,461 - __main__ - INFO - PASS - Backup File Security: No backup directories found
+2025-07-25 15:32:12,461 - __main__ - ERROR - FAILED - Ollama Offline Error Handling: Error handling failed: name 'SecureSCRPAGenerator' is not defined
+2025-07-25 15:32:12,464 - __main__ - INFO - PASS - Invalid Data Error Handling: Invalid data handled gracefully
+2025-07-25 15:32:13,476 - __main__ - INFO - Network monitoring stopped. Found 45 external calls
+2025-07-25 15:32:13,476 - __main__ - ERROR - FAILED - External Network Calls: Detected 45 external network connections
+2025-07-25 15:44:22,485 - __main__ - INFO - Security Validator initialized
+2025-07-25 15:44:22,487 - __main__ - INFO - Network monitoring started
+2025-07-25 15:44:22,488 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 15:44:22,489 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 15:44:22,489 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 15:44:22,491 - __main__ - INFO - PASS - External URL Rejection (http://api.openai.com:443): External URL correctly rejected
+2025-07-25 15:44:22,491 - __main__ - INFO - PASS - External URL Rejection (https://api.anthropic.com): External URL correctly rejected
+2025-07-25 15:44:22,492 - __main__ - INFO - PASS - External URL Rejection (http://192.168.1.100:11434): External URL correctly rejected
+2025-07-25 15:44:22,492 - __main__ - INFO - PASS - External URL Rejection (http://example.com:11434): External URL correctly rejected
+2025-07-25 15:44:24,543 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available on localhost:11434
+2025-07-25 15:44:24,543 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 15:44:24,544 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 15:44:24,544 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 15:44:24,546 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 15:44:24,546 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 15:44:24,546 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 15:44:24,546 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 15:44:24,546 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 15:44:24,563 - __main__ - INFO - PASS - Data Sanitization Effectiveness: All sensitive data properly sanitized
+2025-07-25 15:44:24,566 - comprehensive_data_sanitizer - WARNING -    names: 2 violations
+2025-07-25 15:44:24,566 - comprehensive_data_sanitizer - WARNING -    phones: 1 violations
+2025-07-25 15:44:24,566 - comprehensive_data_sanitizer - WARNING -    ssns: 1 violations
+2025-07-25 15:44:24,566 - comprehensive_data_sanitizer - WARNING -    emails: 1 violations
+2025-07-25 15:44:24,566 - comprehensive_data_sanitizer - WARNING -    license_plates: 2 violations
+2025-07-25 15:44:24,567 - __main__ - INFO - PASS - Sanitization Audit Function: Audit correctly detected 7 violations
+2025-07-25 15:44:24,570 - __main__ - ERROR - FAILED - Address Block-Level Sanitization: Address sanitization not working correctly
+2025-07-25 15:44:28,696 - __main__ - WARNING - WARNING - Local-Only LLM Processing: Report generated but security notices missing: SECURITY NOTICE banner, LOCAL OLLAMA reference
+2025-07-25 15:44:28,697 - __main__ - INFO - PASS - LLM Fallback Behavior: Fallback mode activated with proper security notices when Ollama unavailable
+2025-07-25 15:44:28,698 - __main__ - INFO - PASS - External API Configuration Check: No external API configurations found
+2025-07-25 15:44:28,698 - __main__ - WARNING - WARNING - Secure Configuration Validation: secure_scrpa_config.json not found
+2025-07-25 15:44:28,702 - __main__ - INFO - PASS - Log File Security Check: No sensitive data found in log files
+2025-07-25 15:44:28,702 - __main__ - INFO - PASS - Backup File Security: No backup directories found
+2025-07-25 15:44:28,702 - __main__ - INFO - PASS - Ollama Offline Error Handling: Graceful fallback with security notices when Ollama offline
+2025-07-25 15:44:28,707 - __main__ - INFO - PASS - Invalid Data Error Handling: Invalid data handled gracefully
+2025-07-25 15:44:29,711 - __main__ - INFO - Network monitoring stopped. Found 58 external calls
+2025-07-25 15:44:29,711 - __main__ - ERROR - FAILED - External Network Calls: Detected 58 external network connections
+2025-07-25 15:52:54,140 - __main__ - INFO - Security Validator initialized
+2025-07-25 15:52:54,142 - __main__ - INFO - Network monitoring started
+2025-07-25 15:52:54,145 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 15:52:54,147 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 15:52:54,149 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 15:52:54,150 - __main__ - INFO - PASS - External URL Rejection (http://api.openai.com:443): External URL correctly rejected
+2025-07-25 15:52:54,150 - __main__ - INFO - PASS - External URL Rejection (https://api.anthropic.com): External URL correctly rejected
+2025-07-25 15:52:54,151 - __main__ - INFO - PASS - External URL Rejection (http://192.168.1.100:11434): External URL correctly rejected
+2025-07-25 15:52:54,152 - __main__ - INFO - PASS - External URL Rejection (http://example.com:11434): External URL correctly rejected
+2025-07-25 15:52:56,164 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available on localhost:11434
+2025-07-25 15:52:56,164 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 15:52:56,166 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 15:52:56,166 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 15:52:56,166 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 15:52:56,166 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 15:52:56,167 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 15:52:56,167 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 15:52:56,167 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 15:52:56,190 - __main__ - INFO - PASS - Data Sanitization Effectiveness: All sensitive data properly sanitized
+2025-07-25 15:52:56,196 - comprehensive_data_sanitizer - WARNING -    names: 2 violations
+2025-07-25 15:52:56,196 - comprehensive_data_sanitizer - WARNING -    phones: 1 violations
+2025-07-25 15:52:56,197 - comprehensive_data_sanitizer - WARNING -    ssns: 1 violations
+2025-07-25 15:52:56,197 - comprehensive_data_sanitizer - WARNING -    emails: 1 violations
+2025-07-25 15:52:56,197 - comprehensive_data_sanitizer - WARNING -    license_plates: 2 violations
+2025-07-25 15:52:56,197 - __main__ - INFO - PASS - Sanitization Audit Function: Audit correctly detected 7 violations
+2025-07-25 15:52:56,205 - __main__ - ERROR - FAILED - Address Block-Level Sanitization: Address sanitization not working correctly
+2025-07-25 15:53:00,290 - __main__ - WARNING - WARNING - Local-Only LLM Processing: Report generated but security notices missing: SECURITY NOTICE banner, LOCAL OLLAMA reference
+2025-07-25 15:53:00,291 - __main__ - INFO - PASS - LLM Fallback Behavior: Fallback mode activated with proper security notices when Ollama unavailable
+2025-07-25 15:53:00,292 - __main__ - INFO - PASS - External API Configuration Check: No external API configurations found
+2025-07-25 15:53:00,292 - __main__ - WARNING - WARNING - Secure Configuration Validation: secure_scrpa_config.json not found
+2025-07-25 15:53:00,298 - __main__ - INFO - PASS - Log File Security Check: No sensitive data found in log files
+2025-07-25 15:53:00,298 - __main__ - INFO - PASS - Backup File Security: No backup directories found
+2025-07-25 15:53:00,300 - __main__ - INFO - PASS - Ollama Offline Error Handling: Graceful fallback with security notices when Ollama offline
+2025-07-25 15:53:00,305 - __main__ - INFO - PASS - Invalid Data Error Handling: Invalid data handled gracefully
+2025-07-25 15:53:01,314 - __main__ - INFO - Network monitoring stopped. Found 53 external calls
+2025-07-25 15:53:01,314 - __main__ - ERROR - FAILED - External Network Calls: Detected 53 external network connections
+2025-07-25 15:58:55,882 - __main__ - INFO - Security Validator initialized
+2025-07-25 15:58:55,893 - __main__ - INFO - Network monitoring started
+2025-07-25 15:58:55,894 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 15:58:55,895 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 15:58:55,896 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 15:58:55,897 - __main__ - INFO - PASS - External URL Rejection (http://api.openai.com:443): External URL correctly rejected
+2025-07-25 15:58:55,897 - __main__ - INFO - PASS - External URL Rejection (https://api.anthropic.com): External URL correctly rejected
+2025-07-25 15:58:55,897 - __main__ - INFO - PASS - External URL Rejection (http://192.168.1.100:11434): External URL correctly rejected
+2025-07-25 15:58:55,898 - __main__ - INFO - PASS - External URL Rejection (http://example.com:11434): External URL correctly rejected
+2025-07-25 15:58:57,936 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available on localhost:11434
+2025-07-25 15:58:57,936 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 15:58:57,938 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 15:58:57,938 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 15:58:57,938 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 15:58:57,938 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 15:58:57,938 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 15:58:57,938 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 15:58:57,938 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 15:58:57,953 - __main__ - INFO - PASS - Data Sanitization Effectiveness: All sensitive data properly sanitized
+2025-07-25 15:58:57,955 - comprehensive_data_sanitizer - WARNING -    names: 2 violations
+2025-07-25 15:58:57,955 - comprehensive_data_sanitizer - WARNING -    phones: 1 violations
+2025-07-25 15:58:57,956 - comprehensive_data_sanitizer - WARNING -    ssns: 1 violations
+2025-07-25 15:58:57,956 - comprehensive_data_sanitizer - WARNING -    emails: 1 violations
+2025-07-25 15:58:57,956 - comprehensive_data_sanitizer - WARNING -    license_plates: 2 violations
+2025-07-25 15:58:57,956 - __main__ - INFO - PASS - Sanitization Audit Function: Audit correctly detected 7 violations
+2025-07-25 15:58:57,959 - __main__ - ERROR - FAILED - Address Block-Level Sanitization: Address sanitization not working correctly
+2025-07-25 15:59:02,097 - __main__ - WARNING - WARNING - Local-Only LLM Processing: Report generated but security notices missing: SECURITY NOTICE banner, LOCAL OLLAMA reference
+2025-07-25 15:59:02,098 - __main__ - INFO - PASS - LLM Fallback Behavior: Fallback mode activated with proper security notices when Ollama unavailable
+2025-07-25 15:59:02,098 - __main__ - INFO - PASS - External API Configuration Check: No external API configurations found
+2025-07-25 15:59:02,099 - __main__ - WARNING - WARNING - Secure Configuration Validation: secure_scrpa_config.json not found
+2025-07-25 15:59:02,102 - __main__ - INFO - PASS - Log File Security Check: No sensitive data found in log files
+2025-07-25 15:59:02,103 - __main__ - INFO - PASS - Backup File Security: No backup directories found
+2025-07-25 15:59:02,103 - __main__ - INFO - PASS - Ollama Offline Error Handling: Graceful fallback with security notices when Ollama offline
+2025-07-25 15:59:02,107 - __main__ - INFO - PASS - Invalid Data Error Handling: Invalid data handled gracefully
+2025-07-25 15:59:03,115 - __main__ - INFO - Network monitoring stopped. Found 43 external calls
+2025-07-25 15:59:03,115 - __main__ - ERROR - FAILED - External Network Calls: Detected 43 external network connections
+2025-07-25 16:10:33,020 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:10:33,021 - __main__ - INFO - Network monitoring started
+2025-07-25 16:10:34,023 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:10:34,023 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+2025-07-25 16:12:51,721 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:12:51,723 - __main__ - INFO - Network monitoring started
+2025-07-25 16:12:52,730 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:12:52,731 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+2025-07-25 16:17:08,154 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:17:08,156 - __main__ - INFO - Network monitoring started
+2025-07-25 16:17:08,157 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 16:17:08,157 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 16:17:08,159 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 16:17:10,206 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available
+2025-07-25 16:17:10,206 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:17:10,207 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:17:10,208 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:17:10,208 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:17:10,208 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:17:10,208 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:17:10,208 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:17:10,209 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:17:10,222 - __main__ - INFO - PASS - Address Block-Level Sanitization: All addresses block-level masked
+2025-07-25 16:17:10,223 - __main__ - INFO - PASS - LLM Processing Placeholder: No LLM tests implemented
+2025-07-25 16:17:10,223 - __main__ - INFO - PASS - Configuration Security Placeholder: No config tests implemented
+2025-07-25 16:17:10,223 - __main__ - INFO - PASS - File System Security Placeholder: No filesystem tests implemented
+2025-07-25 16:17:10,223 - __main__ - INFO - PASS - Error Handling Placeholder: No error-handling tests implemented
+2025-07-25 16:17:11,238 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:17:11,239 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+2025-07-25 16:22:52,210 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:22:52,213 - __main__ - INFO - Network monitoring started
+2025-07-25 16:22:52,213 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 16:22:52,215 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 16:22:52,216 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 16:22:54,236 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available
+2025-07-25 16:22:54,236 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:22:54,238 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:22:54,238 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:22:54,238 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:22:54,239 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:22:54,239 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:22:54,239 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:22:54,239 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:22:54,254 - __main__ - INFO - PASS - Address Block-Level Sanitization: All addresses block-level masked
+2025-07-25 16:22:54,254 - __main__ - INFO - PASS - LLM Processing Placeholder: No LLM tests implemented
+2025-07-25 16:22:54,254 - __main__ - INFO - PASS - Configuration Security Placeholder: No config tests implemented
+2025-07-25 16:22:54,254 - __main__ - INFO - PASS - File System Security Placeholder: No filesystem tests implemented
+2025-07-25 16:22:54,254 - __main__ - INFO - PASS - Error Handling Placeholder: No error-handling tests implemented
+2025-07-25 16:22:55,255 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:22:55,255 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+2025-07-25 16:26:23,649 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:26:24,115 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:26:28,205 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002DD3683B350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:26:28,206 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:26:28,207 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:26:28,207 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:26:28,208 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:26:28,208 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:26:28,210 - __main__ - INFO - Network monitoring started
+2025-07-25 16:26:28,211 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:26:28,211 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 16:26:28,212 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://127.0.0.1:11434
+2025-07-25 16:26:28,212 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 16:26:28,212 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://[::1]:11434
+2025-07-25 16:26:28,212 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 16:26:30,249 - __main__ - WARNING - WARNING - Ollama Service Availability: Ollama service not available
+2025-07-25 16:26:30,249 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:26:30,251 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:26:30,251 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:26:30,251 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:26:30,251 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:26:30,252 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:26:30,252 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:26:30,252 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:26:30,252 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:26:30,252 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:26:30,263 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 572 operations, 228 unique names processed
+2025-07-25 16:26:30,264 - __main__ - INFO - PASS - Address Block-Level Sanitization: All addresses block-level masked
+2025-07-25 16:26:30,264 - __main__ - INFO - PASS - LLM Processing Placeholder: No LLM tests implemented
+2025-07-25 16:26:30,264 - __main__ - INFO - PASS - Configuration Security Placeholder: No config tests implemented
+2025-07-25 16:26:30,264 - __main__ - INFO - PASS - File System Security Placeholder: No filesystem tests implemented
+2025-07-25 16:26:30,264 - __main__ - INFO - PASS - Error Handling Placeholder: No error-handling tests implemented
+2025-07-25 16:26:31,270 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:26:31,270 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+2025-07-25 16:29:18,644 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:29:19,102 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:29:23,165 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E76BAE5A00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:29:23,166 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:29:23,166 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:29:23,168 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:29:23,168 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:29:23,168 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:29:23,170 - __main__ - INFO - Network monitoring started
+2025-07-25 16:29:23,170 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:29:23,171 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,171 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://127.0.0.1:11434
+2025-07-25 16:29:23,171 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,171 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://[::1]:11434
+2025-07-25 16:29:23,172 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 16:29:25,221 - __main__ - INFO - PASS - Ollama Service Availability: Ollama service not available; using local fallback
+2025-07-25 16:29:25,221 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:29:25,223 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:29:25,223 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:29:25,223 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:29:25,223 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:29:25,224 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:29:25,224 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:29:25,224 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:29:25,224 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:29:25,224 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:29:25,234 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 561 operations, 233 unique names processed
+2025-07-25 16:29:25,234 - __main__ - INFO - PASS - Address Block-Level Sanitization: All addresses block-level masked
+2025-07-25 16:29:25,234 - __main__ - INFO - PASS - LLM Processing Placeholder: No LLM tests implemented
+2025-07-25 16:29:25,235 - __main__ - INFO - PASS - Configuration Security Placeholder: No config tests implemented
+2025-07-25 16:29:25,235 - __main__ - INFO - PASS - File System Security Placeholder: No filesystem tests implemented
+2025-07-25 16:29:25,235 - __main__ - INFO - PASS - Error Handling Placeholder: No error-handling tests implemented
+2025-07-25 16:29:26,237 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:29:26,237 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+2025-07-25 16:36:44,965 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:36:45,429 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:36:49,506 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B664365580>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:36:49,506 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:36:49,507 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:36:49,507 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:36:49,507 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:36:49,507 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:36:49,508 - __main__ - INFO - Network monitoring started
+2025-07-25 16:36:51,572 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:36:51,574 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:36:51,574 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:36:51,574 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:36:51,574 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:36:51,574 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:36:51,574 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:36:51,575 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:36:51,575 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:36:51,575 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:36:51,586 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 558 operations, 235 unique names processed
+2025-07-25 16:36:52,607 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:40:19,092 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:40:19,554 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:40:23,620 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002093CD1DAC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:40:23,620 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:40:23,621 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:40:23,621 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:40:23,621 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:40:23,621 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:40:23,623 - __main__ - INFO - Network monitoring started
+2025-07-25 16:40:25,642 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:40:25,644 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:40:25,645 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:40:25,645 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:40:25,645 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:40:25,645 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:40:25,646 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:40:25,646 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:40:25,646 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:40:25,647 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:40:25,660 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 563 operations, 227 unique names processed
+2025-07-25 16:40:26,686 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:41:43,602 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:41:44,063 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:41:48,175 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000247F9F558E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:41:48,176 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:41:48,176 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:41:48,176 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:41:48,176 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:41:48,176 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:41:48,177 - __main__ - INFO - Network monitoring started
+2025-07-25 16:41:50,216 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:41:50,219 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:41:50,219 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:41:50,219 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:41:50,219 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:41:50,219 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:41:50,219 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:41:50,219 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:41:50,219 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:41:50,220 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:41:50,232 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 572 operations, 229 unique names processed
+2025-07-25 16:41:51,256 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+2025-07-25 16:51:49,933 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:51:50,386 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:51:54,442 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024FD09562A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:51:54,443 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:51:54,443 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:51:54,443 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:51:54,443 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:51:54,443 - __main__ - INFO - Security Validator initialized
+2025-07-25 16:51:54,445 - __main__ - INFO - Network monitoring started
+2025-07-25 16:51:56,489 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:51:56,491 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:51:56,492 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:51:56,492 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:51:56,492 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:51:56,492 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:51:56,492 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:51:56,492 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:51:56,493 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:51:56,493 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:51:56,503 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 578 operations, 239 unique names processed
+2025-07-25 16:51:57,524 - __main__ - INFO - Network monitoring stopped. Found 0 external calls

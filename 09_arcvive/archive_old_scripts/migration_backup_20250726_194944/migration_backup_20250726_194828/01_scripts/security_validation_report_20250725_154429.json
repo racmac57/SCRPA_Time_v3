@@ -1,0 +1,524 @@
+{
+  "timestamp": "2025-07-25T15:44:29.711886",
+  "summary": {
+    "total_tests": 20,
+    "passed": 15,
+    "failed": 2,
+    "warnings": 3,
+    "errors": 0
+  },
+  "compliance_status": {
+    "data_sanitization_working": true,
+    "localhost_only_validated": true,
+    "no_external_connections": false,
+    "secure_configuration": false,
+    "log_file_security": true
+  },
+  "recommendations": [
+    "Run migration script to create secure configuration",
+    "Ensure no house numbers remain in sanitized addresses",
+    "Block external network access",
+    "Verify localhost-only configuration",
+    "Start Ollama service before running SCRPA",
+    "Include 'LOCAL OLLAMA' reference in generated reports",
+    "Add 'SECURITY NOTICE' banner to report template",
+    "Fix address sanitization to replace ALL numbers with 'XX BLOCK'"
+  ],
+  "detailed_results": [
+    {
+      "test_name": "Localhost URL Validation (http://localhost:11434)",
+      "category": "network",
+      "status": "pass",
+      "message": "Valid localhost URL accepted",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.488929"
+    },
+    {
+      "test_name": "Localhost URL Validation (http://127.0.0.1:11434)",
+      "category": "network",
+      "status": "pass",
+      "message": "Valid localhost URL accepted",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.489939"
+    },
+    {
+      "test_name": "Localhost URL Validation (http://[::1]:11434)",
+      "category": "network",
+      "status": "pass",
+      "message": "Valid localhost URL accepted",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.489939"
+    },
+    {
+      "test_name": "External URL Rejection (http://api.openai.com:443)",
+      "category": "network",
+      "status": "pass",
+      "message": "External URL correctly rejected",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.491338"
+    },
+    {
+      "test_name": "External URL Rejection (https://api.anthropic.com)",
+      "category": "network",
+      "status": "pass",
+      "message": "External URL correctly rejected",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.491338"
+    },
+    {
+      "test_name": "External URL Rejection (http://192.168.1.100:11434)",
+      "category": "network",
+      "status": "pass",
+      "message": "External URL correctly rejected",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.492389"
+    },
+    {
+      "test_name": "External URL Rejection (http://example.com:11434)",
+      "category": "network",
+      "status": "pass",
+      "message": "External URL correctly rejected",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:22.492389"
+    },
+    {
+      "test_name": "Ollama Service Availability",
+      "category": "network",
+      "status": "warning",
+      "message": "Ollama service not available on localhost:11434",
+      "details": {},
+      "recommendations": [
+        "Start Ollama service before running SCRPA"
+      ],
+      "timestamp": "2025-07-25T15:44:24.543720"
+    },
+    {
+      "test_name": "Data Sanitization Effectiveness",
+      "category": "sanitization",
+      "status": "pass",
+      "message": "All sensitive data properly sanitized",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:24.563083"
+    },
+    {
+      "test_name": "Sanitization Audit Function",
+      "category": "sanitization",
+      "status": "pass",
+      "message": "Audit correctly detected 7 violations",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:24.567084"
+    },
+    {
+      "test_name": "Address Block-Level Sanitization",
+      "category": "sanitization",
+      "status": "fail",
+      "message": "Address sanitization not working correctly",
+      "details": {
+        "violations": [
+          "Missing 'XX BLOCK' in: 123 SUBJECT_1, Anytown, NY",
+          "House number still present in: 123 SUBJECT_1, Anytown, NY",
+          "Missing 'XX BLOCK' in: 456 SUBJECT_3, Somewhere, CA",
+          "House number still present in: 456 SUBJECT_3, Somewhere, CA",
+          "Missing 'XX BLOCK' in: 789 SUBJECT_5, Elsewhere, TX",
+          "House number still present in: 789 SUBJECT_5, Elsewhere, TX"
+        ]
+      },
+      "recommendations": [
+        "Fix address sanitization to replace ALL numbers with 'XX BLOCK'",
+        "Ensure no house numbers remain in sanitized addresses"
+      ],
+      "timestamp": "2025-07-25T15:44:24.570083"
+    },
+    {
+      "test_name": "Local-Only LLM Processing",
+      "category": "llm",
+      "status": "warning",
+      "message": "Report generated but security notices missing: SECURITY NOTICE banner, LOCAL OLLAMA reference",
+      "details": {},
+      "recommendations": [
+        "Add 'SECURITY NOTICE' banner to report template",
+        "Include 'LOCAL OLLAMA' reference in generated reports"
+      ],
+      "timestamp": "2025-07-25T15:44:28.696052"
+    },
+    {
+      "test_name": "LLM Fallback Behavior",
+      "category": "llm",
+      "status": "pass",
+      "message": "Fallback mode activated with proper security notices when Ollama unavailable",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:28.697044"
+    },
+    {
+      "test_name": "External API Configuration Check",
+      "category": "config",
+      "status": "pass",
+      "message": "No external API configurations found",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:28.697044"
+    },
+    {
+      "test_name": "Secure Configuration Validation",
+      "category": "config",
+      "status": "warning",
+      "message": "secure_scrpa_config.json not found",
+      "details": {},
+      "recommendations": [
+        "Run migration script to create secure configuration"
+      ],
+      "timestamp": "2025-07-25T15:44:28.698044"
+    },
+    {
+      "test_name": "Log File Security Check",
+      "category": "filesystem",
+      "status": "pass",
+      "message": "No sensitive data found in log files",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:28.702055"
+    },
+    {
+      "test_name": "Backup File Security",
+      "category": "filesystem",
+      "status": "pass",
+      "message": "No backup directories found",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:28.702055"
+    },
+    {
+      "test_name": "Ollama Offline Error Handling",
+      "category": "error_handling",
+      "status": "pass",
+      "message": "Graceful fallback with security notices when Ollama offline",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:28.702055"
+    },
+    {
+      "test_name": "Invalid Data Error Handling",
+      "category": "error_handling",
+      "status": "pass",
+      "message": "Invalid data handled gracefully",
+      "details": {},
+      "recommendations": [],
+      "timestamp": "2025-07-25T15:44:28.707248"
+    },
+    {
+      "test_name": "External Network Calls",
+      "category": "network",
+      "status": "fail",
+      "message": "Detected 58 external network connections",
+      "details": {
+        "external_calls": [
+          {
+            "address": "10.0.1.32:59608",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "172.183.7.194:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "89.187.179.162:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "10.0.0.153:445",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.111.229.128:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.111.229.115:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "10.0.0.157:5003",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "35.185.82.36:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.251.163.188:5228",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "35.230.116.55:7500",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.251.40.106:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "54.203.185.132:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "54.156.98.78:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "108.138.106.58:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "108.138.106.84:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "18.97.36.58:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.10.214.160:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "140.82.114.26:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "34.233.216.93:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "104.18.32.47:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "172.64.155.209:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "104.18.39.21:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "100.24.136.199:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "54.157.233.81:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "104.18.18.125:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "98.84.239.82:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "54.156.120.100:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.250.64.74:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.250.81.234:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "3.168.73.82:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "160.79.104.10:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "3.168.122.56:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.107.251.57:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.104.43.27:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.250.176.202:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.251.40.170:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "104.208.16.90:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.96.90.34:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "20.190.190.194:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "72.153.5.62:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "23.34.249.73:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "216.239.32.223:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "75.101.201.147:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.54.99.86:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "142.250.80.42:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "52.4.181.94:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "100.27.96.241:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "17.248.199.69:443",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58500",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58501",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58503",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58533",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58534",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58535",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58547",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58548",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58557",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          },
+          {
+            "address": "[::1]:58499",
+            "timestamp": "2025-07-25T15:44:22.523430",
+            "connection_type": "ESTABLISHED"
+          }
+        ]
+      },
+      "recommendations": [
+        "Block external network access",
+        "Verify localhost-only configuration"
+      ],
+      "timestamp": "2025-07-25T15:44:29.711886"
+    }
+  ]
+}

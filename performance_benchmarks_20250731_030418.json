@@ -1,0 +1,122 @@
+{
+  "validation_start": {
+    "operation": "validation_start",
+    "duration_seconds": 0.0,
+    "records_processed": 0,
+    "records_per_second": 0.0,
+    "memory_used_mb": 0.01,
+    "timestamp": "2025-07-31T03:04:18.493691"
+  },
+  "RMS_processing_100": {
+    "operation": "RMS_processing_100",
+    "duration_seconds": 0.002,
+    "records_processed": 100,
+    "records_per_second": 61088.03,
+    "memory_used_mb": 9.68,
+    "timestamp": "2025-07-31T03:04:18.568969"
+  },
+  "RMS_processing_500": {
+    "operation": "RMS_processing_500",
+    "duration_seconds": 0.006,
+    "records_processed": 500,
+    "records_per_second": 84973.74,
+    "memory_used_mb": 9.24,
+    "timestamp": "2025-07-31T03:04:18.575306"
+  },
+  "RMS_processing_1000": {
+    "operation": "RMS_processing_1000",
+    "duration_seconds": 0.006,
+    "records_processed": 1000,
+    "records_per_second": 155034.52,
+    "memory_used_mb": 9.63,
+    "timestamp": "2025-07-31T03:04:18.582312"
+  },
+  "RMS_processing_2000": {
+    "operation": "RMS_processing_2000",
+    "duration_seconds": 0.009,
+    "records_processed": 2000,
+    "records_per_second": 212833.21,
+    "memory_used_mb": 9.78,
+    "timestamp": "2025-07-31T03:04:18.592155"
+  },
+  "RMS_processing_5000": {
+    "operation": "RMS_processing_5000",
+    "duration_seconds": 0.013,
+    "records_processed": 5000,
+    "records_per_second": 395360.83,
+    "memory_used_mb": 13.16,
+    "timestamp": "2025-07-31T03:04:18.605179"
+  },
+  "CAD_processing_100": {
+    "operation": "CAD_processing_100",
+    "duration_seconds": 0.002,
+    "records_processed": 100,
+    "records_per_second": 58719.08,
+    "memory_used_mb": 13.48,
+    "timestamp": "2025-07-31T03:04:18.607258"
+  },
+  "CAD_processing_500": {
+    "operation": "CAD_processing_500",
+    "duration_seconds": 0.002,
+    "records_processed": 456,
+    "records_per_second": 297034.11,
+    "memory_used_mb": 13.58,
+    "timestamp": "2025-07-31T03:04:18.609096"
+  },
+  "CAD_processing_1000": {
+    "operation": "CAD_processing_1000",
+    "duration_seconds": 0.001,
+    "records_processed": 912,
+    "records_per_second": 643107.81,
+    "memory_used_mb": 13.94,
+    "timestamp": "2025-07-31T03:04:18.610813"
+  },
+  "CAD_processing_2000": {
+    "operation": "CAD_processing_2000",
+    "duration_seconds": 0.002,
+    "records_processed": 1710,
+    "records_per_second": 1033764.75,
+    "memory_used_mb": 13.98,
+    "timestamp": "2025-07-31T03:04:18.612804"
+  },
+  "CAD_processing_5000": {
+    "operation": "CAD_processing_5000",
+    "duration_seconds": 0.003,
+    "records_processed": 4218,
+    "records_per_second": 1427776.15,
+    "memory_used_mb": 14.99,
+    "timestamp": "2025-07-31T03:04:18.616125"
+  },
+  "geocoding_batch": {
+    "operation": "geocoding_batch",
+    "duration_seconds": 0.0,
+    "records_processed": 8,
+    "records_per_second": 166937.47,
+    "memory_used_mb": 15.02,
+    "timestamp": "2025-07-31T03:04:18.616550"
+  },
+  "geocoding_batch_api": {
+    "operation": "geocoding_batch_api",
+    "duration_seconds": 0.0,
+    "records_processed": 5,
+    "records_per_second": 1310720.0,
+    "memory_used_mb": 15.01,
+    "timestamp": "2025-07-31T03:04:18.616685"
+  },
+  "single_thread_geocoding": {
+    "operation": "single_thread_geocoding",
+    "duration_seconds": 0.0,
+    "records_processed": 100,
+    "records_per_second": 514638.53,
+    "memory_used_mb": 21.16,
+    "timestamp": "2025-07-31T03:04:18.642160"
+  },
+  "multi_thread_geocoding": {
+    "operation": "multi_thread_geocoding",
+    "duration_seconds": 0.021,
+    "records_processed": 100,
+    "records_per_second": 4848.68,
+    "memory_used_mb": 21.96,
+    "timestamp": "2025-07-31T03:04:18.663103"
+  }
+}

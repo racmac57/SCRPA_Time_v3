@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Monday, May 5, 2025 3:30:06 PM</msg><msg code="0" type="0">Legend elements found: ['MainLegend']</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\CrimeAutomationTools.atbx\WeeklyCrimeReport.tool\tool.script.execute.py", line 104, in &lt;module&gt;
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\_mp.py", line 1323, in save
+﻿    return convertArcObjectToPythonObject(self._arc_object.save(*gp_fixargs((), True)))
+﻿                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿OSError: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Monday, May 5, 2025 3:30:24 PM (Elapsed Time: 17.84 seconds)</msg></messages>

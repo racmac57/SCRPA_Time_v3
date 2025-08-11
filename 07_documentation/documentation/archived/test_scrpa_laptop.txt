@@ -1,0 +1,77 @@
+@echo off
+REM 🕒 2025-06-20-18-40-00
+REM Police_Data_Analysis/test_scrpa_arcgis_python
+REM Author: R. A. Carucci
+REM Purpose: Test SCRPA scripts using ArcGIS Pro Python environment
+
+echo ============================================
+echo 🧪 SCRPA Laptop Testing Suite - ArcGIS Pro Python
+echo ============================================
+
+REM Change to scripts directory
+cd /d "C:\Users\carucci_r\SCRPA_LAPTOP\scripts"
+
+echo 📁 Current directory: %CD%
+
+REM Set ArcGIS Pro Python path
+set ARCGIS_PYTHON="C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe"
+
+REM Check if ArcGIS Pro Python exists
+if not exist %ARCGIS_PYTHON% (
+    echo ❌ ArcGIS Pro Python not found at: %ARCGIS_PYTHON%
+    echo 🔍 Looking for alternative paths...
+    
+    REM Try alternative path
+    set ARCGIS_PYTHON="C:\Program Files\ArcGIS\Pro\bin\Python\Scripts\propy.bat"
+    if exist %ARCGIS_PYTHON% (
+        echo ✅ Found ArcGIS Pro Python at: %ARCGIS_PYTHON%
+    ) else (
+        echo ❌ ArcGIS Pro Python not found. Please check installation.
+        pause
+        exit /b 1
+    )
+) else (
+    echo ✅ Found ArcGIS Pro Python at: %ARCGIS_PYTHON%
+)
+
+echo.
+echo 🔧 Testing config.py with ArcGIS Pro Python...
+%ARCGIS_PYTHON% config.py
+if %ERRORLEVEL% NEQ 0 (
+    echo ❌ config.py failed
+) else (
+    echo ✅ config.py passed
+)
+
+echo.
+echo 📊 Testing chart_export.py with ArcGIS Pro Python...
+%ARCGIS_PYTHON% chart_export.py
+if %ERRORLEVEL% NEQ 0 (
+    echo ❌ chart_export.py failed
+) else (
+    echo ✅ chart_export.py passed
+)
+
+echo.
+echo 🗺️ Testing map_export.py with ArcGIS Pro Python...
+%ARCGIS_PYTHON% map_export.py
+if %ERRORLEVEL% NEQ 0 (
+    echo ❌ map_export.py failed
+) else (
+    echo ✅ map_export.py passed
+)
+
+echo.
+echo 🚀 Testing main.py with sample date using ArcGIS Pro Python...
+%ARCGIS_PYTHON% main.py 2025_06_10
+if %ERRORLEVEL% NEQ 0 (
+    echo ❌ main.py failed
+) else (
+    echo ✅ main.py passed
+)
+
+echo.
+echo ============================================
+echo 🏁 Testing Complete
+echo ============================================
+pause

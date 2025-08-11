@@ -1,0 +1,368 @@
+# 🕒 2025-01-27-22-05-00
+# Police_Data_Analysis/map_extent_enhancement
+# Author: R. A. Carucci
+# Purpose: Enhanced map export with proper zoom levels and city boundary context
+
+import arcpy
+import os
+from config import get_crime_type_folder, get_standardized_filename
+
+def calculate_optimal_map_extent(target_layer, map_frame, map_obj):
+    """
+    Calculate optimal map extent based on incident locations with proper zoom
+    """
+    try:
+        # Get incident count and extent
+        incident_count = int(arcpy.GetCount_management(target_layer).getOutput(0))
+        
+        if incident_count == 0:
+            # No incidents - show city boundaries at appropriate scale
+            city_layer = find_city_boundaries_layer(map_obj)
+            if city_layer:
+                city_extent = arcpy.Describe(city_layer).extent
+                # Add 10% buffer around city boundaries
+                buffer_x = city_extent.width * 0.1
+                buffer_y = city_extent.height * 0.1
+                
+                new_extent = arcpy.Extent(
+                    city_extent.XMin - buffer_x,
+                    city_extent.YMin - buffer_y,
+                    city_extent.XMax + buffer_x,
+                    city_extent.YMax + buffer_y
+                )
+                map_frame.camera.setExtent(new_extent)
+                arcpy.AddMessage("📍 Set extent to city boundaries (no incidents)")
+                return True
+        
+        # Get incident extent
+        incident_extent = arcpy.Describe(target_layer).extent
+        
+        if incident_count == 1:
+            # Single incident - create focused view with neighborhood context
+            center_x = (incident_extent.XMin + incident_extent.XMax) / 2
+            center_y = (incident_extent.YMin + incident_extent.YMax) / 2
+            
+            # 3000-foot buffer for single incident (good neighborhood context)
+            buffer_size = 3000  # feet
+            
+            new_extent = arcpy.Extent(
+                center_x - buffer_size,
+                center_y - buffer_size,
+                center_x + buffer_size,
+                center_y + buffer_size
+            )
+            
+            arcpy.AddMessage(f"📍 Single incident: 3000ft buffer for neighborhood context")
+            
+        elif incident_count <= 5:
+            # Few incidents - moderate zoom with context
+            width_buffer = max(incident_extent.width * 0.5, 2000)  # Minimum 2000ft buffer
+            height_buffer = max(incident_extent.height * 0.5, 2000)
+            
+            new_extent = arcpy.Extent(
+                incident_extent.XMin - width_buffer,
+                incident_extent.YMin - height_buffer,
+                incident_extent.XMax + width_buffer,
+                incident_extent.YMax + height_buffer
+            )
+            
+            arcpy.AddMessage(f"📍 Few incidents ({incident_count}): Enhanced context view")
+            
+        else:
+            # Many incidents - show all with reasonable buffer
+            width_buffer = max(incident_extent.width * 0.25, 1500)  # Minimum 1500ft buffer
+            height_buffer = max(incident_extent.height * 0.25, 1500)
+            
+            new_extent = arcpy.Extent(
+                incident_extent.XMin - width_buffer,
+                incident_extent.YMin - height_buffer,
+                incident_extent.XMax + width_buffer,
+                incident_extent.YMax + height_buffer
+            )
+            
+            arcpy.AddMessage(f"📍 Multiple incidents ({incident_count}): Optimized overview")
+        
+        # Ensure minimum reasonable size
+        min_width = 4000  # 4000 feet minimum width
+        min_height = 4000  # 4000 feet minimum height
+        
+        if new_extent.width < min_width:
+            center_x = (new_extent.XMin + new_extent.XMax) / 2
+            new_extent = arcpy.Extent(
+                center_x - min_width/2,
+                new_extent.YMin,
+                center_x + min_width/2,
+                new_extent.YMax
+            )
+        
+        if new_extent.height < min_height:
+            center_y = (new_extent.YMin + new_extent.YMax) / 2
+            new_extent = arcpy.Extent(
+                new_extent.XMin,
+                center_y - min_height/2,
+                new_extent.XMax,
+                center_y + min_height/2
+            )
+        
+        # Apply the calculated extent
+        map_frame.camera.setExtent(new_extent)
+        arcpy.AddMessage(f"✅ Map extent optimized for {incident_count} incidents")
+        arcpy.AddMessage(f"📏 Final extent: {new_extent.width:.0f} x {new_extent.height:.0f} feet")
+        
+        return True
+        
+    except Exception as e:
+        arcpy.AddError(f"❌ Extent calculation failed: {e}")
+        return False
+
+def find_city_boundaries_layer(map_obj):
+    """Find the city boundaries layer in the map"""
+    boundary_names = [
+        "City Boundaries", 
+        "Boundaries", 
+        "City Boundary",
+        "Municipal Boundaries",
+        "Hackensack Boundary"
+    ]
+    
+    for lyr in map_obj.listLayers():
+        for boundary_name in boundary_names:
+            if boundary_name.lower() in lyr.name.lower():
+                return lyr
+    
+    return None
+
+def enhance_map_symbology(target_layer, crime_type):
+    """Enhanced symbology based on crime type"""
+    try:
+        # Crime-specific colors and symbols
+        symbology_settings = {
+            "MV Theft": {"color": "RGB(255, 255, 0)", "size": 8, "symbol": "Circle"},      # Yellow
+            "Burglary - Auto": {"color": "RGB(255, 165, 0)", "size": 8, "symbol": "Square"},   # Orange  
+            "Burglary - Comm & Res": {"color": "RGB(255, 0, 0)", "size": 8, "symbol": "Triangle"},  # Red
+            "Robbery": {"color": "RGB(0, 0, 0)", "size": 10, "symbol": "Circle"},         # Black (larger)
+            "Sexual Offenses": {"color": "RGB(128, 0, 128)", "size": 9, "symbol": "Diamond"}    # Purple
+        }
+        
+        settings = symbology_settings.get(crime_type, {"color": "RGB(0, 0, 255)", "size": 8, "symbol": "Circle"})
+        
+        # Apply symbology if layer supports it
+        if hasattr(target_layer, 'symbology') and target_layer.symbology:
+            try:
+                sym = target_layer.symbology
+                if hasattr(sym, 'renderer') and hasattr(sym.renderer, 'symbol'):
+                    # Set symbol properties
+                    symbol = sym.renderer.symbol
+                    if hasattr(symbol, 'color'):
+                        # This would need specific color setting based on ArcPy version
+                        pass
+                    if hasattr(symbol, 'size'):
+                        symbol.size = settings["size"]
+                    
+                    target_layer.symbology = sym
+                    arcpy.AddMessage(f"✅ Applied {crime_type} symbology: {settings['color']}, size {settings['size']}")
+                    
+            except Exception as e:
+                arcpy.AddWarning(f"⚠️ Could not apply custom symbology: {e}")
+        
+        # Ensure layer is visible
+        target_layer.visible = True
+        target_layer.transparency = 0
+        
+        return True
+        
+    except Exception as e:
+        arcpy.AddWarning(f"⚠️ Symbology enhancement failed: {e}")
+        return False
+
+def export_maps_with_enhanced_zoom(crime_type, output_folder, args):
+    """
+    Enhanced map export with proper zoom and symbology
+    
+    Add this function to your map_export.py or create new enhanced_map_export.py
+    """
+    try:
+        from config import APR_PATH
+        
+        # Get target date from args
+        try:
+            date_str = args[6] if len(args) > 6 else "2025_06_03"
+            target_date = datetime.strptime(date_str, "%Y_%m_%d").date()
+        except:
+            target_date = date.today()
+            date_str = target_date.strftime("%Y_%m_%d")
+        
+        # Create crime-specific output folder
+        crime_output_folder = get_crime_type_folder(crime_type, date_str)
+        os.makedirs(crime_output_folder, exist_ok=True)
+        
+        # Get standardized filename
+        filename_prefix = get_standardized_filename(crime_type)
+        
+        # Load ArcGIS Pro project
+        aprx = arcpy.mp.ArcGISProject(APR_PATH)
+        arcpy.AddMessage(f"✅ Loaded ArcGIS Pro project")
+        
+        # Get layout and map objects
+        layouts = aprx.listLayouts()
+        if not layouts:
+            arcpy.AddError("❌ No layouts found in project")
+            return False
+        
+        layout = layouts[0]  # Use first layout
+        arcpy.AddMessage(f"✅ Using layout: {layout.name}")
+        
+        # Get map frame
+        map_frames = layout.listElements("MAPFRAME_ELEMENT")
+        if not map_frames:
+            arcpy.AddError("❌ No map frame found in layout")
+            return False
+        
+        map_frame = map_frames[0]
+        map_obj = map_frame.map
+        
+        # Find the 7-Day layer for this crime type
+        layer_name = f"{crime_type} 7-Day"
+        target_layer = None
+        
+        for lyr in map_obj.listLayers():
+            if lyr.name == layer_name:
+                target_layer = lyr
+                break
+        
+        if not target_layer:
+            arcpy.AddWarning(f"❌ Layer not found: {layer_name}")
+            # Create placeholder for missing layer
+            return create_no_data_placeholder(crime_type, crime_output_folder, filename_prefix)
+        
+        arcpy.AddMessage(f"✅ Found layer: {target_layer.name}")
+        
+        # Hide all other layers first
+        for lyr in map_obj.listLayers():
+            if "7-Day" in lyr.name and lyr.name != layer_name:
+                lyr.visible = False
+        
+        # Show base layers (streets, boundaries)
+        show_base_layers(map_obj)
+        
+        # Apply enhanced symbology
+        enhance_map_symbology(target_layer, crime_type)
+        
+        # Apply SQL filter for 7-day period
+        apply_7day_filter(target_layer, crime_type, target_date)
+        
+        # Calculate and apply optimal extent
+        calculate_optimal_map_extent(target_layer, map_frame, map_obj)
+        
+        # Export the map
+        export_path = os.path.join(crime_output_folder, f"{filename_prefix}_Map.png")
+        layout.exportToPNG(export_path, resolution=200)
+        
+        if os.path.exists(export_path):
+            file_size = os.path.getsize(export_path)
+            arcpy.AddMessage(f"✅ Map exported: {export_path} ({file_size:,} bytes)")
+            return True
+        else:
+            arcpy.AddError(f"❌ Export failed: {export_path}")
+            return False
+        
+    except Exception as e:
+        arcpy.AddError(f"❌ Enhanced map export failed: {e}")
+        return False
+    finally:
+        try:
+            del aprx
+        except:
+            pass
+
+def show_base_layers(map_obj):
+    """Show essential base layers for context"""
+    base_layer_keywords = [
+        "street", "road", "boundary", "boundaries", 
+        "basemap", "reference", "canvas", "openstreetmap"
+    ]
+    
+    for lyr in map_obj.listLayers():
+        for keyword in base_layer_keywords:
+            if keyword.lower() in lyr.name.lower():
+                lyr.visible = True
+                break
+
+def apply_7day_filter(target_layer, crime_type, target_date):
+    """Apply 7-day date filter to the layer"""
+    try:
+        from config import get_7day_period_dates, get_sql_pattern_for_crime
+        
+        start_date, end_date = get_7day_period_dates(target_date)
+        pattern = get_sql_pattern_for_crime(crime_type)
+        
+        if isinstance(pattern, list):
+            conditions = [f"calltype LIKE '%{p}%'" for p in pattern]
+            crime_condition = f"({' OR '.join(conditions)})"
+        else:
+            crime_condition = f"calltype LIKE '%{pattern}%'"
+        
+        start_timestamp = f"{start_date.strftime('%Y-%m-%d')} 00:00:00.000"
+        end_timestamp = f"{end_date.strftime('%Y-%m-%d')} 23:59:59.999"
+        
+        sql_filter = (f"{crime_condition} AND disposition LIKE '%See Report%' "
+                     f"AND calldate >= timestamp '{start_timestamp}' "
+                     f"AND calldate <= timestamp '{end_timestamp}'")
+        
+        target_layer.definitionQuery = sql_filter
+        
+        # Log feature count
+        feature_count = int(arcpy.GetCount_management(target_layer).getOutput(0))
+        arcpy.AddMessage(f"📊 {crime_type} 7-Day incidents: {feature_count}")
+        
+        return feature_count
+        
+    except Exception as e:
+        arcpy.AddWarning(f"⚠️ Filter application failed: {e}")
+        return 0
+
+def create_no_data_placeholder(crime_type, output_folder, filename_prefix):
+    """Create placeholder image when no data or layer missing"""
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+        
+        # Create white background image
+        width, height = 1120, 806  # Standard map size at 200 DPI
+        img = Image.new('RGB', (width, height), 'white')
+        draw = ImageDraw.Draw(img)
+        
+        # Try to load font
+        try:
+            font = ImageFont.truetype("arial.ttf", 48)
+            small_font = ImageFont.truetype("arial.ttf", 32)
+        except:
+            font = ImageFont.load_default()
+            small_font = ImageFont.load_default()
+        
+        # Draw placeholder text
+        title_text = f"{crime_type}"
+        subtitle_text = "No incidents in 7-day period"
+        
+        # Center the text
+        title_bbox = draw.textbbox((0, 0), title_text, font=font)
+        subtitle_bbox = draw.textbbox((0, 0), subtitle_text, font=small_font)
+        
+        title_x = (width - (title_bbox[2] - title_bbox[0])) // 2
+        subtitle_x = (width - (subtitle_bbox[2] - subtitle_bbox[0])) // 2
+        
+        title_y = height // 2 - 50
+        subtitle_y = height // 2 + 20
+        
+        draw.text((title_x, title_y), title_text, fill='black', font=font)
+        draw.text((subtitle_x, subtitle_y), subtitle_text, fill='gray', font=small_font)
+        
+        # Save placeholder
+        placeholder_path = os.path.join(output_folder, f"{filename_prefix}_Map_Placeholder.png")
+        img.save(placeholder_path, 'PNG', dpi=(200, 200))
+        
+        arcpy.AddMessage(f"✅ Created placeholder: {placeholder_path}")
+        return True
+        
+    except Exception as e:
+        arcpy.AddError(f"❌ Placeholder creation failed: {e}")
+        return False

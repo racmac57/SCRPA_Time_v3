@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(echo:*)",
+      "Bash(copy production_deployment_pipeline.py \"C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\SCRPA_Time_v3_Production_Pipeline.py\")",
+      "Bash(cp:*)",
+      "Bash(dir:*)",
+      "Bash(del:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,74 @@
+2025-08-05 17:35:53,889 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-05 17:35:54,495 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-05 17:35:54,495 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-05 17:35:54,496 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-05 17:35:54,624 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-05 17:35:54,640 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-05 17:35:54,640 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-05 17:35:54,645 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W32, Date: 20250805
+2025-08-05 17:35:54,646 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Complete SCRPA Pipeline V8.5... (Memory: 95.5MB)
+2025-08-05 17:35:54,646 - ComprehensiveSCRPAFixV8_5 - INFO - Starting Comprehensive SCRPA Fix V8.5 pipeline...
+2025-08-05 17:35:54,646 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Complete SCRPA Pipeline V8.5 (Fast):
+2025-08-05 17:35:54,647 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 17:35:54,647 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 95.5MB (Δ+0.0MB)
+2025-08-05 17:35:54,648 - ComprehensiveSCRPAFixV8_5 - INFO - Latest CAD file: 2025_08_01_19_38_12_SCRPA_CAD.xlsx
+2025-08-05 17:35:54,649 - ComprehensiveSCRPAFixV8_5 - INFO - Latest RMS file: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-05 17:35:54,649 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS Data Processing - 2025_08_01_19_38_12_SCRPA_RMS.xlsx... (Memory: 95.5MB)
+2025-08-05 17:35:54,649 - ComprehensiveSCRPAFixV8_5 - INFO - Processing RMS data: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-05 17:35:54,649 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS File Loading... (Memory: 95.5MB)
+2025-08-05 17:35:54,692 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded RMS file with 140 rows and 31 columns
+2025-08-05 17:35:54,692 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS File Loading (Fast):
+2025-08-05 17:35:54,693 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.04s
+2025-08-05 17:35:54,693 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 96.2MB (Δ+0.6MB)
+2025-08-05 17:35:54,693 - ComprehensiveSCRPAFixV8_5 - INFO - Normalized RMS headers: ['case_number', 'incident_date', 'incident_time', 'incident_date_between', 'incident_time_between', 'report_date', 'report_time', 'incident_type_1', 'incident_type_2', 'incident_type_3', 'full_address', 'grid', 'zone', 'narrative', 'total_value_stolen', 'total_value_recover', 'registration_1', 'make_1', 'model_1', 'reg_state_1', 'registration_2', 'reg_state_2', 'make_2', 'model_2', 'reviewed_by', 'complete_calc', 'officer_of_record', 'squad', 'det_assigned', 'case_status', 'nibrs_classification']
+2025-08-05 17:35:54,697 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping to 25 columns.
+2025-08-05 17:35:54,738 - ComprehensiveSCRPAFixV8_5 - INFO - Cascaded incident dates populated: 140/140
+2025-08-05 17:35:54,745 - ComprehensiveSCRPAFixV8_5 - INFO - Cascaded incident times populated: 140/140
+2025-08-05 17:35:54,746 - ComprehensiveSCRPAFixV8_5 - INFO - Time of Day populated: 140/140
+2025-08-05 17:35:54,842 - ComprehensiveSCRPAFixV8_5 - INFO - Formatted incident_date to mm/dd/yy
+2025-08-05 17:35:54,842 - ComprehensiveSCRPAFixV8_5 - WARNING - full_address_raw column not found - location will be None
+2025-08-05 17:35:54,902 - ComprehensiveSCRPAFixV8_5 - INFO - RMS processing complete: 138 records after filtering from 140
+2025-08-05 17:35:54,915 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 RMS Final Dataset memory optimized: 0.4MB → 0.3MB (saved 0.1MB)
+2025-08-05 17:35:54,935 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS Data Processing - 2025_08_01_19_38_12_SCRPA_RMS.xlsx (Fast):
+2025-08-05 17:35:54,936 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.29s
+2025-08-05 17:35:54,936 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 97.7MB (Δ+2.1MB)
+2025-08-05 17:35:54,936 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting CAD Data Processing - 2025_08_01_19_38_12_SCRPA_CAD.xlsx... (Memory: 97.7MB)
+2025-08-05 17:35:54,937 - ComprehensiveSCRPAFixV8_5 - INFO - Processing CAD data: 2025_08_01_19_38_12_SCRPA_CAD.xlsx
+2025-08-05 17:35:54,937 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed CAD Data Processing - 2025_08_01_19_38_12_SCRPA_CAD.xlsx (Fast):
+2025-08-05 17:35:54,937 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 17:35:54,937 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 97.7MB (Δ+0.0MB)
+2025-08-05 17:35:54,972 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded CAD file with 115 rows and 20 columns
+2025-08-05 17:35:54,973 - ComprehensiveSCRPAFixV8_5 - INFO - Applied dtype={'How Reported': str} to prevent Excel auto-parsing '9-1-1' as date
+2025-08-05 17:35:54,974 - ComprehensiveSCRPAFixV8_5 - INFO - Applied enhanced fixes to prevent '9-1-1' date conversion
+2025-08-05 17:35:55,157 - ComprehensiveSCRPAFixV8_5 - INFO - CAD processing complete: 115 records
+2025-08-05 17:35:55,185 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Writing standard CSV: 138 rows
+2025-08-05 17:35:55,213 - ComprehensiveSCRPAFixV8_5 - INFO - RMS data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W32_20250805_7Day_rms_data_standardized_v3.csv
+2025-08-05 17:35:55,215 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Writing standard CSV: 115 rows
+2025-08-05 17:35:55,220 - ComprehensiveSCRPAFixV8_5 - INFO - CAD data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W32_20250805_7Day_cad_data_standardized_v2.csv
+2025-08-05 17:35:55,220 - ComprehensiveSCRPAFixV8_5 - INFO - Starting CAD-RMS matching: RMS=138 records, CAD=115 records
+2025-08-05 17:35:55,229 - ComprehensiveSCRPAFixV8_5 - INFO - CAD-RMS matching complete: 138 records with a 63.0% match rate.
+2025-08-05 17:35:55,234 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Writing standard CSV: 138 rows
+2025-08-05 17:35:55,235 - ComprehensiveSCRPAFixV8_5 - ERROR - Fatal error in main execution: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\04_powerbi\\C08W32_20250805_7Day_cad_rms_matched_standardized.csv'
+Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Fix_v9_Standardized.py", line 2682, in <module>
+    results = processor.process_final_pipeline()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Fix_v9_Standardized.py", line 2531, in process_final_pipeline
+    joined_result = self.create_cad_rms_matched_dataset(rms_data, cad_data, output_dir)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Fix_v9_Standardized.py", line 2583, in create_cad_rms_matched_dataset
+    self.write_large_csv_efficiently(self.standardize_data_types(joined_data), joined_output)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Fix_v9_Standardized.py", line 423, in write_large_csv_efficiently
+    df.to_csv(file_path, index=False)
+  File "C:\Users\carucci_r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Users\carucci_r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\carucci_r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\04_powerbi\\C08W32_20250805_7Day_cad_rms_matched_standardized.csv'

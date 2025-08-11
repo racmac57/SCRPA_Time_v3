@@ -1,0 +1,38 @@
+Hackensack PD Crime Analysis Processing Summary
+============================================================
+Generated: 2025-06-03 16:00:04
+Analysis Date: 2025-06-03
+
+Overall Results: 5/5 crime types processed successfully
+Total Processing Time: 40.0 seconds
+
+Crime Type: MV Theft
+  Processing Time: 8.2s
+  Maps: SUCCESS
+  Charts: SUCCESS
+  Reports: FAILED
+
+Crime Type: Burglary - Auto
+  Processing Time: 2.9s
+  Maps: SUCCESS
+  Charts: SUCCESS
+  Reports: FAILED
+
+Crime Type: Burglary - Comm & Res
+  Processing Time: 15.1s
+  Maps: SUCCESS
+  Charts: SUCCESS
+  Reports: FAILED
+
+Crime Type: Robbery
+  Processing Time: 10.4s
+  Maps: SUCCESS
+  Charts: SUCCESS
+  Reports: FAILED
+
+Crime Type: Sexual Offenses
+  Processing Time: 3.4s
+  Maps: SUCCESS
+  Charts: SUCCESS
+  Reports: FAILED
+

@@ -1,0 +1,14 @@
+2025-08-01 11:58:17,836 - INFO - ================================================================================
+2025-08-01 11:58:17,836 - INFO - SCRPA AUTOMATED GEOCODING - 20250801_115817
+2025-08-01 11:58:17,837 - INFO - ================================================================================
+2025-08-01 11:58:17,837 - INFO - Setting up ArcGIS environment...
+2025-08-01 11:58:18,292 - INFO - Workspace set: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\temp_geocoding_auto
+2025-08-01 11:58:18,292 - INFO - Coordinate system: NAD_1983_StatePlane_New_Jersey_FIPS_2900_Feet (EPSG:3424)
+2025-08-01 11:58:18,293 - INFO - Template validated: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\10_Refrence_Files\7_Day_Templet_SCRPA_Time.aprx
+2025-08-01 11:58:18,293 - WARNING - NJ_Geocode service validation failed: module 'arcpy.geocoding' has no attribute 'DescribeGeocodeService'
+2025-08-01 11:58:18,293 - INFO - Continuing with assumption that service will be available during execution
+2025-08-01 11:58:18,293 - INFO - Starting complete automated SCRPA geocoding workflow...
+2025-08-01 11:58:18,293 - INFO - Creating processing geodatabase...
+2025-08-01 11:58:18,851 - INFO - Processing geodatabase created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\temp_geocoding_auto\SCRPA_Geocoding_20250801_115817.gdb
+2025-08-01 11:58:18,851 - INFO - Importing address data...
+2025-08-01 11:58:20,026 - INFO - Address data imported successfully: 144 records

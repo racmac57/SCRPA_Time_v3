@@ -1,0 +1,5 @@
+let
+    Source = Excel.CurrentWorkbook(){[Name="_7Day_28Day_250414_"]}[Content],
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Report_Due_Date", type date}, {"7_Day_Start", type date}, {"7_Day_End", type date}, {"28_Day_Start", type date}, {"28_Day_End", type date}, {"Report_Name", type text}, {"Is_Due", type logical}})
+in
+    #"Changed Type"

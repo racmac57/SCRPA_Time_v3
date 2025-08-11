@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(test:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(__NEW_LINE__ echo \"Moving old versions to archive...\")",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(__NEW_LINE__ echo \"Moving test and utility scripts to archive...\")",
+      "Bash(__NEW_LINE__ echo \"Moving cleanup and migration scripts to archive...\")",
+      "Bash(copy rms_data_standardized.csv ..final_processed_dataset.csv)",
+      "Bash(cp:*)",
+      "Bash(pip install:*)",
+      "Bash(\"C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\Scripts\\propy.bat\" -c \"\nimport sys\nprint(''=== ARCGIS PRO PYTHON ENVIRONMENT TEST ==='')\nprint(f''Python Version: {sys.version.split()[0]}'')\nprint(f''Python Path: {sys.executable}'')\nprint()\n\ntry:\n    import arcpy\n    print(''[SUCCESS] ArcPy imported successfully!'')\n    \n    # Get installation info\n    install_info = arcpy.GetInstallInfo()\n    print(f''Product: {install_info.get(\"\"ProductName\"\", \"\"Unknown\"\")}'')\n    print(f''Version: {install_info.get(\"\"Version\"\", \"\"Unknown\"\")}'') \n    print(f''Install Dir: {install_info.get(\"\"InstallDir\"\", \"\"Unknown\"\")}'')\n    print(f''License Level: {install_info.get(\"\"LicenseLevel\"\", \"\"Unknown\"\")}'')\n    print()\n    \n    # Test project access\n    project_path = r''C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\10_Refrence_Files\\7_Day_Templet_SCRPA_Time.aprx''\n    print(f''Testing project access: {project_path}'')\n    \n    try:\n        project = arcpy.mp.ArcGISProject(project_path)\n        print(''[SUCCESS] Project opened successfully!'')\n        print(f''Project Name: {project.name}'')\n        print(f''Project Path: {project.filePath}'')\n        \n        # List maps\n        maps = project.listMaps()\n        print(f''[SUCCESS] Found {len(maps)} maps in project:'')\n        for i, map_obj in enumerate(maps):\n            print(f''  Map {i+1}: {map_obj.name}'')\n            \n            # List layers in first map\n            if i == 0:\n                layers = map_obj.listLayers()\n                print(f''    Layers in {map_obj.name}: {len(layers)}'')\n                for j, layer in enumerate(layers[:3]):  # Show first 3 layers\n                    print(f''      Layer {j+1}: {layer.name}'')\n        \n        print(''[SUCCESS] ArcPy functionality test PASSED!'')\n        \n    except Exception as e:\n        print(f''[ERROR] Project access failed: {e}'')\n        \nexcept ImportError as e:\n    print(f''[ERROR] ArcPy import failed: {e}'')\nexcept Exception as e:\n    print(f''[ERROR] ArcPy test failed: {e}'')\n\")",
+      "Bash(\"C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\Scripts\\propy.bat\" \"C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\test_arcpy.py\")",
+      "Bash(\"C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3\\python.exe\" \"C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\test_arcpy_functionality.py\")",
+      "Bash(\"C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3\\python.exe\" \"C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\arcpy_scrpa_integration_demo.py\")",
+      "Bash(del \"cad_rms_matched_standardized.csv\")",
+      "Bash(rm:*)",
+      "Bash(sed:*)"
+    ],
+    "deny": []
+  }
+}

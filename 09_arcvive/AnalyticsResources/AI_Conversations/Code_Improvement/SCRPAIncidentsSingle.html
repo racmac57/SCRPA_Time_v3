@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS Compact Incident Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c2526;
+            color: #ffffff;
+            margin: 0;
+            padding: 10px;
+        }
+        .container {
+            background-color: #e6f0fa;
+            color: #000000;
+            padding: 10px;
+            border: 1px solid #0055a5;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            height: 180px;
+            overflow: hidden;
+        }
+        .field {
+            display: flex;
+            align-items: center;
+        }
+        .field label {
+            width: 80px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .field input, .field select {
+            width: 110px;
+            padding: 3px;
+            font-size: 12px;
+        }
+        .field input[type="number"] {
+            width: 50px;
+        }
+        .section-title {
+            grid-column: span 3;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-title">Type of Offense</div>
+        <div class="field">
+            <label>Crime Type:</label>
+            <select>
+                <option>Sexual Assault - Rape</option>
+                <option>Sexual Assault - Sodomy</option>
+                <option>Sexual Assault - Object</option>
+                <option>Sexual Assault - Fondling</option>
+                <option>Theft from Auto</option>
+                <option>Robbery - Armed</option>
+                <option>Robbery - Strong-Arm</option>
+                <option>Commercial Burglary</option>
+                <option>Residential Burglary</option>
+            </select>
+        </div>
+
+        <div class="section-title">Incident Details</div>
+        <div class="field">
+            <label>Date/Time:</label>
+            <input type="text" placeholder="YYYY-MM-DD HH:MM">
+        </div>
+        <div class="field">
+            <label>Location:</label>
+            <select>
+                <option>Residence</option>
+                <option>Street</option>
+                <option>Commercial Bldg</option>
+                <option>Parking Lot</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Method/Force:</label>
+            <select>
+                <option>Forced</option>
+                <option>Unforced</option>
+                <option>Firearm</option>
+                <option>Strong-Arm</option>
+                <option>None</option>
+            </select>
+        </div>
+
+        <div class="section-title">Victim Information</div>
+        <div class="field">
+            <label># Victims:</label>
+            <input type="number" min="0" value="0">
+        </div>
+        <div class="field">
+            <label>Age/Sex:</label>
+            <select>
+                <option>Juvenile Male</option>
+                <option>Juvenile Female</option>
+                <option>Adult Male</option>
+                <option>Adult Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Injuries:</label>
+            <select>
+                <option>Minor</option>
+                <option>Severe</option>
+                <option>None</option>
+            </select>
+        </div>
+
+        <div class="section-title">Offender/Suspect Information</div>
+        <div class="field">
+            <label># Offenders:</label>
+            <input type="number" min="0" value="0">
+        </div>
+        <div class="field">
+            <label>Age/Sex:</label>
+            <select>
+                <option>Juvenile Male</option>
+                <option>Juvenile Female</option>
+                <option>Adult Male</option>
+                <option>Adult Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Description:</label>
+            <input type="text" placeholder="e.g., Tall, black hoodie">
+        </div>
+
+        <div class="section-title">Property Information</div>
+        <div class="field">
+            <label>Property Desc:</label>
+            <input type="text" placeholder="e.g., Laptop, $500">
+        </div>
+        <div class="field">
+            <label>Vehicle Plate:</label>
+            <input type="text" placeholder="e.g., ABC-123">
+        </div>
+        <div class="field">
+            <label>Vehicle Make:</label>
+            <select>
+                <option>Toyota</option>
+                <option>Ford</option>
+                <option>Honda</option>
+            </select>
+        </div>
+
+        <div class="section-title">Business/Residence Information</div>
+        <div class="field">
+            <label>Address:</label>
+            <input type="text" placeholder="e.g., 123 Main St">
+        </div>
+        <div class="field">
+            <label>Type/Status:</label>
+            <select>
+                <option>Retail</option>
+                <option>Office</option>
+                <option>Apt Occupied</option>
+                <option>House Vacant</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Status:</label>
+            <select>
+                <option>Cleared by Arrest</option>
+                <option>Exceptionally Cleared</option>
+                <option>Uncleared</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

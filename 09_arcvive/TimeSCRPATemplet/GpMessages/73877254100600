@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 1:49:55 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 156, in &lt;module&gt;
+﻿    with pd.ExcelWriter(excel_path, engine='xlsxwriter') as writer:
+﻿         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\excel\_xlsxwriter.py", line 192, in __init__
+﻿    from xlsxwriter import Workbook
+﻿ModuleNotFoundError: No module named 'xlsxwriter'
+</msg><msg code="0" type="0">Failed script Weekly Crime ReportWith Table...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReportables).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 1:49:58 PM (Elapsed Time: 3.05 seconds)</msg></messages>

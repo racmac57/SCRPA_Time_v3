@@ -1,0 +1,10 @@
+2025-07-29 06:07:57,848 - INFO - Detected CAD structure (score: 5/5)
+2025-07-29 06:09:19,792 - INFO - Detected CAD structure (score: 5/5)
+2025-07-29 06:09:19,797 - INFO - 🔄 Processing CADNotes for 114 records
+2025-07-29 06:09:19,800 - INFO - ✅ CADNotes processing complete in 0.00 seconds
+2025-07-29 06:09:19,801 - INFO - 📊 CADNotes Processing Statistics:
+2025-07-29 06:09:19,801 - INFO -    Total records: 114
+2025-07-29 06:09:19,801 - INFO -    Usernames extracted: 96 (84.2%)
+2025-07-29 06:09:19,801 - INFO -    Timestamps extracted: 96 (84.2%)
+2025-07-29 06:09:19,801 - INFO -    Text cleaned: 96 (84.2%)
+2025-07-29 06:09:19,802 - INFO -    Average quality score: 84.2/100

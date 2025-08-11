@@ -1,0 +1,447 @@
+C:\Users\carucci_r\SCRPA_LAPTOP\scripts>"C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" main.py true false false 30 false 2025_06_24
+OK DateTime imported correctly as dt_datetime and dt_date
+✅ map_export.py loaded successfully
+✅ chart_export.py loaded successfully with Excel integration
+📁 Crime-specific folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft
+✅ Loaded ArcGIS Pro project: C:\Users\carucci_r\SCRPA_LAPTOP\projects\7_Day_Templet_SCRPA_Time.aprx
+✅ Found layout: Crime Report Legend
+✅ Found map: Map
+🔄 Hidden 18 layers initially
+✅ Enabled base layer: City Boundaries
+✅ Enabled base layer: OpenStreetMap Light Gray Canvas Reference
+✅ Enabled base layer: Light Gray Canvas (for Export)
+✅ Enabled 3 base layers
+📅 Excel 7-Day period: 2025-06-17 to 2025-06-23
+✅ Removed scale dependencies
+✅ Set symbol size to 15 for MV Theft
+✅ Applied SQUARE color for MV Theft
+✅ Enhanced symbology applied to MV Theft
+   Size: 15, Type: SQUARE
+🔍 Final Layer State:
+   Visible: True
+   Transparency: 0.0
+✅ Configured 7-Day layer: MV Theft 7-Day
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for MV Theft: MOTOR VEHICLE THEFT
+🔎 Final Excel-based SQL filter: calltype LIKE '%MOTOR VEHICLE THEFT%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+🔎 Excel-based SQL for 7-Day MV Theft 7-Day: calltype LIKE '%MOTOR VEHICLE THEFT%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+✅ Applied Excel-based query to MV Theft 7-Day
+📊 7-Day features: 3
+🔍 Layer SR: WGS_1984_Web_Mercator_Auxiliary_Sphere (WKID: 3857)
+🔍 Map SR: WGS_1984_Web_Mercator_Auxiliary_Sphere (WKID: 3857)
+WARNING: ⚠️ Unexpected coordinate system: WGS_1984_Web_Mercator_Auxiliary_Sphere
+📍 Using Hackensack center: 646000, 764000 (feet)
+📊 Incident extent: -8263473, 4857161 to -8238141, 5020714
+📍 Few incidents (3): Tight group view
+📏 Width constrained to Hackensack area
+📏 Height constrained to Hackensack area
+✅ Final extent: 2.8 x 2.8 miles
+📊 Optimized for 3 incidents in Hackensack
+🎯 Coordinate system: WGS_1984_Web_Mercator_Auxiliary_Sphere
+✅ Found legend with 18 items
+🔧 Disabled syncLayerVisibility for manual control
+✅ Showing in legend: MV Theft 7-Day
+🎯 Legend updated: 1 items shown (7-Day only)
+💡 No patch elements found to remove
+📁 Using existing output folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft
+🧹 Deleted old export: MV_Theft_Map.png
+✅ Cleaned up 1 old map files
+🖼️ Exporting map to: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft\MV_Theft_Map.png
+✅ Map exported successfully
+✅ Map export verified: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft\MV_Theft_Map.png (86,556 bytes)
+✅ Restored original layer states
+✅ Map export completed successfully for MV Theft
+🧹 Cleaned up ArcGIS Pro project reference
+📁 Crime-specific folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Auto
+✅ Loaded ArcGIS Pro project: C:\Users\carucci_r\SCRPA_LAPTOP\projects\7_Day_Templet_SCRPA_Time.aprx
+✅ Found layout: Crime Report Legend
+✅ Found map: Map
+🔄 Hidden 18 layers initially
+✅ Enabled base layer: City Boundaries
+✅ Enabled base layer: OpenStreetMap Light Gray Canvas Reference
+✅ Enabled base layer: Light Gray Canvas (for Export)
+✅ Enabled 3 base layers
+📅 Excel 7-Day period: 2025-06-17 to 2025-06-23
+✅ Removed scale dependencies
+✅ Set symbol size to 12 for Burglary - Auto
+✅ Applied CIRCLE color for Burglary - Auto
+✅ Enhanced symbology applied to Burglary - Auto
+   Size: 12, Type: CIRCLE
+🔍 Final Layer State:
+   Visible: True
+   Transparency: 0.0
+✅ Configured 7-Day layer: Burglary - Auto 7-Day
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Burglary - Auto: BURGLARY AUTO
+🔎 Final Excel-based SQL filter: calltype LIKE '%BURGLARY AUTO%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+🔎 Excel-based SQL for 7-Day Burglary - Auto 7-Day: calltype LIKE '%BURGLARY AUTO%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+✅ Applied Excel-based query to Burglary - Auto 7-Day
+📊 7-Day features: 0
+📋 No 7-day incidents for Burglary - Auto, creating placeholder
+✅ Created placeholder image: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Auto\Burglary_Auto_Map.png
+✅ Restored original layer states
+🧹 Cleaned up ArcGIS Pro project reference
+📁 Crime-specific folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Comm_And_Res
+✅ Loaded ArcGIS Pro project: C:\Users\carucci_r\SCRPA_LAPTOP\projects\7_Day_Templet_SCRPA_Time.aprx
+✅ Found layout: Crime Report Legend
+✅ Found map: Map
+🔄 Hidden 18 layers initially
+✅ Enabled base layer: City Boundaries
+✅ Enabled base layer: OpenStreetMap Light Gray Canvas Reference
+✅ Enabled base layer: Light Gray Canvas (for Export)
+✅ Enabled 3 base layers
+📅 Excel 7-Day period: 2025-06-17 to 2025-06-23
+✅ Removed scale dependencies
+✅ Set symbol size to 12 for Burglary - Comm & Res
+✅ Applied TRIANGLE color for Burglary - Comm & Res
+✅ Enhanced symbology applied to Burglary - Comm & Res
+   Size: 12, Type: TRIANGLE
+🔍 Final Layer State:
+   Visible: True
+   Transparency: 0.0
+✅ Configured 7-Day layer: Burglary - Comm & Res 7-Day
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Burglary - Comm & Res: ['BURGLARY COMMERCIAL', 'BURGLARY RESIDENTIAL']
+🔎 Final Excel-based SQL filter: (calltype LIKE '%BURGLARY COMMERCIAL%' OR calltype LIKE '%BURGLARY RESIDENTIAL%') AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+🔎 Excel-based SQL for 7-Day Burglary - Comm & Res 7-Day: (calltype LIKE '%BURGLARY COMMERCIAL%' OR calltype LIKE '%BURGLARY RESIDENTIAL%') AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+✅ Applied Excel-based query to Burglary - Comm & Res 7-Day
+📊 7-Day features: 0
+📋 No 7-day incidents for Burglary - Comm & Res, creating placeholder
+✅ Created placeholder image: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Comm_And_Res\Burglary_Comm_And_Res_Map.png
+✅ Restored original layer states
+🧹 Cleaned up ArcGIS Pro project reference
+📁 Crime-specific folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Robbery
+✅ Loaded ArcGIS Pro project: C:\Users\carucci_r\SCRPA_LAPTOP\projects\7_Day_Templet_SCRPA_Time.aprx
+✅ Found layout: Crime Report Legend
+✅ Found map: Map
+🔄 Hidden 18 layers initially
+✅ Enabled base layer: City Boundaries
+✅ Enabled base layer: OpenStreetMap Light Gray Canvas Reference
+✅ Enabled base layer: Light Gray Canvas (for Export)
+✅ Enabled 3 base layers
+📅 Excel 7-Day period: 2025-06-17 to 2025-06-23
+✅ Removed scale dependencies
+✅ Set symbol size to 18 for Robbery
+✅ Applied CIRCLE color for Robbery
+✅ Enhanced symbology applied to Robbery
+   Size: 18, Type: CIRCLE
+🔍 Final Layer State:
+   Visible: True
+   Transparency: 0.0
+✅ Configured 7-Day layer: Robbery 7-Day
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Robbery: ROBBERY
+🔎 Final Excel-based SQL filter: calltype LIKE '%ROBBERY%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+🔎 Excel-based SQL for 7-Day Robbery 7-Day: calltype LIKE '%ROBBERY%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+✅ Applied Excel-based query to Robbery 7-Day
+📊 7-Day features: 0
+📋 No 7-day incidents for Robbery, creating placeholder
+✅ Created placeholder image: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Robbery\Robbery_Map.png
+✅ Restored original layer states
+🧹 Cleaned up ArcGIS Pro project reference
+📁 Crime-specific folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses
+✅ Loaded ArcGIS Pro project: C:\Users\carucci_r\SCRPA_LAPTOP\projects\7_Day_Templet_SCRPA_Time.aprx
+✅ Found layout: Crime Report Legend
+✅ Found map: Map
+🔄 Hidden 18 layers initially
+✅ Enabled base layer: City Boundaries
+✅ Enabled base layer: OpenStreetMap Light Gray Canvas Reference
+✅ Enabled base layer: Light Gray Canvas (for Export)
+✅ Enabled 3 base layers
+📅 Excel 7-Day period: 2025-06-17 to 2025-06-23
+✅ Removed scale dependencies
+✅ Set symbol size to 20 for Sexual Offenses
+✅ Applied DIAMOND color for Sexual Offenses
+🚨 APPLYING SEXUAL OFFENSES ENHANCED VISIBILITY
+   Visibility attempt 1
+   Visibility attempt 2
+   Visibility attempt 3
+✅ Enhanced symbology applied to Sexual Offenses
+   Size: 20, Type: DIAMOND
+🔍 Final Layer State:
+   Visible: True
+   Transparency: 0.0
+✅ Configured 7-Day layer: Sexual Offenses 7-Day
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Sexual Offenses: ['SEXUAL ASSAULT', 'SEXUAL OFFENSE']
+🔎 Final Excel-based SQL filter: (calltype LIKE '%SEXUAL ASSAULT%' OR calltype LIKE '%SEXUAL OFFENSE%') AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+🔎 Excel-based SQL for 7-Day Sexual Offenses 7-Day: (calltype LIKE '%SEXUAL ASSAULT%' OR calltype LIKE '%SEXUAL OFFENSE%') AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+✅ Applied Excel-based query to Sexual Offenses 7-Day
+📊 7-Day features: 1
+🔍 Layer SR: WGS_1984_Web_Mercator_Auxiliary_Sphere (WKID: 3857)
+🔍 Map SR: WGS_1984_Web_Mercator_Auxiliary_Sphere (WKID: 3857)
+WARNING: ⚠️ Unexpected coordinate system: WGS_1984_Web_Mercator_Auxiliary_Sphere
+📍 Using Hackensack center: 646000, 764000 (feet)
+📊 Incident extent: -8263473, 4857161 to -8238141, 5020714
+📍 Single incident: 0.75-mile focused view
+✅ Final extent: 1.5 x 1.5 miles
+📊 Optimized for 1 incidents in Hackensack
+🎯 Coordinate system: WGS_1984_Web_Mercator_Auxiliary_Sphere
+✅ Found legend with 18 items
+🔧 Disabled syncLayerVisibility for manual control
+✅ Showing in legend: Sexual Offenses 7-Day
+🎯 Legend updated: 1 items shown (7-Day only)
+💡 No patch elements found to remove
+📁 Using existing output folder: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses
+🧹 Deleted old export: Sexual_Offenses_Map.png
+✅ Cleaned up 1 old map files
+🖼️ Exporting map to: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses\Sexual_Offenses_Map.png
+✅ Map exported successfully
+✅ Map export verified: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses\Sexual_Offenses_Map.png (47,730 bytes)
+✅ Restored original layer states
+✅ Map export completed successfully for Sexual Offenses
+🧹 Cleaned up ArcGIS Pro project reference
+
+🔄 AUTO-COMPLETING REMAINING COMPONENTS
+============================================================
+📊 Auto-generating charts and tables for 5 crime types...
+
+📈 GENERATING CHARTS
+------------------------------
+Processing chart for MV Theft...
+🧹 Deleted old chart: MV_Theft_Chart.png
+
+🔍 Processing chart for MV Theft using SAME SQL patterns as map_export...
+✅ Connected to ArcGIS Pro project
+📅 Corrected 7-Day period: 2025-06-17 to 2025-06-23
+🔍 Using corrected timestamp dates: {'7-Day': '2025-06-17 00:00:00.000', '28-Day': '2025-05-27 00:00:00.000', 'YTD': '2025-01-01 00:00:00.000'}
+
+📅 Processing 7-Day data...
+✅ Found layer: MV Theft 7-Day
+🔎 7-Day SQL (MATCHING MAP): calltype LIKE '%MOTOR VEHICLE THEFT%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-06-17 00:00:00.000' And calldate <= timestamp '2025-06-23 23:59:59.999'
+📊 7-Day features found: 3
+✅ Processed 3 records with real time data
+📊 7-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 3, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 0}
+
+📅 Processing 28-Day data...
+✅ Found layer: MV Theft 28-Day
+🔎 28-Day SQL Filter (MATCHING MAP): calltype LIKE '%MOTOR VEHICLE THEFT%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-05-27 00:00:00.000'
+📊 28-Day features found: 6
+✅ Processed 6 records with real time data
+📊 28-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 2, '08:00-11:59': 3, '12:00-15:59': 0, '16:00-19:59': 1, '20:00-23:59': 0}
+
+📅 Processing YTD data...
+✅ Found layer: MV Theft YTD
+🔎 YTD SQL Filter (MATCHING MAP): calltype LIKE '%MOTOR VEHICLE THEFT%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-01-01 00:00:00.000'
+📊 YTD features found: 30
+✅ Processed 30 records with real time data
+📊 YTD time distribution: {'00:00-03:59': 3, '04:00-07:59': 3, '08:00-11:59': 12, '12:00-15:59': 7, '16:00-19:59': 3, '20:00-23:59': 2}
+✅ Chart saved with MATCHING SQL patterns: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft\MV_Theft_Chart.png
+
+📊 Final Chart Data for MV Theft:
+  7-Day: 3 incidents
+  28-Day: 6 incidents
+  YTD: 30 incidents
+📅 7-Day period analyzed: 2025-06-17 to 2025-06-23
+  ✅ SUCCESS: MV Theft chart
+Processing chart for Burglary - Auto...
+🧹 Deleted old chart: Burglary_Auto_Chart.png
+
+🔍 Processing chart for Burglary - Auto using SAME SQL patterns as map_export...
+✅ Connected to ArcGIS Pro project
+📅 Corrected 7-Day period: 2025-06-17 to 2025-06-23
+🔍 Using corrected timestamp dates: {'7-Day': '2025-06-17 00:00:00.000', '28-Day': '2025-05-27 00:00:00.000', 'YTD': '2025-01-01 00:00:00.000'}
+
+📅 Processing 7-Day data...
+✅ Found layer: Burglary - Auto 7-Day
+🔎 7-Day SQL (MATCHING MAP): calltype LIKE '%BURGLARY AUTO%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-06-17 00:00:00.000' And calldate <= timestamp '2025-06-23 23:59:59.999'
+📊 7-Day features found: 0
+📊 7-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 0}
+
+📅 Processing 28-Day data...
+✅ Found layer: Burglary - Auto 28-Day
+🔎 28-Day SQL Filter (MATCHING MAP): calltype LIKE '%BURGLARY AUTO%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-05-27 00:00:00.000'
+📊 28-Day features found: 0
+📊 28-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 0}
+
+📅 Processing YTD data...
+✅ Found layer: Burglary - Auto YTD
+🔎 YTD SQL Filter (MATCHING MAP): calltype LIKE '%BURGLARY AUTO%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-01-01 00:00:00.000'
+📊 YTD features found: 11
+✅ Processed 11 records with real time data
+📊 YTD time distribution: {'00:00-03:59': 0, '04:00-07:59': 2, '08:00-11:59': 1, '12:00-15:59': 3, '16:00-19:59': 2, '20:00-23:59': 3}
+✅ Chart saved with MATCHING SQL patterns: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Auto\Burglary_Auto_Chart.png
+
+📊 Final Chart Data for Burglary - Auto:
+  7-Day: 0 incidents
+  28-Day: 0 incidents
+  YTD: 11 incidents
+📅 7-Day period analyzed: 2025-06-17 to 2025-06-23
+  ✅ SUCCESS: Burglary - Auto chart
+Processing chart for Burglary - Comm & Res...
+🧹 Deleted old chart: Burglary_Comm_And_Res_Chart.png
+
+🔍 Processing chart for Burglary - Comm & Res using SAME SQL patterns as map_export...
+✅ Connected to ArcGIS Pro project
+📅 Corrected 7-Day period: 2025-06-17 to 2025-06-23
+🔍 Using corrected timestamp dates: {'7-Day': '2025-06-17 00:00:00.000', '28-Day': '2025-05-27 00:00:00.000', 'YTD': '2025-01-01 00:00:00.000'}
+
+📅 Processing 7-Day data...
+✅ Found layer: Burglary - Comm & Res 7-Day
+🔎 7-Day SQL (MATCHING MAP): (calltype LIKE '%BURGLARY COMMERCIAL%' OR calltype LIKE '%BURGLARY RESIDENTIAL%') And disposition LIKE '%See Report%' And calldate >= timestamp '2025-06-17 00:00:00.000' And calldate <= timestamp '2025-06-23 23:59:59.999'
+📊 7-Day features found: 0
+📊 7-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 0}
+
+📅 Processing 28-Day data...
+✅ Found layer: Burglary - Comm & Res 28-Day
+🔎 28-Day SQL Filter (MATCHING MAP): (calltype LIKE '%BURGLARY COMMERCIAL%' OR calltype LIKE '%BURGLARY RESIDENTIAL%') And disposition LIKE '%See Report%' And calldate >= timestamp '2025-05-27 00:00:00.000'
+📊 28-Day features found: 0
+📊 28-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 0}
+
+📅 Processing YTD data...
+✅ Found layer: Burglary - Comm & Res YTD
+🔎 YTD SQL Filter (MATCHING MAP): (calltype LIKE '%BURGLARY COMMERCIAL%' OR calltype LIKE '%BURGLARY RESIDENTIAL%') And disposition LIKE '%See Report%' And calldate >= timestamp '2025-01-01 00:00:00.000'
+📊 YTD features found: 13
+✅ Processed 13 records with real time data
+📊 YTD time distribution: {'00:00-03:59': 1, '04:00-07:59': 1, '08:00-11:59': 5, '12:00-15:59': 4, '16:00-19:59': 0, '20:00-23:59': 2}
+✅ Chart saved with MATCHING SQL patterns: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Comm_And_Res\Burglary_Comm_And_Res_Chart.png
+
+📊 Final Chart Data for Burglary - Comm & Res:
+  7-Day: 0 incidents
+  28-Day: 0 incidents
+  YTD: 13 incidents
+📅 7-Day period analyzed: 2025-06-17 to 2025-06-23
+  ✅ SUCCESS: Burglary - Comm & Res chart
+Processing chart for Robbery...
+🧹 Deleted old chart: Robbery_Chart.png
+
+🔍 Processing chart for Robbery using SAME SQL patterns as map_export...
+✅ Connected to ArcGIS Pro project
+📅 Corrected 7-Day period: 2025-06-17 to 2025-06-23
+🔍 Using corrected timestamp dates: {'7-Day': '2025-06-17 00:00:00.000', '28-Day': '2025-05-27 00:00:00.000', 'YTD': '2025-01-01 00:00:00.000'}
+
+📅 Processing 7-Day data...
+✅ Found layer: Robbery 7-Day
+🔎 7-Day SQL (MATCHING MAP): calltype LIKE '%ROBBERY%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-06-17 00:00:00.000' And calldate <= timestamp '2025-06-23 23:59:59.999'
+📊 7-Day features found: 0
+📊 7-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 0}
+
+📅 Processing 28-Day data...
+✅ Found layer: Robbery 28-Day
+🔎 28-Day SQL Filter (MATCHING MAP): calltype LIKE '%ROBBERY%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-05-27 00:00:00.000'
+📊 28-Day features found: 1
+✅ Processed 1 records with real time data
+📊 28-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 1}
+
+📅 Processing YTD data...
+✅ Found layer: Robbery YTD
+🔎 YTD SQL Filter (MATCHING MAP): calltype LIKE '%ROBBERY%' And disposition LIKE '%See Report%' And calldate >= timestamp '2025-01-01 00:00:00.000'
+📊 YTD features found: 6
+✅ Processed 6 records with real time data
+📊 YTD time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 3, '16:00-19:59': 1, '20:00-23:59': 2}
+✅ Chart saved with MATCHING SQL patterns: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Robbery\Robbery_Chart.png
+
+📊 Final Chart Data for Robbery:
+  7-Day: 0 incidents
+  28-Day: 1 incidents
+  YTD: 6 incidents
+📅 7-Day period analyzed: 2025-06-17 to 2025-06-23
+  ✅ SUCCESS: Robbery chart
+Processing chart for Sexual Offenses...
+🧹 Deleted old chart: Sexual_Offenses_Chart.png
+
+🔍 Processing chart for Sexual Offenses using SAME SQL patterns as map_export...
+✅ Connected to ArcGIS Pro project
+📅 Corrected 7-Day period: 2025-06-17 to 2025-06-23
+🔍 Using corrected timestamp dates: {'7-Day': '2025-06-17 00:00:00.000', '28-Day': '2025-05-27 00:00:00.000', 'YTD': '2025-01-01 00:00:00.000'}
+
+📅 Processing 7-Day data...
+✅ Found layer: Sexual Offenses 7-Day
+🔎 7-Day SQL (MATCHING MAP): (calltype LIKE '%SEXUAL ASSAULT%' OR calltype LIKE '%SEXUAL OFFENSE%') And disposition LIKE '%See Report%' And calldate >= timestamp '2025-06-17 00:00:00.000' And calldate <= timestamp '2025-06-23 23:59:59.999'
+📊 7-Day features found: 1
+✅ Processed 1 records with real time data
+📊 7-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 0, '12:00-15:59': 0, '16:00-19:59': 0, '20:00-23:59': 1}
+
+📅 Processing 28-Day data...
+✅ Found layer: Sexual Offenses 28-Day
+🔎 28-Day SQL Filter (MATCHING MAP): (calltype LIKE '%SEXUAL ASSAULT%' OR calltype LIKE '%SEXUAL OFFENSE%') And disposition LIKE '%See Report%' And calldate >= timestamp '2025-05-27 00:00:00.000'
+📊 28-Day features found: 3
+✅ Processed 3 records with real time data
+📊 28-Day time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 1, '12:00-15:59': 1, '16:00-19:59': 0, '20:00-23:59': 1}
+
+📅 Processing YTD data...
+✅ Found layer: Sexual Offenses YTD
+🔎 YTD SQL Filter (MATCHING MAP): (calltype LIKE '%SEXUAL ASSAULT%' OR calltype LIKE '%SEXUAL OFFENSE%') And disposition LIKE '%See Report%' And calldate >= timestamp '2025-01-01 00:00:00.000'
+📊 YTD features found: 11
+✅ Processed 11 records with real time data
+📊 YTD time distribution: {'00:00-03:59': 0, '04:00-07:59': 0, '08:00-11:59': 4, '12:00-15:59': 3, '16:00-19:59': 1, '20:00-23:59': 3}
+✅ Chart saved with MATCHING SQL patterns: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses\Sexual_Offenses_Chart.png
+
+📊 Final Chart Data for Sexual Offenses:
+  7-Day: 1 incidents
+  28-Day: 3 incidents
+  YTD: 11 incidents
+📅 7-Day period analyzed: 2025-06-17 to 2025-06-23
+  ✅ SUCCESS: Sexual Offenses chart
+
+📋 GENERATING INCIDENT TABLES
+------------------------------
+Processing table for MV Theft...
+
+Processing incident table for MV Theft
+Getting incident details for period: 2025-06-17 to 2025-06-23
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for MV Theft: MOTOR VEHICLE THEFT
+🔎 Final Excel-based SQL filter: calltype LIKE '%MOTOR VEHICLE THEFT%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+Extracted 3 incident details for MV Theft
+Created incident table image (8" x 2.3") with 3 incidents: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft\MV_Theft_IncidentTable_AutoFit.png
+Incident data exported to: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\MV_Theft\MV_Theft_Incidents_Manual_Entry.csv
+3 incidents need manual narrative entry
+  ✅ SUCCESS: MV Theft table
+Processing table for Burglary - Auto...
+
+Processing incident table for Burglary - Auto
+Getting incident details for period: 2025-06-17 to 2025-06-23
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Burglary - Auto: BURGLARY AUTO
+🔎 Final Excel-based SQL filter: calltype LIKE '%BURGLARY AUTO%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+Extracted 0 incident details for Burglary - Auto
+Created incident table placeholder (8" x 2.3"): C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Auto\Burglary_Auto_IncidentTable_Placeholder.png
+No incidents found for Burglary - Auto, created placeholder
+  ✅ SUCCESS: Burglary - Auto table
+Processing table for Burglary - Comm & Res...
+
+Processing incident table for Burglary - Comm & Res
+Getting incident details for period: 2025-06-17 to 2025-06-23
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Burglary - Comm & Res: ['BURGLARY COMMERCIAL', 'BURGLARY RESIDENTIAL']
+🔎 Final Excel-based SQL filter: (calltype LIKE '%BURGLARY COMMERCIAL%' OR calltype LIKE '%BURGLARY RESIDENTIAL%') AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+Extracted 0 incident details for Burglary - Comm & Res
+Created incident table placeholder (8" x 2.3"): C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Burglary_Comm_And_Res\Burglary_Comm_And_Res_IncidentTable_Placeholder.png
+No incidents found for Burglary - Comm & Res, created placeholder
+  ✅ SUCCESS: Burglary - Comm & Res table
+Processing table for Robbery...
+
+Processing incident table for Robbery
+Getting incident details for period: 2025-06-17 to 2025-06-23
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Robbery: ROBBERY
+🔎 Final Excel-based SQL filter: calltype LIKE '%ROBBERY%' AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+Extracted 0 incident details for Robbery
+Created incident table placeholder (8" x 2.3"): C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Robbery\Robbery_IncidentTable_Placeholder.png
+No incidents found for Robbery, created placeholder
+  ✅ SUCCESS: Robbery table
+Processing table for Sexual Offenses...
+
+Processing incident table for Sexual Offenses
+Getting incident details for period: 2025-06-17 to 2025-06-23
+📅 Excel-based 7-Day filter period: 2025-06-17 to 2025-06-23
+💡 Using pattern for Sexual Offenses: ['SEXUAL ASSAULT', 'SEXUAL OFFENSE']
+🔎 Final Excel-based SQL filter: (calltype LIKE '%SEXUAL ASSAULT%' OR calltype LIKE '%SEXUAL OFFENSE%') AND disposition LIKE '%See Report%' AND calldate >= timestamp '2025-06-17 00:00:00.000' AND calldate <= timestamp '2025-06-23 23:59:59.999'
+Extracted 1 incident details for Sexual Offenses
+Created incident table image (8" x 2.3") with 1 incidents: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses\Sexual_Offenses_IncidentTable_AutoFit.png
+Incident data exported to: C:\Users\carucci_r\SCRPA_LAPTOP\temp_reports\C07W25_2025_06_24_7Day\Sexual_Offenses\Sexual_Offenses_Incidents_Manual_Entry.csv
+1 incidents need manual narrative entry
+  ✅ SUCCESS: Sexual Offenses table
+
+🎯 AUTO-ASSEMBLING POWERPOINT
+------------------------------
+  ✅ SUCCESS: PowerPoint assembly
+
+📊 AUTO-COMPLETION SUMMARY
+==================================================
+Charts completed: 5/5
+Tables completed: 5/5
+PowerPoint: ✅ SUCCESS
+
+C:\Users\carucci_r\SCRPA_LAPTOP\scripts>

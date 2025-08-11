@@ -1,0 +1,215 @@
+{
+  "session_id": "20250726_143025_789",
+  "operation_type": "pbix_parameter_update",
+  "start_timestamp": "2025-07-26T14:30:25.123456",
+  "end_timestamp": "2025-07-26T14:30:28.987654",
+  "duration_seconds": 3.864,
+  "success": true,
+  "system_environment": {
+    "platform": "Windows",
+    "platform_version": "10.0.19045",
+    "python_version": "3.11.5",
+    "working_directory": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts",
+    "user_name": "carucci_r",
+    "computer_name": "HACKENSACK-PC",
+    "total_memory_gb": 16.0,
+    "available_memory_gb": 8.5,
+    "disk_usage_gb": {
+      "total_gb": 512.0,
+      "used_gb": 256.3,
+      "free_gb": 255.7
+    },
+    "environment_variables": {
+      "PATH": "C:\\Windows\\system32;C:\\Python311;C:\\Python311\\Scripts",
+      "PYTHONPATH": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts",
+      "TEMP": "C:\\Users\\carucci_r\\AppData\\Local\\Temp",
+      "USERPROFILE": "C:\\Users\\carucci_r",
+      "COMPUTERNAME": "HACKENSACK-PC",
+      "USERNAME": "carucci_r"
+    },
+    "timestamp": "2025-07-26T14:30:25.123456"
+  },
+  "input_file": {
+    "path": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\SCRPA_Time_v2.pbix",
+    "exists": true,
+    "size_bytes": 2457600,
+    "size_mb": 2.34,
+    "created_time": "2025-07-26T10:15:30.456789",
+    "modified_time": "2025-07-26T14:20:15.789123",
+    "checksum_md5": "a1b2c3d4e5f6789012345678901234ab",
+    "permissions": "666",
+    "is_readable": true,
+    "is_writable": true
+  },
+  "output_file": {
+    "path": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\SCRPA_Time_v2_updated.pbix",
+    "exists": true,
+    "size_bytes": 2458120,
+    "size_mb": 2.34,
+    "created_time": "2025-07-26T14:30:28.567890",
+    "modified_time": "2025-07-26T14:30:28.567890",
+    "checksum_md5": "b2c3d4e5f6789012345678901234abcd",
+    "permissions": "666",
+    "is_readable": true,
+    "is_writable": true
+  },
+  "parameters": [
+    {
+      "name": "BasePath",
+      "original_value": "C:\\Old\\Path\\Data",
+      "new_value": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2",
+      "pattern_used": "Pattern 1: let\\s+BasePath\\s*=\\s*\"([^\"]*)\"",
+      "update_successful": true,
+      "verification_successful": true,
+      "detection_method": "regex_pattern_matching",
+      "timestamp": "2025-07-26T14:30:27.234567"
+    }
+  ],
+  "backups": [
+    {
+      "backup_id": "BKP_143026_123",
+      "original_file": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\SCRPA_Time_v2.pbix",
+      "backup_file": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\backups_20250726_143025_789\\SCRPA_Time_v2_backup_20250726_143026.pbix",
+      "created_timestamp": "2025-07-26T14:30:26.345678",
+      "size_bytes": 2457600,
+      "checksum_original": "a1b2c3d4e5f6789012345678901234ab",
+      "checksum_backup": "a1b2c3d4e5f6789012345678901234ab",
+      "backup_successful": true,
+      "restoration_timestamp": "",
+      "restoration_successful": false
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "error_id": "ERR_143027_456",
+      "timestamp": "2025-07-26T14:30:27.456789",
+      "error_type": "ChecksumWarning",
+      "error_message": "Large file checksum calculation skipped for performance",
+      "operation_step": "file_info_collection",
+      "file_context": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\SCRPA_Time_v2.pbix",
+      "stack_trace": null,
+      "severity": "warning"
+    }
+  ],
+  "validation_results": {
+    "success": true,
+    "session_id": "20250726_143025_789",
+    "operation_start": "2025-07-26T14:30:25.123456",
+    "pre_validation": {
+      "input_file": {
+        "file_exists": true,
+        "is_pbix": true,
+        "is_valid_zip": true,
+        "has_common_files": true,
+        "datamashup_found": true,
+        "datamashup_location": "DataMashup",
+        "file_size": 2457600,
+        "parameters_detected": [
+          {
+            "name": "BasePath",
+            "value": "C:\\Old\\Path\\Data",
+            "type": "detected"
+          },
+          {
+            "name": "ServerName",
+            "value": "localhost",
+            "type": "detected"
+          },
+          {
+            "name": "DatabaseName",
+            "value": "CrimeDB",
+            "type": "detected"
+          }
+        ],
+        "validation_timestamp": "2025-07-26T14:30:25.567890",
+        "errors": []
+      },
+      "parameter": {
+        "parameter_found": true,
+        "current_value": "C:\\Old\\Path\\Data",
+        "parameter_pattern": "Pattern 1: let\\s+BasePath\\s*=\\s*\"([^\"]*)\"",
+        "datamashup_content_preview": "let\n    BasePath = \"C:\\\\Old\\\\Path\\\\Data\",\n    ServerName = \"localhost\",\n    DatabaseName = \"CrimeDB\",\n    Source = Excel.Workbook(File.Contents(BasePath & \"\\\\data.xlsx\")),\n    Table1 = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data]\nin\n    Table1",
+        "validation_timestamp": "2025-07-26T14:30:26.123456",
+        "errors": []
+      }
+    },
+    "post_validation": {
+      "output_file": {
+        "file_exists": true,
+        "is_pbix": true,
+        "is_valid_zip": true,
+        "has_common_files": true,
+        "datamashup_found": true,
+        "datamashup_location": "DataMashup",
+        "file_size": 2458120,
+        "parameters_detected": [
+          {
+            "name": "BasePath",
+            "value": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2",
+            "type": "detected"
+          },
+          {
+            "name": "ServerName",
+            "value": "localhost",
+            "type": "detected"
+          },
+          {
+            "name": "DatabaseName",
+            "value": "CrimeDB",
+            "type": "detected"
+          }
+        ],
+        "validation_timestamp": "2025-07-26T14:30:28.234567",
+        "errors": []
+      },
+      "parameter_updated": {
+        "parameter_found": true,
+        "current_value": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2",
+        "parameter_pattern": "Pattern 1: let\\s+BasePath\\s*=\\s*\"([^\"]*)\"",
+        "datamashup_content_preview": "let\n    BasePath = \"C:\\\\Users\\\\carucci_r\\\\OneDrive - City of Hackensack\\\\01_DataSources\\\\SCRPA_Time_v2\",\n    ServerName = \"localhost\",\n    DatabaseName = \"CrimeDB\",\n    Source = Excel.Workbook(File.Contents(BasePath & \"\\\\data.xlsx\")),\n    Table1 = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data]\nin\n    Table1",
+        "validation_timestamp": "2025-07-26T14:30:28.345678",
+        "errors": []
+      },
+      "value_matches": true
+    },
+    "processing_log": [
+      "Extracting PBIX to temporary directory: C:\\Users\\carucci_r\\AppData\\Local\\Temp\\tmp_pbix_abc123",
+      "Extraction completed",
+      "Found DataMashup at: DataMashup",
+      "Updating parameter 'BasePath' in DataMashup file",
+      "Successfully decoded with latin1",
+      "Parameter updated successfully",
+      "Creating updated PBIX file",
+      "PBIX file created successfully"
+    ],
+    "backup_info": {
+      "backup_id": "BKP_143026_123",
+      "original_file": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\SCRPA_Time_v2.pbix",
+      "backup_file": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\backups_20250726_143025_789\\SCRPA_Time_v2_backup_20250726_143026.pbix",
+      "created_timestamp": "2025-07-26T14:30:26.345678",
+      "size_bytes": 2457600,
+      "checksum_original": "a1b2c3d4e5f6789012345678901234ab",
+      "checksum_backup": "a1b2c3d4e5f6789012345678901234ab",
+      "backup_successful": true,
+      "restoration_timestamp": "",
+      "restoration_successful": false
+    },
+    "parameter_info": {
+      "name": "BasePath",
+      "original_value": "C:\\Old\\Path\\Data",
+      "new_value": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2",
+      "pattern_used": "Pattern 1: let\\s+BasePath\\s*=\\s*\"([^\"]*)\"",
+      "update_successful": true,
+      "verification_successful": true,
+      "detection_method": "regex_pattern_matching",
+      "timestamp": "2025-07-26T14:30:27.234567"
+    },
+    "rollback_performed": false,
+    "errors": [],
+    "operation_end": "2025-07-26T14:30:28.987654"
+  },
+  "rollback_performed": false,
+  "rollback_successful": false,
+  "summary_file_path": "C:\\Users\\carucci_r\\SCRPA_LAPTOP\\scripts\\pbix_configuration_summary_20250726_143025.json"
+}

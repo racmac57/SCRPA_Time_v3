@@ -1,0 +1,22 @@
+2025-08-01 17:29:35,756 - ComprehensiveSCRPAFixV8_0 - INFO - === Comprehensive SCRPA Fix V8.0 - Column Standardization Version ===
+2025-08-01 17:29:36,233 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded call type reference: 592 records
+2025-08-01 17:29:36,313 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-01 17:29:36,313 - ComprehensiveSCRPAFixV8_0 - INFO - Starting Comprehensive SCRPA Fix V8.0 pipeline...
+2025-08-01 17:29:36,314 - ComprehensiveSCRPAFixV8_0 - INFO - Latest cad file: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-01 17:29:36,314 - ComprehensiveSCRPAFixV8_0 - INFO - Latest rms file: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-01 17:29:36,315 - ComprehensiveSCRPAFixV8_0 - INFO - Processing RMS data: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-01 17:29:36,345 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded RMS file with 114 rows and 20 columns
+2025-08-01 17:29:36,346 - ComprehensiveSCRPAFixV8_0 - INFO - RMS columns found: ['ReportNumberNew', 'Incident', 'How Reported', 'FullAddress2', 'PDZone', 'Grid', 'Time of Call', 'cYear', 'cMonth', 'HourMinuetsCalc', 'DayofWeek', 'Time Dispatched', 'Time Out', 'Time In', 'Time Spent', 'Time Response', 'Officer', 'Disposition', 'Response Type', 'CADNotes']
+2025-08-01 17:29:36,346 - ComprehensiveSCRPAFixV8_0 - INFO - Applied column mapping: {'Grid': 'grid_raw'}
+2025-08-01 17:29:36,361 - ComprehensiveSCRPAFixV8_0 - ERROR - Fatal error in main execution: 'str' object has no attribute 'apply'
+Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Comprehensive_SCRPA_Fix_v8.0_Standardized.py", line 1383, in <module>
+    results = processor.process_final_pipeline()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Comprehensive_SCRPA_Fix_v8.0_Standardized.py", line 1063, in process_final_pipeline
+    rms_data = self.process_rms_data(latest_files['rms'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Comprehensive_SCRPA_Fix_v8.0_Standardized.py", line 773, in process_rms_data
+    rms_df['location'] = rms_df.get('full_address_raw', '').apply(self.validate_hackensack_address)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'apply'

@@ -1,0 +1,79 @@
+let
+// Define today's date (April 15, 2025)
+Today = #date(2025, 4, 15),
+
+// Load the _7Day_28Day_250414_ table
+CycleSource = Excel.CurrentWorkbook(){[Name="_7Day_28Day_250414_"]}[Content],
+// Ensure date columns are in Date type
+TypedCycleSource = Table.TransformColumnTypes(CycleSource, {
+{"7_Day_Start", type date},
+{"7_Day_End", type date},
+{"Report_Due_Date", type date}
+}),
+// Select the most recent 7-day cycle that ended on or before today
+PreviousCycle = Table.SelectRows(TypedCycleSource, each [7_Day_End] < Today),
+// Sort by 7_Day_End in descending order to get the most recent cycle
+SortedCycle = Table.Sort(PreviousCycle, {{"7_Day_End", Order.Descending}}),
+// Take the first row (most recent cycle that ended before today)
+CurrentCycle = Table.FirstN(SortedCycle, 1),
+SevenDayStart = CurrentCycle{0}[7_Day_Start],
+SevenDayEnd = CurrentCycle{0}[7_Day_End],
+
+// Load the Bur_Auto table
+Source = Excel.CurrentWorkbook(){[Name="Bur_Auto"]}[Content],
+// Ensure INC_DATE is in Date type for proper comparison
+TypedSource = Table.TransformColumnTypes(Source, {{"INC_DATE", type date}}),
+
+// Filter for incidents within the previous 7-day cycle
+FilteredRows = Table.SelectRows(TypedSource, each [INC_DATE] >= SevenDayStart and [INC_DATE] <= SevenDayEnd),
+
+// Select and rename columns to match REPORT_BUR_AUTO_7DAY headers
+SelectedColumns = Table.SelectColumns(FilteredRows, {
+"BLOCK",
+"INC_DATE",
+"Day Name",
+"TIME_OF_DAY",
+"VEHICLE",
+"Narrative"
+}),
+
+RenamedColumns = Table.RenameColumns(SelectedColumns, {
+{"BLOCK", "Block Incident Occurred On"},
+{"INC_DATE", "Incident Date"},
+{"Day Name", "Day of Week"},
+{"TIME_OF_DAY", "Time of Day Incident Occurred"},
+{"VEHICLE", "Victim's Vehicle Description"},
+{"Narrative", "Notes"}
+}),
+
+// Add missing columns with blank values
+AddedColumns = Table.AddColumn(RenamedColumns, "Vehicle Was Parked", each null, type text),
+AddedColumns2 = Table.AddColumn(AddedColumns, "Entry Method", each null, type text),
+AddedColumns3 = Table.AddColumn(AddedColumns2, "Damage to Vehicle", each null, type text),
+AddedColumns4 = Table.AddColumn(AddedColumns3, "Suspect Description", each null, type text),
+AddedColumns5 = Table.AddColumn(AddedColumns4, "Suspect Vehicle Description", each null, type text),
+AddedColumns6 = Table.AddColumn(AddedColumns5, "Items Stolen", each null, type text),
+AddedColumns7 = Table.AddColumn(AddedColumns6, "Value of Stolen Property", each null, type text),
+AddedColumns8 = Table.AddColumn(AddedColumns7, "Keys with Vehicle", each null, type text),
+AddedColumns9 = Table.AddColumn(AddedColumns8, "Offense Completed", each null, type text),
+
+// Reorder columns to match the specified order
+ReorderedColumns = Table.ReorderColumns(AddedColumns9, {
+"Block Incident Occurred On",
+"Incident Date",
+"Day of Week",
+"Time of Day Incident Occurred",
+"Victim's Vehicle Description",
+"Vehicle Was Parked",
+"Entry Method",
+"Damage to Vehicle",
+"Suspect Description",
+"Suspect Vehicle Description",
+"Items Stolen",
+"Value of Stolen Property",
+"Keys with Vehicle",
+"Offense Completed",
+"Notes"
+})
+in
+ReorderedColumns

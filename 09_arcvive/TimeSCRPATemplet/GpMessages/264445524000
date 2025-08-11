@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 5:09:54 AM</msg><msg code="0" type="0">Legend elements found: ['MainLegend']</msg><msg code="0" type="0">[INFO] Map Frame successfully re-linked to map.</msg><msg code="0" type="50">Could not clear legend items: 'LegendElement' object has no attribute 'listItems'</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\weekly_crime_report.py", line 167, in &lt;module&gt;
+﻿    if lyr and lyr.supports("SHOWLEGEND"):
+﻿               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\utils.py", line 154, in fn_
+﻿    raise ValueError(
+﻿ValueError: Invalid value for layer_property: 'SHOWLEGEND' (choices are: ['BRIGHTNESS', 'CONNECTIONPROPERTIES', 'CONTRAST', 'DATASOURCE', 'DEFINITIONQUERY', 'IS3DLAYER', 'ISBASEMAPLAYER', 'ISBROKEN', 'ISFEATURELAYER', 'ISGRAPHICSLAYER', 'ISGROUPLAYER', 'ISNETWORKANALYSTLAYER', 'ISNETWORKDATASETLAYER', 'ISPARCELFABRICLAYER', 'ISRASTERLAYER', 'ISSCENELAYER', 'ISTIMEENABLED', 'ISWEBLAYER', 'LONGNAME', 'MAXTHRESHOLD', 'METADATA', 'MINTHRESHOLD', 'NAME', 'SHOWLABELS', 'SYMBOLOGY', 'TRANSPARENCY', 'TIME', 'URI', 'VISIBLE'])
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 5:14:34 AM (Elapsed Time: 4 minutes 40 seconds)</msg></messages>

@@ -1,0 +1,1281 @@
+Query: 7Day_28Day_250414
+Report_Due_Date	7_Day_Start	7_Day_End	28_Day_Start	28_Day_End	Report_Name
+01/07/25	12/31/24	01/06/25	12/10/24	01/06/25	C01W01
+01/14/25	01/07/25	01/13/25	12/17/24	01/13/25	C01W02
+01/21/25	01/14/25	01/20/25	12/24/24	01/20/25	C01W03
+01/28/25	01/21/25	01/27/25	12/31/24	01/27/25	C01W04
+02/04/25	01/28/25	02/03/25	01/07/25	02/03/25	C02W05
+02/11/25	02/04/25	02/10/25	01/14/25	02/10/25	C02W06
+02/18/25	02/11/25	02/17/25	01/21/25	02/17/25	C02W07
+02/25/25	02/18/25	02/24/25	01/28/25	02/24/25	C02W08
+03/04/25	02/25/25	03/03/25	02/04/25	03/03/25	C03W09
+03/11/25	03/04/25	03/10/25	02/11/25	03/10/25	C03W10
+03/18/25	03/11/25	03/17/25	02/18/25	03/17/25	C03W11
+03/25/25	03/18/25	03/24/25	02/25/25	03/24/25	C03W12
+04/01/25	03/25/25	03/31/25	03/04/25	03/31/25	C04W13
+04/08/25	04/01/25	04/07/25	03/11/25	04/07/25	C04W14
+04/15/25	04/08/25	04/14/25	03/18/25	04/14/25	C04W15
+04/22/25	04/15/25	04/21/25	03/25/25	04/21/25	C04W16
+04/29/25	04/22/25	04/28/25	04/01/25	04/28/25	C05W17
+05/06/25	04/29/25	05/05/25	04/08/25	05/05/25	C05W18
+05/13/25	05/06/25	05/12/25	04/15/25	05/12/25	C05W19
+05/20/25	05/13/25	05/19/25	04/22/25	05/19/25	C05W20
+05/27/25	05/20/25	05/26/25	04/29/25	05/26/25	C06W21
+06/03/25	05/27/25	06/02/25	05/06/25	06/02/25	C06W23
+06/10/25	06/03/25	06/09/25	05/13/25	06/09/25	C06W23
+06/17/25	06/10/25	06/16/25	05/20/25	06/16/25	C06W24
+06/24/25	06/17/25	06/23/25	05/27/25	06/23/25	C07W25
+07/01/25	06/24/25	06/30/25	06/03/25	06/30/25	C07W26
+07/08/25	07/01/25	07/07/25	06/10/25	07/07/25	C07W27
+07/15/25	07/08/25	07/14/25	06/17/25	07/14/25	C07W28
+07/22/25	07/15/25	07/21/25	06/24/25	07/21/25	C08W29
+07/29/25	07/22/25	07/28/25	07/01/25	07/28/25	C08W30
+08/05/25	07/29/25	08/04/25	07/08/25	08/04/25	C08W31
+08/12/25	08/05/25	08/11/25	07/15/25	08/11/25	C08W32
+08/19/25	08/12/25	08/18/25	07/22/25	08/18/25	C09W33
+08/26/25	08/19/25	08/25/25	07/29/25	08/25/25	C09W34
+09/02/25	08/26/25	09/01/25	08/05/25	09/01/25	C09W35
+09/09/25	09/02/25	09/08/25	08/12/25	09/08/25	C09W36
+09/16/25	09/09/25	09/15/25	08/19/25	09/15/25	C10W37
+09/23/25	09/16/25	09/22/25	08/26/25	09/22/25	C10W38
+09/30/25	09/23/25	09/29/25	09/02/25	09/29/25	C10W39
+10/07/25	09/30/25	10/06/25	09/09/25	10/06/25	C10W40
+10/14/25	10/07/25	10/13/25	09/16/25	10/13/25	C11W41
+10/21/25	10/14/25	10/20/25	09/23/25	10/20/25	C11W42
+10/28/25	10/21/25	10/27/25	09/30/25	10/27/25	C11W43
+11/04/25	10/28/25	11/03/25	10/07/25	11/03/25	C11W44
+11/11/25	11/04/25	11/10/25	10/14/25	11/10/25	C12W45
+11/18/25	11/11/25	11/17/25	10/21/25	11/17/25	C12W46
+11/25/25	11/18/25	11/24/25	10/28/25	11/24/25	C12W47
+12/02/25	11/25/25	12/01/25	11/04/25	12/01/25	C12W48
+12/09/25	12/02/25	12/08/25	11/11/25	12/08/25	C13W49
+12/16/25	12/09/25	12/15/25	11/18/25	12/15/25	C13W50
+12/23/25	12/16/25	12/22/25	11/25/25	12/22/25	C13W51
+12/30/25	12/23/25	12/29/25	12/02/25	12/29/25	C13W52
+
+
+let
+    Source = Excel.Workbook(File.Contents("C:\Users\carucci_r\OneDrive - City of Hackensack\09_Reference\Temporal\SCRPA_Cycle\7Day_28Day_Cycle_20250414.xlsx"), null, true),
+    #"7Day_28Day_250414_Sheet" = Source{[Item="7Day_28Day_250414",Kind="Sheet"]}[Data],
+    #"Promoted Headers" = Table.PromoteHeaders(#"7Day_28Day_250414_Sheet", [PromoteAllScalars=true]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Report_Due_Date", type date}, {"7_Day_Start", type date}, {"7_Day_End", type date}, {"28_Day_Start", type date}, {"28_Day_End", type date}, {"Report_Name", type text}})
+in
+    #"Changed Type"
+
+Query: CallType_Ctegories:
+Incident	Category Type	Response Type
+1	Miscellaneous	Routine
+9-1-1 Call	Emergency Response	Emergency
+A.C.O.R.N. Test	Administrative and Support	Routine
+A.T.R.A.	Special Operations and Tactical	Urgent
+ABC Advisory Check	Regulatory and Ordinance	Routine
+ABC Inspection	Regulatory and Ordinance	Routine
+ABC Liquor License Applicant	Administrative and Support	Routine
+ABC Violation	Regulatory and Ordinance	Routine
+ALPR Analysis	Investigations and Follow-Ups	Routine
+ALPR Flag	Investigations and Follow-Ups	Routine
+Abandoned 9-1-1 Emergency	Emergency Response	Emergency
+Abandoned 9-1-1Emergency	Miscellaneous	Routine
+Abandoned Auto	Traffic and Motor Vehicle	Routine
+Academy Assignment	Administrative and Support	Routine
+Active/Administratively Closed	Administrative and Support	Routine
+Administrative Assignment	Administrative and Support	Routine
+Aggravated Assault - 2C:12-1b	Criminal Incidents	Emergency
+Aggravated Assault 2C:12-1b	Criminal Investigation	Urgent
+Aggravated Sexual Assault - 2C:14-2a	Criminal Incidents	Emergency
+Aiding Suicide - 2C:11-6	Criminal Incidents	Emergency
+Alarm - Burglar	Emergency Response	Emergency
+Alarm - Fire	Emergency Response	Emergency
+Alarm - Other	Public Safety and Welfare	Urgent
+Alarm - Panic	Emergency Response	Emergency
+Alarm Ordinance	Regulatory and Ordinance	Routine
+Alcohol/School Property - 2C:33-16	Criminal Incidents	Urgent
+Alcoholic Beverage - Hours of Sale	Regulatory and Ordinance	Routine
+Alcoholic Beverage - New Years Day Hours of Sale	Regulatory and Ordinance	Routine
+Alcoholic Beverage - Serving Underage	Regulatory and Ordinance	Routine
+Alcoholic Beverage - Sunday Hours of Sale	Regulatory and Ordinance	Routine
+Alcoholic Beverage - Unlicensed Bartender	Regulatory and Ordinance	Routine
+Animal Bite Incident	Public Safety and Welfare	Urgent
+Animal Complaint	Regulatory and Ordinance	Routine
+Animal Cruelty	Regulatory and Ordinance	Routine
+Annoying Phone Calls - 2C:33-4a	Criminal Incidents	Routine
+Applicant ABC License	Administrative and Support	Routine
+Applicant AD Material License	Administrative and Support	Routine
+Applicant All Others	Administrative and Support	Routine
+Applicant City Employee	Administrative and Support	Routine
+Applicant Concealed Carry	Administrative and Support	Routine
+Applicant Firearm(s)	Administrative and Support	Routine
+Applicant Handicapped Permit	Administrative and Support	Routine
+Applicant Ice Cream Vendor	Administrative and Support	Routine
+Applicant Jewelry	Administrative and Support	Routine
+Applicant Landscaper	Administrative and Support	Routine
+Applicant Limo	Administrative and Support	Routine
+Applicant Peddling License	Administrative and Support	Routine
+Applicant Pistol Permit	Administrative and Support	Routine
+Applicant Police Auxiliary	Administrative and Support	Routine
+Applicant Police Officer	Administrative and Support	Routine
+Applicant Snow Removal	Administrative and Support	Routine
+Applicant Solicitor	Administrative and Support	Routine
+Applicant Spa Therapy	Administrative and Support	Routine
+Applicant Taxi	Administrative and Support	Routine
+Applicant Towing	Administrative and Support	Routine
+Applicant Vending License	Administrative and Support	Routine
+Arrest Process	Criminal Incidents	Routine
+Arrest and JV Complaints	Criminal Incidents	Routine
+Arson - 2C:17-1	Criminal Incidents	Emergency
+Arson 2C:17-1	Criminal Investigation	Urgent
+Assist Motorist	Assistance and Mutual Aid	Routine
+Assist Other Agency	Assistance and Mutual Aid	Routine
+Assist Own Agency (Backup)	Assistance and Mutual Aid	Urgent
+Attempted Burglary - 2C:18-2	Criminal Incidents	Routine
+Attempted Burglary 2C:18-2	Criminal Investigation	Urgent
+Aviation Accident	Emergency Response	Emergency
+BOLO	Investigations and Follow-Ups	Urgent
+Background Checks	Administrative and Support	Routine
+Bad Checks - 2C:21-5	Criminal Incidents	Routine
+Bad Checks 2C:21-5	Patrol and Prevention	Routine
+Bias Incident	Criminal Incidents	Urgent
+Blocked Driveway	Traffic and Motor Vehicle	Routine
+Boating Incident	Public Safety and Welfare	Urgent
+Bomb Scare	Emergency Response	Emergency
+Breath Test - Refusal - 39:4-50.2	Traffic and Motor Vehicle	Routine
+Bribery - 2C:27-2	Criminal Incidents	Routine
+Burglar Tools - 2C:5-5	Criminal Incidents	Routine
+Burglary 2C:18-2	Criminal Investigation	Urgent
+Burglary - Auto - 2C:18-2	Criminal Incidents	Emergency
+Burglary - Commercial - 2C:18-2	Criminal Incidents	Emergency
+Burglary - Commercial 2C: 18-2	Criminal Investigation	Urgent
+Burglary - Residence - 2C:18-2	Criminal Incidents	Emergency
+Burglary - Residence 2C:18-2	Criminal Investigation	Urgent
+CCH / III Request	Administrative and Support	Routine
+CDS/Dist.; School Property - 2C:35-7	Criminal Incidents	Urgent
+CDS/Distribution - 2C:35-5	Criminal Incidents	Urgent
+CDS/Employing Juvenile - 2C:35-6	Juvenile-Related Incidents	Urgent
+CDS/Possession: Influence 2C:35-10	Miscellaneous	Routine
+CDS/Possession: Influence - 2C:35-10	Criminal Incidents	Urgent
+CDS: Obtain by Fraud - 2C:35-13	Criminal Incidents	Urgent
+Canceled Call	Administrative and Support	Routine
+Canvassing / Peddling Permit	Administrative and Support	Routine
+Canvassing without Permit	Regulatory and Ordinance	Routine
+Car Seat Installation	Community Engagement	Routine
+Car Wash	Administrative and Support	Routine
+Carjacking 2C:15-2	Criminal Investigation	Urgent
+Carjacking - 2C:15-2	Criminal Incidents	Emergency
+Catalytic Converter Theft	Criminal Incidents	Routine
+Checked Road Conditions (Weather)	Traffic and Motor Vehicle	Routine
+Child Abuse - Title 9	Juvenile-Related Incidents	Urgent
+Child Custody Dispute	Public Safety and Welfare	Urgent
+Church Crossing	Community Engagement	Routine
+City Ordinance	Regulatory and Ordinance	Routine
+City Ordinance Warning	Regulatory and Ordinance	Routine
+Civil Defense Test	Administrative and Support	Routine
+Cleared-Arrest	Criminal Incidents	Routine
+Code Blue	Public Safety and Welfare	Routine
+Coffee Break	Administrative and Support	Routine
+Community Engagement - Community Policing	Community Engagement	Routine
+Community Engagement - Crime Prevention	Community Engagement	Routine
+Community Engagement - Crisis Intervention	Community Engagement	Routine
+Community Engagement - Emergency Response	Community Engagement	Routine
+Community Engagement - Online Engagement	Community Engagement	Routine
+Community Engagement - Public Education	Community Engagement	Routine
+Community Engagement - School Outreach	Community Engagement	Routine
+Community Engagement - Traffic Safety	Community Engagement	Routine
+Community Engagement - Victim Support	Community Engagement	Routine
+Compensation - 2C:27-4	Criminal Incidents	Routine
+Compensation/Public Servant - 2C:27-7	Criminal Incidents	Routine
+Complaint Signed	Criminal Incidents	Routine
+Compounding - 2C:29-4	Criminal Incidents	Routine
+Compulsory School Attend. - Title 18A:38-2	Juvenile-Related Incidents	Routine
+Computer Issue - Desktop	Administrative and Support	Routine
+Computer Issue - Vehicle	Administrative and Support	Routine
+Conditional Dismissal Process	Administrative and Support	Routine
+Conspiracy - 2C:5-2	Criminal Incidents	Routine
+Constable - Secured Park Facilities	Public Safety and Welfare	Routine
+Construction Hours	Regulatory and Ordinance	Routine
+Contempt of Court - 2C:29-9	Criminal Incidents	Urgent
+Controlled Buy	Special Operations and Tactical	Routine
+Controlled CDS Purchase	Special Operations and Tactical	Urgent
+Cooperative Arrest - Little Ferry	Assistance and Mutual Aid	Urgent
+Cooperative Arrest - Maywood	Assistance and Mutual Aid	Urgent
+Cooperative Arrest - Ridgefield Park	Assistance and Mutual Aid	Urgent
+Cooperative Arrest - So. Hackensack	Assistance and Mutual Aid	Urgent
+Counterfeit Money	Criminal Incidents	Routine
+Court - Federal	Administrative and Support	Routine
+Court - Municipal	Administrative and Support	Routine
+Court - Municipal Prisoner	Administrative and Support	Routine
+Court - Other Municipality	Administrative and Support	Routine
+Court - Superior	Administrative and Support	Routine
+Court Officer	Administrative and Support	Routine
+Court Order	Administrative and Support	Routine
+Courtesy Transport	Assistance and Mutual Aid	Routine
+Creating a Hazard - 2C:40-1	Criminal Incidents	Emergency
+Credit Cards - Unlawful Use 2C:21-6	Miscellaneous	Routine
+Credit Cards - Unlawful Use - 2C:21-6	Criminal Incidents	Routine
+Credit Practices - 2C:21-19	Criminal Incidents	Routine
+Criminal Attempt - 2C:5-1	Criminal Incidents	Routine
+Criminal Coercion - 2C:13-5	Criminal Incidents	Routine
+Criminal Homicide - 2C:11-2	Criminal Incidents	Emergency
+Criminal Mischief 2C:17-3	Criminal Investigation	Urgent
+Criminal Mischief - 2C:17-3	Criminal Incidents	Routine
+Criminal Mischief - Graffiti - 2C:17-3	Criminal Incidents	Routine
+Criminal Mischief - Park - 2C:17-3	Criminal Incidents	Routine
+Criminal Mischief - School - 2C:17-3	Criminal Incidents	Routine
+Criminal Mischief - Vehicle - 2C:17-3	Criminal Incidents	Routine
+Criminal Restraint - 2C:13-2	Criminal Incidents	Routine
+Criminal Sexual Contact 2C:14-3a	Miscellaneous	Routine
+Criminal Sexual Contact - 2C:14-3a	Criminal Incidents	Routine
+Criminal Simulation - 2C:21-2	Criminal Incidents	Routine
+Criminal Trespass 2C:18-3	Miscellaneous	Routine
+Criminal Trespass - 2C:18-3	Criminal Incidents	Routine
+Cyber Harassment - 2C:33-4.1	Criminal Incidents	Routine
+Cyber Harassment 2C:33-4.1	Criminal Investigation	Urgent
+D.O.A	Emergency Response	Emergency
+D.P.W. Assist	Assistance and Mutual Aid	Routine
+DARE Assignment	Community Engagement	Routine
+DCPP (DYFS)	Juvenile-Related Incidents	Routine
+DNA Sample	Investigations and Follow-Ups	Routine
+Damage to Property: Threats - 2C:33-11	Criminal Incidents	Routine
+Dead Animal	Public Safety and Welfare	Routine
+Deceased Person/Sexual Pen. - 2C:34-5	Criminal Incidents	Routine
+Desecration/Venerated Obj. - 2C:33-9	Criminal Incidents	Routine
+Desk Coverage	Administrative and Support	Routine
+Detective Bureau Detail	Investigations and Follow-Ups	Routine
+Disabled Motor Vehicle	Traffic and Motor Vehicle	Urgent
+Disarm a Law Enforcement Officer	Emergency Response	Emergency
+Disarm a Law Enforcement Officer - Attempt	Emergency Response	Emergency
+Discovery - Criminal	Investigations and Follow-Ups	Routine
+Discovery - Motor Vehicle	Investigations and Follow-Ups	Routine
+Discovery - Non Specific	Investigations and Follow-Ups	Routine
+Disorderly Conduct - 2C:33-2	Criminal Incidents	Urgent
+Dispute	Public Safety and Welfare	Urgent
+Disrupting Meet/Procession - 2C:33-8s	Criminal Incidents	Urgent
+Disturbance	Public Safety and Welfare	Urgent
+Docket â€“ Drop Off	Administrative and Support	Routine
+Docket â€“ Pick up	Administrative and Support	Routine
+Dogs Defecating	Regulatory and Ordinance	Routine
+Dogs at Large	Regulatory and Ordinance	Routine
+Domestic Dispute	Criminal Investigation	Urgent
+Domestic Violence 2C:25-21	Criminal Investigation	Urgent
+Domestic Violence - 2C:25-21	Criminal Incidents	Emergency
+Drinking in Public	Regulatory and Ordinance	Routine
+Driving While Intoxicated - 39:4-50	Traffic and Motor Vehicle	Emergency
+Driving While Intoxicated 39:4-50	Miscellaneous	Routine
+Drug Paraphernalia - 2C:36-2	Criminal Incidents	Routine
+Duty to Warn	Miscellaneous	Routine
+Duty to Warn - Notification	Public Safety and Welfare	Routine
+E.D.P.	Miscellaneous	Routine
+ESU - Response	Special Operations and Tactical	Emergency
+ESU - Targeted Patrol	Patrol and Prevention	Routine
+ESU - Training	Special Operations and Tactical	Routine
+Embezzlement	Criminal Incidents	Routine
+Emergency Access Card Use	Emergency Response	Emergency
+Endangering Welfare - 2C:24-4	Criminal Incidents	Routine
+Endangering Welfare - 2C:24-7	Criminal Incidents	Routine
+Endangering Welfare - 2C:24-8	Criminal Incidents	Routine
+Enticing a Child - 2C:13-6	Juvenile-Related Incidents	Routine
+Escape - 2C:29-5	Criminal Incidents	Emergency
+Escort - Money	Assistance and Mutual Aid	Routine
+Evidence Delivery	Investigations and Follow-Ups	Routine
+Evidence Retrieval	Investigations and Follow-Ups	Routine
+Evidence Tampering - 2C:28-6	Criminal Incidents	Routine
+Exceptionally Cleared/Closed	Administrative and Support	Routine
+Expungement	Administrative and Support	Routine
+FTO Documentation	Administrative and Support	Routine
+Facial Recognition Request	Investigations and Follow-Ups	Routine
+False Imprisonment - 2C:13-3	Criminal Incidents	Emergency
+False Public Alarm - 2C:33-3	Criminal Incidents	Routine
+False Reports - 2C:28-4	Criminal Incidents	Routine
+False Swearing - 2C:28-2	Criminal Incidents	Routine
+Fear of Bodily Violence - 2C:33-10	Criminal Incidents	Emergency
+Fencing - 2C:20-7.1	Criminal Incidents	Routine
+Field Contact/ Information	Investigations and Follow-Ups	Routine
+Fight - Armed	Emergency Response	Emergency
+Fight - Unarmed	Emergency Response	Emergency
+Fingerprints	Administrative and Support	Routine
+Fire	Emergency Response	Emergency
+Fire Department Call	Assistance and Mutual Aid	Urgent
+Fireworks Complaint	Regulatory and Ordinance	Routine
+Fish and Game Violation Title 23	Regulatory and Ordinance	Routine
+Food/Drug Tampering - 2C:40-17	Criminal Incidents	Routine
+Forgery 2C:21-1	Miscellaneous	Routine
+Forgery - 2C:21-1	Criminal Incidents	Routine
+Fraud	Criminal Incidents	Routine
+Fugitive from Justice	Criminal Incidents	Emergency
+Funeral Escort	Assistance and Mutual Aid	Routine
+General Information	Administrative and Support	Routine
+General Investigation	Investigations and Follow-Ups	Routine
+Generated in Error	Administrative and Support	Routine
+Generator Test	Administrative and Support	Routine
+Gifts/Public Servant - 2C:27-6	Criminal Incidents	Routine
+Good Conduct Letter Request	Administrative and Support	Routine
+Group	Administrative and Support	Routine
+HAZ-MAT Incident	Emergency Response	Emergency
+HQ Assignment	Administrative and Support	Routine
+Handle With Care - Notification	Emergency Response	Emergency
+Harassment 2C:33-4	Criminal Investigation	Urgent
+Harassment - 2C:33-4	Criminal Incidents	Routine
+Hazard - Pothole	Traffic and Motor Vehicle	Routine
+Hazard All Other	Public Safety and Welfare	Urgent
+Hazardous Condition - Health / Welfare	Public Safety and Welfare	Urgent
+Hazardous Condition - Sewer Call	Public Safety and Welfare	Urgent
+Hazardous Road Condition - Flooding	Traffic and Motor Vehicle	Urgent
+Hazardous Road Condition - General	Traffic and Motor Vehicle	Urgent
+Hazardous Road Condition - Ice	Traffic and Motor Vehicle	Urgent
+Hindering Apprehension - 2C:29-3	Criminal Incidents	Routine
+Homicide - 2C:11-2	Criminal Incidents	Emergency
+Hostage Situation	Emergency Response	Emergency
+Hypodermic/Possession - 2C:36-6	Criminal Incidents	Routine
+ICE Notification	Administrative and Support	Routine
+Identity Theft	Criminal Incidents	Routine
+Illegal Dumping	Regulatory and Ordinance	Routine
+Imitation CDS - 2C:35-11	Criminal Incidents	Routine
+Impersonating Public Servant - 2C:28-9	Criminal Incidents	Routine
+Implements for Escape - 2C:29-6	Criminal Incidents	Routine
+Improper Records	Administrative and Support	Routine
+Information	Administrative and Support	Routine
+Injured On Duty	Public Safety and Welfare	Urgent
+Injury/Law Enforce. Animals - 2C:29-3.1	Criminal Incidents	Routine
+Insecure Building	Public Safety and Welfare	Urgent
+Interception/Emerg. Comm. - 2C:33-21	Criminal Incidents	Routine
+Interference - 2C:29-1	Criminal Incidents	Routine
+Interference With Custody - 2C:13-4	Criminal Incidents	Routine
+Interference w/Transport. - 2C:33-14	Criminal Incidents	Routine
+Interference/Railway Signals - 2C:33-14.1	Criminal Incidents	Routine
+Intoxicated Person	Public Safety and Welfare	Routine
+Invasion of Privacy - Observing	Criminal Incidents	Routine
+Investigation - Follow-Up	Investigations and Follow-Ups	Routine
+Investigation-Follow up	Administrative and Support	Routine
+Juvenile Complaint (Criminal)	Juvenile-Related Incidents	Urgent
+Juvenile Complaint (Non-Criminal)	Juvenile-Related Incidents	Routine
+Juvenile Complaint Signed	Juvenile-Related Incidents	Routine
+Juvenile Investigation	Juvenile-Related Incidents	Routine
+Kidnapping - 2C:13-1	Criminal Incidents	Emergency
+Landlord / Tenant Dispute	Public Safety and Welfare	Urgent
+Leaving Scene of an Acc. - 39:4-129	Traffic and Motor Vehicle	Routine
+Lewdness 2C:14-4	Miscellaneous	Routine
+Lewdness - 2C:14-4	Criminal Incidents	Routine
+License Plate-Lost/Stolen	Traffic and Motor Vehicle	Routine
+Lo-Jack Hit - Tracking Signal	Investigations and Follow-Ups	Urgent
+Lock-Out Residence	Assistance and Mutual Aid	Routine
+Loitering/CDS Offense - 2C:33-2.1	Criminal Incidents	Routine
+M.V. Master Keys - 2C:5-6	Criminal Incidents	Routine
+Maintaining a Nuisance - 2C:33-12	Criminal Incidents	Routine
+Manslaughter - 2C:11-4	Criminal Incidents	Emergency
+Meal Break	Administrative and Support	Routine
+Medical Call	Public Safety and Welfare	Routine
+Medical Call - Oxygen	Public Safety and Welfare	Emergency
+Medical Call/Injury	Public Safety and Welfare	Urgent
+Meeting	Administrative and Support	Routine
+Megan's Law Violation	Criminal Incidents	Urgent
+Mental Health Incident	Public Safety and Welfare	Emergency
+Missing Person	Miscellaneous	Routine
+Missing Person - Adult	Investigations and Follow-Ups	Urgent
+Missing Person - Juvenile	Juvenile-Related Incidents	Urgent
+Missing Person - Return - Adult	Investigations and Follow-Ups	Routine
+Missing Person - Return - Juvenile	Juvenile-Related Incidents	Routine
+Money Laundering	Criminal Incidents	Routine
+Motor Vehicle - Private Property Tow	Traffic and Motor Vehicle	Routine
+Motor Vehicle Complaint	Traffic and Motor Vehicle	Routine
+Motor Vehicle Crash	Traffic and Motor Vehicle	Urgent
+Motor Vehicle Crash - Bicyclist Struck	Traffic and Motor Vehicle	Emergency
+Motor Vehicle Crash - Hit and Run	Traffic and Motor Vehicle	Emergency
+Motor Vehicle Crash - Pedestrian Struck	Traffic and Motor Vehicle	Emergency
+Motor Vehicle Crash - Police Vehicle	Traffic and Motor Vehicle	Routine
+Motor Vehicle Crash - w/injury	Traffic and Motor Vehicle	Emergency
+Motor Vehicle Impound	Traffic and Motor Vehicle	Routine
+Motor Vehicle Lock-out	Assistance and Mutual Aid	Routine
+Motor Vehicle Stop	Traffic and Motor Vehicle	Urgent
+Motor Vehicle Theft 2C:20-3	Criminal Investigation	Urgent
+Motor Vehicle Theft - 2C:20-3	Criminal Incidents	Routine
+Motor Vehicle Violation	Traffic and Motor Vehicle	Routine
+Motor Vehicle Violation - Commercial Vehicle	Traffic and Motor Vehicle	Routine
+Motor Vehicle Violation - Private Property	Traffic and Motor Vehicle	Routine
+Municipal Property/Building Check	Public Safety and Welfare	Routine
+Murder - 2C:11-3	Criminal Incidents	Emergency
+Mutual Aid - E.M.S.	Assistance and Mutual Aid	Routine
+Mutual Aid - Fire	Assistance and Mutual Aid	Routine
+Mutual Aid - Police	Assistance and Mutual Aid	Routine
+NARCAN Deployment - Adult - Aid	Public Safety and Welfare	Emergency
+NARCAN Deployment - Juvenile - Aid	Juvenile-Related Incidents	Emergency
+NCIC Record	Administrative and Support	Routine
+Narcotics Investigation	Investigations and Follow-Ups	Urgent
+No Investigation	Administrative and Support	Routine
+Noise Complaint	Regulatory and Ordinance	Routine
+Non-Emergency Assist	Assistance and Mutual Aid	Routine
+Non-Support - 2C:24-5	Criminal Incidents	Routine
+Notification Request	Administrative and Support	Routine
+OPRA Request	Administrative and Support	Routine
+Obscenity - Over 18 yrs. - 2C:34-2	Criminal Incidents	Routine
+Obscenity - Under 18 yrs. - 2C:34-3	Criminal Incidents	Routine
+Obscenity Public Comm. - 2C:34-4	Criminal Incidents	Routine
+Obscenity Retail Display - 2C:34-3.2	Criminal Incidents	Routine
+Obstructing Highways/Pass. - 2C:33-7	Criminal Incidents	Emergency
+Obstruction of Governmental Function	Criminal Incidents	Urgent
+Off the Air	Administrative and Support	Routine
+Official Misconduct - 2C:30-2	Criminal Incidents	Routine
+Overdose - Adult - Aid	Public Safety and Welfare	Emergency
+Overdose - Juvenile - Aid	Juvenile-Related Incidents	Emergency
+Overnight Parking	Traffic and Motor Vehicle	Routine
+PRD Activation	Special Operations and Tactical	Emergency
+Paging Device/Illicit Use - 2C:33-20	Criminal Incidents	Routine
+Paging Device/Minors - 2C:33-18	Criminal Incidents	Routine
+Paging Device/Student - 2C:33-19	Criminal Incidents	Routine
+Parking Complaint	Traffic and Motor Vehicle	Routine
+Parking Offense	Traffic and Motor Vehicle	Routine
+Parks Department Needed	Assistance and Mutual Aid	Routine
+Parole/Probation Registry	Administrative and Support	Routine
+Patrol Check	Public Safety and Welfare	Routine
+Patrol Check - Extra Duty Detail	Public Safety and Welfare	Routine
+Pawned Item(s)	Investigations and Follow-Ups	Routine
+Peace Officer	Administrative and Support	Routine
+Perjury 2C:28-1	Criminal Incidents	Routine
+Photography	Administrative and Support	Routine
+Police Assist	Assistance and Mutual Aid	Routine
+Poss. CDS in MV - 39:4-49.1	Traffic and Motor Vehicle	Routine
+Presentation Community Policing	Community Engagement	Routine
+Prisoner Log	Administrative and Support	Routine
+Prisoner Transport	Administrative and Support	Routine
+Prohibited Weapons - 2C:39-3	Criminal Incidents	Emergency
+Property - Found	Investigations and Follow-Ups	Routine
+Property - Lost	Investigations and Follow-Ups	Routine
+Property Damage (City Property)	Miscellaneous	Routine
+Property Damage (Non-Criminal)	Miscellaneous	Routine
+Property Damage (Police Vehicle)	Miscellaneous	Routine
+Property Damage - City Property	Public Safety and Welfare	Routine
+Property Damage - Non-Criminal	Public Safety and Welfare	Routine
+Property Damage - Police Vehicle	Administrative and Support	Routine
+Property Disposition	Administrative and Support	Routine
+Property Recovered - Stolen	Investigations and Follow-Ups	Routine
+Property Returned - Court Ordered	Administrative and Support	Routine
+Property Returned - Lost and Found	Administrative and Support	Routine
+Prostitution - 2C:34-1	Criminal Incidents	Routine
+Public Safety/Sr. Citizens - 2C:24-8	Criminal Incidents	Routine
+Pursuit - Foot	Special Operations and Tactical	Emergency
+Pursuit - Motor Vehicle	Special Operations and Tactical	Emergency
+RDF Deployment	Special Operations and Tactical	Emergency
+RDT Deployment	Special Operations and Tactical	Emergency
+Radar Detail	Traffic and Motor Vehicle	Routine
+Radar Trailer Deployed	Traffic and Motor Vehicle	Routine
+Radio Coverage	Administrative and Support	Routine
+Receiving Stolen Property - 2C:20-7	Criminal Incidents	Routine
+Reckless Endangerment - 2C:12-2	Criminal Incidents	Routine
+Records Request	Administrative and Support	Routine
+Records Request - DCPP (DYFS)	Administrative and Support	Routine
+Recovered Stolen - Article	Investigations and Follow-Ups	Routine
+Recovered Stolen - Firearm	Investigations and Follow-Ups	Routine
+Recovered Stolen License Plate	Investigations and Follow-Ups	Routine
+Recovered Stolen Vehicle	Investigations and Follow-Ups	Routine
+Refuel Vehicle	Administrative and Support	Routine
+Relief / Personal	Administrative and Support	Routine
+Repossessed Motor Vehicle	Traffic and Motor Vehicle	Routine
+Resisting Arrest/Eluding - 2C:29-2	Criminal Incidents	Emergency
+Retaliation/Official Action - 2C:27-5	Criminal Incidents	Routine
+Riot - Failure to Disperse - 2C:33-1	Criminal Incidents	Emergency
+Road Job/Outside Assignment	Administrative and Support	Routine
+Robbery 2C:15-1	Criminal Investigation	Urgent
+Robbery - 2C:15-1	Criminal Incidents	Emergency
+Sale of Cigarettes to Minors - 2A:170-51	Regulatory and Ordinance	Routine
+School Crossing	Community Engagement	Routine
+School Detail	Community Engagement	Routine
+Search Warrant Execution - CDW	Investigations and Follow-Ups	Urgent
+Search Warrant Execution - Structure	Investigations and Follow-Ups	Urgent
+Search Warrant Execution - Vehicle	Investigations and Follow-Ups	Urgent
+Service - FERPO	Emergency Response	Emergency
+Service - FRO	Criminal Incidents	Routine
+Service - Subpoena	Administrative and Support	Routine
+Service - Summons	Administrative and Support	Routine
+Service - TERPO	Emergency Response	Emergency
+Service - TRO	Criminal Incidents	Routine
+Service of TRO / FRO	Administrative and Support	Routine
+Serving Alcohol to Minors - 2C:33-17	Regulatory and Ordinance	Routine
+Sex Offender - Address Verification	Investigations and Follow-Ups	Routine
+Sex Offender - General	Administrative and Support	Routine
+Sex Offender - Intent to Move	Investigations and Follow-Ups	Routine
+Sex Offender - Serve Documents	Administrative and Support	Routine
+Sex Offender - Serve Tier Papers	Administrative and Support	Routine
+Sex Offender - Travel	Administrative and Support	Routine
+Sex Offender Investigation	Investigations and Follow-Ups	Routine
+Sex Offender Registration	Administrative and Support	Routine
+Sex Offender Registration - Employment	Administrative and Support	Routine
+Sex Offender Registration - School Enrollment	Administrative and Support	Routine
+Sex Offender-Removal Order	Administrative and Support	Routine
+Sexual Assault 2C:14-2b	Criminal Investigation	Urgent
+Sexual Assault - 2C:14-2b	Criminal Incidents	Emergency
+Shooting	Emergency Response	Emergency
+Shoplifting 2C:20-11	Criminal Investigation	Urgent
+Shoplifting - 2C:20-11	Criminal Incidents	Routine
+Shopping Cart	Public Safety and Welfare	Routine
+Shots Fired Investigation	Emergency Response	Emergency
+Simple Assault 2C:12-1a	Criminal Investigation	Urgent
+Simple Assault - 2C:12-1a	Criminal Incidents	Routine
+Slugs - 2C:21-18	Criminal Incidents	Routine
+Smoking Prohibited	Regulatory and Ordinance	Routine
+Snow Plowed onto Public Street	Regulatory and Ordinance	Routine
+Snow Removal	Regulatory and Ordinance	Routine
+Special Assignment	Administrative and Support	Routine
+Stabbing	Emergency Response	Emergency
+Stalking - 2C:12-10	Criminal Incidents	Routine
+Stationhouse Adjustment	Juvenile-Related Incidents	Routine
+Stolen Article	Criminal Incidents	Routine
+Stranded Party	Assistance and Mutual Aid	Routine
+Street Light	Public Safety and Welfare	Routine
+Structure Damage	Public Safety and Welfare	Urgent
+Sudden Death Investigation	Emergency Response	Emergency
+Suicidal Party	Public Safety and Welfare	Emergency
+Suicide	Emergency Response	Emergency
+Summons	Criminal Incidents	Routine
+Surrender of Ammunition	Administrative and Support	Routine
+Surrender of Weapon	Administrative and Support	Routine
+Surrendered Firearm ID Card	Administrative and Support	Routine
+Surrendered License Plates	Administrative and Support	Routine
+Suspended Drivers License - 39:3-40	Traffic and Motor Vehicle	Routine
+Suspended Drivers License 39:3-40	Traffic and Motor Vehicle	Routine
+Suspended Registration 39:3-40	Traffic and Motor Vehicle	Routine
+Suspended Registration - 39:3-40	Traffic and Motor Vehicle	Routine
+Suspicious Activity Report	Investigations and Follow-Ups	Routine
+Suspicious Activity Submission	Investigations and Follow-Ups	Routine
+Suspicious Incident	Investigations and Follow-Ups	Urgent
+Suspicious Item	Investigations and Follow-Ups	Routine
+Suspicious Person	Investigations and Follow-Ups	Urgent
+Suspicious Vehicle	Investigations and Follow-Ups	Urgent
+TAPS - Business	Public Safety and Welfare	Routine
+TAPS - ESU - Business	Special Operations and Tactical	Routine
+TAPS - ESU - Medical Facility	Special Operations and Tactical	Routine
+TAPS - ESU - Park	Special Operations and Tactical	Routine
+TAPS - ESU - Parking Garage	Special Operations and Tactical	Routine
+TAPS - ESU - Religious Facility	Special Operations and Tactical	Routine
+TAPS - ESU - School	Special Operations and Tactical	Routine
+TAPS - Housing	Public Safety and Welfare	Routine
+TAPS - Medical Facility	Public Safety and Welfare	Routine
+TAPS - Other	Public Safety and Welfare	Routine
+TAPS - Park	Public Safety and Welfare	Routine
+TAPS - Parking Garage	Public Safety and Welfare	Routine
+TAPS - Religious Facility	Public Safety and Welfare	Routine
+TAPS - School	Public Safety and Welfare	Routine
+TAS Alert - Stolen License Plate	Investigations and Follow-Ups	Urgent
+TOT DCP&P	Juvenile-Related Incidents	Routine
+Tampering: Public Records 2C:28-7	Administrative and Support	Routine
+Tampering: Public Records - 2C:28-7	Criminal Incidents	Routine
+Targeted Area Patrol	Patrol and Prevention	Routine
+Task Assignment	Administrative and Support	Routine
+Temporary Parking	Traffic and Motor Vehicle	Routine
+Terroristic Threats 2C:12-3	Criminal Investigation	Urgent
+Terroristic Threats - 2C:12-3	Criminal Incidents	Routine
+Theft 2C:20-3	Criminal Investigation	Urgent
+Theft - 2C:20-3	Criminal Incidents	Routine
+Theft by Deception 2C:20-4	Criminal Investigation	Urgent
+Theft by Deception - 2C:20-4	Criminal Incidents	Routine
+Theft by Extortion 2C:20-5	Criminal Investigation	Urgent
+Theft by Extortion - 2C:20-5	Criminal Incidents	Routine
+Theft of Identity - 2C:21-17	Criminal Incidents	Routine
+Theft of Lost/Mislaid Property 2C:20-6	Criminal Investigation	Urgent
+Theft of Lost/Mislaid Property - 2C:20-6	Criminal Incidents	Routine
+Theft of Services 2C:20-8	Criminal Investigation	Urgent
+Theft of Services - 2C:20-8	Criminal Incidents	Routine
+Theft/Disposition - 2C:20-9	Criminal Incidents	Routine
+Time Check	Administrative and Support	Routine
+Traffic Bureau Report	Traffic and Motor Vehicle	Routine
+Traffic Detail	Traffic and Motor Vehicle	Routine
+Traffic Detail - Road Closure	Traffic and Motor Vehicle	Urgent
+Traffic Enforcement Detail	Traffic and Motor Vehicle	Routine
+Traffic Hazard	Traffic and Motor Vehicle	Urgent
+Traffic Light Malfunction	Traffic and Motor Vehicle	Routine
+Traffic Sign / Signal Malfunction	Traffic and Motor Vehicle	Urgent
+Training	Administrative and Support	Routine
+Training Record	Administrative and Support	Routine
+Transportation	Administrative and Support	Routine
+Tree limb down	Public Safety and Welfare	Routine
+Truancy	Juvenile-Related Incidents	Routine
+U-Visa	Administrative and Support	Routine
+UAS Operation	Special Operations and Tactical	Routine
+Unauthorized Intercept./Comm. - 2C:33-22	Criminal Incidents	Routine
+Undercover Buy	Special Operations and Tactical	Routine
+Unfounded Incident	Administrative and Support	Routine
+Unfounded/Closed	Administrative and Support	Routine
+Uninsured Vehicle - 39:6b-2	Traffic and Motor Vehicle	Routine
+Unintentional Discharge	Emergency Response	Emergency
+Unknown Investigation	Investigations and Follow-Ups	Routine
+Unlawful Possess./Weapons 2C:39-5	Criminal Investigation	Urgent
+Unlawful Possess./Weapons - 2C:39-5	Criminal Incidents	Emergency
+Unlawful Taking 2C:20-10	Miscellaneous	Routine
+Unlawful Taking - 2C:20-10	Criminal Incidents	Routine
+Unlawful Use Of 9-1-1 Sys. - 2C:33-3e	Criminal Incidents	Routine
+Unregistered Vehicle 39:3-4	Traffic and Motor Vehicle	Routine
+Unregistered Vehicle - 39:3-4	Traffic and Motor Vehicle	Routine
+Unsworn Falsification - 2C:28-3	Criminal Incidents	Routine
+Unwanted Person	Public Safety and Welfare	Urgent
+Urinating in Public	Regulatory and Ordinance	Urgent
+Utility Incident	Public Safety and Welfare	Urgent
+Vacant House	Public Safety and Welfare	Routine
+Vacation	Administrative and Support	Routine
+Validation	Administrative and Support	Routine
+Vehicle Maintenance	Administrative and Support	Routine
+Vehicular Homicide - 2C:11-5	Criminal Incidents	Emergency
+Vending Without Permit	Regulatory and Ordinance	Routine
+Violation of Court Order	Criminal Incidents	Urgent
+Violation: TRO/ FRO 2C:29-9b	Traffic and Motor Vehicle	Routine
+Violation: TRO/ FRO - 2C:29-9b	Criminal Incidents	Urgent
+Virtual - Patrol	Public Safety and Welfare	Routine
+Wagering/Official Action - 2C:30-3	Criminal Incidents	Routine
+Warning Issued	Administrative and Support	Routine
+Warrant Arrest	Criminal Incidents	Urgent
+Warrant Recall	Administrative and Support	Routine
+Weapons - Unlawful Purposes - 2C:39-4	Criminal Incidents	Emergency
+Weapons - Unlawful Purposes 2C:39-4	Criminal Investigation	Urgent
+Weapons Seizure - 2C:25-21d	Criminal Incidents	Routine
+Weather Alerts	Public Safety and Welfare	Routine
+Welfare Check	Public Safety and Welfare	Urgent
+Widespread Damage - 2C:17-2	Criminal Incidents	Emergency
+Wire Down	Public Safety and Welfare	Urgent
+Witness Tampering - 2C:28-5	Criminal Incidents	Routine
+Wrongful Impersonating - 2C:21-1	Criminal Incidents	Routine
+domestic Dispute	Criminal Investigation	Urgent
+shoplifting 2C:20-11	Criminal Investigation	Urgent
+simple Assault 2C:12-1a	Criminal Investigation	Urgent
+targeted Area Patrol	Patrol and Prevention	Routine
+terroristic Threats 2C:12-3	Criminal Investigation	Urgent
+Court- Municipal Prisoner	Administrative and Support	Routine
+Embezzlment	Criminal Incidents	Routine
+Gang Intelligence	Criminal Incidents	Routine
+Obstruction of Govermental Function	Criminal Incidents	Routine
+Search Warrant Execution- Structure	Special Operations and Tactical	Urgent
+Service - Warrant	Uncategorized	Routine
+Sex Offender- Address Verification	Uncategorized	Routine
+Sex Offender-Serve Tier Papers	Uncategorized	Routine
+Weapons Seizure - 2C:25-21d.	Uncategorized	Routine
+Weapons Seizure - 2C:25-21d	Criminal Incidents	Routine
+Weather Alerts	Public Safety and Welfare	Routine
+Welfare Check	Public Safety and Welfare	Urgent
+Widespread Damage - 2C:17-2	Criminal Incidents	Emergency
+Wire Down	Public Safety and Welfare	Urgent
+Witness Tampering - 2C:28-5	Criminal Incidents	Routine
+Wrongful Impersonating - 2C:21-1	Criminal Incidents	Routine
+domestic Dispute	Criminal Investigation	Urgent
+shoplifting 2C:20-11	Criminal Investigation	Urgent
+simple Assault 2C:12-1a	Criminal Investigation	Urgent
+simple Assault 2C:12-1a	Criminal Investigation	Urgent
+targeted Area Patrol	Patrol and Prevention	Routine
+terroristic Threats 2C:12-3	Criminal Investigation	Urgent
+
+Query: Cycle_Calendar
+Report_Due_Date	7_Day_Start	7_Day_End	28_Day_Start	28_Day_End	Report_Name
+01/07/25	12/31/24	01/06/25	12/10/24	01/06/25	C01W01
+01/14/25	01/07/25	01/13/25	12/17/24	01/13/25	C01W02
+01/21/25	01/14/25	01/20/25	12/24/24	01/20/25	C01W03
+01/28/25	01/21/25	01/27/25	12/31/24	01/27/25	C01W04
+02/04/25	01/28/25	02/03/25	01/07/25	02/03/25	C02W05
+02/11/25	02/04/25	02/10/25	01/14/25	02/10/25	C02W06
+02/18/25	02/11/25	02/17/25	01/21/25	02/17/25	C02W07
+02/25/25	02/18/25	02/24/25	01/28/25	02/24/25	C02W08
+03/04/25	02/25/25	03/03/25	02/04/25	03/03/25	C03W09
+03/11/25	03/04/25	03/10/25	02/11/25	03/10/25	C03W10
+03/18/25	03/11/25	03/17/25	02/18/25	03/17/25	C03W11
+03/25/25	03/18/25	03/24/25	02/25/25	03/24/25	C03W12
+04/01/25	03/25/25	03/31/25	03/04/25	03/31/25	C04W13
+04/08/25	04/01/25	04/07/25	03/11/25	04/07/25	C04W14
+04/15/25	04/08/25	04/14/25	03/18/25	04/14/25	C04W15
+04/22/25	04/15/25	04/21/25	03/25/25	04/21/25	C04W16
+04/29/25	04/22/25	04/28/25	04/01/25	04/28/25	C05W17
+05/06/25	04/29/25	05/05/25	04/08/25	05/05/25	C05W18
+05/13/25	05/06/25	05/12/25	04/15/25	05/12/25	C05W19
+05/20/25	05/13/25	05/19/25	04/22/25	05/19/25	C05W20
+05/27/25	05/20/25	05/26/25	04/29/25	05/26/25	C06W21
+06/03/25	05/27/25	06/02/25	05/06/25	06/02/25	C06W23
+06/10/25	06/03/25	06/09/25	05/13/25	06/09/25	C06W23
+06/17/25	06/10/25	06/16/25	05/20/25	06/16/25	C06W24
+06/24/25	06/17/25	06/23/25	05/27/25	06/23/25	C07W25
+07/01/25	06/24/25	06/30/25	06/03/25	06/30/25	C07W26
+07/08/25	07/01/25	07/07/25	06/10/25	07/07/25	C07W27
+07/15/25	07/08/25	07/14/25	06/17/25	07/14/25	C07W28
+07/22/25	07/15/25	07/21/25	06/24/25	07/21/25	C08W29
+07/29/25	07/22/25	07/28/25	07/01/25	07/28/25	C08W30
+08/05/25	07/29/25	08/04/25	07/08/25	08/04/25	C08W31
+08/12/25	08/05/25	08/11/25	07/15/25	08/11/25	C08W32
+08/19/25	08/12/25	08/18/25	07/22/25	08/18/25	C09W33
+08/26/25	08/19/25	08/25/25	07/29/25	08/25/25	C09W34
+09/02/25	08/26/25	09/01/25	08/05/25	09/01/25	C09W35
+09/09/25	09/02/25	09/08/25	08/12/25	09/08/25	C09W36
+09/16/25	09/09/25	09/15/25	08/19/25	09/15/25	C10W37
+09/23/25	09/16/25	09/22/25	08/26/25	09/22/25	C10W38
+09/30/25	09/23/25	09/29/25	09/02/25	09/29/25	C10W39
+10/07/25	09/30/25	10/06/25	09/09/25	10/06/25	C10W40
+10/14/25	10/07/25	10/13/25	09/16/25	10/13/25	C11W41
+10/21/25	10/14/25	10/20/25	09/23/25	10/20/25	C11W42
+10/28/25	10/21/25	10/27/25	09/30/25	10/27/25	C11W43
+11/04/25	10/28/25	11/03/25	10/07/25	11/03/25	C11W44
+11/11/25	11/04/25	11/10/25	10/14/25	11/10/25	C12W45
+11/18/25	11/11/25	11/17/25	10/21/25	11/17/25	C12W46
+11/25/25	11/18/25	11/24/25	10/28/25	11/24/25	C12W47
+12/02/25	11/25/25	12/01/25	11/04/25	12/01/25	C12W48
+12/09/25	12/02/25	12/08/25	11/11/25	12/08/25	C13W49
+12/16/25	12/09/25	12/15/25	11/18/25	12/15/25	C13W50
+12/23/25	12/16/25	12/22/25	11/25/25	12/22/25	C13W51
+12/30/25	12/23/25	12/29/25	12/02/25	12/29/25	C13W52
+
+// Use your existing cycle query
+let
+    Source = Excel.Workbook(File.Contents("C:\Users\carucci_r\OneDrive - City of Hackensack\09_Reference\Temporal\SCRPA_Cycle\7Day_28Day_Cycle_20250414.xlsx"), null, true),
+    CycleData = Source{[Item="7Day_28Day_250414",Kind="Sheet"]}[Data],
+    Headers = Table.PromoteHeaders(CycleData),
+    Typed = Table.TransformColumnTypes(Headers,{
+        {"Report_Due_Date", type date}, 
+        {"7_Day_Start", type date}, 
+        {"7_Day_End", type date}, 
+        {"28_Day_Start", type date}, 
+        {"28_Day_End", type date}
+    })
+in
+    Typed
+
+Query: TimeOdDaySort
+TimeOfDay	SortOrder
+00:00–03:59 - Early Morning	1
+04:00–07:59 - Morning	2
+08:00–11:59 - Morning Peak	3
+12:00–15:59 - Afternoon	4
+16:00–19:59 - Evening Peak	5
+20:00–23:59 - Night	6
+Unknown	99
+// Query: TimeOfDaySort
+let
+    TimeOfDaySort = #table(
+        type table [TimeOfDay = text, SortOrder = Int64.Type],
+        {
+            {"00:00–03:59 - Early Morning", 1},
+            {"04:00–07:59 - Morning", 2},
+            {"08:00–11:59 - Morning Peak", 3},
+            {"12:00–15:59 - Afternoon", 4},
+            {"16:00–19:59 - Evening Peak", 5},
+            {"20:00–23:59 - Night", 6},
+            {"Unknown", 99}
+        }
+    )
+in
+    TimeOfDaySort
+
+Query: Enhanced_SCRPA_Data 
+ReportNumberNew	Incident	How Reported	FullAddress2	PDZone	Grid	Time of Call	cYear	cMonth	HourMinuetsCalc	DayofWeek	Time Dispatched	Time Out	Time In	Time Spent	Time Response	Officer	Disposition	Response Type	CADNotes	case_number	incident_text	address	incident_datetime	Case_Number	IncidentType	Crime_Category	CAD_Username	CAD_Timestamp	CAD_Notes_Cleaned	CADNotes_Processing_Quality	Incident_Date	Incident_Time	TimeOfDay	Day_Name	Month_Name	Year	Month	Day	Enhanced_Block	Period	Zone	TimeOfDay_SortOrder	Period_SortOrder	Data_Quality_Category
+25-000813	Motor Vehicle Theft - 2C:20-3	Phone	309 Lookout Avenue, Hackensack, NJ, 07601	9.0	I2	2025-01-04 10:59:09	2025	January	10:59	Saturday	2025-01-04 11:12:37	2025-01-04 11:24:46	2025-01-04 11:46:06	0 days 00:21:20	0 days 00:25:37	P.O. Nicholas Mazzaccaro 377	See Report		"Taken out of driveway last night.  Vehicle was located in Clarkstown, NY.  Involved in a 69 last  - kiselow_g - 1/4/2025 11:00:23 AM
+night - kiselow_g - 1/4/2025 11:00:23 AM
+? - ? - ?"	25-000813	Motor Vehicle Theft - 2C:20-3	309 Lookout Avenue, Hackensack, NJ, 07601	2025-01-04 10:59:09	25-000813	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Kiselow_G	01/04/2025 11:00:23	Taken out of driveway last night. Vehicle was located in clarkstown, ny. Involved in 69 last night ? ? ?	100	01/04/25	null	Unknown	Saturday	January	2025	1	4	Lookout Avenue, 300 Block	YTD	9.0	6	3	High Quality
+25-002564	Criminal Sexual Contact - 2C:14-3a	Other - See Notes	135 First Street, Hackensack, NJ, 07601	7.0	G3	2025-01-10 14:20:51	2025	January	14:20	Friday	2025-01-10 14:21:29	2025-01-10 14:21:35	2025-01-10 14:21:37	0 days 00:00:02	0 days 00:00:44	Det. Cristobal Lara-Nunez 341	See Report			25-002564	Criminal Sexual Contact - 2C:14-3a	135 First Street, Hackensack, NJ, 07601	2025-01-10 14:20:51	25-002564	Criminal Sexual Contact - 2C:14-3a	Sexual Offenses				0	01/10/25	null	Unknown	Friday	January	2025	1	10	First Street, 100 Block	YTD	7.0	6	3	No CAD Notes
+25-002635	Burglary - Auto - 2C:18-2	Phone	90 Prospect Avenue, Hackensack, NJ, 07601			2025-01-10 19:49:52	2025	January	19:49	Friday	2025-01-10 20:04:34	2025-01-10 20:09:44	2025-01-10 21:00:18	0 days 00:50:34	0 days 00:19:52	P.O. Ruben Almonte 359	See Report		"meet the complainant in the lobby, she is reporting that her company vehicle was broken into and  - cavallo_f - 1/10/2025 7:57:11 PM
+tools were stolen from it.  She believes it was her ex-husband. - cavallo_f - 1/10/2025 7:57:35 PM
+? - ? - ?"	25-002635	Burglary - Auto - 2C:18-2	90 Prospect Avenue, Hackensack, NJ, 07601	2025-01-10 19:49:52	25-002635	Burglary - Auto - 2C:18-2	Burglary - Auto	Cavallo_F	01/10/2025 19:57:11	Meet the complainant in the lobby, she is reporting that her company vehicle was broken into and tools were stolen from it. She believes it was her ex husband. ? ? ?	100	01/10/25	null	Unknown	Friday	January	2025	1	10	Prospect Avenue, 0 Block	YTD		6	3	High Quality
+25-003806	Burglary - Residence - 2C:18-2	9-1-1	133 Cedar Avenue, Hackensack, NJ, 07601	9.0	I5	2025-01-14 14:59:48	2025	January	14:59	Tuesday	2025-01-14 15:08:29	2025-01-14 15:17:56	2025-01-14 15:49:20	0 days 00:31:24	0 days 00:18:08	P.O. Frank Lorenzo 371	See Report		"CALLER STATING THAT HER EX WENT INTO HER HOME AND TOOK SOME ITEMS THAT WERE HERS
+ - iannacone_a - 1/14/2025 3:02:06 PM
+MALE PARTY IS NO LONGER ON SCENE. UNK WHEN MALE PARTY ENTERED THE RESIDENCE. - iannacone_a - 1/14/2025 3:09:41 PM
+County CAD- 25-017062.  Total proceeds- $1,282 - iannacone_a - 1/14/2025 3:47:59 PM"	25-003806	Burglary - Residence - 2C:18-2	133 Cedar Avenue, Hackensack, NJ, 07601	2025-01-14 14:59:48	25-003806	Burglary - Residence - 2C:18-2	Burglary - Residence	Iannacone_A	01/14/2025 15:02:06	Caller stating that her ex went into her home and took some items that were hers male party is no longer on scene. Unk when male party entered the residence. County cad 25 017062. Total proceeds $1,282	100	01/14/25	null	Unknown	Tuesday	January	2025	1	14	Cedar Avenue, 100 Block	YTD	9.0	6	3	High Quality
+25-004097	Motor Vehicle Theft - 2C:20-3	Phone	244 First Street, Hackensack, NJ, 07601	8.0	H3	2025-01-15 12:57:26	2025	January	12:57	Wednesday	2025-01-15 12:59:13	2025-01-15 13:07:41	2025-01-15 14:17:42	0 days 01:10:01	0 days 00:10:15	P.O. Frank Lorenzo 371	See Report	Routine		25-004097	Motor Vehicle Theft - 2C:20-3	244 First Street, Hackensack, NJ, 07601	2025-01-15 12:57:26	25-004097	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	01/15/25	null	Unknown	Wednesday	January	2025	1	15	First Street, 200 Block	YTD	8.0	6	3	No CAD Notes
+25-004629	Robbery - 2C:15-1	Phone	630 Main Street, Hackensack, NJ, 07601	9.0	I1	2025-01-17 12:16:59	2025	January	12:16	Friday	2025-01-17 12:22:25	2025-01-17 12:24:18	2025-01-17 12:36:44	0 days 00:12:26	0 days 00:07:19	P.O. Massimo Gallorini 379	See Report	Emergency	"Rep that it ocurred on 01/16/2025 @ 2115. Shoplifter assaulted a security guard. - Gervasi_J - 1/17/2025 12:22:23 PM
+? - ? - ?
+? - ? - ?"	25-004629	Robbery - 2C:15-1	630 Main Street, Hackensack, NJ, 07601	2025-01-17 12:16:59	25-004629	Robbery - 2C:15-1	Robbery	Gervasi_J	01/17/2025 12:22:23	Rep that it ocurred on 01/16/2025 @ 2115. Shoplifter assaulted security guard. ? ? ? ? ? ?	100	01/17/25	null	Unknown	Friday	January	2025	1	17	Main Street, 600 Block	YTD	9.0	6	3	High Quality
+25-005871	Motor Vehicle Theft - 2C:20-3	9-1-1	33 Ross Avenue, Hackensack, NJ, 07601	9.0	I1	2025-01-22 03:10:53	2025	January	03:10	Wednesday	2025-01-22 03:16:24	2025-01-22 03:21:14	2025-01-22 04:48:03	0 days 01:26:49	0 days 00:10:21	P.O. Roselys Salas 369	See Report	Routine		25-005871	Motor Vehicle Theft - 2C:20-3	33 Ross Avenue, Hackensack, NJ, 07601	2025-01-22 03:10:53	25-005871	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	01/22/25	null	Unknown	Wednesday	January	2025	1	22	Ross Avenue, 0 Block	YTD	9.0	6	3	No CAD Notes
+25-005972	Burglary - Auto - 2C:18-2	Walk-In	170 South Park Street, Hackensack, NJ, 07601	7.0	G2	2025-01-22 11:51:55	2025	January	11:51	Wednesday	2025-01-22 12:08:52	2025-01-22 12:08:57	2025-01-22 13:21:59	0 days 01:13:02	0 days 00:17:02	P.O. Bobby Rivera 361	See Report	Emergency		25-005972	Burglary - Auto - 2C:18-2	170 South Park Street, Hackensack, NJ, 07601	2025-01-22 11:51:55	25-005972	Burglary - Auto - 2C:18-2	Burglary - Auto				0	01/22/25	null	Unknown	Wednesday	January	2025	1	22	South Park Street, 100 Block	YTD	7.0	6	3	No CAD Notes
+25-006083	Motor Vehicle Theft - 2C:20-3	Phone	443 Hudson Street, Hackensack, NJ, 07601	5.0	E3	2025-01-22 19:14:56	2025	January	19:14	Wednesday	2025-01-22 19:21:56	2025-01-22 19:25:15	2025-01-22 21:00:51	0 days 01:35:36	0 days 00:10:19	P.O. Roselys Salas 369	See Report	Routine		25-006083	Motor Vehicle Theft - 2C:20-3	443 Hudson Street, Hackensack, NJ, 07601	2025-01-22 19:14:56	25-006083	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	01/22/25	null	Unknown	Wednesday	January	2025	1	22	Hudson Street, 400 Block	YTD	5.0	6	3	No CAD Notes
+25-006463	Sexual Assault - 2C:14-2b	Phone	208 Anderson Street, Hackensack, NJ, 07601	8.0	H3	2025-01-24 05:01:17	2025	January	05:01	Friday	2025-01-24 05:04:04	2025-01-24 05:07:21	2025-01-24 06:42:18	0 days 01:34:57	0 days 00:06:04	P.O. Daniel Francavilla 329	See Report	Emergency	"caller reports she woke up with more clothes on then when she went to bed.  as conversation  - ortiz_n - 1/24/2025 5:03:08 AM
+progressed caller reported waking up with less clothes and a sore vagina.  - ortiz_n - 1/24/2025 5:03:08 AM
+? - ? - ?"	25-006463	Sexual Assault - 2C:14-2b	208 Anderson Street, Hackensack, NJ, 07601	2025-01-24 05:01:17	25-006463	Sexual Assault - 2C:14-2b	Sexual Offenses	Ortiz_N	01/24/2025 05:03:08	Caller reports she woke up with more clothes on then when she went to bed. As conversation progressed caller reported waking up with less clothes and sore vagina. ? ? ?	100	01/24/25	null	Unknown	Friday	January	2025	1	24	Anderson Street, 200 Block	YTD	8.0	6	3	High Quality
+25-008053	Sexual Assault - 2C:14-2b	9-1-1	140 Hudson Street, Hackensack, NJ, 07601	5.0	E1	2025-01-29 20:53:22	2025	January	20:53	Wednesday	2025-01-29 20:54:28	2025-01-29 20:58:03	2025-01-29 21:15:56	0 days 00:17:53	0 days 00:04:41	P.O. Alexander Reyes 355	See Report	Emergency	"FEMALE CALLER STATED SHE HAS BEEN RAPED - STATED THE MALE PARTY IS STILL THERE  - scott_l - 1/29/2025 8:53:49 PM
+ SHE WAS UNSURE IF THERE IS AN APARTMENT NUMBER/LETTER - scott_l - 1/29/2025 8:54:24 PM
+CALLER DISCONNECTED.  - scott_l - 1/29/2025 8:55:50 PM"	25-008053	Sexual Assault - 2C:14-2b	140 Hudson Street, Hackensack, NJ, 07601	2025-01-29 20:53:22	25-008053	Sexual Assault - 2C:14-2b	Sexual Offenses	Scott_L	01/29/2025 20:53:49	Female caller stated she has been raped stated the male party is still there she was unsure if there is an apartment number/letter caller disconnected.	100	01/29/25	null	Unknown	Wednesday	January	2025	1	29	Hudson Street, 100 Block	YTD	5.0	6	3	High Quality
+25-008075	Motor Vehicle Theft - 2C:20-3	Phone	119 Essex Street, Hackensack, NJ, 07601	6.0	F1	2025-01-29 22:02:24	2025	January	22:02	Wednesday	2025-01-29 22:04:31	2025-01-29 22:11:01	2025-01-29 22:37:19	0 days 00:26:18	0 days 00:08:37	P.O. Roselys Salas 369	See Report	Routine	"See Caller believes her vehicle was stolen...Tow Reports Checked and were negative - Swetits_m - 1/29/2025 10:04:14 PM
+? - ? - ?
+? - ? - ?"	25-008075	Motor Vehicle Theft - 2C:20-3	119 Essex Street, Hackensack, NJ, 07601	2025-01-29 22:02:24	25-008075	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Swetits_M	01/29/2025 22:04:14	See caller believes her vehicle was stolen...tow reports checked and were negative ? ? ? ? ? ?	100	01/29/25	null	Unknown	Wednesday	January	2025	1	29	Essex Street, 100 Block	YTD	6.0	6	3	High Quality
+25-008777	Motor Vehicle Theft - 2C:20-3	9-1-1	453 Sutton Avenue, Hackensack, NJ, 07601	6.0	F2	2025-02-01 02:52:33	2025	February	02:52	Saturday	2025-02-01 02:55:10	2025-02-01 02:56:13	2025-02-01 05:14:14	0 days 02:18:01	0 days 00:03:40	P.O. Roselys Salas 369	See Report	Routine	"25-039344 - wouters_f - 2/1/2025 2:54:35 AM
+? - ? - ?
+? - ? - ?"	25-008777	Motor Vehicle Theft - 2C:20-3	453 Sutton Avenue, Hackensack, NJ, 07601	2025-02-01 02:52:33	25-008777	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Wouters_F	02/01/2025 02:54:35	25 039344 ? ? ? ? ? ?	100	02/01/25	null	Unknown	Saturday	February	2025	2	1	Sutton Avenue, 400 Block	YTD	6.0	6	3	High Quality
+25-009348	Robbery - 2C:15-1	Radio	144 Hudson Street, Hackensack, NJ, 07601	5.0	E1	2025-02-03 12:02:04	2025	February	12:02	Monday	2025-02-03 12:02:31	2025-02-03 12:02:36	2025-02-03 12:32:29	0 days 00:29:53	0 days 00:00:32	P.O. Carmine Maceri 378	See Report	Emergency	"flagged down by a male party states he was robbed - Gervasi_J - 2/3/2025 12:02:31 PM
+Drone deployed.  Provided overwatch. - weber_r - 2/3/2025 12:04:27 PM
+? - ? - ?"	25-009348	Robbery - 2C:15-1	144 Hudson Street, Hackensack, NJ, 07601	2025-02-03 12:02:04	25-009348	Robbery - 2C:15-1	Robbery	Gervasi_J	02/03/2025 12:02:31	Flagged down by male party states he was robbed drone deployed. Provided overwatch. ? ? ?	100	02/03/25	null	Unknown	Monday	February	2025	2	3	Hudson Street, 100 Block	YTD	5.0	6	3	High Quality
+25-009438	Robbery - 2C:15-1	Phone	400 Hackensack Avenue, Hackensack, NJ, 07601	9.0	I6	2025-02-03 16:40:35	2025	February	16:40	Monday	2025-02-03 16:44:46	2025-02-03 16:49:17	2025-02-03 18:18:58	0 days 01:29:41	0 days 00:08:42	P.O. Aziah Miller 357	See Report	Emergency	"Actors are GOA. Theft of 2 bags and pushed store employee to the floor as they fled.  - farhi_b - 2/3/2025 4:42:06 PM
+? - ? - ?
+? - ? - ?"	25-009438	Robbery - 2C:15-1	400 Hackensack Avenue, Hackensack, NJ, 07601	2025-02-03 16:40:35	25-009438	Robbery - 2C:15-1	Robbery	Farhi_B	02/03/2025 16:42:06	Actors are goa. Theft of 2 bags and pushed store employee to the floor as they fled. ? ? ? ? ? ?	100	02/03/25	null	Unknown	Monday	February	2025	2	3	Hackensack Avenue, 400 Block	YTD	9.0	6	3	High Quality
+25-009550	Motor Vehicle Theft - 2C:20-3	Phone	411 Simons Avenue, Hackensack, NJ, 07601	6.0	F2	2025-02-04 03:21:47	2025	February	03:21	Tuesday	2025-02-04 03:23:35	2025-02-04 03:27:49	2025-02-04 03:39:18	0 days 00:11:29	0 days 00:06:02	P.O. Paula Lopez 362	See Report	Routine	"male party attempting to steal callers car fled towards s summit last seen wearing a blk hoodie, 
+ - ortiz_n - 2/4/2025 3:23:11 AM
+suspect heard callers dog bark and fled area BCC# 25-042959 - ortiz_n - 2/4/2025 3:23:31 AM
+? - ? - ?"	25-009550	Motor Vehicle Theft - 2C:20-3	411 Simons Avenue, Hackensack, NJ, 07601	2025-02-04 03:21:47	25-009550	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Ortiz_N	02/04/2025 03:23:11	Male party attempting to steal callers car fled towards summit last seen wearing blk hoodie, suspect heard callers dog bark and fled area bcc# 25 042959 ? ? ?	100	02/04/25	null	Unknown	Tuesday	February	2025	2	4	Simons Avenue, 400 Block	YTD	6.0	6	3	High Quality
+25-009657	Motor Vehicle Theft - 2C:20-3	Phone	55 Midtown Bridge Approach, Hackensack, NJ, 07601	8.0	H1	2025-02-04 12:43:32	2025	February	12:43	Tuesday	2025-02-04 13:24:05	2025-02-04 13:26:36	2025-02-04 14:34:02	0 days 01:07:26	0 days 00:43:04	P.O. Micah Gibson 365	See Report	Routine	"possible 26 - antista_ma - 2/4/2025 12:44:03 PM
+? - ? - ?
+? - ? - ?"	25-009657	Motor Vehicle Theft - 2C:20-3	55 Midtown Bridge Approach, Hackensack, NJ, 07601	2025-02-04 12:43:32	25-009657	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Antista_Ma	02/04/2025 12:44:03	Possible 26 ? ? ? ? ? ?	100	02/04/25	null	Unknown	Tuesday	February	2025	2	4	Midtown Bridge Approach, 0 Block	YTD	8.0	6	3	High Quality
+25-010474	Motor Vehicle Theft - 2C:20-3	Phone	170 Hudson Street, Hackensack, NJ, 07601	5.0	E2	2025-02-07 07:22:38	2025	February	07:22	Friday	2025-02-07 07:24:11	2025-02-07 07:30:03	2025-02-07 08:33:20	0 days 01:03:17	0 days 00:07:25	P.O. Matthew Tedesco 316	See Report	Routine	"26,  05 dodge caravan, was left running in driveway - small_k - 2/7/2025 7:23:41 AM
+? - ? - ?
+? - ? - ?"	25-010474	Motor Vehicle Theft - 2C:20-3	170 Hudson Street, Hackensack, NJ, 07601	2025-02-07 07:22:38	25-010474	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Small_K	02/07/2025 07:23:41	26, 05 dodge caravan, was left running in driveway ? ? ? ? ? ?	100	02/07/25	null	Unknown	Friday	February	2025	2	7	Hudson Street, 100 Block	YTD	5.0	6	3	High Quality
+25-010788	Motor Vehicle Theft - 2C:20-3	Walk-In	Hudson Street & Moonachie Road, Hackensack, NJ, 07601	5.0	E3	2025-02-08 09:22:04	2025	February	09:22	Saturday	2025-02-08 09:25:59	2025-02-08 09:30:01	2025-02-08 10:26:16	0 days 00:56:15	0 days 00:07:57	P.O. Daniel Francavilla 329	See Report	Routine		25-010788	Motor Vehicle Theft - 2C:20-3	Hudson Street & Moonachie Road, Hackensack, NJ, 07601	2025-02-08 09:22:04	25-010788	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	02/08/25	null	Unknown	Saturday	February	2025	2	8	Hudson Street & Moonachie Road	YTD	5.0	6	3	No CAD Notes
+25-012325	Burglary - Auto - 2C:18-2	Phone	280 Kipp Street, Hackensack, NJ, 07601	6.0	F3	2025-02-14 07:10:39	2025	February	07:10	Friday	2025-02-14 07:12:18	2025-02-14 07:15:51	2025-02-14 07:34:26	0 days 00:18:35	0 days 00:05:12	P.O. Angelo Vicale 370	See Report	Emergency	"PSE&G van - wouters_f - 2/14/2025 7:11:15 AM
+? - ? - ?
+? - ? - ?"	25-012325	Burglary - Auto - 2C:18-2	280 Kipp Street, Hackensack, NJ, 07601	2025-02-14 07:10:39	25-012325	Burglary - Auto - 2C:18-2	Burglary - Auto	Wouters_F	02/14/2025 07:11:15	Pse& van ? ? ? ? ? ?	100	02/14/25	null	Unknown	Friday	February	2025	2	14	Kipp Street, 200 Block	YTD	6.0	6	3	High Quality
+25-013091	Motor Vehicle Theft - 2C:20-3	Walk-In	100 Second Street, Hackensack, NJ, 07601	7.0	G3	2025-02-17 08:22:14	2025	February	08:22	Monday	2025-02-17 08:25:04	2025-02-17 08:38:55	2025-02-17 09:39:13	0 days 01:00:18	0 days 00:16:41	P.O. Ruben Almonte 359	See Report	Routine	"Walk in, Stolen Auto, Located in Rochelle Park with no wheels on it. - cavallo_f - 2/17/2025 8:25:31 AM
+Advise Rochelle park once entered into NCIC, - cavallo_f - 2/17/2025 8:24:48 AM
+? - ? - ?"	25-013091	Motor Vehicle Theft - 2C:20-3	100 Second Street, Hackensack, NJ, 07601	2025-02-17 08:22:14	25-013091	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Cavallo_F	02/17/2025 08:25:31	Walk in, stolen auto, located in rochelle park with no wheels on it. Advise rochelle park once entered into ncic, ? ? ?	100	02/17/25	null	Unknown	Monday	February	2025	2	17	Second Street, 100 Block	YTD	7.0	6	3	High Quality
+25-013527	Sexual Assault - 2C:14-2b	Phone	240  Prospect Avenue, Hackensack, NJ, 07601	8.0	H4	2025-02-18 17:39:20	2025	February	17:39	Tuesday	2025-02-18 17:39:43	2025-02-18 17:40:26	2025-02-18 17:40:29	0 days 00:00:03	0 days 00:01:06	Det. Matthew Dogali 338	See Report	Emergency	"Patient located at Mt. Sinai ER, responding with Det. Tanucilli - dogali_m - 2/18/2025 5:40:25 PM
+? - ? - ?
+? - ? - ?"	25-013527	Sexual Assault - 2C:14-2b	240  Prospect Avenue, Hackensack, NJ, 07601	2025-02-18 17:39:20	25-013527	Sexual Assault - 2C:14-2b	Sexual Offenses	Dogali_M	02/18/2025 17:40:25	Patient located at mt. Sinai er, responding with det. Tanucilli ? ? ? ? ? ?	100	02/18/25	null	Unknown	Tuesday	February	2025	2	18	Prospect Avenue, 200 Block	YTD	8.0	6	3	High Quality
+25-013689	Motor Vehicle Theft - 2C:20-3	Walk-In	18 East Camden Street, Hackensack, NJ, 07601	8.0	H1	2025-02-19 09:17:12	2025	February	09:17	Wednesday	2025-02-19 09:20:09	2025-02-19 09:23:27	2025-02-19 09:48:23	0 days 00:24:56	0 days 00:06:15	P.O. Micah Gibson 365	See Report	Routine	"*****walk in***** - cavallo_f - 2/19/2025 9:17:36 AM
+? - ? - ?
+? - ? - ?"	25-013689	Motor Vehicle Theft - 2C:20-3	18 East Camden Street, Hackensack, NJ, 07601	2025-02-19 09:17:12	25-013689	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Cavallo_F	02/19/2025 09:17:36	*****walk in***** ? ? ? ? ? ?	100	02/19/25	null	Unknown	Wednesday	February	2025	2	19	East Camden Street, 0 Block	YTD	8.0	6	3	High Quality
+25-014007	Sexual Assault - 2C:14-2b	Phone	360 Union Street, Hackensack, NJ, 07601	8.0	H2	2025-02-20 12:52:04	2025	February	12:52	Thursday	2025-02-20 13:03:28	2025-02-20 13:09:45	2025-02-20 13:46:54	0 days 00:37:09	0 days 00:17:41	P.O. Angie Tabares 363	See Report	Emergency	"See Det. James  - briggs_s - 2/20/2025 12:52:29 PM
+? - ? - ?
+? - ? - ?"	25-014007	Sexual Assault - 2C:14-2b	360 Union Street, Hackensack, NJ, 07601	2025-02-20 12:52:04	25-014007	Sexual Assault - 2C:14-2b	Sexual Offenses	Briggs_S	02/20/2025 12:52:29	See det. James ? ? ? ? ? ?	100	02/20/25	null	Unknown	Thursday	February	2025	2	20	Union Street, 300 Block	YTD	8.0	6	3	High Quality
+25-015290	Motor Vehicle Theft - 2C:20-3	9-1-1	430 Washington Avenue, Hackensack, NJ, 07601	5.0	E3	2025-02-24 23:47:34	2025	February	23:47	Monday	2025-02-24 23:51:04	2025-02-24 23:55:43	2025-02-25 00:48:01	0 days 00:52:18	0 days 00:08:09	P.O. Denisse Caero 367	See Report	Routine	"CCAD# 25-069523  possible 26 - Sosa_C - 2/24/2025 11:48:44 PM
+? - ? - ?
+? - ? - ?"	25-015290	Motor Vehicle Theft - 2C:20-3	430 Washington Avenue, Hackensack, NJ, 07601	2025-02-24 23:47:34	25-015290	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Sosa_C	02/24/2025 23:48:44	Ccad# 25 069523 possible 26 ? ? ? ? ? ?	100	02/24/25	null	Unknown	Monday	February	2025	2	24	Washington Avenue, 400 Block	YTD	5.0	6	3	High Quality
+25-016142	Burglary - Residence - 2C:18-2	Phone	100 State Street, Hackensack, NJ, 07601	7.0	G1	2025-02-27 21:22:35	2025	February	21:22	Thursday	2025-02-27 21:27:26	2025-02-27 21:30:24	2025-02-27 22:14:31	0 days 00:44:07	0 days 00:07:49	P.O. Anthony Mattalian 83	See Report	Emergency	"caller reports her door knob is hanging off the door and key fob is non functional  - ortiz_n - 2/27/2025 9:23:50 PM
+? - ? - ?
+? - ? - ?"	25-016142	Burglary - Residence - 2C:18-2	100 State Street, Hackensack, NJ, 07601	2025-02-27 21:22:35	25-016142	Burglary - Residence - 2C:18-2	Burglary - Residence	Ortiz_N	02/27/2025 21:23:50	Caller reports her door knob is hanging off the door and key fob is non functional ? ? ? ? ? ?	100	02/27/25	null	Unknown	Thursday	February	2025	2	27	State Street, 100 Block	YTD	7.0	6	3	High Quality
+25-018160	Burglary - Auto - 2C:18-2	Phone	216 Central Avenue, Hackensack, NJ, 07601	8.0	H3	2025-03-06 22:35:45	2025	March	22:35	Thursday	2025-03-06 22:46:48	2025-03-06 22:50:26	2025-03-06 23:21:01	0 days 00:30:35	0 days 00:14:41	P.O. Ruben Almonte 359	See Report	Emergency	"see Mike Gibson in ref to a 43 to his car - antista_ma - 3/6/2025 10:36:22 PM
+? - ? - ?
+? - ? - ?"	25-018160	Burglary - Auto - 2C:18-2	216 Central Avenue, Hackensack, NJ, 07601	2025-03-06 22:35:45	25-018160	Burglary - Auto - 2C:18-2	Burglary - Auto	Antista_Ma	03/06/2025 22:36:22	See mike gibson in ref to 43 to his car ? ? ? ? ? ?	100	03/06/25	null	Unknown	Thursday	March	2025	3	6	Central Avenue, 200 Block	YTD	8.0	6	3	High Quality
+25-019111	Sexual Assault - 2C:14-2b	9-1-1	65 Court Street, Hackensack, NJ, 07601	5.0	E1	2025-03-09 21:32:32	2025	March	21:32	Sunday	2025-03-09 21:34:13	2025-03-09 21:36:05	2025-03-09 22:14:52	0 days 00:38:47	0 days 00:03:33	P.O. Roselys Salas 369	See Report	Emergency	"CALLERS REPORTING HE HEARS A FEMALE PARTY SCREAMING ""IM GETTING RAPED CALL 911"" - scott_l - 3/9/2025 9:33:45 PM
+BEHIND PEP BOYS - scott_l - 3/9/2025 9:33:45 PM
+ccad# 25-087241 - scott_l - 3/9/2025 9:34:09 PM"	25-019111	Sexual Assault - 2C:14-2b	65 Court Street, Hackensack, NJ, 07601	2025-03-09 21:32:32	25-019111	Sexual Assault - 2C:14-2b	Sexual Offenses	Scott_L	03/09/2025 21:33:45	"Callers reporting he hears female party screaming ""im getting raped call 911"" behind pep boys ccad# 25 087241"	100	03/09/25	null	Unknown	Sunday	March	2025	3	9	Court Street, 0 Block	YTD	5.0	6	3	High Quality
+25-019245	Burglary - Auto - 2C:18-2	Phone	282 American Legion Drive, Hackensack, NJ, 07601	7.0	G3	2025-03-10 08:53:28	2025	March	08:53	Monday	2025-03-10 08:53:28	2025-03-10 08:53:28	2025-03-10 08:53:28	0 days 00:00:00	0 days 00:00:00	P.O. Peter Voorhis 380	See Report	Emergency	"Silver Hyundai.  2 door.  Complainant standing  with the vehicle - kiselow_g - 3/10/2025 8:54:41 AM
+? - ? - ?
+? - ? - ?"	25-019245	Burglary - Auto - 2C:18-2	282 American Legion Drive, Hackensack, NJ, 07601	2025-03-10 08:53:28	25-019245	Burglary - Auto - 2C:18-2	Burglary - Auto	Kiselow_G	03/10/2025 08:54:41	Silver hyundai. 2 door. Complainant standing with the vehicle ? ? ? ? ? ?	100	03/10/25	null	Unknown	Monday	March	2025	3	10	American Legion Drive, 200 Block	YTD	7.0	6	3	High Quality
+25-020998	Burglary - Residence - 2C:18-2	Phone	472 Passaic Street, Hackensack, NJ, 07601	8.0	H5	2025-03-15 20:39:03	2025	March	20:39	Saturday	2025-03-15 20:51:59	2025-03-15 20:59:50	2025-03-15 21:21:57	0 days 00:22:07	0 days 00:20:47	P.O. Angie Tabares 363	See Report	Emergency	"Complainant is reporting that Noel Smith Stole a box containing $3000 from her closet. - cavallo_f - 3/15/2025 8:47:30 PM
+no contact order in effect barring him from the property - cavallo_f - 3/15/2025 8:52:31 PM
+? - ? - ?"	25-020998	Burglary - Residence - 2C:18-2	472 Passaic Street, Hackensack, NJ, 07601	2025-03-15 20:39:03	25-020998	Burglary - Residence - 2C:18-2	Burglary - Residence	Cavallo_F	03/15/2025 20:47:30	Complainant is reporting that noel smith stole box containing $3000 from her closet. No contact order in effect barring him from the property ? ? ?	100	03/15/25	null	Unknown	Saturday	March	2025	3	15	Passaic Street, 400 Block	YTD	8.0	6	3	High Quality
+25-021086	Burglary - Residence - 2C:18-2	9-1-1	64 Prospect Avenue, Hackensack, NJ, 07601	7.0	G4	2025-03-16 03:15:35	2025	March	03:15	Sunday	2025-03-16 03:18:55	2025-03-16 03:25:05	2025-03-16 06:25:03	0 days 02:59:58	0 days 00:09:30	P.O. Aziah Miller 357	See Report	Emergency	"caller(Jasmine) is stating that her daughters father broke into her apartment  - cavallo_f - 3/16/2025 3:18:37 AM
+no longer lives there , unwilling to leave male party name is kevin Entry Code #9211 - cavallo_f - 3/16/2025 3:18:37 AM
+Father states he justs wants to see his daughter, Poss. intoxicated CFS:25-095926 - cavallo_f - 3/16/2025 3:18:37 AM"	25-021086	Burglary - Residence - 2C:18-2	64 Prospect Avenue, Hackensack, NJ, 07601	2025-03-16 03:15:35	25-021086	Burglary - Residence - 2C:18-2	Burglary - Residence	Cavallo_F	03/16/2025 03:18:37	Caller is stating that her daughters father broke into her apartment no longer lives there , unwilling to leave male party name is kevin entry code father states he justs wants to see his daughter, poss. Intoxicated cfs:25 095926	100	03/16/25	null	Unknown	Sunday	March	2025	3	16	Prospect Avenue, 0 Block	YTD	7.0	6	3	High Quality
+25-021797	Burglary - Residence - 2C:18-2	Phone	45 Linden Street, Hackensack, NJ, 07601	8.0	H3	2025-03-18 11:39:23	2025	March	11:39	Tuesday	2025-03-18 12:06:22	2025-03-18 12:14:36	2025-03-18 12:44:11	0 days 00:29:35	0 days 00:35:13	P.O. Nicholas Mazzaccaro 377	See Report	Emergency	"Discovered on Friday, has been contaminating the scene since then - knapp_j - 3/18/2025 11:41:26 AM
+? - ? - ?
+? - ? - ?"	25-021797	Burglary - Residence - 2C:18-2	45 Linden Street, Hackensack, NJ, 07601	2025-03-18 11:39:23	25-021797	Burglary - Residence - 2C:18-2	Burglary - Residence	Knapp_J	03/18/2025 11:41:26	Discovered on friday, has been contaminating the scene since then ? ? ? ? ? ?	100	03/18/25	null	Unknown	Tuesday	March	2025	3	18	Linden Street, 0 Block	YTD	8.0	6	3	High Quality
+25-022902	Motor Vehicle Theft - 2C:20-3	Phone	171 Kenneth Street, Hackensack, NJ, 07601	6.0	F1	2025-03-21 14:19:53	2025	March	14:19	Friday	2025-03-21 14:24:23	2025-03-21 14:34:19	2025-03-21 16:25:41	0 days 01:51:22	0 days 00:14:26	P.O. Andres Lopez 375	See Report	Routine	"Rocky Auto Shop. Report of a stolen Burgundy Chevrolet Express van. - dominguez_p - 3/21/2025 2:21:37 PM
+? - ? - ?
+? - ? - ?"	25-022902	Motor Vehicle Theft - 2C:20-3	171 Kenneth Street, Hackensack, NJ, 07601	2025-03-21 14:19:53	25-022902	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Dominguez_P	03/21/2025 14:21:37	Rocky auto shop. Report of stolen burgundy chevrolet express van. ? ? ? ? ? ?	100	03/21/25	null	Unknown	Friday	March	2025	3	21	Kenneth Street, 100 Block	YTD	6.0	6	3	High Quality
+25-023424	Burglary - Auto - 2C:18-2	9-1-1	24 Pulaski Park, Hackensack, NJ, 07601	5.0	E3	2025-03-23 04:55:22	2025	March	04:55	Sunday	2025-03-23 04:57:23	2025-03-23 05:01:37	2025-03-23 06:11:29	0 days 01:09:52	0 days 00:06:15	P.O. Micah Gibson 365	See Report	Emergency	"Caller reported that someone broke the lock to his vehicle in an attempt to steal his tools - farhi_b - 3/23/2025 4:57:03 AM
+Suspect vehicle is a white Honda CRV which fled onto Hudson St and possibly Rt 80 - farhi_b - 3/23/2025 4:57:03 AM
+? - ? - ?"	25-023424	Burglary - Auto - 2C:18-2	24 Pulaski Park, Hackensack, NJ, 07601	2025-03-23 04:55:22	25-023424	Burglary - Auto - 2C:18-2	Burglary - Auto	Farhi_B	03/23/2025 04:57:03	Caller reported that someone broke the lock to his vehicle in an attempt to steal his tools suspect vehicle is white honda crv which fled onto hudson st and possibly rt 80 ? ? ?	100	03/23/25	null	Unknown	Sunday	March	2025	3	23	Pulaski Park, 0 Block	YTD	5.0	6	3	High Quality
+25-024100	Robbery - 2C:15-1	Radio	450 Hackensack Avenue, Hackensack, NJ, 07601	9.0	I6	2025-03-25 12:04:57	2025	March	12:04	Tuesday	2025-03-25 12:07:11	2025-03-25 12:15:35	2025-03-25 13:10:31	0 days 00:54:56	0 days 00:10:38	P.O. Christian Alvarez 364	See Report	Emergency	"Stated a female jumped out of a car a forcibly stole his watch. (standing by at his vehicle) - klosk_J - 3/25/2025 12:06:34 PM
+in front of store - klosk_J - 3/25/2025 12:06:34 PM
+Drone deployed.  Provided overwatch. - weber_r - 3/25/2025 12:12:47 PM"	25-024100	Robbery - 2C:15-1	450 Hackensack Avenue, Hackensack, NJ, 07601	2025-03-25 12:04:57	25-024100	Robbery - 2C:15-1	Robbery	Klosk_J	03/25/2025 12:06:34	Stated female jumped out of car forcibly stole his watch. In front of store drone deployed. Provided overwatch.	100	03/25/25	null	Unknown	Tuesday	March	2025	3	25	Hackensack Avenue, 400 Block	YTD	9.0	6	3	High Quality
+25-024791	Burglary - Commercial - 2C:18-2	Phone	211 Essex Street, Hackensack, NJ, 07601	6.0	F1	2025-03-27 12:51:45	2025	March	12:51	Thursday	2025-03-27 13:00:57	2025-03-27 13:16:17	2025-03-27 14:27:17	0 days 01:11:00	0 days 00:24:32	P.O. Daniel Francavilla 329	See Report	Emergency	"Caller reported that the 43 possibly occurred overnight / this morning.   Waited for building  - kiselow_g - 3/27/2025 12:53:26 PM
+management to arrive before contacting the Police - kiselow_g - 3/27/2025 12:54:13 PM
+? - ? - ?"	25-024791	Burglary - Commercial - 2C:18-2	211 Essex Street, Hackensack, NJ, 07601	2025-03-27 12:51:45	25-024791	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Kiselow_G	03/27/2025 12:53:26	Caller reported that the 43 possibly occurred overnight / this morning. Waited for building management to arrive before contacting the police ? ? ?	100	03/27/25	null	Unknown	Thursday	March	2025	3	27	Essex Street, 200 Block	YTD	6.0	6	3	High Quality
+25-025078	Burglary - Residence - 2C:18-2	9-1-1	2 Park Avenue, Hackensack, NJ, 07601	8.0	H1	2025-03-28 11:13:39	2025	March	11:13	Friday	2025-03-28 11:17:16	2025-03-28 11:19:12	2025-03-28 13:40:32	0 days 02:21:20	0 days 00:05:33	P.O. Peter Voorhis 380	See Report	Emergency	"CALLER STATES HIS APT WAS BURGLARIZED SOMETIME LAST NIGHT - Gervasi_J - 3/28/2025 11:15:09 AM
+CALLER FOUND THE DOOR TO BE BROKEN - Gervasi_J - 3/28/2025 11:15:09 AM
+CC#25-112442 - Gervasi_J - 3/28/2025 11:15:09 AM"	25-025078	Burglary - Residence - 2C:18-2	2 Park Avenue, Hackensack, NJ, 07601	2025-03-28 11:13:39	25-025078	Burglary - Residence - 2C:18-2	Burglary - Residence	Gervasi_J	03/28/2025 11:15:09	Caller states his apt was burglarized sometime last night caller found the door to be broken 112442	100	03/28/25	null	Unknown	Friday	March	2025	3	28	Park Avenue, 0 Block	YTD	8.0	6	3	High Quality
+25-025341	Motor Vehicle Theft - 2C:20-3	Phone	296 Berry Street, Hackensack, NJ, 07601	8.0	H4	2025-03-29 10:19:00	2025	March	10:19	Saturday	2025-03-29 10:20:44	2025-03-29 10:23:59	2025-03-29 11:41:28	0 days 01:17:29	0 days 00:04:59	P.O. Wanda Rivera 161	See Report	Routine	"Caller, Navarro Gray, reports his father's vehicle may have been stolen overnight. - competiello_fa - 3/29/2025 10:20:04 AM
+? - ? - ?
+? - ? - ?"	25-025341	Motor Vehicle Theft - 2C:20-3	296 Berry Street, Hackensack, NJ, 07601	2025-03-29 10:19:00	25-025341	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Competiello_Fa	03/29/2025 10:20:04	Caller, navarro gray, reports his father' vehicle may have been stolen overnight. ? ? ? ? ? ?	100	03/29/25	null	Unknown	Saturday	March	2025	3	29	Berry Street, 200 Block	YTD	8.0	6	3	High Quality
+25-025926	Burglary - Residence - 2C:18-2	Phone	100 Essex Street, Hackensack, NJ, 07601	7.0	G2	2025-03-31 13:02:43	2025	March	13:02	Monday	2025-03-31 13:06:55	2025-03-31 13:11:21	2025-03-31 14:02:57	0 days 00:51:36	0 days 00:08:38	P.O. Anthony Mattalian 83	See Report	Emergency	"John Ross - ortiz_n - 3/31/2025 1:04:22 PM
+? - ? - ?
+? - ? - ?"	25-025926	Burglary - Residence - 2C:18-2	100 Essex Street, Hackensack, NJ, 07601	2025-03-31 13:02:43	25-025926	Burglary - Residence - 2C:18-2	Burglary - Residence	Ortiz_N	03/31/2025 13:04:22	John ross ? ? ? ? ? ?	100	03/31/25	null	Unknown	Monday	March	2025	3	31	Essex Street, 100 Block	YTD	7.0	6	3	High Quality
+25-026077	Burglary - Auto - 2C:18-2	9-1-1	Central Avenue & Second Street, Hackensack, NJ, 07601	7.0	G3	2025-03-31 22:19:40	2025	March	22:19	Monday	2025-03-31 22:23:46	2025-03-31 22:26:37	2025-03-31 23:03:52	0 days 00:37:15	0 days 00:06:57	P.O. Jeffrey Rodriguez 342	See Report	Emergency	"TOYOTA SIENNA NJ REG J72JJJ  - scott_l - 3/31/2025 10:21:35 PM
+VEHICLE WAS PARKED @ 1830 HOURS. 
+ - scott_l - 3/31/2025 10:21:03 PM
+AME BACK AND FOUND BELONGINGS HAD BEEN GONE THRU - scott_l - 3/31/2025 10:21:03 PM"	25-026077	Burglary - Auto - 2C:18-2	Central Avenue & Second Street, Hackensack, NJ, 07601	2025-03-31 22:19:40	25-026077	Burglary - Auto - 2C:18-2	Burglary - Auto	Scott_L	03/31/2025 22:21:35	Toyota sienna nj reg j72jjj vehicle was parked @ 1830 hours. Ame back and found belongings had been gone thru	100	03/31/25	null	Unknown	Monday	March	2025	3	31	Central Avenue & Second Street	YTD	7.0	6	3	High Quality
+25-026145	Burglary - Commercial - 2C:18-2	Phone	45 Essex Street, Hackensack, NJ, 07601	5.0	E1	2025-04-01 06:22:25	2025	April	06:22	Tuesday	2025-04-01 06:27:15	2025-04-01 06:28:41	2025-04-01 07:00:47	0 days 00:32:06	0 days 00:06:16	P.O. Frank Caneja 346	See Report	Emergency	"galss back door found pryed open.  Madelyn will meet you out front.  Madyln has already entered - ortiz_n - 4/1/2025 6:24:46 AM
+the building but has been advised to exit. - ortiz_n - 4/1/2025 6:24:51 AM
+? - ? - ?"	25-026145	Burglary - Commercial - 2C:18-2	45 Essex Street, Hackensack, NJ, 07601	2025-04-01 06:22:25	25-026145	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Ortiz_N	04/01/2025 06:24:46	Galss back door found pryed open. Madelyn will meet you out front. Madyln has already entered the building but has been advised to exit. ? ? ?	100	04/01/25	null	Unknown	Tuesday	April	2025	4	1	Essex Street, 0 Block	YTD	5.0	6	3	High Quality
+25-026357	Burglary - Auto - 2C:18-2	Phone	77 Prospect Avenue, Hackensack, NJ, 07601	7.0	G4	2025-04-01 20:28:40	2025	April	20:28	Tuesday	2025-04-01 20:31:29	2025-04-01 20:34:20	2025-04-01 21:49:35	0 days 01:15:15	0 days 00:05:40	P.O. Anzour Marza 356	See Report	Emergency	"caller states his 2024 Mazda was broken into - antista_ma - 4/1/2025 8:29:54 PM
+? - ? - ?
+? - ? - ?"	25-026357	Burglary - Auto - 2C:18-2	77 Prospect Avenue, Hackensack, NJ, 07601	2025-04-01 20:28:40	25-026357	Burglary - Auto - 2C:18-2	Burglary - Auto	Antista_Ma	04/01/2025 20:29:54	Caller states his 2024 mazda was broken into ? ? ? ? ? ?	100	04/01/25	null	Unknown	Tuesday	April	2025	4	1	Prospect Avenue, 0 Block	YTD	7.0	6	3	High Quality
+25-027338	Burglary - Residence - 2C:18-2	Phone	75 Fair Street, Hackensack, NJ, 07601	5.0	E1	2025-04-04 13:05:28	2025	April	13:05	Friday	2025-04-04 13:10:01	2025-04-04 13:14:01	2025-04-04 15:14:19	0 days 02:00:18	0 days 00:08:33	P.O. Alexander Reyes 355	See Report	Emergency	"mother - victoria lawson - went to hospital - son (comp) reporting that neighbors check her - wouters_f - 4/4/2025 1:08:08 PM
+home when she's not there. they are reporting a TV was stolen. -  Ring doorbell present - wouters_f - 4/4/2025 1:08:08 PM
+Landlord - Andre 201-745-7849 - wouters_f - 4/4/2025 1:08:08 PM"	25-027338	Burglary - Residence - 2C:18-2	75 Fair Street, Hackensack, NJ, 07601	2025-04-04 13:05:28	25-027338	Burglary - Residence - 2C:18-2	Burglary - Residence	Wouters_F	04/04/2025 13:08:08	Mother victoria lawson went to hospital son reporting that neighbors check her home when she' not there. They are reporting tv was stolen. Ring doorbell present landlord andre 201 745 7849	100	04/04/25	null	Unknown	Friday	April	2025	4	4	Fair Street, 0 Block	YTD	5.0	6	3	High Quality
+25-028849	Burglary - Residence - 2C:18-2	9-1-1	260 Prospect Avenue, Hackensack, NJ, 07601	8.0	H4	2025-04-09 11:34:58	2025	April	11:34	Wednesday	2025-04-09 11:37:43	2025-04-09 12:01:15	2025-04-09 12:01:26	0 days 00:00:11	0 days 00:26:17	P.O. Angie Tabares 363	See Report	Emergency	"someone just broke in and stole items - rivera_w - 4/9/2025 11:38:04 AM
+BC#25-127915 - rivera_w - 4/9/2025 11:36:18 AM
+? - ? - ?"	25-028849	Burglary - Residence - 2C:18-2	260 Prospect Avenue, Hackensack, NJ, 07601	2025-04-09 11:34:58	25-028849	Burglary - Residence - 2C:18-2	Burglary - Residence	Rivera_W	04/09/2025 11:38:04	Someone just broke in and stole items bc 127915 ? ? ?	100	04/09/25	null	Unknown	Wednesday	April	2025	4	9	Prospect Avenue, 200 Block	YTD	8.0	6	3	High Quality
+25-029155	Burglary - Auto - 2C:18-2	Phone	283 Summit Avenue, Hackensack, NJ, 07601	8.0	H5	2025-04-10 13:49:36	2025	April	13:49	Thursday	2025-04-10 13:54:55	2025-04-10 14:00:50	2025-04-10 14:25:28	0 days 00:24:38	0 days 00:11:14	P.O. Roselys Salas 369	See Report	Emergency	"Burglary to auto caught on ring camera - wouters_f - 4/10/2025 1:52:02 PM
+? - ? - ?
+? - ? - ?"	25-029155	Burglary - Auto - 2C:18-2	283 Summit Avenue, Hackensack, NJ, 07601	2025-04-10 13:49:36	25-029155	Burglary - Auto - 2C:18-2	Burglary - Auto	Wouters_F	04/10/2025 13:52:02	Burglary to auto caught on ring camera ? ? ? ? ? ?	100	04/10/25	null	Unknown	Thursday	April	2025	4	10	Summit Avenue, 200 Block	YTD	8.0	6	3	High Quality
+25-029787	Burglary - Residence - 2C:18-2	Radio	1 Park Avenue, Hackensack, NJ, 07601	8.0	H1	2025-04-12 09:47:06	2025	April	09:47	Saturday	2025-04-12 09:50:25	2025-04-12 09:53:43	2025-04-12 11:09:44	0 days 01:16:01	0 days 00:06:37	P.O. Roselys Salas 369	See Report	Emergency	"shes in the apartment now - wouters_f - 4/12/2025 9:47:28 AM
+look for a benz gle (possibly black) with pa plates.  if located, stop and id driver - wouters_f - 4/12/2025 9:50:16 AM
+? - ? - ?"	25-029787	Burglary - Residence - 2C:18-2	1 Park Avenue, Hackensack, NJ, 07601	2025-04-12 09:47:06	25-029787	Burglary - Residence - 2C:18-2	Burglary - Residence	Wouters_F	04/12/2025 09:47:28	Shes in the apartment now look for benz gle with pa plates. If located, stop and id driver ? ? ?	100	04/12/25	null	Unknown	Saturday	April	2025	4	12	Park Avenue, 0 Block	YTD	8.0	6	3	High Quality
+25-030391	Sexual Assault - 2C:14-2b	Walk-In	2 Kinderkamack Road, Hackensack, NJ, 07601	9.0	I4	2025-04-14 11:53:23	2025	April	11:53	Monday	2025-04-14 12:00:50	2025-04-14 12:01:54	2025-04-14 14:49:51	0 days 02:47:57	0 days 00:08:31	P.O. Juda DeOliveira 376	See Report	Emergency	"*******walk in*********** - antista_ma - 4/14/2025 11:54:51 AM
+? - ? - ?
+? - ? - ?"	25-030391	Sexual Assault - 2C:14-2b	2 Kinderkamack Road, Hackensack, NJ, 07601	2025-04-14 11:53:23	25-030391	Sexual Assault - 2C:14-2b	Sexual Offenses	Antista_Ma	04/14/2025 11:54:51	*******walk in*********** ? ? ? ? ? ?	100	04/14/25	null	Unknown	Monday	April	2025	4	14	Kinderkamack Road, 0 Block	YTD	9.0	6	3	High Quality
+25-031686	Robbery - 2C:15-1	Phone	125 River Street, Hackensack, NJ, 07601	7.0	G1	2025-04-18 23:27:52	2025	April	23:27	Friday	2025-04-18 23:29:47	2025-04-18 23:34:32	2025-04-19 00:10:01	0 days 00:35:29	0 days 00:06:40	P.O. Kevin Small 328	See Report	Emergency	"River Edge is out with a male party who reported that he was assaulted at the bus terminal - kiselow_g - 4/18/2025 11:29:13 PM
+Grand and Kinderkamack - kiselow_g - 4/18/2025 11:29:13 PM
+? - ? - ?"	25-031686	Robbery - 2C:15-1	125 River Street, Hackensack, NJ, 07601	2025-04-18 23:27:52	25-031686	Robbery - 2C:15-1	Robbery	Kiselow_G	04/18/2025 23:29:13	River edge is out with male party who reported that he was assaulted at the bus terminal grand and kinderkamack ? ? ?	100	04/18/25	null	Unknown	Friday	April	2025	4	18	River Street, 100 Block	YTD	7.0	6	3	High Quality
+25-031868	Burglary - Auto - 2C:18-2	9-1-1	11 Passaic Street, Hackensack, NJ, 07601	8.0	H1	2025-04-19 15:17:07	2025	April	15:17	Saturday	2025-04-19 15:20:33	2025-04-19 15:24:47	2025-04-19 16:31:45	0 days 01:06:58	0 days 00:07:40	P.O. Laura Lopez-Amaya 374	See Report	Emergency	"BC#25-141524 STATES SOMEONE TOOK HIS WALLET FROM CALLERS VEHICLE - Arenas_C - 4/19/2025 3:18:17 PM
+WINDOW WAS LEFT OPEN. - Arenas_C - 4/19/2025 3:18:45 PM
+? - ? - ?"	25-031868	Burglary - Auto - 2C:18-2	11 Passaic Street, Hackensack, NJ, 07601	2025-04-19 15:17:07	25-031868	Burglary - Auto - 2C:18-2	Burglary - Auto	Arenas_C	04/19/2025 15:18:17	Bc 141524 states someone took his wallet from callers vehicle window was left open. ? ? ?	100	04/19/25	null	Unknown	Saturday	April	2025	4	19	Passaic Street, 0 Block	YTD	8.0	6	3	High Quality
+25-032420	Burglary - Commercial - 2C:18-2	9-1-1	16 Johnson Avenue, Hackensack, NJ, 07601	9.0	I4	2025-04-21 08:04:33	2025	April	08:04	Monday	2025-04-21 08:07:10	2025-04-21 08:10:57	2025-04-21 10:25:51	0 days 02:14:54	0 days 00:06:24	P.O. Laura Lopez-Amaya 374	See Report	Emergency	"CCAD# 25-143362  Employee will be in a white Cadillac waiting for officer. She entered the dental - Sosa_C - 4/21/2025 8:06:27 AM
+office and there were bottles and a lock box strewn around - Sosa_C - 4/21/2025 8:06:27 AM
+? - ? - ?"	25-032420	Burglary - Commercial - 2C:18-2	16 Johnson Avenue, Hackensack, NJ, 07601	2025-04-21 08:04:33	25-032420	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Sosa_C	04/21/2025 08:06:27	Ccad# 25 143362 employee will be in white cadillac waiting for officer. She entered the dental office and there were bottles and lock box strewn around ? ? ?	100	04/21/25	null	Unknown	Monday	April	2025	4	21	Johnson Avenue, 0 Block	YTD	9.0	6	3	High Quality
+25-032505	Burglary - Auto - 2C:18-2	Walk-In	395 South River Street, Hackensack, NJ, 07601	5.0	E3	2025-04-21 12:46:50	2025	April	12:46	Monday	2025-04-21 13:07:07	2025-04-21 13:08:32	2025-04-21 13:57:21	0 days 00:48:49	0 days 00:21:42	P.O. Alexander Reyes 355	See Report	Emergency	"***WALK IN*** occurred b/w 4/8-4/10 - wouters_f - 4/21/2025 12:47:37 PM
+? - ? - ?
+? - ? - ?"	25-032505	Burglary - Auto - 2C:18-2	395 South River Street, Hackensack, NJ, 07601	2025-04-21 12:46:50	25-032505	Burglary - Auto - 2C:18-2	Burglary - Auto	Wouters_F	04/21/2025 12:47:37	***walk in*** occurred / 4/8 4/10 ? ? ? ? ? ?	100	04/21/25	null	Unknown	Monday	April	2025	4	21	South River Street, 300 Block	YTD	5.0	6	3	High Quality
+25-033529	Criminal Sexual Contact - 2C:14-3a	Other - See Notes	135 First Street, Hackensack, NJ, 07601	7.0	G3	2025-04-24 15:16:12	2025	April	15:16	Thursday	2025-04-24 15:16:56	2025-04-24 15:16:59	2025-04-24 15:17:03	0 days 00:00:04	0 days 00:00:47	Det. Cristobal Lara-Nunez 341	See Report	Routine		25-033529	Criminal Sexual Contact - 2C:14-3a	135 First Street, Hackensack, NJ, 07601	2025-04-24 15:16:12	25-033529	Criminal Sexual Contact - 2C:14-3a	Sexual Offenses				0	04/24/25	null	Unknown	Thursday	April	2025	4	24	First Street, 100 Block	YTD	7.0	6	3	No CAD Notes
+25-033886	Motor Vehicle Theft - 2C:20-3	Phone	11 East Anderson Street, Hackensack, NJ, 07601	8.0	H1	2025-04-25 13:44:16	2025	April	13:44	Friday	2025-04-25 13:47:34	2025-04-25 13:51:41	2025-04-25 14:36:27	0 days 00:44:46	0 days 00:07:25	P.O. Juda DeOliveira 376	See Report	Routine	"Suspect rented a vehicle 3/19-4/11 and did not return it.  - farhi_b - 4/25/2025 1:46:57 PM
+? - ? - ?
+? - ? - ?"	25-033886	Motor Vehicle Theft - 2C:20-3	11 East Anderson Street, Hackensack, NJ, 07601	2025-04-25 13:44:16	25-033886	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Farhi_B	04/25/2025 13:46:57	Suspect rented vehicle 3/19 4/11 and did not return it. ? ? ? ? ? ?	100	04/25/25	null	Unknown	Friday	April	2025	4	25	East Anderson Street, 0 Block	YTD	8.0	6	3	High Quality
+25-034164	Burglary - Residence - 2C:18-2	Phone	46 Newman Street, Hackensack, NJ, 07601	7.0	G3	2025-04-26 10:30:29	2025	April	10:30	Saturday	2025-04-26 10:35:25	2025-04-26 10:37:35	2025-04-26 14:11:01	0 days 03:33:26	0 days 00:07:06	P.O. Maximiliano Anguizaca 368	See Report	Emergency		25-034164	Burglary - Residence - 2C:18-2	46 Newman Street, Hackensack, NJ, 07601	2025-04-26 10:30:29	25-034164	Burglary - Residence - 2C:18-2	Burglary - Residence				0	04/26/25	null	Unknown	Saturday	April	2025	4	26	Newman Street, 0 Block	YTD	7.0	6	3	No CAD Notes
+25-034836	Motor Vehicle Theft - 2C:20-3	Phone	530 West Lookout Avenue, Hackensack, NJ, 07601	9.0	I2	2025-04-28 15:57:33	2025	April	15:57	Monday	2025-04-28 16:06:42	2025-04-28 16:15:23	2025-04-28 16:36:03	0 days 00:20:40	0 days 00:17:50	P.O. Laura Lopez-Amaya 374	See Report	Routine	" - wouters_f - 4/28/2025 4:06:35 PM
+? - ? - ?
+? - ? - ?"	25-034836	Motor Vehicle Theft - 2C:20-3	530 West Lookout Avenue, Hackensack, NJ, 07601	2025-04-28 15:57:33	25-034836	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Wouters_F	04/28/2025 16:06:35	? ? ? ? ? ?	100	04/28/25	null	Unknown	Monday	April	2025	4	28	West Lookout Avenue, 500 Block	YTD	9.0	6	3	High Quality
+25-035174	Motor Vehicle Theft - 2C:20-3	Phone	240 Prospect Avenue, Hackensack, NJ, 07601	8.0	H4	2025-04-29 14:49:23	2025	April	14:49	Tuesday	2025-04-29 15:20:18	2025-04-29 15:32:10	2025-04-29 16:05:12	0 days 00:33:02	0 days 00:42:47	P.O. Alexander Reyes 355	See Report	Routine		25-035174	Motor Vehicle Theft - 2C:20-3	240 Prospect Avenue, Hackensack, NJ, 07601	2025-04-29 14:49:23	25-035174	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	04/29/25	null	Unknown	Tuesday	April	2025	4	29	Prospect Avenue, 200 Block	YTD	8.0	6	3	No CAD Notes
+25-035499	Robbery - 2C:15-1	Walk-In	Gamewell Street & South Park Street, Hackensack, NJ, 07601			2025-04-30 16:19:23	2025	April	16:19	Wednesday	2025-04-30 16:25:15	2025-04-30 16:28:25	2025-04-30 17:28:50	0 days 01:00:25	0 days 00:09:02	P.O. Angie Tabares 363	See Report	Emergency	"spanish speaking officer, 17 year old reporting that two parties assaulted him and stole his phone - cavallo_f - 4/30/2025 4:23 PM
+He believes one party had a knife - cavallo_f - 4/30/2025 4:24:06 PM
+? - ? - ?"	25-035499	Robbery - 2C:15-1	Gamewell Street & South Park Street, Hackensack, NJ, 07601	2025-04-30 16:19:23	25-035499	Robbery - 2C:15-1	Robbery	Cavallo_F	04/30/2025 16:24:06	Spanish speaking officer, 17 year old reporting that two parties assaulted him and stole his phone 4/30/2025 4:23 pm he believes one party had knife ? ? ?	100	04/30/25	null	Unknown	Wednesday	April	2025	4	30	Gamewell Street & South Park Street	YTD		6	3	High Quality
+25-036368	Motor Vehicle Theft - 2C:20-3	Phone	326 Prospect Avenue, Hackensack, NJ, 07601	8.0	H4	2025-05-03 11:59:36	2025	May	11:59	Saturday	2025-05-03 12:07:36	2025-05-03 12:14:34	2025-05-03 14:11:29	0 days 01:56:55	0 days 00:14:58	P.O. Juda DeOliveira 376	See Report	Routine	"complainant will be standing by in the lobby, 2023 Yamaha No further info at this time, incident - cavallo_f - 5/3/2025 12:04:16 PM
+occurred within the past 30 days - cavallo_f - 5/3/2025 12:02:34 PM
+? - ? - ?"	25-036368	Motor Vehicle Theft - 2C:20-3	326 Prospect Avenue, Hackensack, NJ, 07601	2025-05-03 11:59:36	25-036368	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Cavallo_F	05/03/2025 12:04:16	Complainant will be standing by in the lobby, 2023 yamaha no further info at this time, incident occurred within the past 30 days ? ? ?	100	05/03/25	null	Unknown	Saturday	May	2025	5	3	Prospect Avenue, 300 Block	YTD	8.0	6	3	High Quality
+25-037005	Motor Vehicle Theft - 2C:20-3	9-1-1	233 Kinderkamack Road, Hackensack, NJ, 07601	9.0	I4	2025-05-05 18:07:55	2025	May	18:07	Monday	2025-05-05 18:40:35	2025-05-05 18:49:20	2025-05-05 19:15:37	0 days 00:26:17	0 days 00:41:25	P.O. Angelo Vicale 370	See Report	Routine	"CCAD# 25-163269  Indira states her VW was taken in the past hour  - sosa_c - 5/5/2025 6:09:06 PM
+? - ? - ?
+? - ? - ?"	25-037005	Motor Vehicle Theft - 2C:20-3	233 Kinderkamack Road, Hackensack, NJ, 07601	2025-05-05 18:07:55	25-037005	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Sosa_C	05/05/2025 18:09:06	Ccad# 25 163269 indira states her vw was taken in the past hour ? ? ? ? ? ?	100	05/05/25	null	Unknown	Monday	May	2025	5	5	Kinderkamack Road, 200 Block	YTD	9.0	6	3	High Quality
+25-037180	Sexual Assault - 2C:14-2b	9-1-1	119 Essex Street, Hackensack, NJ, 07601	6.0	F1	2025-05-06 09:46:13	2025	May	09:46	Tuesday	2025-05-06 09:48:22	2025-05-06 09:48:25	2025-05-06 10:23:13	0 days 00:34:48	0 days 00:02:12	P.O. Bobby Rivera 361	See Report	Emergency	"CCAD# 25-164069  caller stated there is a male party attempting to have sex with a female - Sosa_C - 5/6/2025 9:48:22 AM
+without her consent and stated the male has multiple firearms - Sosa_C - 5/6/2025 9:48:22 AM
+? - ? - ?"	25-037180	Sexual Assault - 2C:14-2b	119 Essex Street, Hackensack, NJ, 07601	2025-05-06 09:46:13	25-037180	Sexual Assault - 2C:14-2b	Sexual Offenses	Sosa_C	05/06/2025 09:48:22	Ccad# 25 164069 caller stated there is male party attempting to have sex with female without her consent and stated the male has multiple firearms ? ? ?	100	05/06/25	null	Unknown	Tuesday	May	2025	5	6	Essex Street, 100 Block	YTD	6.0	6	3	High Quality
+25-038062	Burglary - Residence - 2C:18-2	Phone	100 John Street, Hackensack, NJ, 07601	7.0	G2	2025-05-09 00:45:54	2025	May	00:45	Friday	2025-05-09 00:47:38	2025-05-09 00:50:22	2025-05-09 06:13:42	0 days 05:23:20	0 days 00:04:28	P.O. Juda DeOliveira 376	See Report	Emergency	"party sates daughter ex has been stalking her & broker houses window 2 mins in the past - cavallo_f - 5/9/2025 12:46:51 AM
+17 y?o male BC:25-168098 - cavallo_f - 5/9/2025 12:48:14 AM
+party is in the backyard. Hispanic male, tall, ski mask with hooded  - farhi_b - 5/9/2025 12:48:53 AM"	25-038062	Burglary - Residence - 2C:18-2	100 John Street, Hackensack, NJ, 07601	2025-05-09 00:45:54	25-038062	Burglary - Residence - 2C:18-2	Burglary - Residence	Cavallo_F	05/09/2025 00:46:51	Party sates daughter ex has been stalking her & broker houses window 2 mins in the past 17 ? male bc:25 168098 party is in the backyard. Hispanic male, tall, ski mask with hooded	100	05/09/25	null	Unknown	Friday	May	2025	5	9	John Street, 100 Block	YTD	7.0	6	3	High Quality
+25-038971	Burglary - Auto - 2C:18-2	Phone	38 Moonachie Road, Hackensack, NJ, 07601	5.0	E3	2025-05-12 06:50:10	2025	May	06:50	Monday	2025-05-12 06:53:17	2025-05-12 07:01:17	2025-05-12 07:24:15	0 days 00:22:58	0 days 00:11:07	P.O. Forrod Bonsu 353	See Report	Emergency	"In parking lot.   Left vehicle doors unlocked - kiselow_g - 5/12/2025 6:51:35 AM
+? - ? - ?
+? - ? - ?"	25-038971	Burglary - Auto - 2C:18-2	38 Moonachie Road, Hackensack, NJ, 07601	2025-05-12 06:50:10	25-038971	Burglary - Auto - 2C:18-2	Burglary - Auto	Kiselow_G	05/12/2025 06:51:35	In parking lot. Left vehicle doors unlocked ? ? ? ? ? ?	100	05/12/25	null	Unknown	Monday	May	2025	5	12	Moonachie Road, 0 Block	YTD	5.0	6	3	High Quality
+25-039095	Burglary - Residence - 2C:18-2	Walk-In	343 Park Street, Hackensack, NJ, 07601	8.0	H2	2025-05-12 13:20:26	2025	May	13:20	Monday	2025-05-12 13:32:18	2025-05-12 13:47:44	2025-05-12 14:41:31	0 days 00:53:47	0 days 00:27:18	P.O. Peter Voorhis 380	See Report	Emergency	"Occurred on the first of the month.  Fraud on debit card.  Packet complete - kiselow_g - 5/12/2025 1:25:52 PM
+Walk in - kiselow_g - 5/12/2025 1:30:05 PM
+? - ? - ?"	25-039095	Burglary - Residence - 2C:18-2	343 Park Street, Hackensack, NJ, 07601	2025-05-12 13:20:26	25-039095	Burglary - Residence - 2C:18-2	Burglary - Residence	Kiselow_G	05/12/2025 13:25:52	Occurred on the first of the month. Fraud on debit card. Packet complete walk in ? ? ?	100	05/12/25	null	Unknown	Monday	May	2025	5	12	Park Street, 300 Block	YTD	8.0	6	3	High Quality
+25-039279	Sexual Assault - 2C:14-2b	Phone	4 Valley Health Plaza, Hackensack, NJ, 07601			2025-05-13 01:48:55	2025	May	01:48	Tuesday	2025-05-13 01:49:11	2025-05-13 01:58:01	2025-05-13 02:59:58	0 days 01:01:57	0 days 00:09:06	P.O. Angelo Vicale 370	See Report	Emergency		25-039279	Sexual Assault - 2C:14-2b	4 Valley Health Plaza, Hackensack, NJ, 07601	2025-05-13 01:48:55	25-039279	Sexual Assault - 2C:14-2b	Sexual Offenses				0	05/13/25	null	Unknown	Tuesday	May	2025	5	13	Valley Health Plaza, 0 Block	YTD		6	3	No CAD Notes
+25-039451	Sexual Assault - 2C:14-2b	Other - See Notes	135 First Street, Hackensack, NJ, 07601	7.0	G3	2025-05-13 15:15:09	2025	May	15:15	Tuesday	2025-05-13 15:16:01	2025-05-13 15:16:03	2025-05-13 15:16:39	0 days 00:00:36	0 days 00:00:54	Det. Cristobal Lara-Nunez 341	See Report	Emergency		25-039451	Sexual Assault - 2C:14-2b	135 First Street, Hackensack, NJ, 07601	2025-05-13 15:15:09	25-039451	Sexual Assault - 2C:14-2b	Sexual Offenses				0	05/13/25	null	Unknown	Tuesday	May	2025	5	13	First Street, 100 Block	YTD	7.0	6	3	No CAD Notes
+25-039778	Motor Vehicle Theft - 2C:20-3	Phone	520 River Street, Hackensack, NJ, 07601	9.0	I1	2025-05-14 15:30:51	2025	May	15:30	Wednesday	2025-05-14 15:32:26	2025-05-14 15:37:23	2025-05-14 16:45:23	0 days 01:08:00	0 days 00:06:32	P.O. Kevin Small 328	See Report	Routine	"26 from lot - kiselow_g - 5/14/2025 3:31:13 PM
+? - ? - ?
+? - ? - ?"	25-039778	Motor Vehicle Theft - 2C:20-3	520 River Street, Hackensack, NJ, 07601	2025-05-14 15:30:51	25-039778	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Kiselow_G	05/14/2025 15:31:13	26 from lot ? ? ? ? ? ?	100	05/14/25	null	Unknown	Wednesday	May	2025	5	14	River Street, 500 Block	YTD	9.0	6	3	High Quality
+25-039963	Motor Vehicle Theft - 2C:20-3	Walk-In	90 Railroad Avenue, Hackensack, NJ, 07601	7.0	G2	2025-05-15 08:15:38	2025	May	08:15	Thursday	2025-05-15 08:16:17	2025-05-15 08:16:25	2025-05-15 08:52:35	0 days 00:36:10	0 days 00:00:47	P.O. Christian Alvarez 364	See Report	Routine		25-039963	Motor Vehicle Theft - 2C:20-3	90 Railroad Avenue, Hackensack, NJ, 07601	2025-05-15 08:15:38	25-039963	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	05/15/25	null	Unknown	Thursday	May	2025	5	15	Railroad Avenue, 0 Block	YTD	7.0	6	3	No CAD Notes
+25-040394	Burglary - Residence - 2C:18-2	Walk-In	33 Henry Place, Hackensack, NJ, 07601	5.0	E3	2025-05-16 13:20:08	2025	May	13:20	Friday	2025-05-16 13:32:10	2025-05-16 13:32:17	2025-05-16 14:59:53	0 days 01:27:36	0 days 00:12:09	P.O. Paula Lopez 362	See Report	Emergency	"walk in reporting her apartment was burglarized twice this week. Monday and today.  - ortiz_n - 5/16/2025 1:23:22 PM
+party is already reluctant to provide address. - ortiz_n - 5/16/2025 1:24:13 PM
+? - ? - ?"	25-040394	Burglary - Residence - 2C:18-2	33 Henry Place, Hackensack, NJ, 07601	2025-05-16 13:20:08	25-040394	Burglary - Residence - 2C:18-2	Burglary - Residence	Ortiz_N	05/16/2025 13:23:22	Walk in reporting her apartment was burglarized twice this week. Monday and today. Party is already reluctant to provide address. ? ? ?	100	05/16/25	null	Unknown	Friday	May	2025	5	16	Henry Place, 0 Block	YTD	5.0	6	3	High Quality
+25-041339	Motor Vehicle Theft - 2C:20-3	9-1-1	55 Clinton Place, Hackensack, NJ, 07601	9.0	I1	2025-05-19 19:32:34	2025	May	19:32	Monday	2025-05-19 19:34:39	2025-05-19 19:45:24	2025-05-19 20:58:14	0 days 01:12:50	0 days 00:12:50	P.O. Aziah Miller 357	See Report	Routine	"caller rpeorting her grey ford escape was stolen - Sroka_T - 5/19/2025 7:34:01 PM
+last saw the vehicle at 8pm yesterday in the parking lot keys not in the vehicle - Sroka_T - 5/19/2025 7:34:01 PM
+CCAD # 25-182882 - Sroka_T - 5/19/2025 7:34:01 PM"	25-041339	Motor Vehicle Theft - 2C:20-3	55 Clinton Place, Hackensack, NJ, 07601	2025-05-19 19:32:34	25-041339	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Sroka_T	05/19/2025 19:34:01	Caller rpeorting her grey ford escape was stolen last saw the vehicle at 8pm yesterday in the parking lot keys not in the vehicle ccad # 25 182882	100	05/19/25	null	Unknown	Monday	May	2025	5	19	Clinton Place, 0 Block	YTD	9.0	6	3	High Quality
+25-041571	Burglary - Auto - 2C:18-2	Walk-In	461 Passaic Street, Hackensack, NJ, 07601	8.0	H5	2025-05-20 13:30:15	2025	May	13:30	Tuesday	2025-05-20 14:04:37	2025-05-20 14:04:38	2025-05-20 14:33:41	0 days 00:29:03	0 days 00:34:23	P.O. Daniel Francavilla 329	See Report	Emergency	"unknown suspect(s) entered vehicle and stole a handicapped parking placard - kiselow_g - 5/20/2025 1:34:08 PM
+? - ? - ?
+? - ? - ?"	25-041571	Burglary - Auto - 2C:18-2	461 Passaic Street, Hackensack, NJ, 07601	2025-05-20 13:30:15	25-041571	Burglary - Auto - 2C:18-2	Burglary - Auto	Kiselow_G	05/20/2025 13:34:08	Unknown suspect entered vehicle and stole handicapped parking placard ? ? ? ? ? ?	100	05/20/25	null	Unknown	Tuesday	May	2025	5	20	Passaic Street, 400 Block	YTD	8.0	6	3	High Quality
+25-041892	Criminal Sexual Contact - 2C:14-3a	Walk-In	43 Maple Avenue, Hackensack, NJ, 07601	9.0	I1	2025-05-21 14:05:42	2025	May	14:05	Wednesday	2025-05-21 14:50:27	2025-05-21 14:50:35	2025-05-21 16:09:33	0 days 01:18:58	0 days 00:44:53	P.O. Daniel Francavilla 329	See Report	Routine	"Incident occurred on the 13th - kiselow_g - 5/21/2025 2:42:06 PM
+Walk in - kiselow_g - 5/21/2025 2:48:44 PM
+? - ? - ?"	25-041892	Criminal Sexual Contact - 2C:14-3a	43 Maple Avenue, Hackensack, NJ, 07601	2025-05-21 14:05:42	25-041892	Criminal Sexual Contact - 2C:14-3a	Sexual Offenses	Kiselow_G	05/21/2025 14:42:06	Incident occurred on the 13th walk in ? ? ?	100	05/21/25	null	Unknown	Wednesday	May	2025	5	21	Maple Avenue, 0 Block	YTD	9.0	6	3	High Quality
+25-042272	Burglary - Residence - 2C:18-2	Phone	18 East Camden Street, Hackensack, NJ, 07601	8.0	H1	2025-05-22 21:35:24	2025	May	21:35	Thursday	2025-05-22 21:38:26	2025-05-22 21:40:38	2025-05-22 22:18:49	0 days 00:38:11	0 days 00:05:14	P.O. Steven Lemanowicz 347	See Report	Emergency	"ex-bf entered apartment and stole $30,000 from the safe.  Actor on scene - wouters_f - 5/22/2025 9:37:39 PM
+? - ? - ?
+? - ? - ?"	25-042272	Burglary - Residence - 2C:18-2	18 East Camden Street, Hackensack, NJ, 07601	2025-05-22 21:35:24	25-042272	Burglary - Residence - 2C:18-2	Burglary - Residence	Wouters_F	05/22/2025 21:37:39	Ex bf entered apartment and stole $30,000 from the safe. Actor on scene ? ? ? ? ? ?	100	05/22/25	null	Unknown	Thursday	May	2025	5	22	East Camden Street, 0 Block	YTD	8.0	6	3	High Quality
+25-042950	Burglary - Commercial - 2C:18-2	Phone	20 Prospect Avenue, Hackensack, NJ, 07601	7.0	G4	2025-05-25 08:51:39	2025	May	08:51	Sunday	2025-05-25 09:35:39	2025-05-25 09:35:39	2025-05-25 10:37:19	0 days 01:01:40	0 days 00:44:00	P.O. Jann Aberde 386	See Report	Emergency	"Burglary occurred earlier today, HUMC never notified HPD  - Ortiz_n - 5/25/2025 8:52:48 AM
+? - ? - ?
+? - ? - ?"	25-042950	Burglary - Commercial - 2C:18-2	20 Prospect Avenue, Hackensack, NJ, 07601	2025-05-25 08:51:39	25-042950	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Ortiz_N	05/25/2025 08:52:48	Burglary occurred earlier today, humc never notified hpd ? ? ? ? ? ?	100	05/25/25	null	Unknown	Sunday	May	2025	5	25	Prospect Avenue, 0 Block	YTD	7.0	6	3	High Quality
+25-043899	Burglary - Residence - 2C:18-2	Walk-In	160 River Street, Hackensack, NJ, 07601			2025-05-28 16:53:40	2025	May	16:53	Wednesday	2025-05-28 16:57:12	2025-05-28 16:57:19	2025-05-28 17:58:35	0 days 01:01:16	0 days 00:03:39	P.O. Kevin Small 328	See Report	Emergency	"Burglary that occurred in the past.  Pai of pants and SS card. - HAN_J - 5/28/2025 4:55:40 PM
+? - ? - ?
+? - ? - ?"	25-043899	Burglary - Residence - 2C:18-2	160 River Street, Hackensack, NJ, 07601	2025-05-28 16:53:40	25-043899	Burglary - Residence - 2C:18-2	Burglary - Residence	Han_J	05/28/2025 16:55:40	Burglary that occurred in the past. Pai of pants and ss card. ? ? ? ? ? ?	100	05/28/25	null	Unknown	Wednesday	May	2025	5	28	River Street, 100 Block	YTD		6	3	High Quality
+25-044042	Robbery - 2C:15-1	9-1-1	Park Street & Passaic Street, Hackensack, NJ, 07601	8.0	H2	2025-05-29 03:57:10	2025	May	03:57	Thursday	2025-05-29 04:00:09	2025-05-29 04:01:27	2025-05-29 05:08:41	0 days 01:07:14	0 days 00:04:17	P.O. Jacob Price 366	See Report	Emergency	"CALLER STATING THAT MALE PARTY PUNCHED THE CALLER IN THE FACE  cc 25-194998 - lemanowicz_s - 5/29/2025 3:59:10 AM
+suspect: HISPANIC MALE PARTY - WEARING RED HOODIE, BLACK PANTS - lemanowicz_s - 5/29/2025 3:59:10 AM
+CALLER IS WEARING A GREY HOODIE AND BLUE PANTS - IN THE PARKING LOT - lemanowicz_s - 5/29/2025 3:59:10 AM"	25-044042	Robbery - 2C:15-1	Park Street & Passaic Street, Hackensack, NJ, 07601	2025-05-29 03:57:10	25-044042	Robbery - 2C:15-1	Robbery	Lemanowicz_S	05/29/2025 03:59:10	Caller stating that male party punched the caller in the face 25 194998 suspect: hispanic male party wearing red hoodie, black pants caller is wearing grey hoodie and blue pants in the parking lot	100	05/29/25	null	Unknown	Thursday	May	2025	5	29	Park Street & Passaic Street	YTD	8.0	6	3	High Quality
+25-045625	Motor Vehicle Theft - 2C:20-3	Phone	1 University Plaza Drive, Hackensack, NJ, 07601	9.0	I3	2025-06-03 06:10:31	2025	June	06:10	Tuesday	2025-06-03 06:11:24	2025-06-03 06:30:05	2025-06-03 08:22:00	0 days 01:51:55	0 days 00:19:34	P.O. Angie Tabares 363	See Report	Routine	"Caller reports his red CRV was broken into. will be standing by.  - farhi_b - 6/3/2025 6:12:29 AM
+? - ? - ?
+? - ? - ?"	25-045625	Motor Vehicle Theft - 2C:20-3	1 University Plaza Drive, Hackensack, NJ, 07601	2025-06-03 06:10:31	25-045625	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Farhi_B	06/03/2025 06:12:29	Caller reports his red crv was broken into. Will be standing by. ? ? ? ? ? ?	100	06/03/25	null	Unknown	Tuesday	June	2025	6	3	University Plaza Drive, 0 Block	YTD	9.0	6	3	High Quality
+25-045839	Motor Vehicle Theft - 2C:20-3	Phone	160 Overlook Avenue, Hackensack, NJ, 07601	7.0	G4	2025-06-03 19:30:42	2025	June	19:30	Tuesday	2025-06-03 19:47:41	2025-06-03 19:55:14	2025-06-03 21:00:02	0 days 01:04:48	0 days 00:24:32	P.O. Anthony Mattalian 83	See Report	Routine	"Stolen yamaha R1 meet near rear entrance to garage (comet way) - ortiz_n - 6/3/2025 7:31:47 PM
+? - ? - ?
+? - ? - ?"	25-045839	Motor Vehicle Theft - 2C:20-3	160 Overlook Avenue, Hackensack, NJ, 07601	2025-06-03 19:30:42	25-045839	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Ortiz_N	06/03/2025 19:31:47	Stolen yamaha r1 meet near rear entrance to garage ? ? ? ? ? ?	100	06/03/25	null	Unknown	Tuesday	June	2025	6	3	Overlook Avenue, 100 Block	YTD	7.0	6	3	High Quality
+25-045993	Sexual Assault - 2C:14-2b	Other - See Notes	167 Central Avenue, Hackensack, NJ, 07601	7.0	G3	2025-06-04 08:58:28	2025	June	08:58	Wednesday	2025-06-04 08:58:28	2025-06-04 08:58:28	2025-06-04 08:58:28	0 days 00:00:00	0 days 00:00:00	Det. John Tanucilli 335	See Report	Emergency	"BCPO SVU follow-up - Incident allegedly occurred on 5/31/2025 - never report to HPD only BCPO SVU - tanucilli_j - 6/4/2025 9:00:33 AM
+? - ? - ?
+? - ? - ?"	25-045993	Sexual Assault - 2C:14-2b	167 Central Avenue, Hackensack, NJ, 07601	2025-06-04 08:58:28	25-045993	Sexual Assault - 2C:14-2b	Sexual Offenses	Tanucilli_J	06/04/2025 09:00:33	Bcpo svu follow incident allegedly occurred on 5/31/2025 never report to hpd only bcpo svu ? ? ? ? ? ?	100	06/04/25	null	Unknown	Wednesday	June	2025	6	4	Central Avenue, 100 Block	YTD	7.0	6	3	High Quality
+25-046075	Sexual Assault - 2C:14-2b	Phone	6-8 Prospect Avenue, Hackensack, NJ, 07601			2025-06-04 14:05:59	2025	June	14:05	Wednesday	2025-06-04 15:32:32	2025-06-04 15:42:34	2025-06-04 17:55:42	0 days 02:13:08	0 days 01:36:35	P.O. Aziah Miller 357	See Report	Emergency	"COmplainant reporting that she was sexually assaulted in a vehicle on june 1st - cavallo_f - 6/4/2025 2:08:54 PM
+? - ? - ?
+? - ? - ?"	25-046075	Sexual Assault - 2C:14-2b	6-8 Prospect Avenue, Hackensack, NJ, 07601	2025-06-04 14:05:59	25-046075	Sexual Assault - 2C:14-2b	Sexual Offenses	Cavallo_F	06/04/2025 14:08:54	Complainant reporting that she was sexually assaulted in vehicle on june 1st ? ? ? ? ? ?	100	06/04/25	null	Unknown	Wednesday	June	2025	6	4	Prospect Avenue, 0 Block	YTD		6	3	High Quality
+25-046290	Burglary - Auto - 2C:18-2	9-1-1	39 Union Street, Hackensack, NJ, 07601	7.0	G2	2025-06-05 06:47:22	2025	June	06:47	Thursday	2025-06-05 07:00:54	2025-06-05 07:04:19	2025-06-05 07:32:25	0 days 00:28:06	0 days 00:16:57	P.O. Roselys Salas 369	See Report	Emergency	"3rd party reporting a burg to a veh a blk male in his 20s wearing a blk shirt with a face mask - lemanowicz_s - 6/5/2025 6:53:06 AM
+light skinned male with hoodie cc 25-205362 - lemanowicz_s - 6/5/2025 6:53:06 AM
+suspect fled in white infiniti with partial plate PG - lemanowicz_s - 6/5/2025 6:53:06 AM"	25-046290	Burglary - Auto - 2C:18-2	39 Union Street, Hackensack, NJ, 07601	2025-06-05 06:47:22	25-046290	Burglary - Auto - 2C:18-2	Burglary - Auto	Lemanowicz_S	06/05/2025 06:53:06	3rd party reporting burg to veh blk male in his 20s wearing blk shirt with face mask light skinned male with hoodie 25 205362 suspect fled in white infiniti with partial plate pg	100	06/05/25	null	Unknown	Thursday	June	2025	6	5	Union Street, 0 Block	YTD	7.0	6	3	High Quality
+25-046294	Burglary - Auto - 2C:18-2	9-1-1	410 Simons Avenue, Hackensack, NJ, 07601	6.0	F2	2025-06-05 06:53:06	2025	June	06:53	Thursday	2025-06-05 06:53:06	2025-06-05 06:53:06	2025-06-05 06:53:06	0 days 00:00:00	0 days 00:00:00	P.O. Angelo Vicale 370	See Report	Emergency	"2 male parties w hoodies entered into a mv and took off wht nissan   east on s summit
+ - lemanowicz_s - 6/5/2025 6:59:20 AM
+2 blk male dressed in all black / Victim vehicle reg P55UNM - tanis_r - 6/5/2025 7:06:29 AM
+25-205365 - lemanowicz_s - 6/5/2025 6:59:20 AM"	25-046294	Burglary - Auto - 2C:18-2	410 Simons Avenue, Hackensack, NJ, 07601	2025-06-05 06:53:06	25-046294	Burglary - Auto - 2C:18-2	Burglary - Auto	Lemanowicz_S	06/05/2025 06:59:20	2 male parties hoodies entered into mv and took off wht nissan east on summit 2 blk male dressed in all black / victim vehicle reg p55unm 25 205365	100	06/05/25	null	Unknown	Thursday	June	2025	6	5	Simons Avenue, 400 Block	YTD	6.0	6	3	High Quality
+25-047026	Burglary - Auto - 2C:18-2	Phone	414 Hackensack Avenue, Hackensack, NJ, 07601	9.0	I6	2025-06-07 17:14:43	2025	June	17:14	Saturday	2025-06-07 17:18:13	2025-06-07 17:21:33	2025-06-07 18:22:30	0 days 01:00:57	0 days 00:06:50	P.O. Maximiliano Anguizaca 368	See Report	Emergency	"Complainant will be standing by her vehicle in front of the 1000 building.  Unknown suspect(s) - kiselow_g - 6/7/2025 5:16:36 PM
+smashed out the windows of her vehicle - kiselow_g - 6/7/2025 5:16:36 PM
+? - ? - ?"	25-047026	Burglary - Auto - 2C:18-2	414 Hackensack Avenue, Hackensack, NJ, 07601	2025-06-07 17:14:43	25-047026	Burglary - Auto - 2C:18-2	Burglary - Auto	Kiselow_G	06/07/2025 17:16:36	Complainant will be standing by her vehicle in front of the 1000 building. Unknown suspect smashed out the windows of her vehicle ? ? ?	100	06/07/25	null	Unknown	Saturday	June	2025	6	7	Hackensack Avenue, 400 Block	YTD	9.0	6	3	High Quality
+25-047203	Burglary - Auto - 2C:18-2	9-1-1	282 American Legion Drive, Hackensack, NJ, 07601	7.0	G3	2025-06-08 10:11:05	2025	June	10:11	Sunday	2025-06-08 10:16:31	2025-06-08 10:23:09	2025-06-08 10:37:25	0 days 00:14:16	0 days 00:12:04	P.O. Roselys Salas 369	See Report	Emergency	"BURGLARY TO AUTO SMASHED WINDOW AND TOOK A BAG.  FORD ESCAPE  T64KLC NJ REG ON THE  - lemanowicz_s - 6/8/2025 10:11:56 AM
+STREET.  VEHICLE LAST SEEN 0130 A.M. INTACT.  cc 25-210025 - lemanowicz_s - 6/8/2025 10:11:56 AM
+? - ? - ?"	25-047203	Burglary - Auto - 2C:18-2	282 American Legion Drive, Hackensack, NJ, 07601	2025-06-08 10:11:05	25-047203	Burglary - Auto - 2C:18-2	Burglary - Auto	Lemanowicz_S	06/08/2025 10:11:56	Burglary to auto smashed window and took bag. Ford escape t64klc nj reg on the street. Vehicle last seen 0130 . Intact. 25 210025 ? ? ?	100	06/08/25	null	Unknown	Sunday	June	2025	6	8	American Legion Drive, 200 Block	YTD	7.0	6	3	High Quality
+25-048048	Motor Vehicle Theft - 2C:20-3	Phone	150 Main Street, Hackensack, NJ, 07601			2025-06-11 04:34:09	2025	June	04:34	Wednesday	2025-06-11 04:41:35	2025-06-11 04:41:47	2025-06-11 06:36:37	0 days 01:54:50	0 days 00:07:38	P.O. Massimo Gallorini 379	See Report	Routine	"toyota 4 runner Grey just stolen amazon driver - ortiz_n - 6/11/2025 4:41:04 AM
+? - ? - ?
+? - ? - ?"	25-048048	Motor Vehicle Theft - 2C:20-3	150 Main Street, Hackensack, NJ, 07601	2025-06-11 04:34:09	25-048048	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Ortiz_N	06/11/2025 04:41:04	Toyota 4 runner grey just stolen amazon driver ? ? ? ? ? ?	100	06/11/25	null	Unknown	Wednesday	June	2025	6	11	Main Street, 100 Block	YTD		6	3	High Quality
+25-048869	Burglary - Auto - 2C:18-2	Phone	211 Essex Street, Hackensack, NJ, 07601	6.0	F1	2025-06-13 14:52:59	2025	June	14:52	Friday	2025-06-13 14:59:17	2025-06-13 14:59:32	2025-06-13 15:32:55	0 days 00:33:23	0 days 00:06:33	P.O. Angelo Vicale 370	See Report	Emergency		25-048869	Burglary - Auto - 2C:18-2	211 Essex Street, Hackensack, NJ, 07601	2025-06-13 14:52:59	25-048869	Burglary - Auto - 2C:18-2	Burglary - Auto				0	06/13/25	null	Unknown	Friday	June	2025	6	13	Essex Street, 200 Block	YTD	6.0	6	3	No CAD Notes
+25-050281	Burglary - Residence - 2C:18-2	Phone	259 Park Street, Hackensack, NJ, 07601	8.0	H2	2025-06-18 11:09:24	2025	June	11:09	Wednesday	2025-06-18 11:32:34	2025-06-18 11:34:00	2025-06-18 12:29:29	0 days 00:55:29	0 days 00:24:36	P.O. Micah Gibson 365	See Report	Emergency	"Someone entered and stole the family cat - knapp_j - 6/18/2025 11:10:12 AM
+? - ? - ?
+? - ? - ?"	25-050281	Burglary - Residence - 2C:18-2	259 Park Street, Hackensack, NJ, 07601	2025-06-18 11:09:24	25-050281	Burglary - Residence - 2C:18-2	Burglary - Residence	Knapp_J	06/18/2025 11:10:12	Someone entered and stole the family cat ? ? ? ? ? ?	100	06/18/25	null	Unknown	Wednesday	June	2025	6	18	Park Street, 200 Block	YTD	8.0	6	3	High Quality
+25-050476	Sexual Assault - 2C:14-2b	Phone	125 Lawrence Street, Hackensack, NJ, 07601	7.0	G2	2025-06-18 23:42:18	2025	June	23:42	Wednesday	2025-06-18 23:46:48	2025-06-18 23:47:57	2025-06-19 01:01:23	0 days 01:13:26	0 days 00:05:39	P.O. Paula Lopez 362	See Report	Emergency	"Caller states her 7 y/o was sexually assaulted by the father. Will meet officer outside. - competiello_fa - 6/18/2025 11:44:14 PM
+TOT Lyndhurst PD - rivera_w - 6/19/2025 1:01:21 AM
+? - ? - ?"	25-050476	Sexual Assault - 2C:14-2b	125 Lawrence Street, Hackensack, NJ, 07601	2025-06-18 23:42:18	25-050476	Sexual Assault - 2C:14-2b	Sexual Offenses	Competiello_Fa	06/18/2025 23:44:14	Caller states her 7 / was sexually assaulted by the father. Will meet officer outside. Tot lyndhurst pd ? ? ?	100	06/18/25	null	Unknown	Wednesday	June	2025	6	18	Lawrence Street, 100 Block	YTD	7.0	6	3	High Quality
+25-051165	Motor Vehicle Theft - 2C:20-3	Walk-In	81 Euclid Avenue, Hackensack, NJ, 07601	9.0	I2	2025-06-21 10:42:26	2025	June	10:42	Saturday	2025-06-21 10:53:52	2025-06-21 10:54:06	2025-06-21 11:15:28	0 days 00:21:22	0 days 00:11:40	P.O. Jacob Price 366	See Report	Routine	"***WALK IN*** - wouters_f - 6/21/2025 10:43:22 AM
+? - ? - ?
+? - ? - ?"	25-051165	Motor Vehicle Theft - 2C:20-3	81 Euclid Avenue, Hackensack, NJ, 07601	2025-06-21 10:42:26	25-051165	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Wouters_F	06/21/2025 10:43:22	***walk in*** ? ? ? ? ? ?	100	06/21/25	null	Unknown	Saturday	June	2025	6	21	Euclid Avenue, 0 Block	YTD	9.0	6	3	High Quality
+25-051170	Motor Vehicle Theft - 2C:20-3	9-1-1	336 Main Street, Hackensack, NJ, 07601	8.0	H1	2025-06-21 11:03:13	2025	June	11:03	Saturday	2025-06-21 11:03:13	2025-06-21 11:03:13	2025-06-21 11:03:13	0 days 00:00:00	0 days 00:00:00	P.O. Angelo Vicale 370	See Report	Routine	"grey toyota highlander just happened.... no direction of flight - antista_ma - 6/21/2025 11:04:19 AM
+25-228333 - antista_ma - 6/21/2025 11:04:19 AM
+? - ? - ?"	25-051170	Motor Vehicle Theft - 2C:20-3	336 Main Street, Hackensack, NJ, 07601	2025-06-21 11:03:13	25-051170	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Antista_Ma	06/21/2025 11:04:19	Grey toyota highlander just happened.... No direction of flight 25 228333 ? ? ?	100	06/21/25	null	Unknown	Saturday	June	2025	6	21	Main Street, 300 Block	YTD	8.0	6	3	High Quality
+25-051478	Motor Vehicle Theft - 2C:20-3	Phone	95 Tracy Place, Hackensack, NJ, 07601	7.0	G5	2025-06-22 11:25:43	2025	June	11:25	Sunday	2025-06-22 11:32:08	2025-06-22 11:37:34	2025-06-22 12:29:01	0 days 00:51:27	0 days 00:11:51	P.O. Jacob Price 366	See Report	Routine		25-051478	Motor Vehicle Theft - 2C:20-3	95 Tracy Place, Hackensack, NJ, 07601	2025-06-22 11:25:43	25-051478	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft				0	06/22/25	null	Unknown	Sunday	June	2025	6	22	Tracy Place, 0 Block	YTD	7.0	6	3	No CAD Notes
+25-053161	Burglary - Residence - 2C:18-2	9-1-1	77 Prospect Avenue, Hackensack, NJ, 07601	7.0	G4	2025-06-27 14:18:09	2025	June	14:18	Friday	2025-06-27 15:08:26	2025-06-27 15:14:18	2025-06-27 15:55:38	0 days 00:41:20	0 days 00:56:09	P.O. Angie Tabares 363	See Report	Emergency	"caller states his apartment was robbed. wife was home but did not hear - Gervasi_J - 6/27/2025 2:19:03 PM
+CC#25-237451 - Gervasi_J - 6/27/2025 2:19:03 PM
+? - ? - ?"	25-053161	Burglary - Residence - 2C:18-2	77 Prospect Avenue, Hackensack, NJ, 07601	2025-06-27 14:18:09	25-053161	Burglary - Residence - 2C:18-2	Burglary - Residence	Gervasi_J	06/27/2025 14:19:03	Caller states his apartment was robbed. Wife was home but did not hear 237451 ? ? ?	100	06/27/25	null	Unknown	Friday	June	2025	6	27	Prospect Avenue, 0 Block	YTD	7.0	6	3	High Quality
+25-053984	Burglary - Auto - 2C:18-2	9-1-1	33 East Broadway, Hackensack, NJ, 07601	5.0	E2	2025-06-30 07:33:04	2025	June	07:33	Monday	2025-06-30 07:36:10	2025-06-30 07:37:48	2025-06-30 08:03:55	0 days 00:26:07	0 days 00:04:44	P.O. Laura Lopez-Amaya 374	See Report	Emergency	"tool(s) stolen from vehicle. - wouters_f - 6/30/2025 7:33:56 AM
+25-240989 - wouters_f - 6/30/2025 7:34:06 AM
+? - ? - ?"	25-053984	Burglary - Auto - 2C:18-2	33 East Broadway, Hackensack, NJ, 07601	2025-06-30 07:33:04	25-053984	Burglary - Auto - 2C:18-2	Burglary - Auto	Wouters_F	06/30/2025 07:33:56	Tool stolen from vehicle. 25 240989 ? ? ?	100	06/30/25	null	Unknown	Monday	June	2025	6	30	East Broadway, 0 Block	28-Day	5.0	6	2	High Quality
+25-054058	Burglary - Residence - 2C:18-2	Phone	100 Essex Street, Hackensack, NJ, 07601	7.0	G2	2025-06-30 11:16:33	2025	June	11:16	Monday	2025-06-30 11:19:09	2025-06-30 11:22:50	2025-06-30 11:46:08	0 days 00:23:18	0 days 00:06:17	P.O. Steven Lemanowicz 347	See Report	Emergency	"currently vacant room, see comp on site. - wouters_f - 6/30/2025 11:17:34 AM
+? - ? - ?
+? - ? - ?"	25-054058	Burglary - Residence - 2C:18-2	100 Essex Street, Hackensack, NJ, 07601	2025-06-30 11:16:33	25-054058	Burglary - Residence - 2C:18-2	Burglary - Residence	Wouters_F	06/30/2025 11:17:34	Currently vacant room, see comp on site. ? ? ? ? ? ?	100	06/30/25	null	Unknown	Monday	June	2025	6	30	Essex Street, 100 Block	28-Day	7.0	6	2	High Quality
+25-054890	Burglary - Residence - 2C:18-2	Phone	175 Passaic Street, Hackensack, NJ, 07601	8.0	H3	2025-07-02 19:40:35	2025	July	19:40	Wednesday	2025-07-02 19:42:00	2025-07-02 19:45:10	2025-07-02 20:13:11	0 days 00:28:01	0 days 00:04:35	P.O. Forrod Bonsu 353	See Report	Emergency	"Caller reported that jewelry is missing from her residence  - kiselow_g - 7/2/2025 7:41:35 PM
+? - ? - ?
+? - ? - ?"	25-054890	Burglary - Residence - 2C:18-2	175 Passaic Street, Hackensack, NJ, 07601	2025-07-02 19:40:35	25-054890	Burglary - Residence - 2C:18-2	Burglary - Residence	Kiselow_G	07/02/2025 19:41:35	Caller reported that jewelry is missing from her residence ? ? ? ? ? ?	100	07/02/25	null	Unknown	Wednesday	July	2025	7	2	Passaic Street, 100 Block	28-Day	8.0	6	2	High Quality
+25-055122	Burglary - Commercial - 2C:18-2	Phone	400  Hackensack Avenue, Hackensack, NJ, 07601	9.0	I6	2025-07-03 10:21:39	2025	July	10:21	Thursday	2025-07-03 10:49:17	2025-07-03 10:59:52	2025-07-03 11:21:12	0 days 00:21:20	0 days 00:38:13	P.O. Jann Aberde 386	See Report	Emergency	"Meet Connie in reference to a burglary of a storage closet. She will meet officer - dominguez_p - 7/3/2025 10:23:16 AM
+out front of Cheesecake Factory - dominguez_p - 7/3/2025 10:23:16 AM
+? - ? - ?"	25-055122	Burglary - Commercial - 2C:18-2	400  Hackensack Avenue, Hackensack, NJ, 07601	2025-07-03 10:21:39	25-055122	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Dominguez_P	07/03/2025 10:23:16	Meet connie in reference to burglary of storage closet. She will meet officer out front of cheesecake factory ? ? ?	100	07/03/25	null	Unknown	Thursday	July	2025	7	3	Hackensack Avenue, 400 Block	28-Day	9.0	6	2	High Quality
+25-055295	Sexual Assault - 2C:14-2b	Other - See Notes	275 Beech Street, Hackensack, NJ, 07601	7.0	G4	2025-07-03 21:34:51	2025	July	21:34	Thursday	2025-07-03 21:34:51	2025-07-03 21:34:51	2025-07-03 21:34:51	0 days 00:00:00	0 days 00:00:00	Det. Cristobal Lara-Nunez 341	See Report	Emergency	"Notified by SVU Det. Huda - laranunez_c - 7/3/2025 10:11:28 PM
+? - ? - ?
+? - ? - ?"	25-055295	Sexual Assault - 2C:14-2b	275 Beech Street, Hackensack, NJ, 07601	2025-07-03 21:34:51	25-055295	Sexual Assault - 2C:14-2b	Sexual Offenses	Laranunez_C	07/03/2025 22:11:28	Notified by svu det. Huda ? ? ? ? ? ?	100	07/03/25	null	Unknown	Thursday	July	2025	7	3	Beech Street, 200 Block	28-Day	7.0	6	2	High Quality
+25-056435	Robbery - 2C:15-1	9-1-1	65 Court Street, Hackensack, NJ, 07601	5.0	E1	2025-07-07 14:40:14	2025	July	14:40	Monday	2025-07-07 14:44:00	2025-07-07 14:47:19	2025-07-07 18:52:49	0 days 04:05:30	0 days 00:07:05	P.O. Bobby Rivera 361	See Report	Emergency	"caller stating someone pepper sprayed him and took his phone - lyak_r - 7/7/2025 2:41:56 PM
+behind pepboys - lyak_r - 7/7/2025 2:41:56 PM
+? - ? - ?"	25-056435	Robbery - 2C:15-1	65 Court Street, Hackensack, NJ, 07601	2025-07-07 14:40:14	25-056435	Robbery - 2C:15-1	Robbery	Lyak_R	07/07/2025 14:41:56	Caller stating someone pepper sprayed him and took his phone behind pepboys ? ? ?	100	07/07/25	null	Unknown	Monday	July	2025	7	7	Court Street, 0 Block	28-Day	5.0	6	2	High Quality
+25-056999	Burglary - Residence - 2C:18-2	Walk-In	240 First Street, Hackensack, NJ, 07601	8.0	H3	2025-07-09 00:29:06	2025	July	00:29	Wednesday	2025-07-09 00:32:07	2025-07-09 00:34:18	2025-07-09 01:11:47	0 days 00:37:29	0 days 00:05:12	P.O. Angelo Vicale 370	See Report	Emergency	"**WALK IN** - wouters_f - 7/9/2025 12:29:34 AM
+? - ? - ?
+? - ? - ?"	25-056999	Burglary - Residence - 2C:18-2	240 First Street, Hackensack, NJ, 07601	2025-07-09 00:29:06	25-056999	Burglary - Residence - 2C:18-2	Burglary - Residence	Wouters_F	07/09/2025 00:29:34	**walk in** ? ? ? ? ? ?	100	07/09/25	null	Unknown	Wednesday	July	2025	7	9	First Street, 200 Block	28-Day	8.0	6	2	High Quality
+25-057343	Robbery - 2C:15-1	9-1-1	50 Main Street, Hackensack, NJ, 07601	7.0	G1	2025-07-10 02:32:02	2025	July	02:32	Thursday	2025-07-10 02:33:29	2025-07-10 02:33:45	2025-07-10 04:55:17	0 days 02:21:32	0 days 00:01:43	P.O. Alexander Reyes 355	See Report	Emergency	"uber driver stating male passenger was assaulted.  --silver honda civic - wouters_f - 7/10/2025 2:33:18 AM
+25-255340 - wouters_f - 7/10/2025 2:33:18 AM
+? - ? - ?"	25-057343	Robbery - 2C:15-1	50 Main Street, Hackensack, NJ, 07601	2025-07-10 02:32:02	25-057343	Robbery - 2C:15-1	Robbery	Wouters_F	07/10/2025 02:33:18	Uber driver stating male passenger was assaulted. Silver honda civic 25 255340 ? ? ?	100	07/10/25	null	Unknown	Thursday	July	2025	7	10	Main Street, 0 Block	28-Day	7.0	6	2	High Quality
+25-058041	Burglary - Commercial - 2C:18-2	Phone	4 Camden Street, Hackensack, NJ, 07601	8.0	H2	2025-07-12 07:00:06	2025	July	07:00	Saturday	2025-07-12 07:03:50	2025-07-12 07:03:52	2025-07-12 08:21:13	0 days 01:17:21	0 days 00:03:46	P.O. Paula Lopez 362	See Report	Emergency	"caller reporting the windows to a store is broken does not see anyone inside - ortiz_n - 7/12/2025 7:01:11 AM
+BCC 25-258342 - ortiz_n - 7/12/2025 7:01:32 AM
+? - ? - ?"	25-058041	Burglary - Commercial - 2C:18-2	4 Camden Street, Hackensack, NJ, 07601	2025-07-12 07:00:06	25-058041	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Ortiz_N	07/12/2025 07:01:11	Caller reporting the windows to store is broken does not see anyone inside bcc 25 258342 ? ? ?	100	07/12/25	null	Unknown	Saturday	July	2025	7	12	Camden Street, 0 Block	28-Day	8.0	6	2	High Quality
+25-058331	Sexual Assault - 2C:14-2b	Phone	215 Charles Street, Hackensack, NJ, 07601	6.0	F1	2025-07-13 02:47:47	2025	July	02:47	Sunday	2025-07-13 02:50:34	2025-07-13 02:54:44	2025-07-13 04:12:38	0 days 01:17:54	0 days 00:06:57	P.O. Juda DeOliveira 376	See Report	Emergency	"Caller reports that her boyfriend assulted her in a car and she was able get out of the car. Female  - cavallo_f - 7/13/2025 2:49:52 AM
+is wearing grey pants and a white shirt and white sneakers - cavallo_f - 7/13/2025 2:49:52 AM
+Boyfriend may still be in the area in a vehicle. - cavallo_f - 7/13/2025 2:50:11 AM"	25-058331	Sexual Assault - 2C:14-2b	215 Charles Street, Hackensack, NJ, 07601	2025-07-13 02:47:47	25-058331	Sexual Assault - 2C:14-2b	Sexual Offenses	Cavallo_F	07/13/2025 02:49:52	Caller reports that her boyfriend assulted her in car and she was able get out of the car. Female is wearing grey pants and white shirt and white sneakers boyfriend may still be in the area in vehicle.	100	07/13/25	null	Unknown	Sunday	July	2025	7	13	Charles Street, 200 Block	28-Day	6.0	6	2	High Quality
+25-058451	Burglary - Residence - 2C:18-2	9-1-1	210 Main Street, Hackensack, NJ, 07601	8.0	H1	2025-07-13 13:18:19	2025	July	13:18	Sunday	2025-07-13 13:43:22	2025-07-13 13:51:58	2025-07-13 14:58:53	0 days 01:06:55	0 days 00:33:39	P.O. Nart Marza 321	See Report	Emergency	"CCAD# 25-259896  storage unit was broken into - sosa_c - 7/13/2025 1:19:16 PM
+? - ? - ?
+? - ? - ?"	25-058451	Burglary - Residence - 2C:18-2	210 Main Street, Hackensack, NJ, 07601	2025-07-13 13:18:19	25-058451	Burglary - Residence - 2C:18-2	Burglary - Residence	Sosa_C	07/13/2025 13:19:16	Ccad# 25 259896 storage unit was broken into ? ? ? ? ? ?	100	07/13/25	null	Unknown	Sunday	July	2025	7	13	Main Street, 200 Block	28-Day	8.0	6	2	High Quality
+25-058726	Robbery - 2C:15-1	Walk-In	80 South River Street, Hackensack, NJ, 07601	5.0	E1	2025-07-14 13:09:00	2025	July	13:09	Monday	2025-07-14 13:19:31	2025-07-14 13:19:34	2025-07-14 13:55:21	0 days 00:35:47	0 days 00:10:34	P.O. Christopher Cole 385	See Report	Emergency	"Walk in reporting he was robbed at Costco last Thursday - knapp_j - 7/14/2025 1:16:23 PM
+? - ? - ?
+? - ? - ?"	25-058726	Robbery - 2C:15-1	80 South River Street, Hackensack, NJ, 07601	2025-07-14 13:09:00	25-058726	Robbery - 2C:15-1	Robbery	Knapp_J	07/14/2025 13:16:23	Walk in reporting he was robbed at costco last thursday ? ? ? ? ? ?	100	07/14/25	null	Unknown	Monday	July	2025	7	14	South River Street, 0 Block	28-Day	5.0	6	2	High Quality
+25-059260	Burglary - Auto - 2C:18-2	Phone	18 Lodi Street, Hackensack, NJ, 07601	5.0	E2	2025-07-16 04:59:48	2025	July	04:59	Wednesday	2025-07-16 05:00:59	2025-07-16 05:17:07	2025-07-16 05:33:07	0 days 00:16:00	0 days 00:17:19	P.O. Laura Lopez-Amaya 374	See Report	Emergency	"missing money from his white car parked near address - wouters_f - 7/16/2025 5:01:31 AM
+? - ? - ?
+? - ? - ?"	25-059260	Burglary - Auto - 2C:18-2	18 Lodi Street, Hackensack, NJ, 07601	2025-07-16 04:59:48	25-059260	Burglary - Auto - 2C:18-2	Burglary - Auto	Wouters_F	07/16/2025 05:01:31	Missing money from his white car parked near address ? ? ? ? ? ?	100	07/16/25	null	Unknown	Wednesday	July	2025	7	16	Lodi Street, 0 Block	28-Day	5.0	6	2	High Quality
+25-060006	Sexual Assault - 2C:14-2b	9-1-1	30 Prospect Avenue, Hackensack, NJ, 07601	7.0	G4	2025-07-18 05:46:58	2025	July	05:46	Friday	2025-07-18 05:49:47	2025-07-18 05:49:50	2025-07-18 13:48:51	0 days 07:59:01	0 days 00:02:52	P.O. Jems Peralta 384	See Report	Emergency	"48 YOF STATING SHE WAS RAPED-SEXUALLY ASSAULTED BLEEDING FORM THE ANAL AREA - kiselow_g - 7/18/2025 5:49:01 AM
+AS PER THE CALLER THE MALE PARTY IS AT THE HOUSE  .  Located in the lobby - kiselow_g - 7/18/2025 5:49:01 AM
+Bergen County CAD # 25-267094 - kiselow_g - 7/18/2025 5:49:01 AM"	25-060006	Sexual Assault - 2C:14-2b	30 Prospect Avenue, Hackensack, NJ, 07601	2025-07-18 05:46:58	25-060006	Sexual Assault - 2C:14-2b	Sexual Offenses	Kiselow_G	07/18/2025 05:49:01	48 yof stating she was raped sexually assaulted bleeding form the anal area as per the caller the male party is at the house . Located in the lobby bergen county cad # 25 267094	100	07/18/25	null	Unknown	Friday	July	2025	7	18	Prospect Avenue, 0 Block	28-Day	7.0	6	2	High Quality
+25-060143	Robbery - 2C:15-1	Walk-In	65 Court Street, Hackensack, NJ, 07601	5.0	E1	2025-07-18 15:51:45	2025	July	15:51	Friday	2025-07-18 15:54:39	2025-07-18 16:12:56	2025-07-18 17:04:53	0 days 00:51:57	0 days 00:21:11	SPO. Aster Abueg 817	See Report	Emergency		25-060143	Robbery - 2C:15-1	65 Court Street, Hackensack, NJ, 07601	2025-07-18 15:51:45	25-060143	Robbery - 2C:15-1	Robbery				0	07/18/25	null	Unknown	Friday	July	2025	7	18	Court Street, 0 Block	28-Day	5.0	6	2	No CAD Notes
+25-060392	Burglary - Auto - 2C:18-2	9-1-1	307 Maple Hill Drive, Hackensack, NJ, 07601	8.0	H5	2025-07-19 14:30:03	2025	July	14:30	Saturday	2025-07-19 14:32:07	2025-07-19 14:38:57	2025-07-19 15:25:50	0 days 00:46:53	0 days 00:08:54	P.O. Christopher Cole 385	See Report	Emergency	"CCAD# 25-269088  3 vehicles broken into - Sosa_C - 7/19/2025 2:31:03 PM
+? - ? - ?
+? - ? - ?"	25-060392	Burglary - Auto - 2C:18-2	307 Maple Hill Drive, Hackensack, NJ, 07601	2025-07-19 14:30:03	25-060392	Burglary - Auto - 2C:18-2	Burglary - Auto	Sosa_C	07/19/2025 14:31:03	Ccad# 25 269088 3 vehicles broken into ? ? ? ? ? ?	100	07/19/25	null	Unknown	Saturday	July	2025	7	19	Maple Hill Drive, 300 Block	28-Day	8.0	6	2	High Quality
+25-060401	Burglary - Auto - 2C:18-2	Radio	307 Maple Hill Drive, Hackensack, NJ, 07601	8.0	H5	2025-07-19 14:59:35	2025	July	14:59	Saturday	2025-07-19 14:59:35	2025-07-19 14:59:35	2025-07-19 14:59:35	0 days 00:00:00	0 days 00:00:00	P.O. Christopher Cole 385	See Report	Emergency		25-060401	Burglary - Auto - 2C:18-2	307 Maple Hill Drive, Hackensack, NJ, 07601	2025-07-19 14:59:35	25-060401	Burglary - Auto - 2C:18-2	Burglary - Auto				0	07/19/25	null	Unknown	Saturday	July	2025	7	19	Maple Hill Drive, 300 Block	28-Day	8.0	6	2	No CAD Notes
+25-060402	Burglary - Auto - 2C:18-2	Radio	307 Maple Hill Drive, Hackensack, NJ, 07601			2025-07-19 15:01:51	2025	July	15:01	Saturday	2025-07-19 15:01:51	2025-07-19 15:01:51	2025-07-19 15:01:51	0 days 00:00:00	0 days 00:00:00	P.O. Christopher Cole 385	See Report	Emergency		25-060402	Burglary - Auto - 2C:18-2	307 Maple Hill Drive, Hackensack, NJ, 07601	2025-07-19 15:01:51	25-060402	Burglary - Auto - 2C:18-2	Burglary - Auto				0	07/19/25	null	Unknown	Saturday	July	2025	7	19	Maple Hill Drive, 300 Block	28-Day		6	2	No CAD Notes
+25-061119	Motor Vehicle Theft - 2C:20-3	9-1-1	33 Oak Street, Hackensack, NJ, 07601	9.0	I4	2025-07-21 18:35:31	2025	July	18:35	Monday	2025-07-21 18:49:16	2025-07-21 19:00:10	2025-07-21 22:54:14	0 days 03:54:04	0 days 00:24:39	P.O. Juda DeOliveira 376	See Report	Routine	"caller stated his veh was stolen from his garage - last seen this morning -- just got home 5 min ago  - scott_l - 7/21/2025 6:37:42 PM
+garage was broken into and veh stolen - green lamboughini - scott_l - 7/21/2025 6:37:42 PM
+ccad# 25-272177 - scott_l - 7/21/2025 6:37:59 PM"	25-061119	Motor Vehicle Theft - 2C:20-3	33 Oak Street, Hackensack, NJ, 07601	2025-07-21 18:35:31	25-061119	Motor Vehicle Theft - 2C:20-3	Motor Vehicle Theft	Scott_L	07/21/2025 18:37:42	Caller stated his veh was stolen from his garage last seen this morning just got home 5 min ago garage was broken into and veh stolen green lamboughini ccad# 25 272177	100	07/21/25	null	Unknown	Monday	July	2025	7	21	Oak Street, 0 Block	7-Day	9.0	6	1	High Quality
+25-061760	Burglary - Auto - 2C:18-2	Walk-In	469 Passaic Street, Hackensack, NJ, 07601	8.0	H5	2025-07-23 12:07:08	2025	July	12:07	Wednesday	2025-07-23 12:54:44	2025-07-23 12:54:54	2025-07-23 12:55:15	0 days 00:00:21	0 days 00:47:46	P.O. Kevin Small 328	See Report	Emergency	"Walk in - kiselow_g - 7/23/2025 12:09:57 PM
+? - ? - ?
+? - ? - ?"	25-061760	Burglary - Auto - 2C:18-2	469 Passaic Street, Hackensack, NJ, 07601	2025-07-23 12:07:08	25-061760	Burglary - Auto - 2C:18-2	Burglary - Auto	Kiselow_G	07/23/2025 12:09:57	Walk in ? ? ? ? ? ?	100	07/23/25	null	Unknown	Wednesday	July	2025	7	23	Passaic Street, 400 Block	7-Day	8.0	6	1	High Quality
+25-062452	Burglary - Commercial - 2C:18-2	Phone	90 Hackensack Avenue, Hackensack, NJ, 07601	9.0	I1	2025-07-25 11:03:20	2025	July	11:03	Friday	2025-07-25 11:06:36	2025-07-25 11:12:35	2025-07-25 11:50:48	0 days 00:38:13	0 days 00:09:15	P.O. Nicholas Mazzaccaro 377	See Report	Emergency	"Unknown suspects entered the rear of the business.  Detectives were notified - kiselow_g - 7/25/2025 11:05:36 AM
+? - ? - ?
+? - ? - ?"	25-062452	Burglary - Commercial - 2C:18-2	90 Hackensack Avenue, Hackensack, NJ, 07601	2025-07-25 11:03:20	25-062452	Burglary - Commercial - 2C:18-2	Burglary - Commercial	Kiselow_G	07/25/2025 11:05:36	Unknown suspects entered the rear of the business. Detectives were notified ? ? ? ? ? ?	100	07/25/25	null	Unknown	Friday	July	2025	7	25	Hackensack Avenue, 0 Block	7-Day	9.0	6	1	High Quality
+
+// ================================================================
+// SCRPA Enhanced Data Loader - Optimized M Code
+// ================================================================
+// Project: SCRPA_Time_v2 Power BI Integration
+// Author: R. A. Carucci  
+// Purpose: High-performance CSV loader for Python-processed SCRPA data
+// Last Updated: 2025-01-27
+// Prerequisites: enhanced_scrpa_data.csv generated by master_scrpa_processor.py
+// ================================================================
+
+let
+    // ============================================================
+    // STEP 1: ROBUST FILE LOADING WITH ERROR HANDLING
+    // ============================================================
+    
+    // Define the expected file path for the Python-processed data
+    FilePath = "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv",
+    
+    // Attempt to load the CSV file with comprehensive error handling
+    Source = try 
+        Csv.Document(
+            File.Contents(FilePath),
+            [
+                Delimiter = ",",
+                Columns = null,
+                Encoding = 65001,  // UTF-8 encoding
+                QuoteStyle = QuoteStyle.Csv
+            ]
+        )
+    otherwise
+        // Create an informative error table if file is missing
+        #table(
+            {"Status", "Message", "Next_Steps", "File_Expected_At"},
+            {{
+                "ERROR", 
+                "Enhanced SCRPA data file not found", 
+                "Run: python master_scrpa_processor.py --mode process", 
+                FilePath
+            }}
+        ),
+    
+    // ============================================================
+    // STEP 2: VALIDATE DATA STRUCTURE
+    // ============================================================
+    
+    // Check if we loaded error table or actual data
+    IsErrorTable = try Table.ColumnNames(Source){0} = "Status" otherwise false,
+    
+    // If error table, return it immediately; otherwise process data
+    ValidatedSource = if IsErrorTable then Source else
+        // Promote headers and validate structure
+        let
+            PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+            
+            // Validate that essential columns exist
+            RequiredColumns = {"Case_Number", "IncidentType", "Incident_Date"},
+            AvailableColumns = Table.ColumnNames(PromotedHeaders),
+            MissingColumns = List.Difference(RequiredColumns, AvailableColumns),
+            
+            // If critical columns are missing, return error
+            StructureValidation = if List.Count(MissingColumns) > 0 then
+                #table(
+                    {"Status", "Message", "Missing_Columns"},
+                    {{"STRUCTURE_ERROR", "Required columns missing from CSV", Text.Combine(MissingColumns, ", ")}}
+                )
+            else
+                PromotedHeaders
+        in
+            StructureValidation,
+
+    // ============================================================
+    // STEP 3: OPTIMIZED DATA TYPE CONVERSION
+    // ============================================================
+    
+    // Apply data types only if we have valid data structure
+    TypedData = if Table.ColumnNames(ValidatedSource){0} = "Status" then ValidatedSource else
+        let
+            // Core identification columns
+            CoreTypes = {
+                {"Case_Number", type text},
+                {"IncidentType", type text},
+                {"Crime_Category", type text}
+            },
+            
+            // Date and time columns with error handling
+            DateTimeTypes = {
+                {"Incident_Date", type date},
+                {"Incident_Time", type time},
+                {"Year", Int64.Type},
+                {"Month", Int64.Type},
+                {"Day", Int64.Type}
+            },
+            
+            // Location and geographic columns
+            LocationTypes = {
+                {"Enhanced_Block", type text},
+                {"Grid", type text},
+                {"Zone", type text},
+                {"Day_Name", type text},
+                {"Month_Name", type text}
+            },
+            
+            // Classification columns
+            ClassificationTypes = {
+                {"Period", type text},
+                {"TimeOfDay", type text},
+                {"Officer", type text}
+            },
+            
+            // CAD processing columns
+            CADTypes = {
+                {"CAD_Username", type text},
+                {"CAD_Timestamp", type text},
+                {"CAD_Notes_Cleaned", type text},
+                {"CADNotes_Processing_Quality", type number}
+            },
+            
+            // Time metrics columns
+            TimeMetricTypes = {
+                {"Time_Response_Minutes", type number},
+                {"Time_Response_Formatted", type text},
+                {"Time_Spent_Minutes", type number},
+                {"Time_Spent_Formatted", type text}
+            },
+            
+            // Combine all type definitions
+            AllTypes = CoreTypes & DateTimeTypes & LocationTypes & ClassificationTypes & CADTypes & TimeMetricTypes,
+            
+            // Apply types only to columns that exist in the data
+            AvailableColumns = Table.ColumnNames(ValidatedSource),
+            FilteredTypes = List.Select(AllTypes, each List.Contains(AvailableColumns, _{0})),
+            
+            // Transform column types with error handling
+            TransformedTypes = Table.TransformColumnTypes(ValidatedSource, FilteredTypes)
+        in
+            TransformedTypes,
+
+    // ============================================================
+    // STEP 4: DATA QUALITY ENHANCEMENTS
+    // ============================================================
+    
+    EnhancedData = if Table.ColumnNames(TypedData){0} = "Status" then TypedData else
+        let
+            // Add TimeOfDay sort order for proper chronological ordering in visuals
+            WithTimeSort = if List.Contains(Table.ColumnNames(TypedData), "TimeOfDay") then
+                Table.AddColumn(TypedData, "TimeOfDay_SortOrder", each
+                    if [TimeOfDay] = null then 6
+                    else if Text.Contains([TimeOfDay], "04:00–07:59") then 1
+                    else if Text.Contains([TimeOfDay], "08:00–11:59") then 2  
+                    else if Text.Contains([TimeOfDay], "12:00–15:59") then 3
+                    else if Text.Contains([TimeOfDay], "16:00–19:59") then 4
+                    else if Text.Contains([TimeOfDay], "20:00–03:59") then 5
+                    else 6, Int64.Type)
+            else
+                TypedData,
+            
+            // Add Period sort order for temporal analysis
+            WithPeriodSort = if List.Contains(Table.ColumnNames(WithTimeSort), "Period") then
+                Table.AddColumn(WithTimeSort, "Period_SortOrder", each
+                    if [Period] = "7-Day" then 1
+                    else if [Period] = "28-Day" then 2
+                    else if [Period] = "YTD" then 3
+                    else if [Period] = "Historical" then 4
+                    else 5, Int64.Type)
+            else
+                WithTimeSort,
+            
+            // Validate data quality and add summary metrics
+            WithQualityMetrics = if List.Contains(Table.ColumnNames(WithPeriodSort), "CADNotes_Processing_Quality") then
+                Table.AddColumn(WithPeriodSort, "Data_Quality_Category", each
+                    if [CADNotes_Processing_Quality] >= 0.8 then "High Quality"
+                    else if [CADNotes_Processing_Quality] >= 0.6 then "Medium Quality"
+                    else if [CADNotes_Processing_Quality] >= 0.4 then "Low Quality"
+                    else if [CADNotes_Processing_Quality] > 0 then "Poor Quality"
+                    else "No CAD Notes", type text)
+            else
+                WithPeriodSort
+        in
+            WithQualityMetrics,
+
+    // ============================================================
+    // STEP 5: OPTIONAL DATA FILTERING
+    // ============================================================
+    
+    FilteredData = if Table.ColumnNames(EnhancedData){0} = "Status" then EnhancedData else
+        let
+            // Remove records with missing critical information
+            CleanedData = Table.SelectRows(EnhancedData, each 
+                [Case_Number] <> null and 
+                [Case_Number] <> "" and
+                [IncidentType] <> null and
+                [IncidentType] <> ""
+            ),
+            
+            // Optional: Filter out "Other" crime categories (uncomment if desired)
+            // FilteredCategories = Table.SelectRows(CleanedData, each [Crime_Category] <> "Other"),
+            
+            FinalFiltered = CleanedData  // Change to FilteredCategories if filtering "Other"
+        in
+            FinalFiltered,
+
+    // ============================================================
+    // STEP 6: PERFORMANCE OPTIMIZATION
+    // ============================================================
+    
+    OptimizedData = if Table.ColumnNames(FilteredData){0} = "Status" then FilteredData else
+        // Buffer the table for better performance in Power BI
+        Table.Buffer(FilteredData),
+
+    // ============================================================
+    // FINAL RESULT WITH METADATA
+    // ============================================================
+    
+    FinalResult = OptimizedData
+
+in
+    FinalResult

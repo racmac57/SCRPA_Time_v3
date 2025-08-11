@@ -1,0 +1,51 @@
+2025-08-01 11:57:48,130 - INFO - ================================================================================
+2025-08-01 11:57:48,130 - INFO - SCRPA AUTOMATED GEOCODING - 20250801_115748
+2025-08-01 11:57:48,130 - INFO - ================================================================================
+2025-08-01 11:57:48,130 - INFO - Setting up ArcGIS environment...
+2025-08-01 11:57:48,554 - INFO - Workspace set: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\temp_geocoding_auto
+2025-08-01 11:57:48,554 - INFO - Coordinate system: NAD_1983_StatePlane_New_Jersey_FIPS_2900_Feet (EPSG:3424)
+2025-08-01 11:57:48,554 - INFO - Template validated: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\10_Refrence_Files\7_Day_Templet_SCRPA_Time.aprx
+2025-08-01 11:57:48,554 - WARNING - NJ_Geocode service validation failed: module 'arcpy.geocoding' has no attribute 'DescribeGeocodeService'
+2025-08-01 11:57:48,555 - INFO - Continuing with assumption that service will be available during execution
+2025-08-01 11:57:48,555 - INFO - Starting complete automated SCRPA geocoding workflow...
+2025-08-01 11:57:48,555 - INFO - Creating processing geodatabase...
+2025-08-01 11:57:49,170 - INFO - Processing geodatabase created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\temp_geocoding_auto\SCRPA_Geocoding_20250801_115748.gdb
+2025-08-01 11:57:49,170 - INFO - Importing address data...
+2025-08-01 11:57:51,059 - INFO - Address data imported successfully: 144 records
+2025-08-01 11:57:51,470 - INFO - Required fields validated: ['Address', 'AddressID']
+2025-08-01 11:57:51,470 - INFO - Executing automated batch geocoding...
+2025-08-01 11:57:51,470 - INFO - Starting geocoding of 144 addresses...
+2025-08-01 11:57:51,471 - INFO - Using service: NJ_Geocode
+2025-08-01 11:57:52,140 - ERROR - Batch geocoding failed: Failed to execute. Parameters are not valid.
+ERROR 000732: Input Address Locator: Dataset NJ_Geocode does not exist or is not supported
+ERROR 000005: Could not open the address locator.
+Failed to execute (GeocodeAddresses).
+
+2025-08-01 11:57:52,150 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Automated_Geocoding_Complete.py", line 229, in execute_batch_geocoding
+    arcpy.geocoding.GeocodeAddresses(
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geocoding.py", line 898, in GeocodeAddresses
+    raise e
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geocoding.py", line 879, in GeocodeAddresses
+    gp.GeocodeAddresses_geocoding(
+  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 533, in <lambda>
+    return lambda *args: val(*gp_fixargs(args, True))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+arcgisscripting.ExecuteError: Failed to execute. Parameters are not valid.
+ERROR 000732: Input Address Locator: Dataset NJ_Geocode does not exist or is not supported
+ERROR 000005: Could not open the address locator.
+Failed to execute (GeocodeAddresses).
+
+
+2025-08-01 11:57:52,150 - ERROR - FATAL ERROR - Automated geocoding failed: Failed to execute geocoding
+2025-08-01 11:57:52,151 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Automated_Geocoding_Complete.py", line 840, in execute_complete_automation
+    raise Exception("Failed to execute geocoding")
+Exception: Failed to execute geocoding
+
+2025-08-01 11:57:52,151 - INFO - Generating automation report...
+2025-08-01 11:57:52,157 - INFO - Automation reports generated:
+2025-08-01 11:57:52,158 - INFO -   JSON Report: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\automated_geocoding_report_20250801_115748.json
+2025-08-01 11:57:52,158 - INFO -   Summary Report: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\automated_geocoding_summary_20250801_115748.md
+2025-08-01 11:57:52,159 - INFO - Cleaning up temporary processing files...
+2025-08-01 11:57:52,572 - INFO - Processing geodatabase removed

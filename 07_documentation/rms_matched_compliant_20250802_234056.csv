@@ -1,0 +1,87 @@
+case_number,incident_date,incident_time,time_of_day,time_of_day_sort_order,period,season,day_of_week,day_type,location,block,grid,post,incident_type,all_incidents,vehicle_1,vehicle_2,vehicle_1_and_vehicle_2,narrative,total_value_stolen,squad,officer_of_record,nibrs_classification,cycle_name
+25-000813,2025-01-03,,Unknown,99,YTD,Winter,Friday,Weekday,,Check Location Data,,,,,"NJ - W46ULY, HONDA/ACC",,,,,B4,P.O. Nicholas Mazzaccaro 377,240 = Theft of Motor Vehicle,C01W01
+25-002564,2025-01-07,,Unknown,99,YTD,Winter,Tuesday,Weekday,,Check Location Data,,,,,,,,,,STA,Det. Cristobal Lara-Nunez 341,11D = Fondling,C01W02
+25-002635,2025-01-06,,Unknown,99,YTD,Winter,Monday,Weekday,,Check Location Data,,,,,"NJ - XCSW43, HONDA/PIL",,,,,A3,P.O. Ruben Almonte 359,23F = Theft From Motor Vehicle,C01W01
+25-004097,2025-01-15,,Unknown,99,YTD,Winter,Wednesday,Weekday,,Check Location Data,,,,,"NJ - U38ULG, HONDA/CIV",,,,,B1,P.O. Frank Lorenzo 371,240 = Theft of Motor Vehicle,C01W03
+25-004629,2025-01-16,,Unknown,99,YTD,Winter,Thursday,Weekday,,Check Location Data,,,,,HYUNDAI/SONATA,,,,,A2,P.O. Massimo Gallorini 379,120 = Robbery,C01W03
+25-005871,2025-01-21,,Unknown,99,YTD,Winter,Tuesday,Weekday,,Check Location Data,,,,,"NJ - U22RSV, HONDA/PAS",,,,,B4,P.O. Roselys Salas 369,240 = Theft of Motor Vehicle,C01W04
+25-006083,2025-01-22,,Unknown,99,YTD,Winter,Wednesday,Weekday,,Check Location Data,,,,,"NJ - Y62SRJ, NISSAN/PTH",,,,,B4,P.O. Roselys Salas 369,240 = Theft of Motor Vehicle,C01W04
+25-008075,2025-01-28,,Unknown,99,YTD,Winter,Tuesday,Weekday,,Check Location Data,,,,,"NJ - K84CXU, LEXUS/ES",,,,,B4,P.O. Roselys Salas 369,240 = Theft of Motor Vehicle,C02W05
+25-008777,2025-02-01,,Unknown,99,YTD,Winter,Saturday,Weekend,,Check Location Data,,,,,"NJ - P77UZJ, FORD/CRO",,,,,B4,P.O. Roselys Salas 369,240 = Theft of Motor Vehicle,C02W05
+25-009348,2025-02-02,,Unknown,99,YTD,Winter,Sunday,Weekend,,Check Location Data,,,,,,,,,,A3,P.O. Micah Gibson 365,,C02W05
+25-009438,2025-02-03,,Unknown,99,YTD,Winter,Monday,Weekday,,Check Location Data,,,,,,,,,,A3,P.O. Aziah Miller 357,120 = Robbery,C02W05
+25-009657,2025-02-03,,Unknown,99,YTD,Winter,Monday,Weekday,,Check Location Data,,,,,"AZ - AM82732, RAM/PROMASTER",,,,,A3,P.O. Micah Gibson 365,240 = Theft of Motor Vehicle,C02W05
+25-010474,2025-02-07,,Unknown,99,YTD,Winter,Friday,Weekday,,Check Location Data,,,,,"NJ - T12SSE, DODGE/CAR",,,,,B3,P.O. Matthew Tedesco 316,240 = Theft of Motor Vehicle,C02W06
+25-010788,2025-01-31,,Unknown,99,YTD,Winter,Friday,Weekday,,Check Location Data,,,,,"NJ - S70MPZ, CIV",,,,,B4,P.O. Daniel Francavilla 329,240 = Theft of Motor Vehicle,C02W05
+25-012325,2025-02-13,,Unknown,99,YTD,Winter,Thursday,Weekday,,Check Location Data,,,,,"NJ - XGDR55, FORD/R1Z",,,,,B3,P.O. Angelo Vicale 370,23F = Theft From Motor Vehicle,C02W07
+25-013091,2025-02-17,,Unknown,99,YTD,Winter,Monday,Weekday,,Check Location Data,,,,,"NJ - L17PUM, HONDA/ACC",,,,,A3,P.O. Ruben Almonte 359,240 = Theft of Motor Vehicle,C02W07
+25-013527,2025-02-17,,Unknown,99,YTD,Winter,Monday,Weekday,,Check Location Data,,,,,,,,,,DET,Det. Matthew Dogali 338,,C02W07
+25-015290,2025-02-25,,Unknown,99,YTD,Winter,Tuesday,Weekday,,Check Location Data,,,,,"MD - 8FL4661, HONDA/PILOT",,,,,B2,P.O. Denisse Caero 367,240 = Theft of Motor Vehicle,C03W09
+25-018160,2025-03-06,,Unknown,99,YTD,Spring,Thursday,Weekday,,Check Location Data,,,,,"NJ - R64NVW, FORD/EXP",,,,,A3,P.O. Ruben Almonte 359,23F = Theft From Motor Vehicle,C03W10
+25-019245,2025-03-09,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,"NJ - K46PXJ, HYN/TIB",,,,,B1,P.O. Peter Voorhis 380,23F = Theft From Motor Vehicle,C03W10
+25-022902,2025-03-21,,Unknown,99,YTD,Spring,Friday,Weekday,,Check Location Data,,,,,"NJ - JWG42F, CHEVROLET",,,,,A2,P.O. Andres Lopez 375,240 = Theft of Motor Vehicle,C03W12
+25-023424,2025-03-23,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,"NJ - M88KXU, FORD/ECO",,,,,A3,P.O. Micah Gibson 365,23F = Theft From Motor Vehicle,C03W12
+25-024100,2025-03-25,,Unknown,99,YTD,Spring,Tuesday,Weekday,,Check Location Data,,,,,"NJ - C73VBN, SUBARU/IMP",,,,,B1,P.O. Christian Alvarez 364,120 = Robbery,C04W13
+25-025078,2025-03-27,,Unknown,99,YTD,Spring,Thursday,Weekday,,Check Location Data,,,,,,,,,50300.0,B1,P.O. Peter Voorhis 380,220 = Burglary/Breaking & Entering,C04W13
+25-025341,2025-03-28,,Unknown,99,YTD,Spring,Friday,Weekday,,Check Location Data,,,,,"NJ - T41VHN, ACURA/TLX",,,,,A1,P.O. Wanda Rivera 161,240 = Theft of Motor Vehicle,C04W13
+25-025926,2025-03-31,,Unknown,99,YTD,Spring,Monday,Weekday,,Check Location Data,,,,,,,,,,A2,P.O. Anthony Mattalian 83,220 = Burglary/Breaking & Entering,C04W13
+25-026077,2025-03-31,,Unknown,99,YTD,Spring,Monday,Weekday,,Check Location Data,,,,,"NJ - J72JJJ, TOYOTA/SIENNA",,,,,A2,P.O. Jeffrey Rodriguez 342,290 = Destruction/Damage/Vandalism of Property,C04W13
+25-026357,2025-04-01,,Unknown,99,YTD,Spring,Tuesday,Weekday,,Check Location Data,,,,,"NJ - U57SNU, MAZDA/C30",,,,,A3,P.O. Anzour Marza 356,23F = Theft From Motor Vehicle,C04W14
+25-027338,2025-04-01,,Unknown,99,YTD,Spring,Tuesday,Weekday,,Check Location Data,,,,,,,,,,B4,P.O. Alexander Reyes 355,220 = Burglary/Breaking & Entering,C04W14
+25-029155,2025-04-09,,Unknown,99,YTD,Spring,Wednesday,Weekday,,Check Location Data,,,,,"NJ - Z73VFP, CHEVROLET/SUB",,,,,B4,P.O. Roselys Salas 369,23F = Theft From Motor Vehicle,C04W15
+25-030391,2025-03-23,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,,,,,,A3,P.O. Juda DeOliveira 376,11D = Fondling,C03W12
+25-031686,2025-04-18,,Unknown,99,YTD,Spring,Friday,Weekday,,Check Location Data,,,,,,,,,,B2,P.O. Kevin Small 328,120 = Robbery,C04W16
+25-031868,2025-04-19,,Unknown,99,YTD,Spring,Saturday,Weekend,,Check Location Data,,,,,"NJ - XKEM57, FORD/E25","NJ - H88KAG, GMC/SIE","NJ - XKEM57, FORD/E25 | NJ - H88KAG, GMC/SIE",,,B3,P.O. Laura Lopez-Amaya 374,23F = Theft From Motor Vehicle,C04W16
+25-032420,2025-04-20,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,,,,,,B3,P.O. Laura Lopez-Amaya 374,220 = Burglary/Breaking & Entering,C04W16
+25-032505,2025-04-08,,Unknown,99,YTD,Spring,Tuesday,Weekday,,Check Location Data,,,,,"NJ - G15RSU, GEN/G80",,,,,B4,P.O. Alexander Reyes 355,23F = Theft From Motor Vehicle,C04W15
+25-033529,2025-04-24,,Unknown,99,YTD,Spring,Thursday,Weekday,,Check Location Data,,,,,,,,,,STA,Det. Cristobal Lara-Nunez 341,11D = Fondling,C05W17
+25-034836,2025-04-25,,Unknown,99,YTD,Spring,Friday,Weekday,,Check Location Data,,,,,"NJ - G86REG, TESLA/MOD",,,,,B3,P.O. Laura Lopez-Amaya 374,240 = Theft of Motor Vehicle,C05W17
+25-035174,2025-04-29,,Unknown,99,YTD,Spring,Tuesday,Weekday,,Check Location Data,,,,,"NJ - J73SXP, HYUNDAI/ELANTA",,,,,B4,P.O. Alexander Reyes 355,240 = Theft of Motor Vehicle,C05W18
+25-035499,2025-04-30,,Unknown,99,YTD,Spring,Wednesday,Weekday,,Check Location Data,,,,,,,,,,A3,P.O. Angie Tabares 363,120 = Robbery,C05W18
+25-036368,2025-03-01,,Unknown,99,YTD,Spring,Saturday,Weekend,,Check Location Data,,,,,"NJ - 3HRC7, YAMAHA/CZD",,,,,A4,P.O. Juda DeOliveira 376,240 = Theft of Motor Vehicle,C03W09
+25-037005,2025-05-05,,Unknown,99,YTD,Spring,Monday,Weekday,,Check Location Data,,,,,"NJ - S41USM, VOLKS/JET",,,,,B3,P.O. Angelo Vicale 370,,C05W18
+25-038971,2025-05-11,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,"NJ - P36RMF, TOYOTA/CAM",,,,,B1,P.O. Forrod Bonsu 353,23F = Theft From Motor Vehicle,C05W19
+25-039095,2025-05-04,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,,,,,,B1,P.O. Peter Voorhis 380,220 = Burglary/Breaking & Entering,C05W18
+25-039451,2025-05-11,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,,,,,,A4,Det. Cristobal Lara-Nunez 341,36B = Statutory Rape,C05W19
+25-039778,2025-05-05,,Unknown,99,YTD,Spring,Monday,Weekday,,Check Location Data,,,,,FORD/BRO,,,,,B2,P.O. Kevin Small 328,240 = Theft of Motor Vehicle,C05W18
+25-039963,2025-05-12,,Unknown,99,YTD,Spring,Monday,Weekday,,Check Location Data,,,,,"NJ - 6BHK7, QIA/JIG",,,,,B1,P.O. Christian Alvarez 364,240 = Theft of Motor Vehicle,C05W19
+25-040394,2025-05-12,,Unknown,99,YTD,Spring,Monday,Weekday,,Check Location Data,,,,,,,,,,A2,P.O. Paula Lopez 362,220 = Burglary/Breaking & Entering,C05W19
+25-041339,2025-05-18,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,"NJ - 5964HJ, FORD/ESC",,,,,A3,P.O. Aziah Miller 357,240 = Theft of Motor Vehicle,C05W20
+25-041571,2025-05-14,,Unknown,99,YTD,Spring,Wednesday,Weekday,,Check Location Data,,,,,P2403495,,,,,B4,P.O. Daniel Francavilla 329,23F = Theft From Motor Vehicle,C05W20
+25-041892,2025-05-13,,Unknown,99,YTD,Spring,Tuesday,Weekday,,Check Location Data,,,,,,,,,,B4,P.O. Daniel Francavilla 329,11D = Fondling,C05W20
+25-042950,2025-05-25,,Unknown,99,YTD,Spring,Sunday,Weekend,,Check Location Data,,,,,,,,,,A1,P.O. Jann Aberde 386,220 = Burglary/Breaking & Entering,C06W21
+25-043899,2025-05-23,,Unknown,99,YTD,Spring,Friday,Weekday,,Check Location Data,,,,,,,,,,B2,P.O. Kevin Small 328,220 = Burglary/Breaking & Entering,C06W21
+25-044042,2025-05-29,,Unknown,99,YTD,Spring,Thursday,Weekday,,Check Location Data,,,,,,,,,,B4,P.O. Jacob Price 366,120 = Robbery,C06W23
+25-045625,2025-06-02,,Unknown,99,YTD,Summer,Monday,Weekday,,Check Location Data,,,,,"NJ - XEFE81, FORD/E35",,,,,A3,P.O. Angie Tabares 363,240 = Theft of Motor Vehicle,C06W23
+25-045839,2025-06-03,,Unknown,99,YTD,Summer,Tuesday,Weekday,,Check Location Data,,,,,"NJ - 4HXZ4, YAM/YZF",,,,,A2,P.O. Anthony Mattalian 83,240 = Theft of Motor Vehicle,C06W23
+25-045993,2025-06-01,,Unknown,99,YTD,Summer,Sunday,Weekend,,Check Location Data,,,,,,,,,,DET,Det. John Tanucilli 335,11A = Rape,C06W23
+25-046294,2025-06-05,,Unknown,99,YTD,Summer,Thursday,Weekday,,Check Location Data,,,,,"NJ - P55UNM, INFINITI/Q50",,,,,B3,P.O. Angelo Vicale 370,23F = Theft From Motor Vehicle,C06W23
+25-046290,2025-06-05,,Unknown,99,YTD,Summer,Thursday,Weekday,,Check Location Data,,,,,"NY - EJK4320, INFINITI/Q50",,,,,B4,P.O. Roselys Salas 369,240 = Theft of Motor Vehicle,C06W23
+25-047026,2025-06-07,,Unknown,99,YTD,Summer,Saturday,Weekend,,Check Location Data,,,,,"NJ - J58VJZ, SUBARU/FOR",,,,,B3,P.O. Maximiliano Anguizaca 368,23F = Theft From Motor Vehicle,C06W23
+25-047203,2025-06-08,,Unknown,99,YTD,Summer,Sunday,Weekend,,Check Location Data,,,,,"NJ - T64KLC, ESC",,,,,B4,P.O. Roselys Salas 369,23F = Theft From Motor Vehicle,C06W23
+25-048048,2025-06-11,,Unknown,99,YTD,Summer,Wednesday,Weekday,,Check Location Data,,,,,"NJ - V82UPJ, TOYOTA/RUN",,,,,A2,P.O. Massimo Gallorini 379,240 = Theft of Motor Vehicle,C06W24
+25-050281,2025-06-18,,Unknown,99,YTD,Summer,Wednesday,Weekday,,Check Location Data,,,,,,,,,,A4,P.O. Micah Gibson 365,220 = Burglary/Breaking & Entering,C07W25
+25-051170,2025-06-21,,Unknown,99,YTD,Summer,Saturday,Weekend,,Check Location Data,,,,,"NJ - S88UJJ, TOYOTA/HIG",,,,,B3,P.O. Angelo Vicale 370,240 = Theft of Motor Vehicle,C07W25
+25-051478,2025-06-21,,Unknown,99,YTD,Summer,Saturday,Weekend,,Check Location Data,,,,,"NJ - G85RPW, TOYOTA/COR",,,,,B4,P.O. Jacob Price 366,240 = Theft of Motor Vehicle,C07W25
+25-053161,2025-06-27,,Unknown,99,YTD,Summer,Friday,Weekday,,Check Location Data,,,,,,,,,,A3,P.O. Angie Tabares 363,220 = Burglary/Breaking & Entering,C07W26
+25-053984,2025-06-29,,Unknown,99,YTD,Summer,Sunday,Weekend,,Check Location Data,,,,,"NJ - F10SMK, FORD/ECO",,,,,B3,P.O. Laura Lopez-Amaya 374,23F = Theft From Motor Vehicle,C07W26
+25-054058,2025-06-30,,Unknown,99,YTD,Summer,Monday,Weekday,,Check Location Data,,,,,,,,,,B4,P.O. Ricardo Swaby 381,220 = Burglary/Breaking & Entering,C07W26
+25-054890,2025-07-02,,Unknown,99,YTD,Summer,Wednesday,Weekday,,Check Location Data,,,,,,,,,,B1,P.O. Forrod Bonsu 353,220 = Burglary/Breaking & Entering,C07W27
+25-055122,2025-06-27,,Unknown,99,YTD,Summer,Friday,Weekday,,Check Location Data,,,,,,,,,,A1,P.O. Jann Aberde 386,220 = Burglary/Breaking & Entering,C07W26
+25-055295,2025-07-03,,Unknown,99,YTD,Summer,Thursday,Weekday,,Check Location Data,,,,,,,,,,A3,P.O. Eric Badalyan 382,36A = Incest,C07W27
+25-056435,2025-07-07,,Unknown,99,28-Day,Summer,Monday,Weekday,,Check Location Data,,,,,,,,,,B2,P.O. Bobby Rivera 361,,C07W27
+25-056999,2025-07-08,,Unknown,99,28-Day,Summer,Tuesday,Weekday,,Check Location Data,,,,,,,,,,B3,P.O. Angelo Vicale 370,,C07W28
+25-057343,2025-07-10,,Unknown,99,28-Day,Summer,Thursday,Weekday,,Check Location Data,,,,,,,,,,B4,P.O. Alexander Reyes 355,,C07W28
+25-058331,2025-07-13,,Unknown,99,28-Day,Summer,Sunday,Weekend,,Check Location Data,,,,,,,,,,A4,P.O. Juda DeOliveira 376,,C07W28
+25-058451,2025-07-13,,Unknown,99,28-Day,Summer,Sunday,Weekend,,Check Location Data,,,,,,,,,1200.0,A1,P.O. Nart Marza 321,,C07W28
+25-059260,2025-07-15,,Unknown,99,28-Day,Summer,Tuesday,Weekday,,Check Location Data,,,,,"NJ - Z23VFV, DODGE/DAK",,,,,B3,P.O. Laura Lopez-Amaya 374,,C08W29
+25-060143,2025-07-17,,Unknown,99,28-Day,Summer,Thursday,Weekday,,Check Location Data,,,,,,,,,,,SPO. Aster Abueg 817,,C08W29
+25-060401,2025-07-18,,Unknown,99,28-Day,Summer,Friday,Weekday,,Check Location Data,,,,,"NY - KNF9225, HONDA/ACCORD",,,,,A2,P.O. Christopher Cole 385,,C08W29
+25-060402,2025-07-18,,Unknown,99,28-Day,Summer,Friday,Weekday,,Check Location Data,,,,,"NY - HKR1235, HONDA/CRV",,,,,A2,P.O. Christopher Cole 385,,C08W29
+25-060392,2025-07-18,,Unknown,99,28-Day,Summer,Friday,Weekday,,Check Location Data,,,,,"NJ - J30UAF, NISSAN/MUR",,,,,A2,P.O. Christopher Cole 385,,C08W29
+25-061119,2025-07-21,,Unknown,99,28-Day,Summer,Monday,Weekday,,Check Location Data,,,,,"NJ - P26RLZ, LAMBORGUINI/HURACAN","NJ - G15VSH, MERCEDES-BENZ/G63","NJ - P26RLZ, LAMBORGUINI/HURACAN | NJ - G15VSH, MERCEDES-BENZ/G63",,,A4,P.O. Juda DeOliveira 376,,C08W29
+25-061760,2025-07-22,,Unknown,99,28-Day,Summer,Tuesday,Weekday,,Check Location Data,,,,,"NJ - E99RPU, ACURA/MDX",,,,,B2,P.O. Kevin Small 328,,C08W30
+25-062452,2025-07-24,,Unknown,99,28-Day,Summer,Thursday,Weekday,,Check Location Data,,,,,DODGE/RAM,,,,,B2,P.O. Nicholas Mazzaccaro 377,,C08W30
+25-062738,2025-07-25,,Unknown,99,28-Day,Summer,Friday,Weekday,,Check Location Data,,,,,"NJ - N50VML, HONDA/CRV",,,,,B2,P.O. Nicholas Mazzaccaro 377,,C08W30
+25-063212,2025-07-27,,Unknown,99,7-Day,Summer,Sunday,Weekend,,Check Location Data,,,,,"NC - VFJ5061, BMW/440I GRAN COUP",,,,,A3,P.O. Ruben Almonte 359,,C08W30
+25-063524,2025-07-27,,Unknown,99,7-Day,Summer,Sunday,Weekend,,Check Location Data,,,,,"NJ - K79UGW, HONDA/ACC",,,,,A2,P.O. Massimo Gallorini 379,,C08W30

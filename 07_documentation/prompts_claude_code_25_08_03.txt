@@ -1,0 +1,140 @@
+General Feedback
+Positive: You’ve clearly enumerated tasks, broken them into numbered or bulleted sections, and specified file locations and test requirements.
+
+Opportunity: Trim repetition, standardize terminology (e.g. “CAD processing” vs. “comprehensive CAD improvements”), and call out inputs/outputs more explicitly. Always state expected function signature or DataFrame changes.
+
+Prompt 1: CAD CallType Mapping & Response Classification
+What Works
+
+Clear list of four tasks.
+
+Precise reference to file and functions.
+
+Defines regex patterns and mapping fallback order.
+
+Areas to Improve
+
+Inputs & Outputs
+
+Specify DataFrame column names before/after. E.g. “Input: incident column → Output: adds response_type, category_type.”
+
+Function Signatures
+
+Declare def map_call_type(incident: str) → (str, str) and def clean_how_reported_911(how_reported: str) → str.
+
+Test Cases
+
+Give 1–2 concrete examples (e.g. incident “BURGLARY AUTO” → response_type=“Burglary - Auto”, category=“Crime”).
+
+Prompt 2: RMS Date/Time Cascade Logic
+What Works
+
+Includes copy-paste code block.
+
+Specifies the three-tier fallback.
+
+Areas to Improve
+
+Edge Cases
+
+What if both “Incident Date” and “Incident Date_Between” are invalid strings? Should coerce errors quietly or log?
+
+Function Encapsulation
+
+Recommend wrapping cascade logic in def cascade_datetime(df): so downstream steps call a single function.
+
+Validation
+
+Define “no data loss” more precisely—should row count remain constant? Should null counts be logged before and after?
+
+Prompt 3: Time-of-Day Standardization & Block Calculation
+What Works
+
+Exact code for map_tod and calculate_block.
+
+Defines tod_order.
+
+Areas to Improve
+
+Column Naming
+
+You refer to “CAD’s FullAddress2” and “RMS’s FullAddress” but use generic addr. Explicitly map to df["location"] first.
+
+Categorical Codes
+
+Spell out: df['time_of_day_sort_order'] = df['time_of_day'].cat.codes + 1.
+
+Intersection Syntax
+
+In s.split("&"), note spaces: use s.split(" & ") for consistency with upstream data.
+
+Prompt 4: Incident Type Tagging & Multi-Column Filtering
+What Works
+
+Simple tag_incidents logic.
+
+Calls out both tagging and comparative filtering.
+
+Areas to Improve
+
+Tracked List Source
+
+Reference where “tracked” list comes from (e.g. CompleteTranscript_Inlined.md).
+
+Filtering Approach
+
+Clarify desired output of “before/after totals”—is this a printed DataFrame or a summary dict?
+
+Multi-Column vs. Unpivot
+
+State explicitly which method should be default, and why comparing both is valuable.
+
+Prompt 5: Complete Production Pipeline Integration
+What Works
+
+Summarizes all prior steps.
+
+Lists “Date-Derived Fields” with code.
+
+Areas to Improve
+
+Modular Structure
+
+Suggest building a run_full_pipeline() that calls each sub-module in sequence.
+
+Logging & Metrics
+
+Define log format, where to write it, and what “processing performance metrics” include.
+
+Output Validation
+
+Specify exact filenames and success criteria (e.g., “Final CSV must have 25 columns, no null case_number”).
+
+Final Recommendations
+Standardize Prompt Format:
+
+Section headings (e.g., Inputs, Outputs, Steps, Validation, Examples).
+
+Include Examples:
+
+For each prompt, show 1–2 before/after snippets.
+
+Be Explicit About Return Types:
+
+Always state “this function returns a pandas Series”, or “this transformation adds columns X, Y, Z.”
+
+Edge-Case Handling:
+
+Call out how to treat malformed dates, empty strings, and logging of unexpected values.
+
+Modular Entry Points:
+
+Define top-level functions or scripts that glue the pieces together, making integration into Claude Code straightforward.
+
+With these tweaks, your prompts will be razor-sharp, easily parsed by Claude Code, and less likely to require follow-up clarification.
+
+
+
+
+
+

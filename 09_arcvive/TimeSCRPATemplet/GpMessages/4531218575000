@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Monday, May 5, 2025 6:34:09 PM</msg><msg code="0" type="0">Legend elements found: ['MainLegend']</msg><msg code="0" type="0">Map contains the following layers: ['MV Theft 7-Day', 'MV Theft 28-Day', 'MV Theft YTD', 'Burglary - Auto 7-Day', 'Burglary - Auto 28-Day', 'Burglary - Auto YTD', 'Burglary - Comm &amp; Res 7-Day', 'Burglary - Comm &amp; Res 28-Day', 'Burglary - Comm &amp; Res YTD', 'Robbery 7-Day', 'Robbery 28-Day', 'Robbery YTD', 'Sexual Offenses 7-Day', 'Sexual Offenses 28-Day', 'Sexual Offenses YTD', 'City Boundaries', 'World Street Map (Night - Community Maps)']</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\weekly_crime_report.py", line 124, in &lt;module&gt;
+﻿    layout.exportToJPEG(output_jpg, resolution=300, jpeg_color_mode='24-BIT_TRUE_COLOR', quality=100)
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\utils.py", line 186, in fn_
+﻿    return fn(*args, **kw)
+﻿           ^^^^^^^^^^^^^^^
+﻿TypeError: Layout.exportToJPEG() got an unexpected keyword argument 'quality'
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Monday, May 5, 2025 6:34:12 PM (Elapsed Time: 2.97 seconds)</msg></messages>

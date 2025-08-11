@@ -1,0 +1,72 @@
+@echo off
+REM cleanup_and_prune_scripts.bat
+REM This script sets up the environment and executes the main PowerShell logic.
+
+SETLOCAL ENABLEEXTENSIONS
+
+REM === Configuration ===
+SET "ROOT=%~dp0"
+SET "SCRIPTS_DIR=%ROOT%01_scripts"
+SET "ARCHIVE_DIR=%ROOT%02_old_tools"
+SET "MIGRATION_BACKUP_DIR=%ARCHIVE_DIR%\migration_backups"
+SET "DUPLICATE_REPORT=%ROOT%duplicate_report.txt"
+SET "POWERSHELL_SCRIPT=%ROOT%cleanup_logic.ps1"
+REM ======================
+
+echo.
+echo ================================================================
+echo SCRPA CLEANUP AND MIGRATION BACKUP PROCESSING
+echo ================================================================
+echo.
+
+REM 1) Create archive directories if they don't exist
+echo Creating directory structure if needed...
+if not exist "%ARCHIVE_DIR%" mkdir "%ARCHIVE_DIR%"
+if not exist "%MIGRATION_BACKUP_DIR%" mkdir "%MIGRATION_BACKUP_DIR%"
+echo   Directory structure ready.
+echo.
+
+REM 2) Execute the main PowerShell script
+echo Executing PowerShell cleanup logic...
+echo.
+powershell.exe -ExecutionPolicy Bypass -File "%POWERSHELL_SCRIPT%" -ScriptsDir "%SCRIPTS_DIR%" -ArchiveDir "%ARCHIVE_DIR%" -MigrationBackupDir "%MIGRATION_BACKUP_DIR%" -DuplicateReportPath "%DUPLICATE_REPORT%"
+echo.
+echo PowerShell script execution finished.
+echo.
+
+REM 3) Final Summary
+echo ================================================================
+echo FINAL PROCESSING SUMMARY
+echo ================================================================
+SET "REMAINING_BACKUPS=0"
+for /f "delims=" %%F in ('dir /b /s /a-d "%SCRIPTS_DIR%\migration_backup_*.py" 2^>nul') do ( SET /A REMAINING_BACKUPS+=1 )
+
+SET "FINAL_MOVED_COUNT=0"
+for /f "delims=" %%F in ('dir /b /s /a-d "%MIGRATION_BACKUP_DIR%\*.py" 2^>nul') do ( SET /A FINAL_MOVED_COUNT+=1 )
+
+SET "FINAL_NON_ARCPY_COUNT=0"
+for /f "delims=" %%F in ('dir /b /s /a-d "%ARCHIVE_DIR%\*.py" 2^>nul') do ( SET /A FINAL_NON_ARCPY_COUNT+=1 )
+SET /A FINAL_NON_ARCPY_COUNT-=FINAL_MOVED_COUNT
+
+echo Migration Backup Processing:
+echo   - Total migration backups in archive: %FINAL_MOVED_COUNT% files
+echo.
+echo Script Organization:
+echo   - Non-Arcpy scripts archived: %FINAL_NON_ARCPY_COUNT% files
+if exist "%DUPLICATE_REPORT%" (
+    echo   - Duplicate report: CREATED
+) else (
+    echo   - Duplicate report: NOT NEEDED (no duplicates found)
+)
+echo.
+if %REMAINING_BACKUPS% EQU 0 (
+    echo STATUS: SUCCESS - 01_scripts directory cleaned of migration backups
+) else (
+    echo STATUS: INCOMPLETE - %REMAINING_BACKUPS% migration backups may still remain
+)
+echo.
+echo Processing completed at %DATE% %TIME%
+echo ================================================================
+
+ENDLOCAL
+pause

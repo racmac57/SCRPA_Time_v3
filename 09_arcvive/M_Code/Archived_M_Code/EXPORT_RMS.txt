@@ -1,0 +1,7 @@
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    #"Filtered Hidden Files1" = Table.SelectRows(Source, each Record.FieldOrDefault([Attributes], "Hidden", false) <> true),
+    #"Invoke Transform File" = Table.AddColumn(#"Filtered Hidden Files1", "TransformedData", each Transform_File([Content]), type table),
+    #"Expand Transformed Data" = Table.ExpandTableColumn(#"Invoke Transform File", "TransformedData", {"CaseNumber", "FullAddress", "CaseNumberLength", "IncDate", "IncTime", "StartOfHour", "TimeOfDay"})
+in
+    #"Expand Transformed Data"

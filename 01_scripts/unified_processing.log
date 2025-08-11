@@ -1,0 +1,463 @@
+2025-07-27 02:03:39,734 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_020339.log
+2025-07-27 02:03:39,742 - INFO - ================================================================================
+2025-07-27 02:03:39,746 - INFO - ================================================================================
+2025-07-27 02:03:39,927 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:03:39,937 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:03:39,955 - INFO -    Total records: 112
+2025-07-27 02:03:39,956 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:03:39,956 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:03:39,956 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:03:39,956 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:03:39,990 - INFO - ================================================================================
+2025-07-27 02:03:39,996 - INFO - ================================================================================
+2025-07-27 02:14:50,664 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_021450.log
+2025-07-27 02:14:50,669 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:14:50,670 - INFO - ================================================================================
+2025-07-27 02:14:50,670 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:14:50,670 - INFO - ================================================================================
+2025-07-27 02:14:50,671 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:14:50,671 - INFO - Searching for latest auto export files
+2025-07-27 02:14:50,671 - INFO -    Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:14:50,672 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:14:50,902 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:14:50,902 - INFO - Detected CAD structure with 112 records
+2025-07-27 02:14:50,902 - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:14:50,903 - INFO -    Processing CAD structure (no unpivoting needed)
+2025-07-27 02:14:50,912 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:14:50,913 - INFO -    CAD processing complete: 112 records
+2025-07-27 02:14:50,913 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:14:50,926 - INFO -    Total records: 112
+2025-07-27 02:14:50,926 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:14:50,927 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:14:50,927 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:14:50,927 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:14:50,927 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:14:50,927 - INFO - Step 4: Adding derived columns (replaces M Code logic)
+2025-07-27 02:14:50,954 - INFO -    All enhancements complete
+2025-07-27 02:14:50,954 - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:14:50,956 - INFO -    Validation complete: 112 clean records
+2025-07-27 02:14:50,956 - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:14:50,962 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:14:50,963 - INFO - ================================================================================
+2025-07-27 02:14:50,964 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:14:50,965 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:14:50,966 - INFO - ================================================================================
+2025-07-27 02:17:15,206 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_021715.log
+2025-07-27 02:17:15,209 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:17:15,210 - INFO - ================================================================================
+2025-07-27 02:17:15,211 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:17:15,211 - INFO - ================================================================================
+2025-07-27 02:17:15,212 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:17:15,213 - INFO - Searching for latest auto export files
+2025-07-27 02:17:15,214 - INFO -    Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:17:15,215 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:17:15,369 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:17:15,370 - INFO - Detected CAD structure with 112 records
+2025-07-27 02:17:15,371 - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:17:15,371 - INFO -    Processing CAD structure (no unpivoting needed)
+2025-07-27 02:17:15,378 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:17:15,379 - INFO -    CAD processing complete: 112 records
+2025-07-27 02:17:15,379 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:17:15,392 - INFO -    Total records: 112
+2025-07-27 02:17:15,392 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:17:15,392 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:17:15,392 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:17:15,393 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:17:15,393 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:17:15,393 - INFO - Step 4: Adding derived columns (replaces M Code logic)
+2025-07-27 02:17:15,414 - INFO -    All enhancements complete
+2025-07-27 02:17:15,414 - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:17:15,416 - INFO -    Validation complete: 112 clean records
+2025-07-27 02:17:15,416 - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:17:15,425 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:17:15,426 - INFO - ================================================================================
+2025-07-27 02:17:15,426 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:17:15,426 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:17:15,427 - INFO - ================================================================================
+2025-07-27 02:23:40,528 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_022340.log
+2025-07-27 02:23:40,533 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:23:40,535 - INFO - ================================================================================
+2025-07-27 02:23:40,535 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:23:40,536 - INFO - ================================================================================
+2025-07-27 02:23:40,537 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:23:40,539 - INFO - Searching for latest auto export files
+2025-07-27 02:23:40,542 - INFO -    Most recent file: 2025_07_25_13_24_20_ALL_CADS.xlsx (CAD)
+2025-07-27 02:23:40,543 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:23:40,800 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:23:40,800 - INFO - Detected CAD structure with 112 records
+2025-07-27 02:23:40,802 - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:23:40,802 - INFO -    Processing CAD structure
+2025-07-27 02:23:40,815 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:23:40,819 - INFO -    CAD processing complete: 112 records
+2025-07-27 02:23:40,820 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:23:40,846 - INFO -    Total records: 112
+2025-07-27 02:23:40,846 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:23:40,846 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:23:40,846 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:23:40,846 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:23:40,847 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:23:40,847 - INFO - Step 4: Adding derived columns
+2025-07-27 02:23:40,875 - INFO -    All enhancements complete
+2025-07-27 02:23:40,875 - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:23:40,880 - INFO -    Validation complete: 112 clean records
+2025-07-27 02:23:40,881 - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:23:40,886 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:23:40,886 - INFO - ================================================================================
+2025-07-27 02:23:40,887 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:23:40,887 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:23:40,887 - INFO - ================================================================================
+2025-07-27 02:32:36,355 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_023236.log
+2025-07-27 02:32:36,359 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:32:36,362 - INFO - ================================================================================
+2025-07-27 02:32:36,363 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:32:36,363 - INFO - ================================================================================
+2025-07-27 02:32:36,364 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:32:36,364 - INFO - Searching for latest auto export files
+2025-07-27 02:32:36,365 - INFO -    Most recent file: 2025_07_25_13_24_20_ALL_CADS.xlsx (CAD)
+2025-07-27 02:32:36,366 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:32:36,517 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:32:36,518 - INFO - Detected CAD structure with 112 records
+2025-07-27 02:32:36,518 - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:32:36,519 - INFO -    Processing CAD structure
+2025-07-27 02:32:36,525 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:32:36,526 - INFO -    CAD processing complete: 112 records
+2025-07-27 02:32:36,526 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:32:36,542 - INFO -    Total records: 112
+2025-07-27 02:32:36,543 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:32:36,543 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:32:36,544 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:32:36,545 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:32:36,548 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:32:36,549 - INFO - Step 4: Adding derived columns
+2025-07-27 02:32:36,571 - INFO -    All enhancements complete
+2025-07-27 02:32:36,572 - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:32:36,575 - INFO -    Validation complete: 112 clean records
+2025-07-27 02:32:36,575 - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:32:36,583 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:32:36,584 - INFO - ================================================================================
+2025-07-27 02:32:36,584 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:32:36,585 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:32:36,585 - INFO - ================================================================================
+2025-07-27 02:47:12,023 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_024712.log
+2025-07-27 02:47:12,027 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:47:12,028 - INFO - ================================================================================
+2025-07-27 02:47:12,028 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:47:12,029 - INFO - ================================================================================
+2025-07-27 02:47:12,031 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:47:12,032 - INFO - Searching for latest auto export files
+2025-07-27 02:47:12,033 - INFO -    Most recent file: 2025_07_25_13_24_20_ALL_CADS.xlsx (CAD)
+2025-07-27 02:47:12,034 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:47:12,195 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:47:12,195 - INFO - Detected CAD structure with 112 records
+2025-07-27 02:47:12,196 - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:47:12,196 - INFO -    Processing CAD structure
+2025-07-27 02:47:12,203 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:47:12,204 - INFO -    CAD processing complete: 112 records
+2025-07-27 02:47:12,204 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:47:12,215 - INFO -    Total records: 112
+2025-07-27 02:47:12,215 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:47:12,216 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:47:12,217 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:47:12,217 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:47:12,219 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:47:12,219 - INFO - Step 4: Adding derived columns
+2025-07-27 02:47:12,235 - INFO -    Adding vehicle columns
+2025-07-27 02:47:12,241 - INFO -    All enhancements complete
+2025-07-27 02:47:12,241 - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:47:12,243 - INFO -    Validation complete: 112 clean records
+2025-07-27 02:47:12,244 - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:47:12,247 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:47:12,249 - INFO - ================================================================================
+2025-07-27 02:47:12,250 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:47:12,251 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:47:12,251 - INFO - ================================================================================
+2025-07-27 02:50:15,638 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_025015.log
+2025-07-27 02:50:15,641 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:50:15,642 - INFO - ================================================================================
+2025-07-27 02:50:15,643 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:50:15,644 - INFO - ================================================================================
+2025-07-27 02:50:15,646 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 02:50:15,646 - INFO - Searching for latest auto export files
+2025-07-27 02:50:15,648 - INFO -    Most recent file: 2025_07_25_13_24_20_ALL_CADS.xlsx (CAD)
+2025-07-27 02:50:15,648 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:50:15,802 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 02:50:15,803 - INFO - Detected CAD structure with 112 records
+2025-07-27 02:50:15,804 - INFO - Step 2: Processing CAD data structure
+2025-07-27 02:50:15,804 - INFO -    Processing CAD structure
+2025-07-27 02:50:15,811 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 02:50:15,812 - INFO -    CAD processing complete: 112 records
+2025-07-27 02:50:15,812 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 02:50:15,823 - INFO -    Total records: 112
+2025-07-27 02:50:15,823 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 02:50:15,823 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 02:50:15,823 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 02:50:15,823 - INFO -    Average quality score: 84.8/100
+2025-07-27 02:50:15,825 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 02:50:15,825 - INFO - Step 4: Adding derived columns
+2025-07-27 02:50:15,848 - INFO -    Adding vehicle columns
+2025-07-27 02:50:15,861 - INFO -    All enhancements complete
+2025-07-27 02:50:15,862 - INFO - Step 5: Data validation and cleanup
+2025-07-27 02:50:15,866 - INFO -    Validation complete: 112 clean records
+2025-07-27 02:50:15,866 - INFO - Step 6: Exporting for Power BI
+2025-07-27 02:50:15,874 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:50:15,874 - INFO - ================================================================================
+2025-07-27 02:50:15,875 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:50:15,875 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:50:15,875 - INFO - ================================================================================
+2025-07-27 02:55:56,262 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_025556.log
+2025-07-27 02:55:56,265 - INFO - Master SCRPA Processor initialized
+2025-07-27 02:55:56,266 - INFO - ================================================================================
+2025-07-27 02:55:56,267 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 02:55:56,268 - INFO - ================================================================================
+2025-07-27 02:55:56,269 - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 02:55:56,270 - INFO - Searching for latest RMS export file...
+2025-07-27 02:55:56,271 - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 02:55:56,437 - INFO - Searching for latest CAD export file...
+2025-07-27 02:55:56,438 - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 02:55:56,458 - INFO -    Joining RMS and CAD data...
+2025-07-27 02:55:56,467 - INFO -    Join complete. Total records: 131
+2025-07-27 02:55:56,468 - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 02:55:56,486 - INFO -    Total records: 131
+2025-07-27 02:55:56,487 - INFO -    Usernames extracted: 70 (53.4%)
+2025-07-27 02:55:56,487 - INFO -    Timestamps extracted: 70 (53.4%)
+2025-07-27 02:55:56,488 - INFO -    Text cleaned: 70 (53.4%)
+2025-07-27 02:55:56,488 - INFO -    Average quality score: 53.4/100
+2025-07-27 02:55:56,489 - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 02:55:56,490 - INFO - Step 3: Adding derived columns
+2025-07-27 02:55:56,510 - INFO -    Adding vehicle columns
+2025-07-27 02:55:56,517 - INFO -    All enhancements complete
+2025-07-27 02:55:56,518 - INFO - Step 4: Data validation and cleanup
+2025-07-27 02:55:56,520 - INFO -    Validation complete: 131 clean records
+2025-07-27 02:55:56,521 - INFO - Step 5: Exporting for Power BI
+2025-07-27 02:55:56,529 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:55:56,531 - INFO - ================================================================================
+2025-07-27 02:55:56,533 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 02:55:56,533 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 02:55:56,534 - INFO - ================================================================================
+2025-07-27 03:00:22,552 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_030022.log
+2025-07-27 03:00:22,555 - INFO - Master SCRPA Processor initialized
+2025-07-27 03:00:22,556 - INFO - ================================================================================
+2025-07-27 03:00:22,557 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:00:22,557 - INFO - ================================================================================
+2025-07-27 03:00:22,560 - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 03:00:22,561 - INFO - Searching for latest RMS export file...
+2025-07-27 03:00:22,562 - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 03:00:22,726 - INFO - Searching for latest CAD export file...
+2025-07-27 03:00:22,727 - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:00:22,745 - INFO -    Joining RMS and CAD data...
+2025-07-27 03:00:22,747 - INFO -    Join complete. Total records: 131
+2025-07-27 03:00:22,748 - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 03:00:22,760 - INFO -    Total records: 131
+2025-07-27 03:00:22,761 - INFO -    Usernames extracted: 70 (53.4%)
+2025-07-27 03:00:22,761 - INFO -    Timestamps extracted: 70 (53.4%)
+2025-07-27 03:00:22,761 - INFO -    Text cleaned: 70 (53.4%)
+2025-07-27 03:00:22,762 - INFO -    Average quality score: 53.4/100
+2025-07-27 03:00:22,763 - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 03:00:22,763 - INFO - Step 3: Adding derived columns
+2025-07-27 03:00:22,768 - ERROR - PIPELINE FAILED: 'CAD_Block'
+2025-07-27 03:21:38,284 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_032138.log
+2025-07-27 03:21:38,289 - INFO - Master SCRPA Processor initialized
+2025-07-27 03:21:38,291 - INFO - ================================================================================
+2025-07-27 03:21:38,293 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:21:38,294 - INFO - ================================================================================
+2025-07-27 03:21:38,296 - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 03:21:38,296 - INFO - Searching for latest RMS export file...
+2025-07-27 03:21:38,297 - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 03:21:38,575 - INFO - Searching for latest CAD export file...
+2025-07-27 03:21:38,576 - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:21:38,596 - INFO -    Joining RMS and CAD data...
+2025-07-27 03:21:38,603 - INFO -    Join complete. Total records: 131
+2025-07-27 03:21:38,606 - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 03:21:38,634 - INFO -    Total records: 131
+2025-07-27 03:21:38,635 - INFO -    Usernames extracted: 70 (53.4%)
+2025-07-27 03:21:38,635 - INFO -    Timestamps extracted: 70 (53.4%)
+2025-07-27 03:21:38,635 - INFO -    Text cleaned: 70 (53.4%)
+2025-07-27 03:21:38,635 - INFO -    Average quality score: 53.4/100
+2025-07-27 03:21:38,636 - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 03:21:38,637 - INFO - Step 3: Adding derived columns
+2025-07-27 03:21:38,649 - ERROR - PIPELINE FAILED: 'CAD_Block'
+2025-07-27 03:22:36,948 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_032236.log
+2025-07-27 03:22:36,952 - INFO - Master SCRPA Processor initialized
+2025-07-27 03:22:36,956 - INFO - ================================================================================
+2025-07-27 03:22:36,957 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:22:36,958 - INFO - ================================================================================
+2025-07-27 03:22:36,958 - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 03:22:36,959 - INFO - Searching for latest RMS export file...
+2025-07-27 03:22:36,960 - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 03:22:37,130 - INFO - Searching for latest CAD export file...
+2025-07-27 03:22:37,131 - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:22:37,150 - INFO -    Joining RMS and CAD data...
+2025-07-27 03:22:37,153 - INFO -    Join complete. Total records: 131
+2025-07-27 03:22:37,155 - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 03:22:37,173 - INFO -    Total records: 131
+2025-07-27 03:22:37,174 - INFO -    Usernames extracted: 70 (53.4%)
+2025-07-27 03:22:37,174 - INFO -    Timestamps extracted: 70 (53.4%)
+2025-07-27 03:22:37,175 - INFO -    Text cleaned: 70 (53.4%)
+2025-07-27 03:22:37,175 - INFO -    Average quality score: 53.4/100
+2025-07-27 03:22:37,178 - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 03:22:37,179 - INFO - Step 3: Adding derived columns
+2025-07-27 03:22:37,187 - ERROR - PIPELINE FAILED: 'CAD_Block'
+2025-07-27 03:25:04,842 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_032504.log
+2025-07-27 03:25:04,848 - INFO - Master SCRPA Processor initialized
+2025-07-27 03:25:04,849 - INFO - ================================================================================
+2025-07-27 03:25:04,850 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:25:04,851 - INFO - ================================================================================
+2025-07-27 03:25:04,851 - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 03:25:04,852 - INFO - Searching for latest RMS export file...
+2025-07-27 03:25:04,854 - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 03:25:05,092 - INFO - Searching for latest CAD export file...
+2025-07-27 03:25:05,093 - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:25:05,113 - INFO -    Joining RMS and CAD data...
+2025-07-27 03:25:05,115 - INFO -    Join complete. Total records: 131
+2025-07-27 03:25:05,116 - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 03:25:05,131 - INFO -    Total records: 131
+2025-07-27 03:25:05,132 - INFO -    Usernames extracted: 70 (53.4%)
+2025-07-27 03:25:05,132 - INFO -    Timestamps extracted: 70 (53.4%)
+2025-07-27 03:25:05,132 - INFO -    Text cleaned: 70 (53.4%)
+2025-07-27 03:25:05,133 - INFO -    Average quality score: 53.4/100
+2025-07-27 03:25:05,134 - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 03:25:05,134 - INFO - Step 3: Adding derived columns
+2025-07-27 03:25:05,164 - INFO -    Adding vehicle columns
+2025-07-27 03:25:05,171 - INFO -    All enhancements complete
+2025-07-27 03:25:05,172 - INFO - Step 4: Data validation and cleanup
+2025-07-27 03:25:05,177 - INFO -    Validation complete: 131 clean records
+2025-07-27 03:25:05,178 - INFO - Step 5: Exporting for Power BI
+2025-07-27 03:25:05,186 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 03:25:05,188 - INFO - ================================================================================
+2025-07-27 03:25:05,190 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 03:25:05,192 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 03:25:05,194 - INFO - ================================================================================
+2025-07-27 03:29:44,693 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_032944.log
+2025-07-27 03:29:44,699 - INFO - Master SCRPA Processor initialized
+2025-07-27 03:29:44,701 - INFO - ================================================================================
+2025-07-27 03:29:44,703 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:29:44,704 - INFO - ================================================================================
+2025-07-27 03:29:44,705 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 03:29:44,706 - INFO - Searching for latest auto export files
+2025-07-27 03:29:44,707 - INFO -    Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:29:44,707 - INFO -    Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:29:44,930 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 03:29:44,930 - INFO - Detected CAD structure with 112 records
+2025-07-27 03:29:44,931 - INFO - Step 2: Processing CAD data structure
+2025-07-27 03:29:44,931 - INFO -    Processing CAD structure (no unpivoting needed)
+2025-07-27 03:29:44,942 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 03:29:44,943 - INFO -    CAD processing complete: 112 records
+2025-07-27 03:29:44,943 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 03:29:44,957 - INFO -    Total records: 112
+2025-07-27 03:29:44,958 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 03:29:44,958 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 03:29:44,958 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 03:29:44,958 - INFO -    Average quality score: 84.8/100
+2025-07-27 03:29:44,959 - INFO -    CADNotes processing complete: 95 notes processed
+2025-07-27 03:29:44,959 - INFO - Step 4: Adding derived columns (replaces M Code logic)
+2025-07-27 03:29:44,990 - INFO -    All enhancements complete
+2025-07-27 03:29:44,991 - INFO - Step 5: Data validation and cleanup
+2025-07-27 03:29:44,993 - INFO -    Validation complete: 112 clean records
+2025-07-27 03:29:44,994 - INFO - Step 6: Exporting for Power BI
+2025-07-27 03:29:45,010 - INFO -    Data successfully exported to C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 03:29:45,011 - INFO - ================================================================================
+2025-07-27 03:29:45,012 - INFO - COMPLETE SCRPA PROCESSING PIPELINE FINISHED
+2025-07-27 03:29:45,013 - INFO - Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv
+2025-07-27 03:29:45,014 - INFO - ================================================================================
+2025-07-27 03:32:13,127 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_033213.log
+2025-07-27 03:32:13,133 - INFO - ================================================================================
+2025-07-27 03:32:13,136 - INFO - ================================================================================
+2025-07-27 03:32:13,296 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 03:32:13,310 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 03:32:13,327 - INFO -    Total records: 112
+2025-07-27 03:32:13,327 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 03:32:13,328 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 03:32:13,328 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 03:32:13,329 - INFO -    Average quality score: 84.8/100
+2025-07-27 03:32:13,362 - INFO - ================================================================================
+2025-07-27 03:32:13,368 - INFO - ================================================================================
+2025-07-27 16:06:55,589 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_160655.log
+2025-07-27 16:06:55,700 - INFO - ================================================================================
+2025-07-27 16:06:55,709 - INFO - ================================================================================
+2025-07-27 16:06:57,275 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 16:06:57,288 - ERROR - Failed to auto-detect and load data: Can only use .dt accessor with datetimelike values
+2025-07-27 16:15:23,558 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_161523.log
+2025-07-27 16:15:23,563 - INFO - Master SCRPA Processor initialized
+2025-07-27 16:15:23,564 - INFO - ========================================
+2025-07-27 16:15:23,565 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 16:15:23,565 - INFO - ========================================
+2025-07-27 16:15:23,565 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 16:15:23,566 - INFO - Searching for latest auto export files
+2025-07-27 16:15:23,567 - INFO - Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:15:23,567 - INFO - Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:15:23,749 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 16:15:23,757 - WARNING - 112 null values in Time of Call (unexpected for CAD exports)
+2025-07-27 16:15:23,761 - INFO - Removed column: cYear
+2025-07-27 16:15:23,763 - INFO - Removed column: cMonth
+2025-07-27 16:15:23,763 - INFO - Removed column: DayofWeek
+2025-07-27 16:15:23,764 - INFO - Detected CAD structure with 112 records
+2025-07-27 16:15:23,764 - INFO - Step 2: Processing CAD data structure
+2025-07-27 16:15:23,765 - INFO - Processing CAD structure (no unpivoting needed)
+2025-07-27 16:15:23,774 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 16:15:23,778 - ERROR - PIPELINE FAILED: 'MasterSCRPAProcessor' object has no attribute 'response_map'
+2025-07-27 16:22:31,095 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_162231.log
+2025-07-27 16:22:31,099 - INFO - Master SCRPA Processor initialized
+2025-07-27 16:22:31,100 - INFO - ========================================
+2025-07-27 16:22:31,101 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 16:22:31,101 - INFO - ========================================
+2025-07-27 16:22:31,104 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 16:22:31,105 - INFO - Searching for latest auto export files
+2025-07-27 16:22:31,106 - INFO - Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:22:31,106 - INFO - Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:22:31,253 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 16:22:31,256 - WARNING - 112 null values in Time of Call (unexpected for CAD exports)
+2025-07-27 16:22:31,257 - INFO - Removed column: cYear
+2025-07-27 16:22:31,258 - INFO - Removed column: cMonth
+2025-07-27 16:22:31,259 - INFO - Removed column: DayofWeek
+2025-07-27 16:22:31,260 - INFO - Detected CAD structure with 112 records
+2025-07-27 16:22:31,260 - INFO - Step 2: Processing CAD data structure
+2025-07-27 16:22:31,261 - INFO - Processing CAD structure (no unpivoting needed)
+2025-07-27 16:22:31,267 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 16:22:31,271 - INFO - CAD processing complete: 112 records
+2025-07-27 16:22:31,272 - INFO - Step 3: Enhanced CADNotes processing
+2025-07-27 16:22:31,285 - INFO -    Total records: 112
+2025-07-27 16:22:31,286 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-27 16:22:31,286 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-27 16:22:31,286 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-27 16:22:31,287 - INFO -    Average quality score: 84.8/100
+2025-07-27 16:22:31,287 - INFO - CADNotes processing complete: 95 notes processed
+2025-07-27 16:22:31,288 - INFO - Step 4: Adding derived columns (replaces M Code logic)
+2025-07-27 16:22:31,292 - ERROR - PIPELINE FAILED: 'Incident_Time'
+2025-07-27 16:31:33,677 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_163133.log
+2025-07-27 16:31:33,681 - INFO - Master SCRPA Processor initialized
+2025-07-27 16:31:33,685 - INFO - ========================================
+2025-07-27 16:31:33,687 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 16:31:33,688 - INFO - ========================================
+2025-07-27 16:31:33,689 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 16:31:33,690 - INFO - Searching for latest auto export files
+2025-07-27 16:31:33,692 - INFO - Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:31:33,693 - INFO - Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:31:33,844 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 16:31:33,847 - WARNING - 112 null values in Time of Call (unexpected for CAD exports)
+2025-07-27 16:31:33,848 - INFO - Removed column: cYear
+2025-07-27 16:31:33,849 - INFO - Removed column: cMonth
+2025-07-27 16:31:33,850 - INFO - Removed column: DayofWeek
+2025-07-27 16:31:33,851 - INFO - Detected CAD structure with 112 records
+2025-07-27 16:31:33,853 - INFO - Step 2: Processing CAD data structure
+2025-07-27 16:31:33,854 - INFO - Processing CAD structure (no unpivoting needed)
+2025-07-27 16:31:33,862 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 16:31:33,864 - ERROR - PIPELINE FAILED: 'MasterSCRPAProcessor' object has no attribute 'response_map'
+2025-07-27 17:17:17,427 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_171717.log
+2025-07-27 17:17:17,432 - INFO - Master SCRPA Processor initialized
+2025-07-27 17:17:17,433 - INFO - ========================================
+2025-07-27 17:17:17,433 - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 17:17:17,434 - INFO - ========================================
+2025-07-27 17:17:17,435 - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 17:17:17,435 - INFO - Searching for latest auto export files
+2025-07-27 17:17:17,437 - INFO - Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 17:17:17,438 - INFO - Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 17:17:17,715 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 17:17:17,722 - WARNING - 112 null values in Time of Call (unexpected for CAD exports)
+2025-07-27 17:17:17,724 - INFO - Removed column: cYear
+2025-07-27 17:17:17,725 - INFO - Removed column: cMonth
+2025-07-27 17:17:17,726 - INFO - Removed column: DayofWeek
+2025-07-27 17:17:17,727 - INFO - Detected CAD structure with 112 records
+2025-07-27 17:17:17,727 - INFO - Step 2: Processing CAD data structure
+2025-07-27 17:17:17,727 - INFO - Processing CAD structure (no unpivoting needed)
+2025-07-27 17:17:17,737 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-27 17:17:17,739 - ERROR - PIPELINE FAILED: 'MasterSCRPAProcessor' object has no attribute 'response_map'

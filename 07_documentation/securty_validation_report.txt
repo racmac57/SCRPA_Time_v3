@@ -1,0 +1,83 @@
+Microsoft Windows [Version 10.0.26100.4770]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\carucci_r>cd C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts
+
+C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts>python security_validation_suite.py
+2025-07-25 16:29:18,644 - comprehensive_data_sanitizer - INFO - 🔒 Comprehensive Data Sanitizer initialized
+2025-07-25 16:29:19,102 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+2025-07-25 16:29:23,165 - secure_scrpa_generator - ERROR - ❌ Ollama connection error: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E76BAE5A00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-07-25 16:29:23,166 - secure_scrpa_generator - INFO - 🔒 SECURITY VALIDATION RESULTS:
+2025-07-25 16:29:23,166 - secure_scrpa_generator - INFO -    Localhost Ollama Connection: ✅ PASS
+2025-07-25 16:29:23,168 - secure_scrpa_generator - INFO -    External API Blocking: ✅ PASS - No external APIs configured
+2025-07-25 16:29:23,168 - secure_scrpa_generator - INFO -    Audit Logging: ✅ PASS
+2025-07-25 16:29:23,168 - __main__ - INFO - Security Validator initialized
+======================================================================
+🔒 SCRPA SECURITY VALIDATION SUITE
+======================================================================
+2025-07-25 16:29:23,170 - __main__ - INFO - Network monitoring started
+
+🌐 NETWORK SECURITY TESTS
+----------------------------------------
+2025-07-25 16:29:23,170 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://localhost:11434
+✅ [NETWORK] Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,171 - __main__ - INFO - PASS - Localhost URL Validation (http://localhost:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,171 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://127.0.0.1:11434
+✅ [NETWORK] Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,171 - __main__ - INFO - PASS - Localhost URL Validation (http://127.0.0.1:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,171 - secure_scrpa_generator - INFO - 🔒 Validated localhost URL: http://[::1]:11434
+✅ [NETWORK] Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+2025-07-25 16:29:23,172 - __main__ - INFO - PASS - Localhost URL Validation (http://[::1]:11434): Valid localhost URL accepted
+✅ [NETWORK] Ollama Service Availability: Ollama service not available; using local fallback
+2025-07-25 16:29:25,221 - __main__ - INFO - PASS - Ollama Service Availability: Ollama service not available; using local fallback
+
+🔒 DATA SANITIZATION TESTS
+----------------------------------------
+2025-07-25 16:29:25,221 - test_data_generator - INFO - Generating 20 test records with embedded PII
+2025-07-25 16:29:25,223 - test_data_generator - INFO - Generated test dataset with 20 records containing:
+2025-07-25 16:29:25,223 - test_data_generator - INFO -   - Names: ~80 embedded
+2025-07-25 16:29:25,223 - test_data_generator - INFO -   - Phone numbers: ~60 embedded
+2025-07-25 16:29:25,223 - test_data_generator - INFO -   - SSNs: ~40 embedded
+2025-07-25 16:29:25,224 - test_data_generator - INFO -   - Email addresses: ~40 embedded
+2025-07-25 16:29:25,224 - test_data_generator - INFO -   - License plates: ~40 embedded
+2025-07-25 16:29:25,224 - test_data_generator - INFO -   - Credit cards: ~20 embedded
+2025-07-25 16:29:25,224 - comprehensive_data_sanitizer - INFO - 🔒 Starting sanitization of 20 records
+2025-07-25 16:29:25,224 - comprehensive_data_sanitizer - INFO - 📋 Sanitizing columns: ['case_number', 'incident_date', 'incident_time', 'incident_type', 'address', 'narrative', 'officer', 'officer_notes', 'witness_statement', 'suspect_description', 'victim_info', 'evidence_log', 'case_status', 'grid', 'zone', 'total_value_stolen']
+2025-07-25 16:29:25,234 - comprehensive_data_sanitizer - INFO - ✅ Sanitization complete: 561 operations, 233 unique names processed
+✅ [SANITIZATION] Address Block-Level Sanitization: All addresses block-level masked
+2025-07-25 16:29:25,234 - __main__ - INFO - PASS - Address Block-Level Sanitization: All addresses block-level masked
+✅ [LLM] LLM Processing Placeholder: No LLM tests implemented
+2025-07-25 16:29:25,234 - __main__ - INFO - PASS - LLM Processing Placeholder: No LLM tests implemented
+✅ [CONFIG] Configuration Security Placeholder: No config tests implemented
+2025-07-25 16:29:25,235 - __main__ - INFO - PASS - Configuration Security Placeholder: No config tests implemented
+✅ [FILESYSTEM] File System Security Placeholder: No filesystem tests implemented
+2025-07-25 16:29:25,235 - __main__ - INFO - PASS - File System Security Placeholder: No filesystem tests implemented
+✅ [ERROR] Error Handling Placeholder: No error-handling tests implemented
+2025-07-25 16:29:25,235 - __main__ - INFO - PASS - Error Handling Placeholder: No error-handling tests implemented
+2025-07-25 16:29:26,237 - __main__ - INFO - Network monitoring stopped. Found 0 external calls
+✅ [NETWORK] External Network Calls: No external network connections detected
+2025-07-25 16:29:26,237 - __main__ - INFO - PASS - External Network Calls: No external network connections detected
+
+🔒 SECURITY VALIDATION SUMMARY
+======================================================================
+📊 Test Results: 10 total tests
+   ✅ Passed: 10
+   ❌ Failed: 0
+   ⚠️  Warnings: 0
+   🚨 Errors: 0
+
+⚠️ SECURITY STATUS: PASS
+
+📋 COMPLIANCE_CHECKLIST:
+   ✅ Localhost URL Validation (http://localhost:11434)
+   ✅ Localhost URL Validation (http://127.0.0.1:11434)
+   ✅ Localhost URL Validation (http://[::1]:11434)
+   ✅ Ollama Service Availability
+   ✅ Address Block-Level Sanitization
+   ✅ LLM Processing Placeholder
+   ✅ Configuration Security Placeholder
+   ✅ File System Security Placeholder
+   ✅ Error Handling Placeholder
+   ✅ External Network Calls
+
+C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts>

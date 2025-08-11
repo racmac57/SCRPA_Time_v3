@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 3:29:16 PM</msg><msg code="0" type="0">Exported layout for MV Theft</msg><msg code="0" type="0">Exported layout for Burglary - Auto</msg><msg code="0" type="0">Exported layout for Burglary - Comm &amp; Res</msg><msg code="0" type="0">Exported layout for Robbery</msg><msg code="0" type="0">Exported layout for Sexual Offenses</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 155, in &lt;module&gt;
+﻿    df = pd.DataFrame(arcpy.da.TableToNumPyArray(layer_7day, fields_7day))
+﻿                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+</msg><msg code="0" type="0">Failed script Weekly Crime ReportWith Table...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReportables).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 3:29:49 PM (Elapsed Time: 33.90 seconds)</msg></messages>

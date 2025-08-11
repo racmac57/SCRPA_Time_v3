@@ -1,0 +1,3 @@
+2025-07-26 20:09:39,733 - INFO - [WORKFLOW:PBIXWorkflow] - PBIX Workflow Manager initialized - ID: 20250726_200939_730
+2025-07-26 20:09:39,734 - INFO - [WORKFLOW:PBIXWorkflow] - Sample configuration created: C:\Users\CARUCC~1\AppData\Local\Temp\tmpoux6n4no.json
+2025-07-26 20:09:39,734 - ERROR - [WORKFLOW:PBIXWorkflow] - Failed to create sample configuration: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>

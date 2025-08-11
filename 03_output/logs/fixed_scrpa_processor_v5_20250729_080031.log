@@ -1,0 +1,26 @@
+2025-07-29 08:00:31,544 - FixedSCRPAProcessorV5 - INFO - Fixed SCRPA Processor V5 initialized - NO unpivoting, proper data types
+2025-07-29 08:00:31,544 - FixedSCRPAProcessorV5 - INFO - Starting Fixed SCRPA Processing V5 - NO unpivoting, all data type fixes
+2025-07-29 08:00:31,545 - FixedSCRPAProcessorV5 - INFO - Latest CAD file: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 08:00:31,545 - FixedSCRPAProcessorV5 - INFO - Latest RMS file: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 08:00:31,545 - FixedSCRPAProcessorV5 - INFO - Processing CAD data: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 08:00:32,115 - FixedSCRPAProcessorV5 - INFO - Loaded CAD data: 114 records
+2025-07-29 08:00:32,125 - FixedSCRPAProcessorV5 - INFO - Fixed CAD_PDZone as integer
+2025-07-29 08:00:32,125 - FixedSCRPAProcessorV5 - INFO - Fixed CAD_cYear as integer
+2025-07-29 08:00:32,126 - FixedSCRPAProcessorV5 - INFO - Fixed CAD_HourMinuetsCalc as numeric
+2025-07-29 08:00:32,127 - FixedSCRPAProcessorV5 - INFO - Fixed Enhanced_Block using CAD_FullAddress2
+2025-07-29 08:00:32,129 - FixedSCRPAProcessorV5 - INFO - Fixed Crime_Category with proper SCRPA classifications
+2025-07-29 08:00:32,131 - FixedSCRPAProcessorV5 - INFO - Fixed CAD_Response Type with Emergency/Priority/Routine classifications
+2025-07-29 08:00:32,131 - FixedSCRPAProcessorV5 - INFO - CAD processing complete: 114 records with all fixes applied
+2025-07-29 08:00:32,131 - FixedSCRPAProcessorV5 - INFO - Processing RMS data: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 08:00:32,157 - FixedSCRPAProcessorV5 - INFO - Loaded RMS data: 134 records
+2025-07-29 08:00:32,187 - FixedSCRPAProcessorV5 - INFO - Fixed Enhanced_Block using RMS_FullAddress
+2025-07-29 08:00:32,189 - FixedSCRPAProcessorV5 - INFO - Fixed Crime_Category with proper SCRPA classifications
+2025-07-29 08:00:32,189 - FixedSCRPAProcessorV5 - INFO - RMS processing complete: 134 records (NO unpivoting)
+2025-07-29 08:00:32,193 - FixedSCRPAProcessorV5 - WARNING - No case number column found for reordering
+2025-07-29 08:00:32,206 - FixedSCRPAProcessorV5 - INFO - ============================================================
+2025-07-29 08:00:32,207 - FixedSCRPAProcessorV5 - INFO - FIXED PROCESSING V5 COMPLETE
+2025-07-29 08:00:32,207 - FixedSCRPAProcessorV5 - INFO - ============================================================
+2025-07-29 08:00:32,207 - FixedSCRPAProcessorV5 - INFO - ✅ Total records: 248
+2025-07-29 08:00:32,207 - FixedSCRPAProcessorV5 - INFO - ✅ Case number column: CAD_ReportNumberNew
+2025-07-29 08:00:32,207 - FixedSCRPAProcessorV5 - INFO - ✅ Null case numbers: 134 (54.0%)
+2025-07-29 08:00:32,207 - FixedSCRPAProcessorV5 - INFO - ✅ Output: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data.csv

@@ -1,0 +1,16 @@
+2025-07-25 14:54:23,083 - INFO - SUCCESS - Test Step: Testing step logging functionality
+2025-07-26 19:48:28,582 - WARNING - Could not create rollback script: 'charmap' codec can't encode character '\u274c' in position 504: character maps to <undefined>
+2025-07-26 19:48:28,588 - INFO - RUNNING - Backup Creation: Creating comprehensive backup...
+2025-07-26 19:48:29,629 - INFO - RUNNING - Backup Creation: Backing up 368 files...
+2025-07-26 19:48:32,953 - INFO - SUCCESS - Backup Creation: Backup created with 368 files
+2025-07-26 19:48:32,955 - INFO - RUNNING - Security Audit: Scanning for security issues...
+2025-07-26 19:48:59,003 - INFO - SUCCESS - Security Audit: Audit complete: 244 findings (68 high severity)
+2025-07-26 19:49:08,876 - INFO - SUCCESS - Security Review: User approved migration
+2025-07-26 19:49:08,878 - INFO - RUNNING - Migration Execution: Executing migration steps...
+2025-07-26 19:49:08,880 - INFO - SKIPPED - LLM Migration: llm_report_generator.py not found
+2025-07-26 19:49:08,882 - INFO - SUCCESS - Processor Migration: Migrated 0 processor files
+2025-07-26 19:49:08,888 - INFO - SUCCESS - Config Creation: Secure configuration created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\secure_scrpa_config.json
+2025-07-26 19:49:08,960 - INFO - SUCCESS - Import Updates: Updated imports in 16 files
+2025-07-26 19:49:08,961 - INFO - SUCCESS - Migration Execution: All migration steps completed
+2025-07-26 19:49:08,961 - INFO - RUNNING - Migration Verification: Verifying migration...
+2025-07-26 19:49:09,520 - ERROR - FAILED - Migration Verification: Only 2/4 verification checks passed

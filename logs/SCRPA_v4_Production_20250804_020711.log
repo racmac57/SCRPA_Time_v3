@@ -1,0 +1,17 @@
+2025-08-04 02:07:11,162 - INFO - SCRPA v4 Production Pipeline Started - 20250804_020711
+2025-08-04 02:07:11,217 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:07:11,242 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:07:11,244 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:07:11,247 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:07:11,314 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:07:11,320 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:07:11,321 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:07:11,327 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:07:11,429 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:07:11,452 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:07:11,452 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:07:11,453 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:07:11,523 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:07:11,533 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:07:11,534 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:07:11,535 - INFO - Current cycle: C08W31, Date: 20250804

@@ -1,0 +1,16 @@
+2025-07-27 03:22:36,948 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_032236.log
+2025-07-27 03:22:36,952 - MasterProcessor - INFO - Master SCRPA Processor initialized
+2025-07-27 03:22:36,956 - MasterProcessor - INFO - ================================================================================
+2025-07-27 03:22:36,957 - MasterProcessor - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 03:22:36,958 - MasterProcessor - INFO - ================================================================================
+2025-07-27 03:22:36,958 - MasterProcessor - INFO - Step 1: Loading and joining latest RMS and CAD data
+2025-07-27 03:22:36,959 - MasterProcessor - INFO - Searching for latest RMS export file...
+2025-07-27 03:22:36,960 - MasterProcessor - INFO -    Found latest RMS file: 2025_07_25_13_11_35_ALL_RMS.xlsx
+2025-07-27 03:22:37,130 - MasterProcessor - INFO - Searching for latest CAD export file...
+2025-07-27 03:22:37,131 - MasterProcessor - INFO -    Found latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 03:22:37,150 - MasterProcessor - INFO -    Joining RMS and CAD data...
+2025-07-27 03:22:37,153 - MasterProcessor - INFO -    Join complete. Total records: 131
+2025-07-27 03:22:37,155 - MasterProcessor - INFO - Step 2: Enhanced CADNotes processing
+2025-07-27 03:22:37,178 - MasterProcessor - INFO -    CADNotes processing complete: 70 notes processed
+2025-07-27 03:22:37,179 - MasterProcessor - INFO - Step 3: Adding derived columns
+2025-07-27 03:22:37,187 - MasterProcessor - ERROR - PIPELINE FAILED: 'CAD_Block'

@@ -1,0 +1,1 @@
+EXPORT_RMS meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File", Type="Binary", IsParameterQueryRequired=true]

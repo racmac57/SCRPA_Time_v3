@@ -1,0 +1,19 @@
+Hackensack PD Crime Analysis Processing Summary
+============================================================
+Generated: 2025-06-10 16:43:29
+Analysis Date: 2025-06-10
+Excel Integration: ENABLED
+Crime Subfolder Organization: ENABLED
+
+- MV Theft Maps: Success
+- MV Theft Charts: Success
+- Burglary - Auto Maps: Success
+- Burglary - Auto Charts: Success
+- Burglary - Comm & Res Maps: Success
+- Burglary - Comm & Res Charts: Success
+- Robbery Maps: Success
+- Robbery Charts: Success
+- Sexual Offenses Maps: Success
+- Sexual Offenses Charts: Success
+
+Status: COMPLETE

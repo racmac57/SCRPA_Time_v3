@@ -1,0 +1,77 @@
+2025-07-31 23:48:07,413 - SCRPACompleteValidator - INFO - === SCRPA Complete Pipeline Validator with Spatial Enhancement ===
+2025-07-31 23:48:07,413 - SCRPACompleteValidator - INFO - 🚀 Starting complete SCRPA pipeline validation...
+2025-07-31 23:48:07,413 - SCRPACompleteValidator - INFO - 🚀 Running base SCRPA pipeline...
+2025-07-31 23:48:07,415 - SCRPACompleteValidator - ERROR - ❌ Base pipeline failed: No module named 'Comprehensive_SCRPA_Fix_v8_0_Standardized'
+2025-07-31 23:48:07,415 - SCRPACompleteValidator - INFO - 📊 Validating record counts...
+2025-07-31 23:48:07,432 - SCRPACompleteValidator - INFO - Record count validation: FAIL
+2025-07-31 23:48:07,432 - SCRPACompleteValidator - WARNING -   ⚠️ Matched count 299 != RMS count 0
+2025-07-31 23:48:07,433 - SCRPACompleteValidator - INFO - 🔍 Validating column compliance...
+2025-07-31 23:48:07,435 - SCRPACompleteValidator - INFO -   cad_data_standardized (CSV): 100.0% compliant
+2025-07-31 23:48:07,438 - SCRPACompleteValidator - INFO -   rms_data_standardized (CSV): 100.0% compliant
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - INFO -   cad_rms_matched_standardized (CSV): 0.0% compliant
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING - ❌ Column compliance FAILED: 0.0%
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Case_Number
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Incident_Date
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Incident_Time
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Of_Day
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Period
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Season
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Day_Of_Week
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Day_Type
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Location
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Block
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Grid
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Post
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: All_Incidents
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Incident_Type
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Crime_Category
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Vehicle_1
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Vehicle_2
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Vehicle_1_And_Vehicle_2
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Narrative
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Total_Value_Stolen
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Total_Value_Recovered
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Squad
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Officer_Of_Record
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: NIBRS_Classification
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Case_Number_CAD
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Response_Type_CAD
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: How_Reported_CAD
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Location_CAD
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Block_CAD
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Grid_CAD
+2025-07-31 23:48:07,442 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Post_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Of_Call_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Dispatched_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Out_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_In_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Spent_Minutes_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Response_Minutes_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Officer_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Disposition_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: CAD_Notes_Cleaned_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Has_CAD_Data
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Response_CAD
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Spent
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - WARNING -   Non-compliant: cad_rms_matched_standardized: Time_Response_Formatted
+2025-07-31 23:48:07,443 - SCRPACompleteValidator - INFO - ⏰ Validating time formatting...
+2025-07-31 23:48:07,451 - SCRPACompleteValidator - WARNING - ❌ Time formatting validation FAILED
+2025-07-31 23:48:07,451 - SCRPACompleteValidator - WARNING -   CAD time_response_formatted compliance low: 0.0%
+2025-07-31 23:48:07,451 - SCRPACompleteValidator - INFO - 🔗 Validating CAD-RMS matching...
+2025-07-31 23:48:07,459 - SCRPACompleteValidator - INFO -   Match rate: 0.0% (0/299)
+2025-07-31 23:48:07,459 - SCRPACompleteValidator - WARNING - ❌ CAD-RMS matching validation FAILED
+2025-07-31 23:48:07,459 - SCRPACompleteValidator - WARNING -   CAD-RMS match rate too low: 0.0%
+2025-07-31 23:48:07,459 - SCRPACompleteValidator - INFO - 🏠 Validating address standardization...
+2025-07-31 23:48:07,464 - SCRPACompleteValidator - INFO -   rms_data_standardized: 100.0% Hackensack standardized (133/133)
+2025-07-31 23:48:07,468 - SCRPACompleteValidator - INFO -   cad_data_standardized: 100.0% Hackensack standardized (114/114)
+2025-07-31 23:48:07,478 - SCRPACompleteValidator - INFO - ✅ Address standardization validation PASSED
+2025-07-31 23:48:07,479 - SCRPACompleteValidator - INFO - 🗺️ Preparing spatial enhancement...
+2025-07-31 23:48:07,479 - SCRPACompleteValidator - INFO - ✅ ArcGIS Pro template found: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\10_Refrence_Files\7_Day_Templet_SCRPA_Time.aprx
+2025-07-31 23:48:07,487 - SCRPACompleteValidator - INFO -   rms_data_standardized.csv: 115 unique addresses
+2025-07-31 23:48:07,490 - SCRPACompleteValidator - INFO -   cad_data_standardized.csv: 99 unique addresses
+2025-07-31 23:48:07,502 - SCRPACompleteValidator - INFO - 📍 Total unique addresses to geocode: 144
+2025-07-31 23:48:07,502 - SCRPACompleteValidator - INFO - 📦 Estimated batches: 2
+2025-07-31 23:48:07,502 - SCRPACompleteValidator - INFO - ⚙️ Creating geocoding batch processor...
+2025-07-31 23:48:07,503 - SCRPACompleteValidator - INFO - ✅ Geocoding batch processor created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\batch_geocoding_processor.py
+2025-07-31 23:48:07,503 - SCRPACompleteValidator - INFO - 📋 Generating comprehensive report...
+2025-07-31 23:48:07,505 - SCRPACompleteValidator - ERROR - ❌ Complete validation failed: Unknown format code 'f' for object of type 'str'

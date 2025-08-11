@@ -1,0 +1,8 @@
+2025-07-26 20:09:39,883 - INFO - [__main__:190] - PBIX Parameter Updater initialized - Session: 20250726_200939_882
+2025-07-26 20:09:39,883 - INFO - [__main__:624] - === STARTING PBIX PARAMETER UPDATE PROCESS ===
+2025-07-26 20:09:39,883 - INFO - [__main__:627] - === PRE-RUN VALIDATION ===
+2025-07-26 20:09:39,883 - INFO - [__main__:451] - Validating input file: nonexistent.pbix
+2025-07-26 20:09:39,883 - ERROR - [__main__:212] - [ERR_200939_883] input_validation: File does not exist: nonexistent.pbix
+2025-07-26 20:09:39,883 - ERROR - [__main__:635] - Pre-validation failed for input file
+2025-07-26 20:09:39,885 - INFO - [__main__:994] - Generating configuration summary: pbix_config_summary_20250726_200939.json
+2025-07-26 20:09:40,149 - INFO - [__main__:1028] - Configuration summary saved successfully: pbix_config_summary_20250726_200939.json

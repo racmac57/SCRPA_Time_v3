@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 13, 2025 2:20:50 PM</msg><msg code="0" type="0">Running reports...</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 96, in &lt;module&gt;
+﻿    run_all_reports(base_folder, crime_types, chart_suffixes, args)
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 34, in run_all_reports
+﻿    aprx = arcpy.mp.ArcGISProject(aprx_path)
+﻿           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\_mp.py", line 1500, in __init__
+﻿    self._arc_object = arcgisscripting._mapping.ArcGISProject(*gp_fixargs((aprx_path,), True))
+﻿                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿OSError: C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\_Hackensack_Data_Repository\\GIS_Tools\\Maps\\SCRPA_Template.aprx
+</msg><msg code="0" type="0">Failed script Updated Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeExport).</msg><msg code="0" type="3">Failed at Tuesday, May 13, 2025 2:20:50 PM (Elapsed Time: 0.14 seconds)</msg></messages>

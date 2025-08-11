@@ -1,0 +1,46 @@
+Hackensack PD Crime Analysis Processing Summary
+============================================================
+Generated: 2025-06-21 14:19:37
+Analysis Date: 2025-06-21
+Excel Integration: ENABLED
+Crime Subfolder Organization: ENABLED
+
+Total Crime Types Processed: 5
+Successful Exports: 0
+Failed Exports: 5
+
+Crime Type: MV Theft
+  Maps: ❌
+  Charts: ✅
+  Processing Time: 24.49s
+  Errors:
+    - Map export failed for MV Theft
+
+Crime Type: Burglary - Auto
+  Maps: ❌
+  Charts: ✅
+  Processing Time: 4.13s
+  Errors:
+    - Map export failed for Burglary - Auto
+
+Crime Type: Burglary - Comm & Res
+  Maps: ❌
+  Charts: ✅
+  Processing Time: 3.77s
+  Errors:
+    - Map export failed for Burglary - Comm & Res
+
+Crime Type: Robbery
+  Maps: ❌
+  Charts: ✅
+  Processing Time: 3.57s
+  Errors:
+    - Map export failed for Robbery
+
+Crime Type: Sexual Offenses
+  Maps: ❌
+  Charts: ✅
+  Processing Time: 5.01s
+  Errors:
+    - Map export failed for Sexual Offenses
+

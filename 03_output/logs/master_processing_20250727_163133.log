@@ -1,0 +1,17 @@
+2025-07-27 16:31:33,677 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_163133.log
+2025-07-27 16:31:33,681 - MasterProcessor - INFO - Master SCRPA Processor initialized
+2025-07-27 16:31:33,685 - MasterProcessor - INFO - ========================================
+2025-07-27 16:31:33,687 - MasterProcessor - INFO - STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 16:31:33,688 - MasterProcessor - INFO - ========================================
+2025-07-27 16:31:33,689 - MasterProcessor - INFO - Step 1: Auto-detecting data source and loading data
+2025-07-27 16:31:33,690 - MasterProcessor - INFO - Searching for latest auto export files
+2025-07-27 16:31:33,692 - MasterProcessor - INFO - Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:31:33,693 - MasterProcessor - INFO - Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:31:33,847 - MasterProcessor - WARNING - 112 null values in Time of Call (unexpected for CAD exports)
+2025-07-27 16:31:33,848 - MasterProcessor - INFO - Removed column: cYear
+2025-07-27 16:31:33,849 - MasterProcessor - INFO - Removed column: cMonth
+2025-07-27 16:31:33,850 - MasterProcessor - INFO - Removed column: DayofWeek
+2025-07-27 16:31:33,851 - MasterProcessor - INFO - Detected CAD structure with 112 records
+2025-07-27 16:31:33,853 - MasterProcessor - INFO - Step 2: Processing CAD data structure
+2025-07-27 16:31:33,854 - MasterProcessor - INFO - Processing CAD structure (no unpivoting needed)
+2025-07-27 16:31:33,864 - MasterProcessor - ERROR - PIPELINE FAILED: 'MasterSCRPAProcessor' object has no attribute 'response_map'

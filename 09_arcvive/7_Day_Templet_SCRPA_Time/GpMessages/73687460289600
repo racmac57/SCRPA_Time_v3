@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 1:46:45 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\WeeklyCrimeReport_Tables.py", line 151, in &lt;module&gt;
+﻿    df_7day = pd.DataFrame(arcpy.da.TableToNumPyArray(layer_7day, fields_7day))
+﻿              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\frame.py", line 736, in __init__
+﻿    mgr = rec_array_to_mgr(
+﻿          ^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\internals\construction.py", line 190, in rec_array_to_mgr
+﻿    mgr = arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ)
+﻿          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\internals\construction.py", line 120, in arrays_to_mgr
+﻿    arrays, refs = _homogenize(arrays, index, dtype)
+﻿                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\internals\construction.py", line 607, in _homogenize
+﻿    val = sanitize_array(val, index, dtype=dtype, copy=False)
+﻿          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\construction.py", line 607, in sanitize_array
+﻿    subarr = _sanitize_ndim(subarr, data, dtype, index, allow_2d=allow_2d)
+﻿             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\core\construction.py", line 666, in _sanitize_ndim
+﻿    raise ValueError(
+﻿ValueError: Data must be 1-dimensional, got ndarray of shape (1, 2) instead
+</msg><msg code="0" type="0">Failed script Weekly Crime ReportWith Table...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReportables).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 1:46:50 PM (Elapsed Time: 4.78 seconds)</msg></messages>

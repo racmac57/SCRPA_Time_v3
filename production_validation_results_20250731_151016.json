@@ -1,0 +1,162 @@
+{
+  "validation_metadata": {
+    "start_time": "2025-07-31T15:10:16.137375",
+    "python_version": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+    "system_info": {
+      "cpu_count": 12,
+      "memory_gb": 15.66,
+      "platform": "nt"
+    }
+  },
+  "performance_benchmarks": {
+    "RMS_100": {
+      "operation": "RMS_processing_100",
+      "duration_seconds": 0.003,
+      "records_processed": 100,
+      "records_per_second": 39976.21,
+      "memory_used_mb": 3.17,
+      "timestamp": "2025-07-31T15:10:16.240282"
+    },
+    "RMS_500": {
+      "operation": "RMS_processing_500",
+      "duration_seconds": 0.002,
+      "records_processed": 500,
+      "records_per_second": 222651.24,
+      "memory_used_mb": 3.15,
+      "timestamp": "2025-07-31T15:10:16.242853"
+    },
+    "RMS_1000": {
+      "operation": "RMS_processing_1000",
+      "duration_seconds": 0.004,
+      "records_processed": 1000,
+      "records_per_second": 266932.09,
+      "memory_used_mb": 3.16,
+      "timestamp": "2025-07-31T15:10:16.246944"
+    },
+    "RMS_2000": {
+      "operation": "RMS_processing_2000",
+      "duration_seconds": 0.006,
+      "records_processed": 2000,
+      "records_per_second": 339221.48,
+      "memory_used_mb": 3.25,
+      "timestamp": "2025-07-31T15:10:16.253195"
+    },
+    "RMS_5000": {
+      "operation": "RMS_processing_5000",
+      "duration_seconds": 0.012,
+      "records_processed": 5000,
+      "records_per_second": 408117.39,
+      "memory_used_mb": 14.31,
+      "timestamp": "2025-07-31T15:10:16.265788"
+    },
+    "CAD_100": {
+      "operation": "CAD_processing_100",
+      "duration_seconds": 0.008,
+      "records_processed": 100,
+      "records_per_second": 12235.78,
+      "memory_used_mb": 13.77,
+      "timestamp": "2025-07-31T15:10:16.274406"
+    },
+    "CAD_500": {
+      "operation": "CAD_processing_500",
+      "duration_seconds": 0.002,
+      "records_processed": 456,
+      "records_per_second": 272217.85,
+      "memory_used_mb": 13.77,
+      "timestamp": "2025-07-31T15:10:16.276373"
+    },
+    "CAD_1000": {
+      "operation": "CAD_processing_1000",
+      "duration_seconds": 0.001,
+      "records_processed": 912,
+      "records_per_second": 653434.45,
+      "memory_used_mb": 13.77,
+      "timestamp": "2025-07-31T15:10:16.277997"
+    },
+    "CAD_2000": {
+      "operation": "CAD_processing_2000",
+      "duration_seconds": 0.002,
+      "records_processed": 1710,
+      "records_per_second": 1031386.23,
+      "memory_used_mb": 13.77,
+      "timestamp": "2025-07-31T15:10:16.279900"
+    },
+    "CAD_5000": {
+      "operation": "CAD_processing_5000",
+      "duration_seconds": 0.002,
+      "records_processed": 4218,
+      "records_per_second": 1863447.89,
+      "memory_used_mb": 13.77,
+      "timestamp": "2025-07-31T15:10:16.282419"
+    }
+  },
+  "geocoding_integration": {
+    "total_addresses": 8,
+    "successful_geocodes": 4,
+    "failed_geocodes": 4,
+    "validation_issues": 4,
+    "performance": {
+      "operation": "geocoding_batch",
+      "duration_seconds": 0.0,
+      "records_processed": 8,
+      "records_per_second": 188508.04,
+      "memory_used_mb": 13.65,
+      "timestamp": "2025-07-31T15:10:16.282836"
+    },
+    "batch_performance": {
+      "operation": "geocoding_batch_api",
+      "duration_seconds": 0.0,
+      "records_processed": 5,
+      "records_per_second": 1747626.67,
+      "memory_used_mb": 13.65,
+      "timestamp": "2025-07-31T15:10:16.282947"
+    }
+  },
+  "arcgis_functionality": {
+    "arcpy_available": false,
+    "spatial_operations": {},
+    "errors": [
+      "ArcPy not available - install ArcGIS Pro or ArcMap"
+    ]
+  },
+  "quality_assurance": {
+    "data_integrity": {
+      "rms_records": 136,
+      "cad_records": 114,
+      "final_records": 163,
+      "rms_duplicates": 0,
+      "cad_duplicates": 0,
+      "final_duplicates": 0
+    },
+    "format_validation": {
+      "snake_case_headers": true,
+      "incident_time_format": false,
+      "squad_uppercase": true,
+      "response_type_populated": true
+    },
+    "reference_lookups": {
+      "calltype_categories_loaded": 592,
+      "calltype_matches_found": 114,
+      "calltype_match_rate": 1.0
+    },
+    "completeness": {
+      "rms_required_fields": {
+        "case_number": 1.0,
+        "incident_time": 0.9632352941176471,
+        "full_address": 1.0
+      },
+      "cad_required_fields": {
+        "report_number_new": 1.0,
+        "incident": 1.0,
+        "response_type": 1.0
+      }
+    }
+  },
+  "error_handling": {
+    "edge_cases_tested": 4,
+    "errors_handled": 4,
+    "unhandled_errors": 0,
+    "test_cases": [
+      {
+        "name": "empty_dataframe",
+        "test": 

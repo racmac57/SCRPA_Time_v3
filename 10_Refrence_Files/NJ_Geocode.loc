@@ -1,0 +1,52 @@
+
+LocFileUseUTF8 = True
+Category = Address
+Description = Locator built with PointAddress, StreetAddress
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;  Properties Required by ArcGIS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+CLSID = {26AC4C70-EA6E-4125-86F9-5ED7970D15F7}
+UICLSID = {AE5A3A0E-F756-11D2-9F4F-00C04F8ED1C4}
+MinimumMatchScore = 85
+MinimumCandidateScore = 75
+EndOffset = 6.371
+SideOffset = 6.371
+BatchOutputFields = Shape, Status, Score, Match_addr, LongLabel, ShortLabel, Addr_type, Rank, AddNum, AddNumFrom, AddNumTo, Side, StPreDir, StPreType, StName, StType, StDir, BldgType, BldgName, UnitType, UnitName, SubAddr, City, Subregion, Region, RegionAbbr, Zone, Postal, X, Y, Xmin, Xmax, Ymin, Ymax, ExInfo, School_Districts, Addr_Block, Addr_Lot
+BatchSize = 500
+BuildDate = 2025-07-29 10:52:20
+BuilderVersion = 3.3
+CategoriesFilter = Subaddress,Point Address,Street Address,Intersection
+DefaultLocationType = rooftop
+DefaultSuggestCandidates = 5
+EnableXYProviders = true
+FirstPageSize = 200
+LocatorVersion = 11.0
+LocatorWorkspaceString = ProgID = esriDataSourcesFile.ShapefileWorkspaceFactory; Path = E:\ogis_data\GeocodeETL\download\NJ_Geocode\
+MatchOutOfRange = false
+MaxBatchCandidates = 50
+MaxCandidates = 50
+MaxSuggestCandidates = 15
+NewPageSize = 16
+NumThreads = 4
+PrecisionType = GLOBAL_HIGH
+RDT_AlternateTables = 
+RDT_ReferenceTables = 
+RebuildStartTime = 133982591483830000
+RebuildStartTimeAscii = 10:39:08 AM
+ReleaseInfo = 11.10
+ReverseFeatureTypesFilter = StreetInt,StreetAddress,StreetName,PointAddress,Subaddress
+
+SR.wkid = 3424
+
+SafeLocatorName = NJ_Geocode
+ServerThreadBatchSize = 10
+ShowSubaddressesInfo = true
+SuggestPartialAddresses = FALSE
+SuggestPartialSubaddresses = true
+SuggestSubaddressesAfterBaseAddress = true
+SupportedAddressTypes = Subaddress, PointAddress, StreetAddress, StreetInt, StreetAddressExt, StreetName, StreetMidBlock
+SupportedFeatureTypes = Subaddress, PointAddress, StreetInt, StreetAddress, StreetName
+SupportedRoles = PointAddress, StreetAddress, AlternateCityName, AlternateStreetName, AlternateZoneName
+WarmUp = false

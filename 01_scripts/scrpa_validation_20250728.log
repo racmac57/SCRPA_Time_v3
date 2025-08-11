@@ -1,0 +1,44 @@
+2025-07-28 00:06:01,838 - INFO - Detected CAD structure (score: 5/5)
+2025-07-28 00:06:01,884 - INFO - CAD disposition filtering: 112 → 112 records
+2025-07-28 00:06:01,886 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-28 00:06:01,897 - INFO - 🔄 Processing CADNotes for 112 records
+2025-07-28 00:06:01,926 - INFO - ✅ CADNotes processing complete in 0.03 seconds
+2025-07-28 00:06:01,936 - INFO - 📊 CADNotes Processing Statistics:
+2025-07-28 00:06:01,936 - INFO -    Total records: 112
+2025-07-28 00:06:01,937 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-28 00:06:01,938 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-28 00:06:01,938 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-28 00:06:01,939 - INFO -    Average quality score: 84.8/100
+2025-07-28 00:09:31,762 - INFO - Detected CAD structure (score: 5/5)
+2025-07-28 00:09:31,768 - INFO - CAD disposition filtering: 112 → 112 records
+2025-07-28 00:09:31,768 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-28 00:09:31,773 - INFO - 🔄 Processing CADNotes for 112 records
+2025-07-28 00:09:31,779 - INFO - ✅ CADNotes processing complete in 0.01 seconds
+2025-07-28 00:09:31,780 - INFO - 📊 CADNotes Processing Statistics:
+2025-07-28 00:09:31,780 - INFO -    Total records: 112
+2025-07-28 00:09:31,780 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-28 00:09:31,780 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-28 00:09:31,780 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-28 00:09:31,780 - INFO -    Average quality score: 84.8/100
+2025-07-28 00:17:39,684 - INFO - Detected CAD structure (score: 5/5)
+2025-07-28 00:17:39,742 - INFO - CAD disposition filtering: 112 → 112 records
+2025-07-28 00:17:39,749 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-28 00:17:39,768 - INFO - 🔄 Processing CADNotes for 112 records
+2025-07-28 00:17:39,779 - INFO - ✅ CADNotes processing complete in 0.01 seconds
+2025-07-28 00:17:39,781 - INFO - 📊 CADNotes Processing Statistics:
+2025-07-28 00:17:39,781 - INFO -    Total records: 112
+2025-07-28 00:17:39,781 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-28 00:17:39,781 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-28 00:17:39,781 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-28 00:17:39,781 - INFO -    Average quality score: 84.8/100
+2025-07-28 03:21:55,161 - INFO - Detected CAD structure (score: 5/5)
+2025-07-28 03:21:55,174 - INFO - CAD disposition filtering: 112 → 112 records
+2025-07-28 03:21:55,174 - INFO - CAD data prepared: 112 records ready for processing
+2025-07-28 03:21:55,178 - INFO - 🔄 Processing CADNotes for 112 records
+2025-07-28 03:21:55,183 - INFO - ✅ CADNotes processing complete in 0.01 seconds
+2025-07-28 03:21:55,184 - INFO - 📊 CADNotes Processing Statistics:
+2025-07-28 03:21:55,184 - INFO -    Total records: 112
+2025-07-28 03:21:55,184 - INFO -    Usernames extracted: 95 (84.8%)
+2025-07-28 03:21:55,184 - INFO -    Timestamps extracted: 95 (84.8%)
+2025-07-28 03:21:55,184 - INFO -    Text cleaned: 95 (84.8%)
+2025-07-28 03:21:55,184 - INFO -    Average quality score: 84.8/100

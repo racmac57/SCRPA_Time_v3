@@ -1,0 +1,50 @@
+2025-08-05 16:41:41,587 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-05 16:41:42,223 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-05 16:41:42,223 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-05 16:41:42,224 - ComprehensiveSCRPAFixV8_5 - INFO - Incident column forced to string type with 592 records
+2025-08-05 16:41:42,328 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-05 16:41:42,353 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-05 16:41:42,354 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-05 16:41:42,357 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W32, Date: 20250805
+2025-08-05 16:41:42,357 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting Complete SCRPA Pipeline V8.5... (Memory: 95.6MB)
+2025-08-05 16:41:42,357 - ComprehensiveSCRPAFixV8_5 - INFO - Starting Comprehensive SCRPA Fix V8.5 pipeline...
+2025-08-05 16:41:42,357 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed Complete SCRPA Pipeline V8.5 (Fast):
+2025-08-05 16:41:42,358 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 16:41:42,358 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 95.6MB (Δ+0.0MB)
+2025-08-05 16:41:42,359 - ComprehensiveSCRPAFixV8_5 - INFO - Latest CAD file: 2025_08_01_19_38_12_SCRPA_CAD.xlsx
+2025-08-05 16:41:42,361 - ComprehensiveSCRPAFixV8_5 - INFO - Latest RMS file: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-05 16:41:42,361 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS Data Processing - 2025_08_01_19_38_12_SCRPA_RMS.xlsx... (Memory: 95.6MB)
+2025-08-05 16:41:42,361 - ComprehensiveSCRPAFixV8_5 - INFO - Processing RMS data: 2025_08_01_19_38_12_SCRPA_RMS.xlsx
+2025-08-05 16:41:42,362 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting RMS File Loading... (Memory: 95.6MB)
+2025-08-05 16:41:42,399 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded RMS file with 140 rows and 31 columns
+2025-08-05 16:41:42,400 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS File Loading (Fast):
+2025-08-05 16:41:42,400 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.04s
+2025-08-05 16:41:42,400 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 96.1MB (Δ+0.5MB)
+2025-08-05 16:41:42,401 - ComprehensiveSCRPAFixV8_5 - INFO - Normalized RMS headers: ['case_number', 'incident_date', 'incident_time', 'incident_date_between', 'incident_time_between', 'report_date', 'report_time', 'incident_type_1', 'incident_type_2', 'incident_type_3', 'full_address', 'grid', 'zone', 'narrative', 'total_value_stolen', 'total_value_recover', 'registration_1', 'make_1', 'model_1', 'reg_state_1', 'registration_2', 'reg_state_2', 'make_2', 'model_2', 'reviewed_by', 'complete_calc', 'officer_of_record', 'squad', 'det_assigned', 'case_status', 'nibrs_classification']
+2025-08-05 16:41:42,402 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping to 31 columns.
+2025-08-05 16:41:42,445 - ComprehensiveSCRPAFixV8_5 - INFO - Cascaded incident dates populated: 140/140
+2025-08-05 16:41:42,449 - ComprehensiveSCRPAFixV8_5 - INFO - Cascaded incident times populated: 0/140
+2025-08-05 16:41:42,452 - ComprehensiveSCRPAFixV8_5 - INFO - Time of Day populated: 0/140
+2025-08-05 16:41:42,555 - ComprehensiveSCRPAFixV8_5 - INFO - Formatted incident_date to mm/dd/yy
+2025-08-05 16:41:42,556 - ComprehensiveSCRPAFixV8_5 - WARNING - Removing Jersey City address: 128 Christopher Columbus Drive, Jersey City, NJ 07302, Hackensack, NJ, 07601
+2025-08-05 16:41:42,556 - ComprehensiveSCRPAFixV8_5 - INFO - Address validation: 139/140 addresses validated
+2025-08-05 16:41:42,639 - ComprehensiveSCRPAFixV8_5 - INFO - After case status filter: 120 records
+2025-08-05 16:41:42,639 - ComprehensiveSCRPAFixV8_5 - INFO - RMS processing complete: 119 records after filtering from 140
+2025-08-05 16:41:42,669 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed RMS Data Processing - 2025_08_01_19_38_12_SCRPA_RMS.xlsx (Fast):
+2025-08-05 16:41:42,669 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.31s
+2025-08-05 16:41:42,669 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 97.8MB (Δ+2.2MB)
+2025-08-05 16:41:42,669 - ComprehensiveSCRPAFixV8_5 - INFO - 🚀 Starting CAD Data Processing - 2025_08_01_19_38_12_SCRPA_CAD.xlsx... (Memory: 97.8MB)
+2025-08-05 16:41:42,670 - ComprehensiveSCRPAFixV8_5 - INFO - Processing CAD data: 2025_08_01_19_38_12_SCRPA_CAD.xlsx
+2025-08-05 16:41:42,670 - ComprehensiveSCRPAFixV8_5 - INFO - ⚡ Completed CAD Data Processing - 2025_08_01_19_38_12_SCRPA_CAD.xlsx (Fast):
+2025-08-05 16:41:42,670 - ComprehensiveSCRPAFixV8_5 - INFO -   ⏱️ Duration: 0.00s
+2025-08-05 16:41:42,670 - ComprehensiveSCRPAFixV8_5 - INFO -   💾 Memory: 97.8MB (Δ+0.0MB)
+2025-08-05 16:41:42,715 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded CAD file with 115 rows and 20 columns
+2025-08-05 16:41:42,715 - ComprehensiveSCRPAFixV8_5 - ERROR - Error loading CAD file: Invalid format specifier ' str' for object of type 'str'
+2025-08-05 16:41:42,722 - ComprehensiveSCRPAFixV8_5 - INFO - 💾 Writing standard CSV: 119 rows
+2025-08-05 16:41:42,731 - ComprehensiveSCRPAFixV8_5 - INFO - RMS data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W32_20250805_7Day_rms_data_standardized_v3.csv
+2025-08-05 16:41:42,732 - ComprehensiveSCRPAFixV8_5 - INFO - ============================================================
+2025-08-05 16:41:42,732 - ComprehensiveSCRPAFixV8_5 - INFO - FINAL VALIDATION SUMMARY
+2025-08-05 16:41:42,732 - ComprehensiveSCRPAFixV8_5 - INFO - ============================================================
+2025-08-05 16:41:42,732 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ RMS records processed: 119
+2025-08-05 16:41:42,733 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CAD records processed: 0
+2025-08-05 16:41:42,733 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Matched records created: 0

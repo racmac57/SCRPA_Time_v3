@@ -1,0 +1,34 @@
+Based on your project knowledge, the main Python script that uses arcPy and generates all those summaries is:
+
+## **Main Script Location:**
+```
+C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\crime_report_tool\main.py
+```
+
+## **Generated Outputs:**
+✅ **7-Day_Executive_Summary.txt**  
+✅ **28-Day_Executive_Summary.txt**  
+✅ **YTD_Executive_Summary.txt**  
+✅ **SCRPA_Dashboard_Summary.txt**  
+✅ **Crime Time Charts** (individual charts by crime type)
+
+## **Export Location:**
+```
+C:\Users\carucci_r\SCRPA_LAPTOP\projects\output\Statistical_Reports\
+```
+
+## **How to Run:**
+**Command Prompt** (not ArcGIS Pro Python window):
+```cmd
+"C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\crime_report_tool\main.py" true true false 30 false 2025_07_27
+```
+
+## **Parameters:**
+- `true` → export maps
+- `true` → export charts  
+- `false` → skip reports/PDFs
+- `30` → days back (ignored)
+- `false` → not dry run
+- `2025_07_27` → today's date
+
+The script automatically creates the Statistical_Reports folder and generates all your executive summaries with crime analysis, zone distribution, and temporal patterns.

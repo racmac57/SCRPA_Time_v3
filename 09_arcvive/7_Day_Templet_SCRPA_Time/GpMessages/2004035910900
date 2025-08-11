@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Wednesday, May 7, 2025 2:04:46 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\Updated Weekly Crime Report.py", line 22, in &lt;module&gt;
+﻿    chart_suffixes = load_suffixes()
+﻿                     ^^^^^^^^^^^^^
+﻿NameError: name 'load_suffixes' is not defined
+</msg><msg code="0" type="0">Failed script Updated Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeExport).</msg><msg code="0" type="3">Failed at Wednesday, May 7, 2025 2:04:46 PM (Elapsed Time: 0.05 seconds)</msg></messages>

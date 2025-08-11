@@ -1,0 +1,25 @@
+2025-08-04 02:51:04,464 - INFO - SCRPA v4 Production Pipeline Started - 20250804_025104
+2025-08-04 02:51:04,497 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,519 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,520 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,521 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,576 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,585 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,588 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,590 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:51:04,714 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,737 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,738 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,739 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,806 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,814 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,814 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,820 - INFO - Current cycle: C08W31, Date: 20250804
+2025-08-04 02:51:04,851 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-04 02:51:04,881 - INFO - Loaded call type reference: 592 records
+2025-08-04 02:51:04,881 - INFO - Reference file columns: ['Incident', 'Category Type', 'Response Type']
+2025-08-04 02:51:04,885 - INFO - Incident column forced to string type with 592 records
+2025-08-04 02:51:04,956 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-04 02:51:04,965 - INFO - Loaded cycle calendar: 52 records
+2025-08-04 02:51:04,967 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-04 02:51:04,973 - INFO - Current cycle: C08W31, Date: 20250804

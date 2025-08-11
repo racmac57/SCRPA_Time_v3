@@ -1,0 +1,20 @@
+2025-07-29 08:30:19,966 - ComprehensiveSCRPAFixV7_1 - INFO - Comprehensive SCRPA Fix V7.1 initialized.
+2025-07-29 08:30:19,966 - ComprehensiveSCRPAFixV7_1 - WARNING - Call type reference file not found. Will use fallback categorization.
+2025-07-29 08:30:19,966 - ComprehensiveSCRPAFixV7_1 - INFO - Starting Comprehensive SCRPA Fix V7.1 pipeline...
+2025-07-29 08:30:19,966 - ComprehensiveSCRPAFixV7_1 - INFO - Latest cad file: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 08:30:19,967 - ComprehensiveSCRPAFixV7_1 - INFO - Latest rms file: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 08:30:19,976 - ComprehensiveSCRPAFixV7_1 - INFO - Processing CAD data: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 08:30:20,475 - ComprehensiveSCRPAFixV7_1 - INFO - Cleaning 'How Reported' column.
+2025-07-29 08:30:20,477 - ComprehensiveSCRPAFixV7_1 - WARNING - Applying fallback crime categorization.
+2025-07-29 08:30:20,479 - ComprehensiveSCRPAFixV7_1 - INFO - CAD processing complete: 114 records.
+2025-07-29 08:30:20,479 - ComprehensiveSCRPAFixV7_1 - INFO - Processing RMS data: 2025_07_28_13_44_25_SCRPA_RMS.xlsx
+2025-07-29 08:30:20,541 - ComprehensiveSCRPAFixV7_1 - INFO - Applied uppercase to vehicle data.
+2025-07-29 08:30:20,557 - ComprehensiveSCRPAFixV7_1 - INFO - Created derived vehicle columns.
+2025-07-29 08:30:20,557 - ComprehensiveSCRPAFixV7_1 - WARNING - Applying fallback crime categorization.
+2025-07-29 08:30:20,559 - ComprehensiveSCRPAFixV7_1 - INFO - RMS processing complete: 134 records.
+2025-07-29 08:30:20,581 - ComprehensiveSCRPAFixV7_1 - INFO - ============================================================
+2025-07-29 08:30:20,581 - ComprehensiveSCRPAFixV7_1 - INFO - COMPREHENSIVE SCRPA FIX V7.1 COMPLETE
+2025-07-29 08:30:20,581 - ComprehensiveSCRPAFixV7_1 - INFO - ✅ Total records processed: 248
+2025-07-29 08:30:20,581 - ComprehensiveSCRPAFixV7_1 - INFO - ✅ Null/Empty CaseNumbers: 0
+2025-07-29 08:30:20,581 - ComprehensiveSCRPAFixV7_1 - INFO - ✅ Output file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\enhanced_scrpa_data_v7_1_fixed.csv
+2025-07-29 08:30:20,581 - ComprehensiveSCRPAFixV7_1 - INFO - ============================================================

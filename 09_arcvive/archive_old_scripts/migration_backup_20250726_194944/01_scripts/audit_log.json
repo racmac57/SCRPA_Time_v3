@@ -1,0 +1,146 @@
+[
+  {
+    "timestamp": "2025-07-25T16:36:49.509982",
+    "test_name": "Migration Success",
+    "status": "fail",
+    "message": "config.json missing"
+  },
+  {
+    "timestamp": "2025-07-25T16:36:51.570340",
+    "test_name": "Ollama Availability",
+    "status": "pass",
+    "message": "Ollama offline, using fallback"
+  },
+  {
+    "timestamp": "2025-07-25T16:36:51.588469",
+    "test_name": "Data Sanitization",
+    "status": "pass",
+    "message": "Addresses block-level masked"
+  },
+  {
+    "timestamp": "2025-07-25T16:36:51.594476",
+    "test_name": "Audit Trail",
+    "status": "pass",
+    "message": "3 entries recorded"
+  },
+  {
+    "timestamp": "2025-07-25T16:36:51.595468",
+    "test_name": "Remaining Issues",
+    "status": "pass",
+    "message": "No uncaught issues detected"
+  },
+  {
+    "timestamp": "2025-07-25T16:36:52.607719",
+    "test_name": "External Network Calls",
+    "status": "pass",
+    "message": "No external network connections"
+  },
+  {
+    "timestamp": "2025-07-25T16:40:23.623907",
+    "test_name": "Migration Success",
+    "status": "warning",
+    "message": "No configuration file found (config.json or secure_scrpa_config.json)"
+  },
+  {
+    "timestamp": "2025-07-25T16:40:25.640730",
+    "test_name": "Ollama Availability",
+    "status": "pass",
+    "message": "Ollama offline, using fallback"
+  },
+  {
+    "timestamp": "2025-07-25T16:40:25.661841",
+    "test_name": "Data Sanitization",
+    "status": "pass",
+    "message": "Addresses block-level masked"
+  },
+  {
+    "timestamp": "2025-07-25T16:40:25.671115",
+    "test_name": "Audit Trail",
+    "status": "pass",
+    "message": "9 entries recorded"
+  },
+  {
+    "timestamp": "2025-07-25T16:40:25.673115",
+    "test_name": "Remaining Issues",
+    "status": "pass",
+    "message": "No uncaught issues detected"
+  },
+  {
+    "timestamp": "2025-07-25T16:40:26.686786",
+    "test_name": "External Network Calls",
+    "status": "pass",
+    "message": "No external network connections"
+  },
+  {
+    "timestamp": "2025-07-25T16:41:48.178530",
+    "test_name": "Migration Success",
+    "status": "warning",
+    "message": "No configuration file found (config.json or secure_scrpa_config.json)"
+  },
+  {
+    "timestamp": "2025-07-25T16:41:50.214696",
+    "test_name": "Ollama Availability",
+    "status": "pass",
+    "message": "Ollama offline, using fallback"
+  },
+  {
+    "timestamp": "2025-07-25T16:41:50.233692",
+    "test_name": "Data Sanitization",
+    "status": "pass",
+    "message": "Addresses block-level masked"
+  },
+  {
+    "timestamp": "2025-07-25T16:41:50.239693",
+    "test_name": "Audit Trail",
+    "status": "pass",
+    "message": "15 entries recorded"
+  },
+  {
+    "timestamp": "2025-07-25T16:41:50.240693",
+    "test_name": "Remaining Issues",
+    "status": "pass",
+    "message": "No uncaught issues detected"
+  },
+  {
+    "timestamp": "2025-07-25T16:41:51.256894",
+    "test_name": "External Network Calls",
+    "status": "pass",
+    "message": "No external network connections"
+  },
+  {
+    "timestamp": "2025-07-25T16:51:54.445747",
+    "test_name": "Migration Success",
+    "status": "pass",
+    "message": "config.json found"
+  },
+  {
+    "timestamp": "2025-07-25T16:51:56.488380",
+    "test_name": "Ollama Availability",
+    "status": "pass",
+    "message": "Ollama offline, using fallback"
+  },
+  {
+    "timestamp": "2025-07-25T16:51:56.504473",
+    "test_name": "Data Sanitization",
+    "status": "pass",
+    "message": "Addresses block-level masked"
+  },
+  {
+    "timestamp": "2025-07-25T16:51:56.510474",
+    "test_name": "Audit Trail",
+    "status": "pass",
+    "message": "21 entries recorded"
+  },
+  {
+    "timestamp": "2025-07-25T16:51:56.512473",
+    "test_name": "Remaining Issues",
+    "status": "pass",
+    "message": "No uncaught issues detected"
+  },
+  {
+    "timestamp": "2025-07-25T16:51:57.524198",
+    "test_name": "External Network Calls",
+    "status": "pass",
+    "message": "No external network connections"
+  }
+]

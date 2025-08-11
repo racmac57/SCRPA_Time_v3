@@ -1,0 +1,79 @@
+{
+  "sanitization_report": {
+    "summary": {
+      "total_operations": 7,
+      "unique_names_processed": 4,
+      "processing_time_seconds": 0.000998
+    },
+    "operations_by_type": {
+      "name": 4,
+      "phone": 1,
+      "license_plate": 2
+    },
+    "operations_by_field": {
+      "narrative": 5,
+      "address": 2
+    },
+    "name_mappings_count": 4,
+    "timestamp": "2025-07-25T14:44:51.169370"
+  },
+  "operations": [
+    {
+      "field_name": "narrative",
+      "original_hash": "7b56ceba3efd9805",
+      "replacement_value": "SUBJECT_1",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "a54a72dd9e610811",
+      "replacement_value": "SUBJECT_2",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "e9079869dd9889f9",
+      "replacement_value": "XXX-XXX-XXXX",
+      "data_type": "phone",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "9fe4c68ec20dda7c",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "78619c34891ec45d",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    },
+    {
+      "field_name": "address",
+      "original_hash": "1b0b1585d3957295",
+      "replacement_value": "SUBJECT_3",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    },
+    {
+      "field_name": "address",
+      "original_hash": "87e731a4b78a96c9",
+      "replacement_value": "SUBJECT_4",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:44:51.169370",
+      "record_id": "25-060394"
+    }
+  ],
+  "name_mapping_count": 4
+}

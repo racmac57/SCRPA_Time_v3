@@ -1,0 +1,638 @@
+2025-08-03 00:16:27,626 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:16:27,627 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:16:27,628 - SCRPA_Production - ERROR - Pipeline failed: Input files not found: CAD=0, RMS=0
+2025-08-03 00:16:27,630 - SCRPA_Production - ERROR - Traceback (most recent call last):
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Time_v3_Production_Pipeline.py", line 493, in run_production_pipeline
+    raise FileNotFoundError(f"Input files not found: CAD={len(cad_files)}, RMS={len(rms_files)}")
+FileNotFoundError: Input files not found: CAD=0, RMS=0
+
+2025-08-03 00:17:26,123 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:17:26,123 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:17:26,124 - SCRPA_Production - ERROR - Pipeline failed: Input files not found: CAD=0, RMS=0
+2025-08-03 00:17:26,126 - SCRPA_Production - ERROR - Traceback (most recent call last):
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\SCRPA_Time_v3_Production_Pipeline.py", line 493, in run_production_pipeline
+    raise FileNotFoundError(f"Input files not found: CAD={len(cad_files)}, RMS={len(rms_files)}")
+FileNotFoundError: Input files not found: CAD=0, RMS=0
+
+2025-08-03 00:18:15,373 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:18:15,373 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:18:15,374 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_data_standardized.csv
+2025-08-03 00:18:15,374 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_rms_data_standardized.csv
+2025-08-03 00:18:15,383 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 00:18:15,387 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_001815
+2025-08-03 00:18:15,388 - SCRPA_Production - INFO - Loading data files
+2025-08-03 00:18:15,402 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 00:18:15,403 - SCRPA_Production - INFO - Applying hybrid filtering
+2025-08-03 00:18:15,419 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 00:18:15,419 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 00:18:15,420 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-03 00:18:15,437 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-03 00:18:15,438 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 00:18:15,440 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_001815.json
+2025-08-03 00:25:28,403 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:25:28,404 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:25:28,405 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_data_standardized.csv
+2025-08-03 00:25:28,406 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_rms_data_standardized.csv
+2025-08-03 00:25:28,439 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 00:25:28,453 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_002528
+2025-08-03 00:25:28,455 - SCRPA_Production - INFO - Loading data files
+2025-08-03 00:25:28,486 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 00:25:28,486 - SCRPA_Production - INFO - Applying hybrid filtering
+2025-08-03 00:25:28,537 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 00:25:28,538 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 00:25:28,538 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-03 00:25:28,565 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-03 00:25:28,566 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 00:25:28,568 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_002528.json
+2025-08-03 00:25:34,028 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:25:34,028 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:25:34,029 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_data_standardized.csv
+2025-08-03 00:25:34,030 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_rms_data_standardized.csv
+2025-08-03 00:25:34,036 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 00:25:34,048 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_002534
+2025-08-03 00:25:34,049 - SCRPA_Production - INFO - Loading data files
+2025-08-03 00:25:34,063 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 00:25:34,064 - SCRPA_Production - INFO - Applying hybrid filtering
+2025-08-03 00:25:34,083 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 00:25:34,084 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 00:25:34,085 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-03 00:25:34,104 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-03 00:25:34,108 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 00:25:34,114 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_002534.json
+2025-08-03 00:26:58,450 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:26:58,450 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:26:58,451 - SCRPA_Production - ERROR - Pipeline failed: Input files not found: CAD=0, RMS=0
+2025-08-03 00:26:58,452 - SCRPA_Production - ERROR - Traceback (most recent call last):
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\production_deployment_pipeline.py", line 493, in run_production_pipeline
+    raise FileNotFoundError(f"Input files not found: CAD={len(cad_files)}, RMS={len(rms_files)}")
+FileNotFoundError: Input files not found: CAD=0, RMS=0
+
+2025-08-03 00:28:21,455 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:28:21,456 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:28:21,456 - SCRPA_Production - ERROR - Pipeline failed: Input files not found: CAD=0, RMS=0
+2025-08-03 00:28:21,457 - SCRPA_Production - ERROR - Traceback (most recent call last):
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\SCRPA_Time_v3_Production_Pipeline.py", line 493, in run_production_pipeline
+    raise FileNotFoundError(f"Input files not found: CAD={len(cad_files)}, RMS={len(rms_files)}")
+FileNotFoundError: Input files not found: CAD=0, RMS=0
+
+2025-08-03 00:35:51,341 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 00:35:51,341 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 00:35:51,342 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_data_standardized.csv
+2025-08-03 00:35:51,342 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_rms_data_standardized.csv
+2025-08-03 00:35:51,348 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 00:35:51,355 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_003551
+2025-08-03 00:35:51,356 - SCRPA_Production - INFO - Loading data files
+2025-08-03 00:35:51,368 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 00:35:51,369 - SCRPA_Production - INFO - Applying hybrid filtering
+2025-08-03 00:35:51,377 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 00:35:51,377 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 00:35:51,378 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-03 00:35:51,389 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-03 00:35:51,389 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 00:35:51,393 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_003551.json
+2025-08-03 04:08:39,835 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:08:40,122 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:08:40,173 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:08:40,181 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:12:19,992 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:12:20,205 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:12:20,257 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:12:20,268 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:12:20,269 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 04:12:20,273 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_cad_data_standardized.csv
+2025-08-03 04:12:20,273 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_rms_data_standardized.csv
+2025-08-03 04:12:20,288 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 04:12:20,302 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_041220
+2025-08-03 04:12:20,302 - SCRPA_Production - INFO - Loading data files
+2025-08-03 04:12:20,316 - SCRPA_Production - INFO - Applying v8.5 data processing enhancements
+2025-08-03 04:12:20,316 - SCRPA_Production - INFO - Processing CAD data with v8.5 enhancements: 114 records
+2025-08-03 04:12:20,322 - SCRPA_Production - INFO - Applied CAD column mapping: 0 columns mapped
+2025-08-03 04:12:20,322 - SCRPA_Production - INFO - Normalized CAD headers to snake_case
+2025-08-03 04:12:20,343 - SCRPA_Production - INFO - Applied how_reported 9-1-1 fix
+2025-08-03 04:12:20,352 - SCRPA_Production - INFO - Removed problematic column: response_type_cad
+2025-08-03 04:12:20,353 - SCRPA_Production - INFO - Removed problematic column: category_type_cad
+2025-08-03 04:12:20,361 - SCRPA_Production - INFO - Added time_of_day calculations
+2025-08-03 04:12:20,361 - SCRPA_Production - INFO - CAD processing complete: 114 records, 26 columns
+2025-08-03 04:12:20,362 - SCRPA_Production - INFO - Processing RMS data with v8.5 enhancements: 134 records
+2025-08-03 04:12:20,363 - SCRPA_Production - INFO - Applied RMS column mapping: 0 columns mapped
+2025-08-03 04:12:20,367 - SCRPA_Production - INFO - Normalized RMS headers to snake_case
+2025-08-03 04:12:20,402 - SCRPA_Production - INFO - Applied cascade logic for incident_date and incident_time
+2025-08-03 04:12:20,403 - SCRPA_Production - INFO - Added time_of_day calculations to RMS
+2025-08-03 04:12:20,404 - SCRPA_Production - INFO - RMS processing complete: 134 records, 24 columns
+2025-08-03 04:12:20,407 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 04:12:20,407 - SCRPA_Production - INFO - Applying enhanced hybrid filtering
+2025-08-03 04:12:20,426 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 04:12:20,426 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 04:12:20,427 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-03 04:12:20,447 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-03 04:12:20,448 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 04:12:20,455 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_041220.json
+2025-08-03 04:14:37,127 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:14:37,308 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:14:37,363 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:14:37,371 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:14:37,373 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 04:14:37,374 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_cad_data_standardized.csv
+2025-08-03 04:14:37,375 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_rms_data_standardized.csv
+2025-08-03 04:14:37,380 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 04:14:37,393 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_041437
+2025-08-03 04:14:37,395 - SCRPA_Production - INFO - Loading data files
+2025-08-03 04:14:37,403 - SCRPA_Production - INFO - Applying v8.5 data processing enhancements
+2025-08-03 04:14:37,404 - SCRPA_Production - INFO - Processing CAD data with v8.5 enhancements: 114 records
+2025-08-03 04:14:37,405 - SCRPA_Production - INFO - Applied CAD column mapping: 0 columns mapped
+2025-08-03 04:14:37,406 - SCRPA_Production - INFO - Normalized CAD headers to snake_case
+2025-08-03 04:14:37,416 - SCRPA_Production - INFO - Applied how_reported 9-1-1 fix
+2025-08-03 04:14:37,417 - SCRPA_Production - INFO - Removed problematic column: response_type_cad
+2025-08-03 04:14:37,418 - SCRPA_Production - INFO - Removed problematic column: category_type_cad
+2025-08-03 04:14:37,421 - SCRPA_Production - INFO - Added time_of_day calculations
+2025-08-03 04:14:37,422 - SCRPA_Production - INFO - CAD processing complete: 114 records, 26 columns
+2025-08-03 04:14:37,422 - SCRPA_Production - INFO - Processing RMS data with v8.5 enhancements: 134 records
+2025-08-03 04:14:37,423 - SCRPA_Production - INFO - Applied RMS column mapping: 0 columns mapped
+2025-08-03 04:14:37,423 - SCRPA_Production - INFO - Normalized RMS headers to snake_case
+2025-08-03 04:14:37,459 - SCRPA_Production - INFO - Applied cascade logic for incident_date and incident_time
+2025-08-03 04:14:37,460 - SCRPA_Production - INFO - Added time_of_day calculations to RMS
+2025-08-03 04:14:37,460 - SCRPA_Production - INFO - RMS processing complete: 134 records, 24 columns
+2025-08-03 04:14:37,462 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 04:14:37,463 - SCRPA_Production - INFO - Applying enhanced hybrid filtering
+2025-08-03 04:14:37,483 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 04:14:37,483 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 04:14:37,484 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-03 04:14:37,496 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-03 04:14:37,496 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 04:14:37,498 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_041437.json
+2025-08-03 04:31:56,467 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:31:56,652 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:31:56,700 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:31:56,707 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:32:48,382 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:33:05,332 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:33:05,513 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:33:05,562 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:33:05,569 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:33:17,296 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:33:28,384 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:33:28,551 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:33:28,597 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:33:28,604 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:34:23,161 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:34:23,360 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:34:23,418 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:34:23,425 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:34:23,426 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 04:34:23,427 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_cad_data_standardized.csv
+2025-08-03 04:34:23,427 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_rms_data_standardized.csv
+2025-08-03 04:34:23,432 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 04:34:23,444 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_043423
+2025-08-03 04:34:23,448 - SCRPA_Production - INFO - Loading data files
+2025-08-03 04:34:23,453 - SCRPA_Production - INFO - Applying v8.5 data processing enhancements
+2025-08-03 04:34:23,454 - SCRPA_Production - INFO - Processing CAD data with v8.5 enhancements: 114 records
+2025-08-03 04:34:23,454 - SCRPA_Production - INFO - Applied CAD column mapping: 0 columns mapped
+2025-08-03 04:34:23,455 - SCRPA_Production - INFO - Normalized CAD headers to snake_case
+2025-08-03 04:34:23,469 - SCRPA_Production - INFO - Applied how_reported 9-1-1 fix
+2025-08-03 04:34:23,471 - SCRPA_Production - INFO - Removed problematic column: response_type_cad
+2025-08-03 04:34:23,472 - SCRPA_Production - INFO - Removed problematic column: category_type_cad
+2025-08-03 04:34:23,476 - SCRPA_Production - INFO - Added time_of_day calculations
+2025-08-03 04:34:23,476 - SCRPA_Production - INFO - CAD processing complete: 114 records, 26 columns
+2025-08-03 04:34:23,477 - SCRPA_Production - INFO - Processing RMS data with v8.5 enhancements: 134 records
+2025-08-03 04:34:23,478 - SCRPA_Production - INFO - Applied RMS column mapping: 0 columns mapped
+2025-08-03 04:34:23,479 - SCRPA_Production - INFO - Normalized RMS headers to snake_case
+2025-08-03 04:34:23,511 - SCRPA_Production - INFO - Applied cascade logic for incident_date and incident_time
+2025-08-03 04:34:23,513 - SCRPA_Production - INFO - Added time_of_day calculations to RMS
+2025-08-03 04:34:23,513 - SCRPA_Production - INFO - RMS processing complete: 134 records, 24 columns
+2025-08-03 04:34:23,517 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 04:34:23,517 - SCRPA_Production - INFO - Applying enhanced hybrid filtering
+2025-08-03 04:34:23,532 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 04:34:23,533 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 04:34:23,533 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset
+2025-08-03 04:34:23,533 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset with v8.5 logic
+2025-08-03 04:34:23,543 - SCRPA_Production - INFO - Matched dataset created: 86 records
+2025-08-03 04:34:23,598 - SCRPA_Production - INFO - Added cycle information to matched dataset
+2025-08-03 04:34:23,598 - SCRPA_Production - INFO - Creating v8.5 compliant exports
+2025-08-03 04:34:23,602 - SCRPA_Production - INFO - Created matched dataset: C08W31_20250803_cad_rms_matched_standardized.csv (86 rows, 50 columns)
+2025-08-03 04:34:23,606 - SCRPA_Production - INFO - Created 7-Day CAD export: C08W31_20250803_7Day_cad_standardized.csv (114 rows)
+2025-08-03 04:34:23,611 - SCRPA_Production - INFO - Created 7-Day RMS export: C08W31_20250803_7Day_rms_standardized.csv (86 rows)
+2025-08-03 04:34:23,617 - SCRPA_Production - INFO - Created validation report: C08W31_20250803_validation_report.json
+2025-08-03 04:34:23,618 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 04:34:23,619 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_043423.json
+2025-08-03 04:52:05,068 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:52:05,271 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:52:05,318 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:52:05,327 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:52:54,102 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:52:54,306 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:52:54,353 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:52:54,360 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:56:41,631 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:56:41,885 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:56:41,952 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:56:41,959 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:56:41,961 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 04:56:41,963 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_cad_data_standardized.csv
+2025-08-03 04:56:41,963 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_rms_data_standardized.csv
+2025-08-03 04:56:41,971 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 04:56:41,985 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_045641
+2025-08-03 04:56:41,987 - SCRPA_Production - INFO - Loading data files
+2025-08-03 04:56:41,997 - SCRPA_Production - INFO - Applying v8.5 data processing enhancements
+2025-08-03 04:56:41,998 - SCRPA_Production - INFO - Processing CAD data with v8.5 enhancements: 114 records
+2025-08-03 04:56:42,000 - SCRPA_Production - INFO - Data appears to be already processed - skipping raw data transformations
+2025-08-03 04:56:42,013 - SCRPA_Production - INFO - CAD notes already processed - skipping extraction
+2025-08-03 04:56:42,019 - SCRPA_Production - INFO - Removed problematic column: response_type_cad
+2025-08-03 04:56:42,021 - SCRPA_Production - INFO - Removed problematic column: category_type_cad
+2025-08-03 04:56:42,026 - SCRPA_Production - INFO - Added time_of_day calculations
+2025-08-03 04:56:42,027 - SCRPA_Production - INFO - CAD processing complete: 114 records, 26 columns
+2025-08-03 04:56:42,029 - SCRPA_Production - INFO - Processing RMS data with v8.5 enhancements: 134 records
+2025-08-03 04:56:42,030 - SCRPA_Production - INFO - RMS data appears to be already processed - skipping raw data transformations
+2025-08-03 04:56:42,036 - SCRPA_Production - INFO - Cascade logic already applied - skipping
+2025-08-03 04:56:42,036 - SCRPA_Production - INFO - Time calculations already applied
+2025-08-03 04:56:42,037 - SCRPA_Production - INFO - Block calculations already applied
+2025-08-03 04:56:42,037 - SCRPA_Production - INFO - Coalesced fields already exist
+2025-08-03 04:56:42,037 - SCRPA_Production - INFO - RMS processing complete: 134 records, 24 columns
+2025-08-03 04:56:42,044 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 04:56:42,045 - SCRPA_Production - INFO - Applying enhanced hybrid filtering
+2025-08-03 04:56:42,068 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 04:56:42,069 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 04:56:42,069 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset
+2025-08-03 04:56:42,069 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset with v8.5 logic
+2025-08-03 04:56:42,072 - SCRPA_Production - INFO - Matched dataset created: 86 records
+2025-08-03 04:56:42,077 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,079 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,081 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,081 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,082 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-16 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,085 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,086 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,086 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,087 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,088 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,089 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,090 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,091 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,094 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,095 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,097 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,099 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,102 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,103 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,106 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,114 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,121 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,134 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,138 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,150 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,153 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,156 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,162 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,168 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,171 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,184 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,187 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,190 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-19 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,194 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-20 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,198 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,200 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,203 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,206 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,212 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-30 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,217 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,225 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,231 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,233 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-04 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,234 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,236 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,238 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,239 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,240 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,241 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-14 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,244 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,248 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,249 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,252 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,254 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,255 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,256 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,259 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,262 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,265 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,267 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,269 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,269 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,270 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,271 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,272 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,273 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,275 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-30 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,278 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,281 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,283 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,286 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,287 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,288 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-10 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,289 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,290 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,290 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,291 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,294 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,298 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,300 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,302 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,303 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,304 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,305 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,305 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,306 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:56:42,307 - SCRPA_Production - INFO - Added cycle information to matched dataset
+2025-08-03 04:56:42,307 - SCRPA_Production - INFO - Creating v8.5 compliant exports
+2025-08-03 04:56:42,322 - SCRPA_Production - INFO - Created matched dataset: C08W31_20250803_cad_rms_matched_standardized.csv (86 rows, 50 columns)
+2025-08-03 04:56:42,323 - SCRPA_Production - ERROR - Error creating v8.5 exports: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\04_powerbi\\C08W31_20250803_7Day_cad_standardized.csv'
+2025-08-03 04:56:42,323 - SCRPA_Production - ERROR - Pipeline failed: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\04_powerbi\\C08W31_20250803_7Day_cad_standardized.csv'
+2025-08-03 04:56:42,445 - SCRPA_Production - ERROR - Traceback (most recent call last):
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Time_v3_Production_Pipeline.py", line 1224, in run_production_pipeline
+    export_info = self.create_v85_exports(cad_filtered, rms_matched, matched_df)
+  File "c:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\SCRPA_Time_v3_Production_Pipeline.py", line 1026, in create_v85_exports
+    cad_df.to_csv(cad_path, index=False)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\core\generic.py", line 3986, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ~~~~~~~~~~^
+        self.filepath_or_buffer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        storage_options=self.storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handles:
+    ^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\04_powerbi\\C08W31_20250803_7Day_cad_standardized.csv'
+
+2025-08-03 04:59:01,290 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 04:59:01,486 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 04:59:01,548 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 04:59:01,555 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 04:59:01,556 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 04:59:01,557 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_cad_data_standardized.csv
+2025-08-03 04:59:01,558 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_rms_data_standardized.csv
+2025-08-03 04:59:01,562 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 04:59:01,567 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_045901
+2025-08-03 04:59:01,568 - SCRPA_Production - INFO - Loading data files
+2025-08-03 04:59:01,574 - SCRPA_Production - INFO - Applying v8.5 data processing enhancements
+2025-08-03 04:59:01,575 - SCRPA_Production - INFO - Processing CAD data with v8.5 enhancements: 114 records
+2025-08-03 04:59:01,575 - SCRPA_Production - INFO - Data appears to be already processed - skipping raw data transformations
+2025-08-03 04:59:01,584 - SCRPA_Production - INFO - CAD notes already processed - skipping extraction
+2025-08-03 04:59:01,586 - SCRPA_Production - INFO - Removed problematic column: response_type_cad
+2025-08-03 04:59:01,587 - SCRPA_Production - INFO - Removed problematic column: category_type_cad
+2025-08-03 04:59:01,590 - SCRPA_Production - INFO - Added time_of_day calculations
+2025-08-03 04:59:01,591 - SCRPA_Production - INFO - CAD processing complete: 114 records, 26 columns
+2025-08-03 04:59:01,591 - SCRPA_Production - INFO - Processing RMS data with v8.5 enhancements: 134 records
+2025-08-03 04:59:01,591 - SCRPA_Production - INFO - RMS data appears to be already processed - skipping raw data transformations
+2025-08-03 04:59:01,595 - SCRPA_Production - INFO - Cascade logic already applied - skipping
+2025-08-03 04:59:01,596 - SCRPA_Production - INFO - Time calculations already applied
+2025-08-03 04:59:01,596 - SCRPA_Production - INFO - Block calculations already applied
+2025-08-03 04:59:01,596 - SCRPA_Production - INFO - Coalesced fields already exist
+2025-08-03 04:59:01,596 - SCRPA_Production - INFO - RMS processing complete: 134 records, 24 columns
+2025-08-03 04:59:01,599 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 04:59:01,599 - SCRPA_Production - INFO - Applying enhanced hybrid filtering
+2025-08-03 04:59:01,622 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 04:59:01,622 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 04:59:01,622 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset
+2025-08-03 04:59:01,622 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset with v8.5 logic
+2025-08-03 04:59:01,624 - SCRPA_Production - INFO - Matched dataset created: 86 records
+2025-08-03 04:59:01,625 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,627 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,628 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,628 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,629 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-16 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,630 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,630 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,631 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,631 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,632 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,639 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,640 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,641 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,643 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,644 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,645 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,647 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,647 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,648 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,649 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,655 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,657 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,658 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,660 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,661 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,662 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,663 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,665 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,670 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,673 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,674 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,676 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,677 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-19 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,678 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-20 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,679 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,681 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,682 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,684 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,688 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-30 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,689 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,690 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,691 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,691 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-04 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,692 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,693 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,693 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,694 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,695 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,696 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-14 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,696 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,697 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,697 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,698 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,699 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,705 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,706 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,707 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,708 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,710 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,711 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,711 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,712 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,713 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,714 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,715 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,717 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,722 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-30 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,723 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,725 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,725 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,726 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,726 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,727 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-10 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,728 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,728 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,729 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,730 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,731 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,733 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,738 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,739 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,740 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,741 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,741 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,742 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,743 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 04:59:01,743 - SCRPA_Production - INFO - Added cycle information to matched dataset
+2025-08-03 04:59:01,743 - SCRPA_Production - INFO - Creating v8.5 compliant exports
+2025-08-03 04:59:01,749 - SCRPA_Production - INFO - Created matched dataset: C08W31_20250803_cad_rms_matched_standardized.csv (86 rows, 50 columns)
+2025-08-03 04:59:01,758 - SCRPA_Production - INFO - Created 7-Day CAD export: C08W31_20250803_7Day_cad_standardized.csv (114 rows)
+2025-08-03 04:59:01,760 - SCRPA_Production - INFO - Created 7-Day RMS export: C08W31_20250803_7Day_rms_standardized.csv (86 rows)
+2025-08-03 04:59:01,765 - SCRPA_Production - INFO - Created validation report: C08W31_20250803_validation_report.json
+2025-08-03 04:59:01,765 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 04:59:01,772 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_045901.json
+2025-08-03 05:16:02,385 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-03 05:16:02,585 - SCRPA_Production - INFO - Loaded call type reference: 592 records
+2025-08-03 05:16:02,646 - SCRPA_Production - INFO - Loaded zone/grid reference: 1368 records
+2025-08-03 05:16:02,654 - SCRPA_Production - INFO - Loaded cycle calendar: 52 records
+2025-08-03 05:16:02,656 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-03 05:16:02,658 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_cad_data_standardized.csv
+2025-08-03 05:16:02,658 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250803_7Day_rms_data_standardized.csv
+2025-08-03 05:16:02,668 - SCRPA_Production - INFO - Input file validation passed
+2025-08-03 05:16:02,679 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250803_051602
+2025-08-03 05:16:02,680 - SCRPA_Production - INFO - Loading data files
+2025-08-03 05:16:02,689 - SCRPA_Production - INFO - Applying v8.5 data processing enhancements
+2025-08-03 05:16:02,690 - SCRPA_Production - INFO - Processing CAD data with v8.5 enhancements: 114 records
+2025-08-03 05:16:02,690 - SCRPA_Production - INFO - Data appears to be already processed - skipping raw data transformations
+2025-08-03 05:16:02,701 - SCRPA_Production - INFO - CAD notes already processed - skipping extraction
+2025-08-03 05:16:02,703 - SCRPA_Production - INFO - Removed problematic column: response_type_cad
+2025-08-03 05:16:02,703 - SCRPA_Production - INFO - Removed problematic column: category_type_cad
+2025-08-03 05:16:02,710 - SCRPA_Production - INFO - Added time_of_day calculations
+2025-08-03 05:16:02,710 - SCRPA_Production - INFO - CAD processing complete: 114 records, 26 columns
+2025-08-03 05:16:02,711 - SCRPA_Production - INFO - Processing RMS data with v8.5 enhancements: 134 records
+2025-08-03 05:16:02,711 - SCRPA_Production - INFO - RMS data appears to be already processed - skipping raw data transformations
+2025-08-03 05:16:02,724 - SCRPA_Production - INFO - Cascade logic already applied - skipping
+2025-08-03 05:16:02,725 - SCRPA_Production - INFO - Time calculations already applied
+2025-08-03 05:16:02,726 - SCRPA_Production - INFO - Block calculations already applied
+2025-08-03 05:16:02,726 - SCRPA_Production - INFO - Coalesced fields already exist
+2025-08-03 05:16:02,726 - SCRPA_Production - INFO - RMS processing complete: 134 records, 24 columns
+2025-08-03 05:16:02,732 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-03 05:16:02,733 - SCRPA_Production - INFO - Applying enhanced hybrid filtering
+2025-08-03 05:16:02,755 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-03 05:16:02,756 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-03 05:16:02,756 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset
+2025-08-03 05:16:02,756 - SCRPA_Production - INFO - Creating matched CAD-RMS dataset with v8.5 logic
+2025-08-03 05:16:02,759 - SCRPA_Production - INFO - Matched dataset created: 86 records
+2025-08-03 05:16:02,764 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,766 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,766 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,767 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,768 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-16 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,769 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,770 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,771 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,772 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,774 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,775 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,776 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,780 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,783 - SCRPA_Production - WARNING - Error getting cycle for date 2025-01-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,784 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,784 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,786 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,787 - SCRPA_Production - WARNING - Error getting cycle for date 2025-02-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,787 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-06 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,788 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,790 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,792 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,793 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,797 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,800 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-28 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,802 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,802 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-31 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,803 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,804 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,804 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-09 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,805 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,806 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,807 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-19 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,809 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-20 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,811 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,816 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,819 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,820 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,821 - SCRPA_Production - WARNING - Error getting cycle for date 2025-04-30 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,821 - SCRPA_Production - WARNING - Error getting cycle for date 2025-03-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,822 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,823 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,824 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-04 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,825 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,826 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,831 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,832 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-12 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,834 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,834 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-14 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,836 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,837 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,838 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-23 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,838 - SCRPA_Production - WARNING - Error getting cycle for date 2025-05-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,839 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,840 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,842 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-01 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,844 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,850 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-05 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,852 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,853 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,853 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-11 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,854 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,856 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,857 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,858 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,859 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-29 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,865 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-30 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,867 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-02 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,868 - SCRPA_Production - WARNING - Error getting cycle for date 2025-06-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,869 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-03 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,870 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-07 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,870 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-08 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,871 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-10 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,874 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,875 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-13 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,876 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-15 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,883 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-17 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,885 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,886 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,887 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-18 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,889 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-21 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,890 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-22 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,890 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-24 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,891 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-25 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,892 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,898 - SCRPA_Production - WARNING - Error getting cycle for date 2025-07-27 00:00:00: Cannot compare Timestamp with datetime.date. Use ts == pd.Timestamp(date) or ts.date() == date instead.
+2025-08-03 05:16:02,899 - SCRPA_Production - INFO - Added cycle information to matched dataset
+2025-08-03 05:16:02,900 - SCRPA_Production - INFO - Creating v8.5 compliant exports
+2025-08-03 05:16:02,906 - SCRPA_Production - INFO - Created matched dataset: C08W31_20250803_cad_rms_matched_standardized.csv (86 rows, 50 columns)
+2025-08-03 05:16:02,915 - SCRPA_Production - INFO - Created 7-Day CAD export: C08W31_20250803_7Day_cad_standardized.csv (114 rows)
+2025-08-03 05:16:02,920 - SCRPA_Production - INFO - Created 7-Day RMS export: C08W31_20250803_7Day_rms_standardized.csv (86 rows)
+2025-08-03 05:16:02,925 - SCRPA_Production - INFO - Created validation report: C08W31_20250803_validation_report.json
+2025-08-03 05:16:02,926 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-03 05:16:02,929 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250803_051602.json

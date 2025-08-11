@@ -1,0 +1,4 @@
+2025-08-01 22:12:05,055 - ComprehensiveSCRPAFixV8_0 - INFO - === Comprehensive SCRPA Fix V8.0 - Column Standardization Version ===
+2025-08-01 22:12:05,078 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded call type reference: 592 records
+2025-08-01 22:12:05,080 - ComprehensiveSCRPAFixV8_0 - INFO - Reference file columns after standardization: ['incident', 'category_type', 'response_type']
+2025-08-01 22:12:05,175 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded zone/grid reference: 1368 records

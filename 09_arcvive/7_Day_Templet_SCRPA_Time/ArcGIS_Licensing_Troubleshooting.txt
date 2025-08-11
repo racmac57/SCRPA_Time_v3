@@ -1,0 +1,20 @@
+    def isLicensed(self):
+        """Set whether the tool is licensed to execute."""
+        return True
+
+    def isLicensed(self):
+        return True
+
+**RAC:**
+regular refresh or Refresh Python Toolbox Access Permission?
+**AI:**
+Do a regular refresh:
+
+The option “Refresh Python Toolbox Access Permission” is only for locked-down environments (e.g., network drives, restrictive IT policies). Stick with the regular refresh unless you're explicitly dealing with access errors.
+
+✅ This avoids OneDrive syncing conflicts, permission locks, or encoding anomalies.
+
+**RAC:**
+still failed even from "C:\GIS_Sandbox\RunCrimeTool.pyt"
+**AI:**
+Thanks for confirming — since it still fails to load even from C:\GIS_Sandbox, that confirms there's an internal error in the .pyt file's Python structure, not just a permissions or OneDrive issue.

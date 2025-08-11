@@ -1,0 +1,158 @@
+@echo off
+REM cleanup_and_prune_scripts.bat
+REM Enhanced batch file to:
+REM 1. Move all migration backup files to archive
+REM 2. Archive non-Arcpy scripts
+REM 3. Generate duplicate script report
+REM Usage: Run from a standard Command Prompt (cmd.exe).
+
+SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
+
+REM === Configuration ===
+SET "ROOT=%~dp0"
+SET "SCRIPTS_DIR=%ROOT%01_scripts"
+SET "ARCHIVE_DIR=%ROOT%02_old_tools"
+SET "MIGRATION_BACKUP_DIR=%ARCHIVE_DIR%\migration_backups"
+SET "DUPLICATE_REPORT=%ROOT%duplicate_report.txt"
+REM ======================
+
+echo.
+echo ================================================================
+echo SCRPA CLEANUP AND MIGRATION BACKUP PROCESSING
+echo ================================================================
+echo ROOT directory: %ROOT%
+echo Scripts directory: %SCRIPTS_DIR%
+echo Archive directory: %ARCHIVE_DIR%
+echo Migration backup directory: %MIGRATION_BACKUP_DIR%
+echo Duplicate report path: %DUPLICATE_REPORT%
+echo.
+
+REM 1) Create archive directories if they don't exist
+echo Step 1: Creating directory structure...
+if not exist "%ARCHIVE_DIR%" (
+    echo   Creating archive directory "%ARCHIVE_DIR%"
+    mkdir "%ARCHIVE_DIR%"
+)
+if not exist "%MIGRATION_BACKUP_DIR%" (
+    echo   Creating migration backup directory "%MIGRATION_BACKUP_DIR%"
+    mkdir "%MIGRATION_BACKUP_DIR%"
+)
+echo   Directory structure ready.
+echo.
+
+REM 2) Move all migration backup files FIRST using PowerShell for long path support
+echo Step 2: Moving migration backup files...
+SET "BACKUP_COUNT=0"
+SET "MOVED_COUNT=0"
+
+REM Count migration backup files before move
+for /f "delims=" %%F in ('dir /b /s "%SCRIPTS_DIR%\migration_backup_*.py"') do (
+    SET /A BACKUP_COUNT+=1
+)
+
+echo   Found !BACKUP_COUNT! migration backup files to move.
+
+REM Move migration backup files
+if !BACKUP_COUNT! GTR 0 (
+    echo   Moving migration backup files to archive...
+    for /R "%SCRIPTS_DIR%" %%F in (migration_backup_*.py) do (
+        if exist "%%F" (
+            echo     Moving "%%~nxF"
+            REM Using PowerShell's Move-Item to handle long file paths
+            powershell -NoProfile -Command "Move-Item -LiteralPath '%%F' -Destination '%MIGRATION_BACKUP_DIR%' -Force" >nul 2>&1
+            if !errorlevel! EQU 0 (
+                SET /A MOVED_COUNT+=1
+            )
+        )
+    )
+    echo   Migration backup move completed: !MOVED_COUNT!/!BACKUP_COUNT! files moved.
+) else (
+    echo   No migration backup files found to move.
+)
+echo.
+
+REM 3) Count and report migration backup files after move
+echo Step 3: Post-move verification...
+SET "REMAINING_BACKUPS=0"
+SET "TOTAL_ARCHIVED=0"
+
+REM Count remaining backups in scripts directory
+for /f "delims=" %%F in ('dir /b /s "%SCRIPTS_DIR%\migration_backup_*.py" 2^>nul') do (
+    SET /A REMAINING_BACKUPS+=1
+)
+
+REM Count total backups in archive directory
+for /f "delims=" %%F in ('dir /b /s "%MIGRATION_BACKUP_DIR%\migration_backup_*.py" 2^>nul') do (
+    SET /A TOTAL_ARCHIVED+=1
+)
+
+echo   MIGRATION BACKUP FILE COUNTS:
+echo   - Remaining in 01_scripts: !REMAINING_BACKUPS! files
+echo   - Total in 02_old_tools: !TOTAL_ARCHIVED! files
+echo.
+
+if !REMAINING_BACKUPS! EQU 0 (
+    echo   SUCCESS: All migration backup files moved from 01_scripts directory.
+) else (
+    echo   WARNING: !REMAINING_BACKUPS! migration backup files still remain in 01_scripts.
+)
+echo.
+
+REM 4) Archive non-Arcpy .py files (original functionality)
+echo Step 4: Archiving non-Arcpy Python files...
+SET "NON_ARCPY_COUNT=0"
+for /R "%SCRIPTS_DIR%" %%F in (*.py) do (
+    findstr /I /C:"import arcpy" "%%F" >nul || (
+        echo   Moving non-Arcpy file "%%~nxF"
+        REM Using PowerShell for consistency and long path support
+        powershell -NoProfile -Command "Move-Item -LiteralPath '%%F' -Destination '%ARCHIVE_DIR%' -Force" >nul
+        SET /A NON_ARCPY_COUNT+=1
+    )
+)
+echo   Archived !NON_ARCPY_COUNT! non-Arcpy Python files.
+echo.
+
+REM 5) Generate duplicate report (original functionality)
+echo Step 5: Generating duplicate report...
+if exist "%DUPLICATE_REPORT%" del "%DUPLICATE_REPORT%"
+
+REM Corrected PowerShell command for reliability. It only creates the file if duplicates are found.
+powershell -NoProfile -Command "$duplicates = Get-ChildItem -Path '%SCRIPTS_DIR%' -Recurse -Filter '*.py' | Group-Object -Property Name | Where-Object { $_.Count -gt 1 } | ForEach-Object { $_.Group | Sort-Object LastWriteTime -Descending | Select-Object -Skip 1 } | Select-Object -ExpandProperty FullName; if ($duplicates) { $duplicates | Out-File -FilePath '%DUPLICATE_REPORT%' -Encoding UTF8 }"
+
+SET "DUPLICATE_REPORT_CREATED=0"
+if exist "%DUPLICATE_REPORT%" (
+    echo   Duplicate report created: %DUPLICATE_REPORT%
+    SET "DUPLICATE_REPORT_CREATED=1"
+) else (
+    echo   No duplicates found in cleaned 01_scripts directory.
+)
+echo.
+
+REM 6) Final Summary
+echo ================================================================
+echo FINAL PROCESSING SUMMARY
+echo ================================================================
+echo Migration Backup Processing:
+echo   - Migration backups moved: !MOVED_COUNT! files
+echo   - Migration backups remaining in 01_scripts: !REMAINING_BACKUPS! files
+echo   - Total migration backups in 02_old_tools: !TOTAL_ARCHIVED! files
+echo.
+echo Script Organization:
+echo   - Non-Arcpy scripts archived: !NON_ARCPY_COUNT! files
+if !DUPLICATE_REPORT_CREATED! EQU 1 (
+    echo   - Duplicate report: CREATED
+) else (
+    echo   - Duplicate report: NOT NEEDED (no duplicates found)
+)
+echo.
+if !REMAINING_BACKUPS! EQU 0 (
+    echo STATUS: SUCCESS - 01_scripts directory cleaned of migration backups
+) else (
+    echo STATUS: INCOMPLETE - Some migration backups may still remain
+)
+echo.
+echo Processing completed at %DATE% %TIME%
+echo ================================================================
+
+ENDLOCAL
+pause

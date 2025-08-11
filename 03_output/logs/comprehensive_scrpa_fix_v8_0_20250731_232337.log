@@ -1,0 +1,4 @@
+2025-07-31 23:23:37,645 - ComprehensiveSCRPAFixV8_0 - INFO - === Comprehensive SCRPA Fix V8.0 - Column Standardization Version ===
+2025-07-31 23:23:38,080 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded call type reference: 592 records
+2025-07-31 23:23:38,336 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded zone/grid reference: 1368 records
+2025-07-31 23:23:38,338 - ComprehensiveSCRPAFixV8_0 - WARNING - Removing Jersey City address: 123 Main St, Jersey City, NJ

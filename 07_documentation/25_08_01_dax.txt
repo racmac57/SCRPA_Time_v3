@@ -1,0 +1,713 @@
+28Day_Total = 
+CALCULATE(
+    COUNTROWS(CAD_RMS_Matched),
+    CAD_RMS_Matched[Period] = "28-Day"
+)
+
+7-Day Count Dynamic = 
+VAR SelectedCrime = SELECTEDVALUE('Crime Types Slicer'[Display Name])
+VAR CrimeType = IF(ISBLANK(SelectedCrime), "All Crimes", SelectedCrime)
+
+// Dynamic 7-day period based on today
+VAR Today = TODAY()
+VAR Current7DayStart = Today - 6  // Last 7 days
+VAR Current7DayEnd = Today
+VAR StartDateText = FORMAT(Current7DayStart, "MM/DD/YY")
+VAR EndDateText = FORMAT(Current7DayEnd, "MM/DD/YY")
+
+// Count ONLY incidents in dynamic 7-day period
+VAR Count7Day = 
+    SWITCH(
+        SELECTEDVALUE('Crime Types Slicer'[Crime Type]),
+        "AUTO THEFT", 
+            CALCULATE(
+                COUNTROWS('ALL_CRIMES'),
+                SEARCH("MOTOR VEHICLE THEFT", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0,
+                VALUE('ALL_CRIMES'[IncidentDate]) >= Current7DayStart,
+                VALUE('ALL_CRIMES'[IncidentDate]) <= Current7DayEnd
+            ),
+        "BURGLARY AUTO",
+            CALCULATE(
+                COUNTROWS('ALL_CRIMES'),
+                SEARCH("BURGLARY - AUTO", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0,
+                VALUE('ALL_CRIMES'[IncidentDate]) >= Current7DayStart,
+                VALUE('ALL_CRIMES'[IncidentDate]) <= Current7DayEnd
+            ),
+        "BURGLARY COMM_RES",
+            CALCULATE(
+                COUNTROWS('ALL_CRIMES'),
+                OR(
+                    SEARCH("BURGLARY COMMERCIAL", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0,
+                    SEARCH("BURGLARY - RESIDENCE", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0
+                ),
+                VALUE('ALL_CRIMES'[IncidentDate]) >= Current7DayStart,
+                VALUE('ALL_CRIMES'[IncidentDate]) <= Current7DayEnd
+            ),
+        "ROBBERY",
+            CALCULATE(
+                COUNTROWS('ALL_CRIMES'),
+                SEARCH("ROBBERY", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0,
+                VALUE('ALL_CRIMES'[IncidentDate]) >= Current7DayStart,
+                VALUE('ALL_CRIMES'[IncidentDate]) <= Current7DayEnd
+            ),
+        "SEXUAL OFFENSES",
+            CALCULATE(
+                COUNTROWS('ALL_CRIMES'),
+                SEARCH("SEXUAL", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0,
+                VALUE('ALL_CRIMES'[IncidentDate]) >= Current7DayStart,
+                VALUE('ALL_CRIMES'[IncidentDate]) <= Current7DayEnd
+            ),
+        CALCULATE(
+            COUNTROWS('ALL_CRIMES'),
+            VALUE('ALL_CRIMES'[IncidentDate]) >= Current7DayStart,
+            VALUE('ALL_CRIMES'[IncidentDate]) <= Current7DayEnd
+        )
+    )
+
+RETURN
+IF(
+    Count7Day = 0,
+    "0 " & CrimeType & " during 7-Day Period (" & StartDateText & "-" & EndDateText & ")",
+    Count7Day & " " & CrimeType & " during 7-Day Period (" & StartDateText & "-" & EndDateText & ")"
+)
+
+7Day_Total = 
+CALCULATE(
+    COUNTROWS(CAD_RMS_Matched),
+    CAD_RMS_Matched[Period] = "7-Day"
+)
+
+7Day_vs_28Day_Change = 
+DIVIDE([7Day_Total] - [28Day_Total], [28Day_Total], 0)
+
+7Day_vs_28Day_ChangeText = 
+VAR ChangePercent = [7Day_vs_28Day_Change]
+RETURN
+    IF(
+        ChangePercent > 0, 
+        "↑ +" & FORMAT(ChangePercent, "0.0%"),
+        IF(
+            ChangePercent < 0,
+            "↓ " & FORMAT(ChangePercent, "0.0%"),
+            "→ No Change"
+        )
+    )
+	
+7Day_vs_28Day_ChangeText = 
+VAR ChangePercent = [7Day_vs_28Day_Change]
+VAR ChangeDirection = 
+    IF(
+        ChangePercent > 0, 
+        "↑ +" & FORMAT(ChangePercent, "0.0%"),
+        IF(
+            ChangePercent < 0,
+            "↓ " & FORMAT(ChangePercent, "0.0%"),
+            "→ No Change"
+        )
+    )
+RETURN
+    ChangeDirection
+	
+Avg_Response_Minutes = 
+AVERAGEX(
+    FILTER(
+        ALL_CRIMES,
+        NOT(ISBLANK(ALL_CRIMES[Time_Response])) &&  // ← Use existing Time_Response column
+        ALL_CRIMES[Time_Response] > 0
+    ),
+    ALL_CRIMES[Time_Response]  // ← Already calculated in minutes
+)
+
+Avg_Time_On_Scene_Minutes = 
+AVERAGEX(
+    FILTER(
+        CAD_RMS_Matched, 
+        NOT(ISBLANK(CAD_RMS_Matched[Time Spent])) && 
+        CAD_RMS_Matched[Time Spent] > 0
+    ),
+    CAD_RMS_Matched[Time Spent]
+)
+
+
+Burglary_Auto_7Day = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    ALL_CRIMES[Crime_Category] = "Burglary Auto",
+    ALL_CRIMES[Period] = "7-Day"
+)
+
+
+Burglary_Auto_Title_AllFilters = 
+VAR IncidentCount = 
+    CALCULATE(
+        COUNTROWS(ALL_CRIMES),
+        ALL_CRIMES[Crime_Category] = "Burglary Auto",
+        ALLEXCEPT(ALL_CRIMES, ALL_CRIMES[Period])  // Keep period filter, remove everything else
+    )
+RETURN 
+    "Burglary - Auto (" & IncidentCount & " incidents)"
+	
+Burglary_Auto_Title_Complete = 
+VAR IncidentCount = 
+    CALCULATE(
+        COUNTROWS(ALL_CRIMES),
+        ALL_CRIMES[Crime_Category] = "Burglary Auto",
+        REMOVEFILTERS(
+            ALL_CRIMES[Enhanced_TimeOfDay],
+            ALL_CRIMES[Block], 
+            ALL_CRIMES[Officer],
+            ALL_CRIMES[Zone]
+        )
+    )
+RETURN 
+    "Burglary - Auto (" & IncidentCount & " incidents)"
+	
+Burglary_Auto_Title_PageLevel = 
+VAR IncidentCount = 
+    CALCULATE(
+        COUNTROWS(ALL_CRIMES),
+        ALL_CRIMES[Crime_Category] = "Burglary Auto",
+        ALLEXCEPT(
+            ALL_CRIMES, 
+            ALL_CRIMES[Period],           // Keep period filters
+            ALL_CRIMES[INC_DATE],         // Keep date filters
+            'Crime Types Slicer'[Display Name]  // Keep crime type slicer
+        )
+    )
+RETURN 
+    "Burglary - Auto (" & IncidentCount & " incidents)"
+	
+Burglary_CommRes_7Day = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    ALL_CRIMES[Crime_Category] = "Burglary - Comm & Res",
+    ALL_CRIMES[Period] = "7-Day"
+)
+
+CAD_Match_Rate = 
+DIVIDE([Records_With_CAD], [Total_Records], 0)
+
+Call_Category_Summary = 
+VAR EmergencyCalls = CALCULATE(COUNTROWS(CAD_RMS_Matched), CAD_RMS_Matched[Response Type] = "Emergency")
+VAR RoutineCalls = CALCULATE(COUNTROWS(CAD_RMS_Matched), CAD_RMS_Matched[Response Type] = "Routine") 
+VAR UrgentCalls = CALCULATE(COUNTROWS(CAD_RMS_Matched), CAD_RMS_Matched[Response Type] = "Urgent")
+VAR TotalCalls = COUNTROWS(CAD_RMS_Matched)
+RETURN
+    "Emergency: " & EmergencyCalls & " | Routine: " & RoutineCalls & " | Urgent: " & UrgentCalls & " | Total: " & TotalCalls
+	
+Clearance_Rate_7Day = 
+DIVIDE( [Cleared_Cases_7Day], [7Day_Total], 0 )
+
+Cleared_Cases_7Day = 
+CALCULATE(
+    COUNTROWS( ALL_CRIMES ),
+    ALL_CRIMES[Period] = "7-Day",
+    OR(
+        CONTAINSSTRING( ALL_CRIMES[Case_Status], "Cleared" ),
+        CONTAINSSTRING( ALL_CRIMES[Case_Status], "Arrest" )
+    )
+)
+
+CORRECTED DAX - Officer Workload Balance Measure:*/Officer_Workload_Balance = 
+VAR AvgCalls = 
+    AVERAGEX(
+        VALUES(ALL_CRIMES[Officer]),
+        CALCULATE(COUNTROWS(ALL_CRIMES))
+    )
+VAR MaxCalls = 
+    MAXX(
+        ADDCOLUMNS(
+            VALUES(ALL_CRIMES[Officer]),
+            "CallCount", 
+            CALCULATE(COUNTROWS(ALL_CRIMES))
+        ),
+        [CallCount]
+    )
+RETURN
+    DIVIDE(MaxCalls, AvgCalls, 1)
+
+/* 
+Additional DAX measures for CAD/RMS analysis:
+*/
+
+CAD_Match_Rate = 
+DIVIDE(
+    CALCULATE(
+        COUNTROWS(ALL_CRIMES),
+        NOT(ISBLANK(ALL_CRIMES[CAD Report Number]))
+    ),
+    COUNTROWS(ALL_CRIMES)
+)
+
+Avg_Response_Time_Minutes = 
+AVERAGEX(
+    FILTER(ALL_CRIMES, NOT(ISBLANK(ALL_CRIMES[Time Response]))),
+    ALL_CRIMES[Time Response]
+)
+
+Avg_Time_On_Scene_Minutes = 
+AVERAGEX(
+    FILTER(ALL_CRIMES, NOT(ISBLANK(ALL_CRIMES[Time Spent]))),
+    ALL_CRIMES[Time Spent]
+)
+
+Call_Category_Summary = 
+VAR EmergencyCalls = CALCULATE(COUNTROWS(ALL_CRIMES), ALL_CRIMES[Response Type] = "Emergency")
+VAR RoutineCalls = CALCULATE(COUNTROWS(ALL_CRIMES), ALL_CRIMES[Response Type] = "Routine") 
+VAR UrgentCalls = CALCULATE(COUNTROWS(ALL_CRIMES), ALL_CRIMES[Response Type] = "Urgent")
+VAR TotalCalls = COUNTROWS(ALL_CRIMES)
+RETURN
+    "Emergency: " & EmergencyCalls & " | Routine: " & RoutineCalls & " | Urgent: " & UrgentCalls & " | Total: " & TotalCalls
+
+Response_Type_Breakdown = 
+CONCATENATEX(
+    TOPN(5, 
+        SUMMARIZE(ALL_CRIMES, ALL_CRIMES[Response Type], "Count", COUNTROWS(ALL_CRIMES)),
+        [Count], DESC
+    ),
+    ALL_CRIMES[Response Type] & ": " & [Count],
+    " | "
+)
+
+Crime Trend Indicator2 = 
+VAR CurrentCount =
+    CALCULATE(
+        COUNTROWS(ALL_CRIMES),
+        ALL_CRIMES[Period] = "7-Day"
+    )
+VAR PreviousCount =
+    CALCULATE(
+        COUNTROWS( ALL_CRIMES),
+        ALL_CRIMES[Period] = "28-Day"
+    )
+VAR ChangePct =
+    DIVIDE( CurrentCount - PreviousCount, PreviousCount, 0 )
+RETURN
+SWITCH(
+    TRUE(),
+    ChangePct > 0.2, "🔴 Increasing (" & FORMAT( ChangePct, "0.0%") & ")",
+    ChangePct < -0.2, "🟢 Decreasing (" & FORMAT( ChangePct, "0.0%") & ")",
+    "🟡 Stable (" & FORMAT( ChangePct, "0.0%") & ")"
+)
+
+
+
+Crime_Trend_Indicator = 
+VAR Curr7  = [7Day_Total]
+VAR Prev28 = [28Day_Total]
+RETURN
+    SWITCH(
+        TRUE(),
+        Curr7 > Prev28 * 1.1, "🔴 Increasing",
+        Curr7 < Prev28 * 0.9, "🟢 Decreasing",
+        "🟡 Stable"
+    )
+
+
+Current_Month_Total = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    MONTH(ALL_CRIMES[Incident Date]) = MONTH(TODAY()),
+    YEAR(ALL_CRIMES[Incident Date]) = YEAR(TODAY())
+)
+
+Dynamic Incident Count = 
+VAR SelectedCrime = SELECTEDVALUE('Crime Types Slicer'[Crime Type])
+
+RETURN
+SWITCH(
+    SelectedCrime,
+    "AUTO THEFT", 
+        CALCULATE(
+            COUNTROWS('ALL_CRIMES'),
+            SEARCH("MOTOR VEHICLE THEFT", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0
+        ),
+    "BURGLARY AUTO",
+        CALCULATE(
+            COUNTROWS('ALL_CRIMES'),
+            SEARCH("BURGLARY - AUTO", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0
+        ),
+    "BURGLARY COMM_RES",
+        CALCULATE(
+            COUNTROWS('ALL_CRIMES'),
+            OR(
+                SEARCH("BURGLARY COMMERCIAL", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0,
+                SEARCH("BURGLARY - RESIDENCE", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0
+            )
+        ),
+    "ROBBERY",
+        CALCULATE(
+            COUNTROWS('ALL_CRIMES'),
+            SEARCH("ROBBERY", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0
+        ),
+    "SEXUAL OFFENSES",
+        CALCULATE(
+            COUNTROWS('ALL_CRIMES'),
+            SEARCH("SEXUAL", 'ALL_CRIMES'[ALL_INCIDENTS], 1, 0) > 0
+        ),
+    COUNTROWS('ALL_CRIMES')
+)
+
+DynamicSubtitle = 
+VAR SelectedCategory =
+    SELECTEDVALUE( ALL_CRIMES[Crime_Category], "All Categories" )
+
+VAR TotalCount =
+    CALCULATE(
+        DISTINCTCOUNT( ALL_CRIMES[Case Number] ),
+        REMOVEFILTERS( ALL_CRIMES[Incident Date] )
+    )
+
+VAR YTDCount =
+    CALCULATE(
+        DISTINCTCOUNT( ALL_CRIMES[Case Number] ),
+        REMOVEFILTERS( ALL_CRIMES[Incident Date] ),
+        FILTER(
+            ALL( ALL_CRIMES[Incident Date] ),
+            YEAR( ALL_CRIMES[Incident Date] ) = YEAR( TODAY() )
+        )
+    )
+
+VAR Last28Count =
+    CALCULATE(
+        DISTINCTCOUNT( ALL_CRIMES[Case Number] ),
+        REMOVEFILTERS( ALL_CRIMES[Incident Date] ),
+        FILTER(
+            ALL( ALL_CRIMES[Incident Date] ),
+            ALL_CRIMES[Incident Date] >= TODAY() - 28
+                && ALL_CRIMES[Incident Date] <= TODAY()
+        )
+    )
+
+VAR Last7Count =
+    CALCULATE(
+        DISTINCTCOUNT( ALL_CRIMES[Case Number] ),
+        REMOVEFILTERS( ALL_CRIMES[Incident Date] ),
+        FILTER(
+            ALL( ALL_CRIMES[Incident Date] ),
+            ALL_CRIMES[Incident Date] >= TODAY() - 7
+                && ALL_CRIMES[Incident Date] <= TODAY()
+        )
+    )
+
+RETURN
+    SelectedCategory
+        & " | Total: "  & FORMAT( TotalCount,  "#,0" )
+        & " | YTD: "    & FORMAT( YTDCount,    "#,0" )
+        & " | 28-Day: " & FORMAT( Last28Count,"#,0" )
+        & " | 7-Day: "  & FORMAT( Last7Count,  "#,0" )
+
+
+Enhanced Chart Title = 
+VAR SelectedCrime = SELECTEDVALUE('Crime Types Slicer'[Display Name])
+VAR CrimeType = IF(ISBLANK(SelectedCrime), "All Crimes", SelectedCrime)
+VAR IncidentCount = [Dynamic Incident Count]
+VAR SingleIncident = SELECTEDVALUE(ALL_CRIMES[ALL_INCIDENTS])
+VAR IncidentText = 
+    IF(
+        NOT(ISBLANK(SingleIncident)),
+        SingleIncident,
+        IF(
+            COUNTROWS(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS])) = 1,
+            MAXX(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS]), ALL_CRIMES[ALL_INCIDENTS]),
+            "Multiple Incident Types"
+        )
+    )
+RETURN 
+    CrimeType & " - " & IncidentText & " by Time of Day (" & IncidentCount & " incidents)"
+	
+Enhanced_Chart_Title_V1 = 
+VAR SelectedCrime = SELECTEDVALUE('Crime Types Slicer'[Display Name])
+VAR CrimeType = IF(ISBLANK(SelectedCrime), "All Crimes", SelectedCrime)
+VAR IncidentCount = [Dynamic Incident Count]
+VAR SelectedIncidents = 
+    IF(
+        HASONEFILTER(ALL_CRIMES[ALL_INCIDENTS]),
+        "Filtered: " & SELECTEDVALUE(ALL_CRIMES[ALL_INCIDENTS]),
+        IF(
+            COUNTROWS(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS])) = 1,
+            "Filtered: " & MAXX(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS]), ALL_CRIMES[ALL_INCIDENTS]),
+            IF(
+                COUNTROWS(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS])) < COUNTROWS(ALL(ALL_CRIMES[ALL_INCIDENTS])),
+                "Multiple Incidents Selected",
+                "All Incidents"
+            )
+        )
+    )
+RETURN 
+    CrimeType & " - Calls by Time of Day (" & IncidentCount & " incidents) | " & SelectedIncidents
+	
+Enhanced_Chart_Title_V2 = 
+VAR SelectedCrime = SELECTEDVALUE('Crime Types Slicer'[Display Name])
+VAR CrimeType = IF(ISBLANK(SelectedCrime), "All Crimes", SelectedCrime)
+VAR IncidentCount = [Dynamic Incident Count]
+VAR FilteredIncidents = COUNTROWS(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS]))
+VAR TotalIncidents = COUNTROWS(ALL(ALL_CRIMES[ALL_INCIDENTS]))
+VAR IncidentFilter = 
+    IF(
+        FilteredIncidents = TotalIncidents,
+        "All Incident Types",
+        FilteredIncidents & " of " & TotalIncidents & " Incident Types"
+    )
+RETURN 
+    CrimeType & " - Calls by Time of Day (" & IncidentCount & " incidents, " & IncidentFilter & ")"
+	
+Enhanced_Chart_Title_V3 = 
+VAR SelectedCrime = SELECTEDVALUE('Crime Types Slicer'[Display Name])
+VAR CrimeType = IF(ISBLANK(SelectedCrime), "All Crimes", SelectedCrime)
+VAR IncidentCount = [Dynamic Incident Count]
+VAR SelectedIncidentList = 
+    CONCATENATEX(
+        TOPN(3, ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS]), ALL_CRIMES[ALL_INCIDENTS], ASC),
+        ALL_CRIMES[ALL_INCIDENTS],
+        ", "
+    )
+VAR FilteredCount = COUNTROWS(ALLSELECTED(ALL_CRIMES[ALL_INCIDENTS]))
+VAR TotalCount = COUNTROWS(ALL(ALL_CRIMES[ALL_INCIDENTS]))
+VAR IncidentDisplay = 
+    IF(
+        FilteredCount = TotalCount,
+        "All Incidents",
+        IF(
+            FilteredCount <= 3,
+            SelectedIncidentList,
+            SelectedIncidentList & " (+" & (FilteredCount - 3) & " more)"
+        )
+    )
+RETURN 
+    CrimeType & " - " & IncidentDisplay & " (" & IncidentCount & " incidents)"
+	
+Executive_Summary = 
+VAR Total7Day = [7Day_Total]
+VAR Change = FORMAT([7Day_vs_28Day_Change], "0.0%")
+VAR MatchRate = FORMAT([CAD_Match_Rate], "0%")
+RETURN
+    "7-Day Total: " & Total7Day & " incidents (" & Change & " vs 28-day). CAD Match Rate: " & MatchRate
+	
+Hour Sort = 
+VAR HourValue = HOUR('ALL_CRIMES'[Incident Time])
+RETURN
+SWITCH(
+    TRUE(),
+    HourValue >= 0 && HourValue <= 3, 1,
+    HourValue >= 4 && HourValue <= 7, 2,
+    HourValue >= 8 && HourValue <= 11, 3,
+    HourValue >= 12 && HourValue <= 15, 4,
+    HourValue >= 16 && HourValue <= 19, 5,
+    HourValue >= 20 && HourValue <= 23, 6,
+    7
+)
+
+MaxCalls_vs_Avg = 
+VAR MaxCalls =
+    MAXX(
+        VALUES( ALL_CRIMES[OfficerOfRecord] ),
+        CALCULATE( COUNTROWS( ALL_CRIMES ) )
+    )
+VAR AvgCalls =
+    AVERAGEX(
+        VALUES( ALL_CRIMES[OfficerOfRecord] ),
+        CALCULATE( COUNTROWS( ALL_CRIMES ) )
+    )
+RETURN
+    DIVIDE( MaxCalls, AvgCalls, 1 )
+Month_over_Month_Change = 
+DIVIDE([Current_Month_Total] - [Previous_Month_Total], [Previous_Month_Total], 0)
+
+Most_Active_Officer = 
+VAR OfficerCounts = 
+    ADDCOLUMNS(
+        VALUES(ALL_CRIMES[OfficerOfRecord]),
+        "OfficerCalls", 
+        CALCULATE(COUNTROWS(ALL_CRIMES))
+    )
+VAR MaxOfficerCount = MAXX(OfficerCounts, [OfficerCalls])
+VAR TopOfficer = 
+    MAXX(
+        FILTER(OfficerCounts, [OfficerCalls] = MaxOfficerCount),
+        ALL_CRIMES[OfficerOfRecord]
+    )
+RETURN
+    TopOfficer
+	
+Most_Active_Zone = 
+VAR ZoneCounts = 
+    ADDCOLUMNS(
+        VALUES(ALL_CRIMES[Zone]),
+        "ZoneCount", 
+        CALCULATE(COUNTROWS(ALL_CRIMES))
+    )
+VAR MaxZoneCount = MAXX(ZoneCounts, [ZoneCount])
+VAR TopZone = 
+    MAXX(
+        FILTER(ZoneCounts, [ZoneCount] = MaxZoneCount),
+        ALL_CRIMES[Zone]
+    )
+RETURN
+    "Zone " & TopZone
+	
+MV_Theft_7Day = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    ALL_CRIMES[Crime_Category] = "Motor Vehicle Theft",
+    ALL_CRIMES[Period] = "7-Day"
+)
+
+Officer_Workload_Balance = 
+VAR AvgCalls = 
+    AVERAGEX(
+        VALUES(CAD_RMS_Matched[off]),
+        CALCULATE(COUNTROWS(CAD_RMS_Matched))
+    )
+VAR MaxCalls = 
+    MAXX(
+        ADDCOLUMNS(
+            VALUES(CAD_RMS_Matched[Officer]),
+            "CallCount", 
+            CALCULATE(COUNTROWS(CAD_RMS_Matched))
+        ),
+        [CallCount]
+    )
+RETURN
+    DIVIDE(MaxCalls, AvgCalls, 1)
+	
+Peak_Hour = 
+VAR HourCounts = 
+    ADDCOLUMNS(
+        VALUES(ALL_CRIMES[Enhanced_TimeOfDay]),
+        "IncidentCount", 
+        CALCULATE(COUNTROWS(ALL_CRIMES))
+    )
+VAR MaxCount = MAXX(HourCounts, [IncidentCount])
+VAR PeakTimeSlot = 
+    MAXX(
+        FILTER(HourCounts, [IncidentCount] = MaxCount),
+        ALL_CRIMES[Enhanced_TimeOfDay]
+    )
+RETURN
+    PeakTimeSlot
+	
+Previous_Month_Total = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    MONTH(ALL_CRIMES[Incident Date]) = MONTH(TODAY()) - 1,
+    YEAR(ALL_CRIMES[Incident Date]) = YEAR(TODAY())
+)
+
+
+Recommended_Patrol_Time = 
+VAR MostActiveHour = [Peak_Hour]
+VAR MostActiveZone = [Most_Active_Zone]
+RETURN
+    "Focus on " & MostActiveZone & " during " & MostActiveHour
+	
+Records_With_CAD = 
+CALCULATE(
+    COUNTROWS(CAD_RMS_Matched),
+    CAD_RMS_Matched[Has_CAD_Data] = "Yes"
+)
+
+Repeat_Locations = 
+CALCULATE(
+    DISTINCTCOUNT(ALL_CRIMES[Block]),
+    FILTER(
+        ALL_CRIMES,
+        [7Day_Total] > 1
+    )
+)
+
+Report Subtitle = 
+VAR TodayDate = TODAY()
+VAR Start7    = TodayDate - 7
+VAR Start28   = TodayDate - 28
+RETURN
+"SCRPAR as of " 
+    & FORMAT( TodayDate, "MMMM dd, yyyy" ) 
+    & UNICHAR(10) 
+    & " | 7-Day Period: " 
+    & FORMAT( Start7, "MM/dd/yy" ) 
+    & " – " 
+    & FORMAT( TodayDate, "MM/dd/yy" ) 
+    & UNICHAR(10) 
+    & " | 28-Day Period: " 
+    & FORMAT( Start28, "MM/dd/yy" ) 
+    & " – " 
+    & FORMAT( TodayDate, "MM/dd/yy" )
+
+
+Report Title = 
+"Strategic Crime Reduction Plan Analysis Report" 
+    & UNICHAR(10) 
+    & "Prepared by Officer R. A. Carucci"
+
+
+Response_Type_Breakdown = 
+CONCATENATEX(
+    TOPN(5, 
+        SUMMARIZE(CAD_RMS_Matched, CAD_RMS_Matched[Response Type], "Count", COUNTROWS(CAD_RMS_Matched)),
+        [Count], DESC
+    ),
+    CAD_RMS_Matched[Response Type] & ": " & [Count],
+    " | "
+)
+
+Robbery_7Day = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    ALL_CRIMES[Crime_Category] = "Robbery",
+    ALL_CRIMES[Period] = "7-Day"
+)
+
+Robbery_7Day = 
+CALCULATE(
+    COUNTROWS(ALL_CRIMES),
+    ALL_CRIMES[Crime_Category] = "Robbery",
+    ALL_CRIMES[Period] = "7-Day"
+)
+
+TimeOfDaySort = 
+VAR HourValue = HOUR( 'ALL_CRIMES'[Incident Time] )
+RETURN
+SWITCH(
+    TRUE(),
+    HourValue >= 0  && HourValue <= 3, 1,
+    HourValue >= 4  && HourValue <= 7, 2,
+    HourValue >= 8  && HourValue <= 11,3,
+    HourValue >= 12 && HourValue <= 15,4,
+    HourValue >= 16 && HourValue <= 19,5,
+    HourValue >= 20 && HourValue <= 23,6,
+    7  // fallback for Unknown
+)
+
+
+
+Top_Crime_Block = 
+VAR BlockCounts = 
+    ADDCOLUMNS(
+        VALUES(ALL_CRIMES[Block]),
+        "BlockCount", 
+        CALCULATE(COUNTROWS(ALL_CRIMES))
+    )
+VAR MaxBlockCount = MAXX(BlockCounts, [BlockCount])
+VAR TopBlock = 
+    MAXX(
+        FILTER(BlockCounts, [BlockCount] = MaxBlockCount),
+        ALL_CRIMES[Block]
+    )
+RETURN
+    TopBlock
+
+Total_Records = COUNTROWS(CAD_RMS_Matched)
+
+Weekly Report Subtitle = "Weekly Incident Report"
+
+YTD_Total = 
+CALCULATE(
+    COUNTROWS(CAD_RMS_Matched),
+    CAD_RMS_Matched[Period] = "YTD"
+)
+
+
+
+
+

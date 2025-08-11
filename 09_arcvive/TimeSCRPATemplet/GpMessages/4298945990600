@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Wednesday, May 14, 2025 6:50:04 PM</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\GenerateCrimeCSVs_byPeriod_ARCGIS.py", line 44, in &lt;module&gt;
+﻿    crime_input_files = [
+﻿    ^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\GenerateCrimeCSVs_byPeriod_ARCGIS.py", line 12, in export_crime_csvs
+﻿    d7_start = report_date - timedelta(days=6)
+﻿             ^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+﻿    return _read(filepath_or_buffer, kwds)
+﻿           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+﻿    parser = TextFileReader(filepath_or_buffer, **kwds)
+﻿             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+﻿    self._engine = self._make_engine(f, self.engine)
+﻿                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+﻿    self.handles = get_handle(
+﻿                   ^^^^^^^^^^^
+﻿  File "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+﻿    handle = open(
+﻿             ^^^^^
+﻿FileNotFoundError: [Errno 2] No such file or directory: 'C:\\GIS_Data\\SCRPA\\raw\\Burglary_-_Auto.csv'
+</msg><msg code="0" type="0">Failed script Report Date...</msg><msg code="-2147467259" type="100">Failed to execute (ReportDate).</msg><msg code="0" type="3">Failed at Wednesday, May 14, 2025 6:50:04 PM (Elapsed Time: 0.08 seconds)</msg></messages>

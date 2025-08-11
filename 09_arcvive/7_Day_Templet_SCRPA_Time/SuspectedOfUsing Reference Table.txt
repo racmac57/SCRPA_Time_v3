@@ -1,0 +1,10 @@
+let
+    Source = Table.FromRows({
+        {"A"},
+        {"C"},
+        {"D"},
+        {"N"}
+    }, {"SuspectedOfUsing"}),
+    ChangedType = Table.TransformColumnTypes(Source, {{"SuspectedOfUsing", type text}})
+in
+    Source

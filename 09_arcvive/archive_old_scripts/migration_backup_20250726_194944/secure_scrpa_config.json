@@ -1,0 +1,27 @@
+{
+  "version": "2.0-secure",
+  "migration_date": "2025-07-26T19:49:08.883532",
+  "security": {
+    "localhost_only": true,
+    "data_sanitization": true,
+    "audit_logging": true,
+    "external_apis_disabled": true
+  },
+  "ollama": {
+    "api_url": "http://localhost:11434",
+    "model": "llama2:7b",
+    "timeout": 120,
+    "max_retries": 3
+  },
+  "sanitization": {
+    "mask_names": true,
+    "mask_phones": true,
+    "mask_ssns": true,
+    "mask_emails": true,
+    "block_level_addresses": true
+  },
+  "backup": {
+    "backup_location": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\migration_backup_20250726_194828",
+    "rollback_available": true
+  }
+}

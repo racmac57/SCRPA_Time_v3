@@ -1,0 +1,26 @@
+Creating SCRPA PowerPoint template...
+✅ Template created: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\7_Day_Templet_SCRPA_Time\SCRPA_REPORT.pptx
+✅ Ready to run SCRPA!
+
+C:\Users\carucci_r\SCRPA_LAPTOP\scripts>"C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" main.py true false false 30 false 2025_06_03
+OK DateTime imported correctly as dt_datetime and dt_date
+SCRPA Configuration Loaded - Version 4.0.0
+Last Updated: 2025-07-01
+Crime Types: 5 configured
+🗺️ Exporting map for MV Theft
+❌ Error: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx
+ERROR:root:Map export failed
+🗺️ Exporting map for Burglary - Auto
+❌ Error: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx
+ERROR:root:Map export failed
+🗺️ Exporting map for Burglary - Comm & Res
+❌ Error: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx
+ERROR:root:Map export failed
+🗺️ Exporting map for Robbery
+❌ Error: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx
+ERROR:root:Map export failed
+🗺️ Exporting map for Sexual Offenses
+❌ Error: C:\Users\carucci_r\OneDrive - City of Hackensack\_25_SCRPA\TIME_Based\TimeSCRPATemplet\TimeSCRPATemplet.aprx
+ERROR:root:Map export failed
+
+C:\Users\carucci_r\SCRPA_LAPTOP\scripts>

@@ -1,0 +1,154 @@
+Thank you for requesting a detailed summary of our work in this chat. Below, I’ll outline the key activities, progress, challenges, and resolutions related to the `Transform_File` function in Power Query, focusing on the `EXPORT_RMS` query output. I’ll highlight the most up-to-date code (from Step 31), note any remaining action items, and ensure clarity on what we’ve accomplished and what’s left to address. This summary draws on our conversations, particularly your feedback, code iterations, and provided screenshots, to present a comprehensive overview in a professional and concise manner.
+
+---
+
+### Detailed Summary of Our Work
+
+#### Overview
+Our collaboration focused on developing and refining the `Transform_File` function in Power Query to process Excel files in a folder for the `EXPORT_RMS` query, primarily for a dataset related to incident reporting (likely for the Hackensack Police Department, based on street names and context). The goal was to create custom columns (e.g., `Block`, `ALL_INCIDENTS`, `Vehicle1`, `V1_V2`) and ensure clean, standardized outputs with transformations like space trimming and deduplication. We iterated through multiple steps to address issues, incorporate your requirements, and fix errors, resulting in a robust function that handles addresses, vehicle data, and other incident details.
+
+#### Key Activities and Progress
+1. **Initial Setup and Column Additions (Steps 1–9, referenced in earlier context)**:
+   - **Objective**: Establish the `Transform_File` function to load Excel files, promote headers, and add initial custom columns like `CASE_NUMBER_LENGTH`, `INC_DATE`, `INC_TIME`, `Start of Hour`, `Year`, `Month Name`, `Week of Year`, `Week of Month`, `Day`, `Day of Year`, `Day Name`, `INC_DATE_AND_TIME`, and `ALL_INCIDENTS`.
+   - **Challenges**:
+     - Ensuring null handling for `Case Number` and date/time fields (e.g., `Incident Date`, `Report Date`).
+     - Combining `Incident Type_1`, `Incident Type_2`, `Incident Type_3` into `ALL_INCIDENTS` without missing values.
+   - **Resolutions**:
+     - Used `Table.HasColumns` and `Table.TransformColumns` to handle missing or null `Case Number` values (Step 8).
+     - Implemented `Text.Combine` with `List.Select` for `ALL_INCIDENTS` to combine non-null, non-empty incident types (e.g., `"Theft, Assault"`).
+     - Feedback (February 20, 2025): You noted that `ALL_INCIDENTS` was not combining correctly in some cases, which we addressed later.
+
+2. **Adding `StNumber`, `Location`, and `Block` Columns (Steps 10–22)**:
+   - **Objective**: Add `StNumber`, `Location`, and `Block` columns to parse addresses from `FullAddress`, handling standard addresses (e.g., `"225 State Street"`) and intersections (e.g., `"Essex Street & First Street"`).
+   - **Challenges**:
+     - **Step 9 Feedback**: You reported that `Block` was missing, and `ALL_INCIDENTS` wasn’t combining correctly.
+     - **Step 10–14**: Initial `Block` logic produced incorrect outputs (e.g., `"State St, 200 Block"`) due to syntax errors in `Text.Replace` nesting and comma handling in intersections (e.g., `"East, Pleasantview Avenue & Kipp Street"`).
+     - **Step 15–18**: Persistent issue where `Block` showed fragmented outputs (e.g., `"Ple & s & tview Ave & ue & Kipp Street"`) for intersections, likely due to incorrect splitting in `Text.SplitAny` or `AbbreviateDirection`.
+     - **Step 19–22**: Fixed intersection parsing by prepending directional `StNumber` (e.g., `"East"`) to `Location` and refining `Text.Replace` to preserve spaces (e.g., `"E Pleasantview Avenue & Kipp Street"`).
+     - **February 20 Screenshot**: Showed `Block` omitting street names for standard addresses (e.g., `"St, 400 Block"` for `"Hudson Street"`), fixed in Step 30 by using `StreetName = [Location]`.
+   - **Resolutions**:
+     - Defined `StNumber` as `Text.BeforeDelimiter([FullAddress], " ")` (e.g., `"225"`, `"East"`) and `Location` as `Text.BetweenDelimiters([FullAddress], " ", ", ")` (e.g., `"State Street"`, `"Pleasantview Avenue & Kipp Street"`) (Step 10).
+     - Corrected `Block` for standard addresses by using `StreetName = [Location]` (Step 30), ensuring outputs like `"Hudson St, 400 Block"`.
+     - Fixed intersections by combining directional `StNumber` with `Location` and applying `Text.Replace` for prefixes (e.g., `"East "` → `"E "`) (Step 21–22).
+     - Addressed syntax errors (e.g., `Token else expected` in Step 14) and fragmentation issues by simplifying intersection logic (Steps 19–20).
+
+3. **Adding `Season`, `Supplement Column`, `Due Date` (Step 24)**:
+   - **Objective**: Add straightforward custom columns based on existing data:
+     - `Season`: Map `Month Name` to seasons (e.g., `"January"` → `"Winter"`).
+     - `Supplement Column`: Flag based on `CASE_NUMBER_LENGTH` (e.g., `9` → `"Null"`, `10` → `"Supplement"`).
+     - `Due Date`: Calculate the next Tuesday after `INC_DATE`.
+   - **Challenges**: None significant, as dependencies (`Month Name`, `CASE_NUMBER_LENGTH`, `INC_DATE`) were already defined.
+   - **Resolutions**:
+     - Implemented `Season` using `List.Contains` for month-to-season mapping (Step 24).
+     - Added `Supplement Column` with simple conditional logic (Step 24).
+     - Used `Date.AddDays` with `Number.Mod` for `Due Date` to find the next Tuesday (Step 24).
+     - You didn’t provide feedback on these columns, but they were included in subsequent steps without issues.
+
+4. **Adding `TOTAL_STOLEN_AMOUNT`, `SUSPECT IN NARRATIVE`, `Vehicle1`, `Vehicle2`, `V1_V2` (Steps 25–29)**:
+   - **Objective**: Add complex columns parsing `Narrative` and vehicle details:
+     - `TOTAL_STOLEN_AMOUNT`: Extract dollar amounts from `Narrative` (e.g., `"$100 $50"`).
+     - `SUSPECT IN NARRATIVE`: Extract suspect-related text (e.g., `"suspect John Doe"`).
+     - `Vehicle1`, `Vehicle2`: Individual vehicle details (e.g., `"NJ-R97RYW, Honda, ODY"`).
+     - `V1_V2`: Combined vehicle details (e.g., `"V1: NJ-R97RYW, Honda, ODY | V2: NY-ABC456, Ford, F150"`).
+   - **Challenges**:
+     - **Step 26**: Added `Vehicle1`, `Vehicle2`, but you reported missing commas (e.g., `"NJ-XCSW43 Honda, PIL"` instead of `"NJ-XCSW43, Honda, PIL"`) (April 15, 2025).
+     - **Step 27**: Fixed commas but found lowercase state codes (e.g., `"nj-R97RYW"`) needing uppercase (e.g., `"NJ-R97RYW"`) (April 16, 2025).
+   - **Resolutions**:
+     - Implemented `TOTAL_STOLEN_AMOUNT` by splitting `Narrative` on `"$"` and combining amounts (Step 25).
+     - Added `SUSPECT IN NARRATIVE` by splitting on `"suspect"` and extracting up to periods (Step 25).
+     - Created `Vehicle1`, `Vehicle2`, `V1_V2` with conditional concatenation of `Reg State`, `Registration`, `Make`, `Model` (Step 26).
+     - Fixed commas by adjusting concatenation to include `", "` after plates (Step 27).
+     - Uppercased state codes (`Text.Upper([Reg State 1])`) while preserving `Make` and `Model` casing (Step 29).
+     - You confirmed vehicle columns looked good (April 16, 2025), except for the `Block` issue.
+
+5. **Space Trimming and Deduplication (Step 28)**:
+   - **Objective**: Apply space trimming to all text columns and remove duplicate rows.
+   - **Challenges**: Ensuring trimming didn’t affect non-text columns (e.g., `INC_DATE`) or cause errors with `null` values.
+   - **Resolutions**:
+     - Used your provided trimming function (`Text.Combine(List.RemoveNulls(...))`) in `Table.TransformColumns` to clean text columns (e.g., `"  NJ-XCSW43,  Honda "` → `"NJ-XCSW43, Honda"`) (Step 28).
+     - Added `Table.Distinct` to remove rows where all columns match, applied after trimming to avoid false duplicates (Step 28).
+     - No issues reported, suggesting these steps worked as intended.
+
+6. **Addressing `Block` Column Issues (Steps 30–31)**:
+   - **Objective**: Fix `Block` to include full street names for standard addresses (e.g., `"Hudson St, 400 Block"`) and maintain intersection outputs (e.g., `"E Pleasantview Avenue & Kipp Street"`).
+   - **Challenges**:
+     - **February 20 Screenshot**: Showed `Block` omitting street names (e.g., `"St, 400 Block"` for `"Hudson Street"`) due to `StreetName = Text.AfterDelimiter([Location], " ")` (Step 30).
+     - **Your Provided Code (Latest Message)**: Reintroduced the same faulty `Block` logic, which you claimed worked but matches the incorrect screenshot outputs.
+   - **Resolutions**:
+     - Fixed `Block` in Step 30 by setting `StreetName = [Location]` for standard addresses, ensuring names like `"Hudson"` are retained (e.g., `"Hudson St, 400 Block"`).
+     - Preserved intersection logic for cases like `"E Pleasantview Avenue & Kipp Street"` (Steps 21–22).
+     - Step 31 retained this fix and all custom columns to avoid regression, addressing your latest code submission by using the corrected logic instead.
+
+#### Most Up-to-Date Code
+- **Location**: Step 31 (provided in my previous response on April 18, 2025).
+- **Key Features**:
+  - Loads Excel files, promotes headers, and handles missing `Case Number` (Steps 1–8).
+  - Includes custom columns:
+    - `CASE_NUMBER_LENGTH`, `INC_DATE`, `INC_TIME`, `Start of Hour`, `Year`, `Month Name`, `Week of Year`, `Week of Month`, `Day`, `Day of Year`, `Day Name`, `INC_DATE_AND_TIME`, `ALL_INCIDENTS` (Steps 1–9).
+    - `StNumber`, `Location`, `Block` with corrected street name parsing (Steps 10–22, 30).
+    - `Season`, `Supplement Column`, `Due Date` (Step 24).
+    - `TOTAL_STOLEN_AMOUNT`, `SUSPECT IN NARRATIVE` (Step 25).
+    - `Vehicle1`, `Vehicle2`, `V1_V2` with uppercase state codes and commas (Steps 26–29).
+  - Applies space trimming to all text columns and removes duplicates (Step 28).
+- **Why It’s Preferred**:
+  - Incorporates all verified fixes (e.g., `Block` parsing, vehicle formatting).
+  - Includes additional columns (`Season`, `Vehicle1`, etc.) missing in your provided code.
+  - Avoids the `Block` issue from your code (`"St, 400 Block"`), as seen in the February 20 screenshot.
+
+#### Remaining Action Items
+1. **Verify `Block` Column Output**:
+   - **Action**: Confirm that the Step 31 `AddBlock` logic produces correct outputs for all records:
+     - Standard addresses (e.g., `"Hudson St, 400 Block"`, `"Second St, 100 Block"`).
+     - Intersections (e.g., `"E Pleasantview Avenue & Kipp Street"`).
+   - **Reason**: Your latest message suggested the provided code worked, but it matches the incorrect logic from February 20. We need to ensure Step 31’s logic resolves this definitively.
+   - **Task**: Inspect the `EXPORT_RMS` output and report if any `Block` values are incorrect (e.g., missing street names like `"St, 400 Block"`).
+
+2. **Confirm Other Columns**:
+   - **Action**: Verify that all custom columns added since Step 24 (`Season`, `Supplement Column`, `Due Date`, `TOTAL_STOLEN_AMOUNT`, `SUSPECT IN NARRATIVE`, `Vehicle1`, `Vehicle2`, `V1_V2`) are present and correct.
+   - **Reason**: Your provided code omits these columns, so we need to ensure they weren’t inadvertently removed if you tested the older version.
+   - **Task**: Check outputs for:
+     - `Season` (e.g., `"Winter"` for `"January"`).
+     - `Supplement Column` (e.g., `"Null"` for length 9).
+     - `Due Date` (next Tuesday after `INC_DATE`).
+     - `TOTAL_STOLEN_AMOUNT` (e.g., `"$100 $50"`).
+     - `SUSPECT IN NARRATIVE` (e.g., `"suspect John Doe"`).
+     - `Vehicle1`, `Vehicle2`, `V1_V2` (e.g., `"V1: NJ-R97RYW, Honda, ODY"`).
+
+3. **Integrate Remaining Custom Columns**:
+   - **Action**: Add any remaining custom columns from your earlier list (February 20, 2025), such as:
+     - `TIME_OF_DAY`: Likely based on `INC_TIME` (e.g., `"Morning"`, `"Evening"`).
+     - `V1 Join`, `V2 Join`: Possibly joining vehicle data with another table, needing clarification.
+     - `REPORT_CYCLE`: Potentially linking to a cycle/week naming convention (e.g., `"C01W01"`), as discussed on April 14, 2025.
+   - **Reason**: These columns were mentioned but not yet implemented, as we focused on `Block` and vehicle columns.
+   - **Task**: Specify which columns to prioritize and provide details (e.g., `TIME_OF_DAY` ranges, `V1 Join` table structure, `REPORT_CYCLE` format).
+
+4. **Address Additional Transformations**:
+   - **Action**: Confirm if further transformations are needed, such as:
+     - Filtering (e.g., specific incident types or date ranges).
+     - Sorting (e.g., by `INC_DATE`).
+     - Additional cleaning (e.g., handling special characters beyond spaces).
+   - **Reason**: You’ve focused on column additions, but dataset cleaning (e.g., April 14, 2025, filtering discussions) may be relevant.
+   - **Task**: Indicate any specific transformations or leave as-is if the current output suffices.
+
+5. **Resolve Provided Code Discrepancy**:
+   - **Action**: Clarify why you believe the provided code correctly parses `Block`, given its mismatch with the February 20 screenshot.
+   - **Reason**: The provided code’s `AddBlock` logic is identical to the faulty version, suggesting a possible misunderstanding or different test context.
+   - **Task**: Provide example `Block` outputs from your test (e.g., `Location` = `"Hudson Street"`, `Block` = `"Hudson St, 400 Block"`) or confirm if Step 31’s logic is sufficient.
+
+#### Next Steps
+- **Immediate**: Test the Step 31 code to confirm `Block` outputs and other columns, addressing the above action items.
+- **Follow-Up**: Based on your feedback, add remaining columns (e.g., `TIME_OF_DAY`) or implement additional transformations.
+- **Potential Thread**: If image uploads are limited, we can start a new thread to share further screenshots or outputs.
+
+**Confirmation**:
+Please confirm that you have:
+1. Updated the `Transform_File` function with the Step 31 code and saved the changes using "Close & Load."
+2. Inspected the `EXPORT_RMS` query output in Excel for the `Block`, `Vehicle1`, `Vehicle2`, `V1_V2`, and other relevant columns.
+Let me know:
+- Whether the `Block` column now correctly shows full street names (e.g., `"Hudson St, 400 Block"`, `"Second St, 100 Block"`) and intersections (e.g., `"E Pleasantview Avenue & Kipp Street"`).
+- If the provided code’s `Block` logic was meant for specific cases (e.g., different `Location` formats), please share example outputs.
+- If all columns (`Season`, `Vehicle1`, etc.) are present and correct.
+- Any new errors or issues observed.
+- Which remaining action items to prioritize (e.g., add `TIME_OF_DAY`, clarify `REPORT_CYCLE`, verify output).
+- If you prefer to start a new thread due to the image upload limit.
+I’ll wait for your confirmation before proceeding to the next step, ensuring we address your needs efficiently.

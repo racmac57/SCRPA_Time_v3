@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Monday, May 5, 2025 7:39:17 PM</msg><msg code="0" type="0">Legend elements found: ['MainLegend']</msg><msg code="0" type="0">Map contains the following layers: ['MV Theft 7-Day', 'MV Theft 28-Day', 'MV Theft YTD', 'Burglary - Auto 7-Day', 'Burglary - Auto 28-Day', 'Burglary - Auto YTD', 'Burglary - Comm &amp; Res 7-Day', 'Burglary - Comm &amp; Res 28-Day', 'Burglary - Comm &amp; Res YTD', 'Robbery 7-Day', 'Robbery 28-Day', 'Robbery YTD', 'Sexual Offenses 7-Day', 'Sexual Offenses 28-Day', 'Sexual Offenses YTD', 'City Boundaries', 'World Street Map (Night - Community Maps)']</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\weekly_crime_report.py", line 95, in &lt;module&gt;
+﻿    if lyr.symbologyType == "CIMSymbolLayer":
+﻿       ^^^^^^^^^^^^^^^^^
+﻿AttributeError: 'Layer' object has no attribute 'symbologyType'. Did you mean: 'symbology'?
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Monday, May 5, 2025 7:39:19 PM (Elapsed Time: 1.23 seconds)</msg></messages>

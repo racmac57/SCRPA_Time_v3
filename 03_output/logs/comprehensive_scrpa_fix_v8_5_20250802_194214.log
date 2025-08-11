@@ -1,0 +1,86 @@
+2025-08-02 19:42:14,539 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-02 19:42:15,211 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-02 19:42:15,214 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns after standardization: ['incident', 'category_type', 'response_type']
+2025-08-02 19:42:15,347 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-02 19:42:15,366 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-02 19:42:15,367 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-02 19:42:15,383 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W31, Date: 20250802
+2025-08-02 19:42:15,384 - ComprehensiveSCRPAFixV8_5 - INFO - Starting Comprehensive SCRPA Fix V8.5 pipeline...
+2025-08-02 19:42:15,386 - ComprehensiveSCRPAFixV8_5 - INFO - Latest CAD file: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-02 19:42:15,387 - ComprehensiveSCRPAFixV8_5 - INFO - Latest RMS file: 2025_07_29_13_02_46_SCRPA_RMS.xlsx
+2025-08-02 19:42:15,388 - ComprehensiveSCRPAFixV8_5 - INFO - Processing RMS data: 2025_07_29_13_02_46_SCRPA_RMS.xlsx
+2025-08-02 19:42:15,481 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded RMS file with 136 rows and 31 columns
+2025-08-02 19:42:15,481 - ComprehensiveSCRPAFixV8_5 - INFO - RMS columns found: ['Case Number', 'Incident Date', 'Incident Time', 'Incident Date_Between', 'Incident Time_Between', 'Report Date', 'Report Time', 'Incident Type_1', 'Incident Type_2', 'Incident Type_3', 'FullAddress', 'Grid', 'Zone', 'Narrative', 'Total Value Stolen', 'Total Value Recover', 'Registration 1', 'Make1', 'Model1', 'Reg State 1', 'Registration 2', 'Reg State 2', 'Make2', 'Model2', 'Reviewed By', 'CompleteCalc', 'Officer of Record', 'Squad', 'Det_Assigned', 'Case_Status', 'NIBRS Classification']
+2025-08-02 19:42:15,484 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping: {'Case Number': 'case_number', 'Incident Date': 'incident_date_raw', 'Incident Time': 'incident_time_raw', 'Incident Date_Between': 'incident_date_between_raw', 'Incident Time_Between': 'incident_time_between_raw', 'Report Date': 'report_date_raw', 'Report Time': 'report_time_raw', 'Incident Type_1': 'incident_type_1_raw', 'Incident Type_2': 'incident_type_2_raw', 'Incident Type_3': 'incident_type_3_raw', 'FullAddress': 'full_address_raw', 'Grid': 'grid_raw', 'Zone': 'zone_raw', 'Narrative': 'narrative_raw', 'Total Value Stolen': 'total_value_stolen', 'Total Value Recover': 'total_value_recovered', 'Registration 1': 'registration_1', 'Make1': 'make_1', 'Model1': 'model_1', 'Reg State 1': 'reg_state_1', 'Registration 2': 'registration_2', 'Reg State 2': 'reg_state_2', 'Make2': 'make_2', 'Model2': 'model_2', 'Reviewed By': 'reviewed_by', 'CompleteCalc': 'complete_calc', 'Officer of Record': 'officer_of_record', 'Squad': 'squad', 'Det_Assigned': 'det_assigned', 'Case_Status': 'case_status', 'NIBRS Classification': 'nibrs_classification'}
+2025-08-02 19:42:15,741 - ComprehensiveSCRPAFixV8_5 - WARNING - Removing Jersey City address: 128 Christopher Columbus Drive, Jersey City, NJ 07302, Hackensack, NJ, 07601
+2025-08-02 19:42:15,830 - ComprehensiveSCRPAFixV8_5 - INFO - RMS processing complete: 134 records after filtering
+2025-08-02 19:42:15,830 - ComprehensiveSCRPAFixV8_5 - INFO - Final RMS columns: ['case_number', 'incident_date', 'incident_time', 'time_of_day', 'time_of_day_sort_order', 'period', 'season', 'day_of_week', 'day_type', 'location', 'block', 'grid', 'post', 'incident_type', 'all_incidents', 'vehicle_1', 'vehicle_2', 'vehicle_1_and_vehicle_2', 'narrative', 'total_value_stolen', 'total_value_recovered', 'squad', 'officer_of_record', 'nibrs_classification', 'cycle_name']
+2025-08-02 19:42:15,831 - ComprehensiveSCRPAFixV8_5 - INFO - REMOVED CAD-specific columns: incident_type, crime_category, response_type
+2025-08-02 19:42:15,831 - ComprehensiveSCRPAFixV8_5 - INFO - Processing CAD data: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-02 19:42:15,859 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded CAD file with 114 rows and 20 columns
+2025-08-02 19:42:15,860 - ComprehensiveSCRPAFixV8_5 - INFO - CAD columns found: ['ReportNumberNew', 'Incident', 'How Reported', 'FullAddress2', 'PDZone', 'Grid', 'Time of Call', 'cYear', 'cMonth', 'HourMinuetsCalc', 'DayofWeek', 'Time Dispatched', 'Time Out', 'Time In', 'Time Spent', 'Time Response', 'Officer', 'Disposition', 'Response Type', 'CADNotes']
+2025-08-02 19:42:15,861 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping: {'ReportNumberNew': 'case_number', 'Incident': 'incident_raw', 'How Reported': 'how_reported', 'FullAddress2': 'full_address_raw', 'PDZone': 'post', 'Grid': 'grid_raw', 'Time of Call': 'time_of_call', 'cYear': 'call_year', 'cMonth': 'call_month', 'HourMinuetsCalc': 'hour_minutes_calc', 'DayofWeek': 'day_of_week_raw', 'Time Dispatched': 'time_dispatched', 'Time Out': 'time_out', 'Time In': 'time_in', 'Time Spent': 'time_spent_raw', 'Time Response': 'time_response_raw', 'Officer': 'officer', 'Disposition': 'disposition', 'Response Type': 'response_type_fallback', 'CADNotes': 'cad_notes_raw'}
+2025-08-02 19:42:15,874 - ComprehensiveSCRPAFixV8_5 - INFO - Starting call type mapping for 114 CAD records
+2025-08-02 19:42:15,875 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident_raw values: ['Motor Vehicle Theft - 2C:20-3', 'Criminal Sexual Contact - 2C:14-3a', 'Burglary - Auto - 2C:18-2', 'Burglary - Residence - 2C:18-2', 'Motor Vehicle Theft - 2C:20-3']
+2025-08-02 19:42:15,875 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns: ['incident', 'category_type', 'response_type']
+2025-08-02 19:42:15,953 - ComprehensiveSCRPAFixV8_5 - INFO - Category type mapping results: {'Criminal Incidents': 114}
+2025-08-02 19:42:15,954 - ComprehensiveSCRPAFixV8_5 - INFO - Top 10 response types: {'Emergency': 80, 'Routine': 34}
+2025-08-02 19:42:16,066 - ComprehensiveSCRPAFixV8_5 - INFO - CAD response_type populated in 114/114 records
+2025-08-02 19:42:16,067 - ComprehensiveSCRPAFixV8_5 - INFO - CAD grid populated in 107/114 records
+2025-08-02 19:42:16,068 - ComprehensiveSCRPAFixV8_5 - INFO - CAD post populated in 110/114 records
+2025-08-02 19:42:16,069 - ComprehensiveSCRPAFixV8_5 - INFO - CAD processing complete: 114 records
+2025-08-02 19:42:16,070 - ComprehensiveSCRPAFixV8_5 - INFO - Final CAD columns: ['case_number', 'response_type', 'category_type', 'how_reported', 'location', 'block', 'grid', 'post', 'time_of_call', 'time_dispatched', 'time_out', 'time_in', 'time_spent_minutes', 'time_response_minutes', 'time_spent_formatted', 'time_response_formatted', 'officer', 'disposition', 'cycle_name']
+2025-08-02 19:42:16,085 - ComprehensiveSCRPAFixV8_5 - INFO - RMS data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_rms_data_standardized.csv
+2025-08-02 19:42:16,102 - ComprehensiveSCRPAFixV8_5 - INFO - CAD data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_data_standardized.csv
+2025-08-02 19:42:16,102 - ComprehensiveSCRPAFixV8_5 - INFO - Starting CAD-RMS matching: RMS=134 records, CAD=114 records
+2025-08-02 19:42:16,133 - ComprehensiveSCRPAFixV8_5 - INFO - CAD-RMS matching complete:
+2025-08-02 19:42:16,134 - ComprehensiveSCRPAFixV8_5 - INFO -   - Final record count: 134 (matches RMS input)
+2025-08-02 19:42:16,135 - ComprehensiveSCRPAFixV8_5 - INFO -   - CAD matches found: 86
+2025-08-02 19:42:16,135 - ComprehensiveSCRPAFixV8_5 - INFO -   - Match rate: 64.2%
+2025-08-02 19:42:16,165 - ComprehensiveSCRPAFixV8_5 - INFO - Joined data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_rms_matched_standardized.csv
+2025-08-02 19:42:16,166 - ComprehensiveSCRPAFixV8_5 - INFO - Starting 7-Day SCRPA incident export...
+2025-08-02 19:42:16,170 - ComprehensiveSCRPAFixV8_5 - INFO - 7-Day period records found: 3
+2025-08-02 19:42:16,182 - ComprehensiveSCRPAFixV8_5 - INFO - After multi-column crime filtering: 3 records
+2025-08-02 19:42:16,183 - ComprehensiveSCRPAFixV8_5 - INFO - 7-Day filtering complete: 3 incidents found using Exact period match with multi-column filtering
+2025-08-02 19:42:16,192 - ComprehensiveSCRPAFixV8_5 - INFO - 7-Day incident breakdown by crime type:
+2025-08-02 19:42:16,194 - ComprehensiveSCRPAFixV8_5 - INFO -   - Motor Vehicle Theft: 1 incidents
+2025-08-02 19:42:16,196 - ComprehensiveSCRPAFixV8_5 - INFO -   - Burglary - Auto: 2 incidents
+2025-08-02 19:42:16,220 - ComprehensiveSCRPAFixV8_5 - INFO - 7-Day SCRPA export complete:
+2025-08-02 19:42:16,220 - ComprehensiveSCRPAFixV8_5 - INFO -   - File: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_SCRPA_Incidents.csv
+2025-08-02 19:42:16,220 - ComprehensiveSCRPAFixV8_5 - INFO -   - Total incidents exported: 3
+2025-08-02 19:42:16,221 - ComprehensiveSCRPAFixV8_5 - INFO -   - Filtering method used: Exact period match with multi-column filtering
+2025-08-02 19:42:16,221 - ComprehensiveSCRPAFixV8_5 - INFO -   - Crime types: Motor Vehicle Theft, Burglary - Auto
+2025-08-02 19:42:16,221 - ComprehensiveSCRPAFixV8_5 - INFO -   - Breakdown: 1 Motor Vehicle Theft, 2 Burglary - Auto
+2025-08-02 19:42:16,221 - ComprehensiveSCRPAFixV8_5 - INFO - ============================================================
+2025-08-02 19:42:16,222 - ComprehensiveSCRPAFixV8_5 - INFO - COMPREHENSIVE SCRPA FIX V8.5 COMPLETE - VALIDATION SUMMARY
+2025-08-02 19:42:16,222 - ComprehensiveSCRPAFixV8_5 - INFO - ============================================================
+2025-08-02 19:42:16,222 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ RMS records processed: 134
+2025-08-02 19:42:16,222 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CAD records processed: 114
+2025-08-02 19:42:16,223 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Matched records: 134 (RMS as master)
+2025-08-02 19:42:16,223 - ComprehensiveSCRPAFixV8_5 - WARNING - ⚠️ RECORD COUNT VALIDATION: Expected 135, got 134
+2025-08-02 19:42:16,223 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ COLUMN NAMING VALIDATION: PASSED (all lowercase_with_underscores)
+2025-08-02 19:42:16,224 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CAD columns with _cad suffix: 19
+2025-08-02 19:42:16,224 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ CRITICAL COLUMNS VALIDATION: PASSED
+2025-08-02 19:42:16,224 - ComprehensiveSCRPAFixV8_5 - INFO - 🔍 Running comprehensive filtering validation...
+2025-08-02 19:42:16,227 - ComprehensiveSCRPAFixV8_5 - INFO - Starting comprehensive filtering validation...
+2025-08-02 19:42:16,228 - ComprehensiveSCRPAFixV8_5 - INFO - Testing column coverage for filtering...
+2025-08-02 19:42:16,232 - ComprehensiveSCRPAFixV8_5 - INFO - Testing crime pattern matching...
+2025-08-02 19:42:16,303 - ComprehensiveSCRPAFixV8_5 - INFO - Testing multi-column search function...
+2025-08-02 19:42:16,304 - ComprehensiveSCRPAFixV8_5 - INFO - Testing filtering on real data...
+2025-08-02 19:42:16,305 - ComprehensiveSCRPAFixV8_5 - INFO - Testing backward compatibility...
+2025-08-02 19:42:16,306 - ComprehensiveSCRPAFixV8_5 - INFO - Comprehensive filtering validation complete:
+2025-08-02 19:42:16,306 - ComprehensiveSCRPAFixV8_5 - INFO -   - Overall status: WARNING
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO -   - Failed tests: 0
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO -   - Warning tests: 4
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO -   - Recommendations: 1
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - WARNING - ⚠️ COMPREHENSIVE FILTERING VALIDATION: WARNING
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ 7-Day records: 3
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Filtered crime incidents: 3
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Filtering rate: 100.0%
+2025-08-02 19:42:16,307 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Crime distribution:
+2025-08-02 19:42:16,308 - ComprehensiveSCRPAFixV8_5 - INFO -    - Motor Vehicle Theft: 1
+2025-08-02 19:42:16,308 - ComprehensiveSCRPAFixV8_5 - INFO -    - Burglary - Auto: 2
+2025-08-02 19:42:16,308 - ComprehensiveSCRPAFixV8_5 - WARNING - ⚠️ Filtering validation recommendations:
+2025-08-02 19:42:16,308 - ComprehensiveSCRPAFixV8_5 - WARNING -    - Low data coverage in vehicle_2: 3.0%
+2025-08-02 19:42:16,308 - ComprehensiveSCRPAFixV8_5 - INFO - ✅ Output directory: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi
+2025-08-02 19:42:16,309 - ComprehensiveSCRPAFixV8_5 - INFO - ============================================================

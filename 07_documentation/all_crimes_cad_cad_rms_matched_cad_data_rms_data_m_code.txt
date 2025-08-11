@@ -1,0 +1,321 @@
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\05_EXPORTS\_CAD\SCRPA"),
+    FilteredExcel = Table.SelectRows(Source, each [Extension] = ".xlsx" and Record.FieldOrDefault([Attributes], "Hidden", false) <> true),
+    Sorted = Table.Sort(FilteredExcel,{{"Date modified", Order.Descending}}),
+    LatestFile = Table.FirstN(Sorted, 1),
+
+    Transform_File = (Parameter2 as binary) =>
+        let
+            // ✅ Handle multiple sheets safely
+            Source = Excel.Workbook(Parameter2, null, true),
+            FilteredSheets = Table.SelectRows(Source, each [Kind] = "Sheet"),
+            Sheet1_Sheet = if Table.RowCount(FilteredSheets) > 0 then FilteredSheets{0}[Data] else error "No valid CAD sheets found",
+
+            #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+
+            // ✅ FIXED: Handle Time Spent and Time Response as time strings (00:21:20 format)
+            #"Fixed Time Columns" = Table.TransformColumns(#"Promoted Headers", {
+                {"Time Spent", each
+                    let
+                        value = _
+                    in
+                        if value = null then null
+                        else if value is time then Duration.TotalMinutes(value)
+                        else if value is text then
+                            try
+                                let
+                                    timeValue = Time.FromText(value),
+                                    minutes = Duration.TotalMinutes(timeValue)
+                                in if minutes < 0 then null else minutes
+                            otherwise null
+                        else if value is number then if value < 0 then null else value
+                        else null
+                    , type number
+                },
+                {"Time Response", each
+                    let
+                        value = _
+                    in
+                        if value = null then null
+                        else if value is time then Duration.TotalMinutes(value)
+                        else if value is text then
+                            try
+                                let
+                                    timeValue = Time.FromText(value),
+                                    minutes = Duration.TotalMinutes(timeValue)
+                                in if minutes < 0 then null else minutes
+                            otherwise null
+                        else if value is number then if value < 0 then null else value
+                        else null
+                    , type number
+                }
+            }),
+
+            // ✅ Add Block calculation using FullAddress2 (CAD uses FullAddress2, not FullAddress)
+            WithBlock = Table.AddColumn(#"Fixed Time Columns", "Block", each
+                let
+                    addr = [FullAddress2] ?? "",
+                    streetNum = try Number.FromText(Text.BeforeDelimiter(addr, " ")) otherwise null,
+                    streetName = Text.Trim(Text.BeforeDelimiter(Text.AfterDelimiter(addr, " "), ","))
+                in
+                    if streetNum <> null and streetName <> "" then
+                        streetName & ", " & Text.From(Number.IntegerDivide(streetNum, 100) * 100) & " Block"
+                    else if streetName <> "" then
+                        streetName & ", Unknown Block"
+                    else "Unknown Block", type text)
+        in
+            WithBlock,
+
+    InvokedCustom = Table.AddColumn(LatestFile, "Transform_File", each Transform_File([Content])),
+    #"Expanded Transform_File" = Table.ExpandTableColumn(InvokedCustom, "Transform_File", Table.ColumnNames(Transform_File(LatestFile{0}[Content]))),
+    #"Removed Other Columns" = Table.SelectColumns(#"Expanded Transform_File", Table.ColumnNames(Transform_File(LatestFile{0}[Content])))
+in
+    #"Removed Other Columns"
+
+    // 🕒 2025-07-22-13-45-00
+    // Project: SCRPA_Analysis/Updated_RMS_Data_Query
+    // Author: R. A. Carucci
+    // Purpose: Complete RMS_Data M-Code with fixed null handling and data type conversions
+
+    let
+        // RMS Data Source
+        Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\05_EXPORTS\_RMS\SCRPA"),
+        FilteredFiles = Table.SelectRows(Source, each [Extension] = ".xlsx" and Record.FieldOrDefault([Attributes],"Hidden",false) <> true),
+        SortedFiles = Table.Sort(FilteredFiles, {{"Date modified", Order.Descending}}),
+        LatestFile = Table.FirstN(SortedFiles, 1),
+
+        TransformRMS = (FileBinary as binary) =>
+            let
+                Workbook = Excel.Workbook(FileBinary, null, true),
+                FirstSheet = try Workbook{[Item="Sheet1",Kind="Sheet"]}[Data]
+                            otherwise try Workbook{0}[Data]
+                            otherwise Workbook{[Kind="Sheet"]}[Data],
+                Headers = Table.PromoteHeaders(FirstSheet, [PromoteAllScalars=true]),
+
+                // Get available columns to avoid errors
+                AvailableColumns = Table.ColumnNames(Headers),
+
+                // Safe data type conversion with null handling - only for columns that exist
+                SafeTyped = Table.TransformColumnTypes(Headers,
+                    List.Select({
+                        {"Case Number", type text},
+                        {"CaseNumber", type text},
+                        {"IncidentType1", type text},
+                        {"IncidentType2", type text},
+                        {"IncidentType3", type text},
+                        {"IncidentType", type text},
+                        {"FullAddress", type text},
+                        {"Zone", Int64.Type},
+                        {"Officer", type text},
+                        {"OfficerOfRecord", type text},
+                        {"Disposition", type text}
+                    }, each List.Contains(AvailableColumns, _{0}))),
+
+                // Crime category logic with safe text handling
+                WithCrimeCategory = Table.AddColumn(SafeTyped, "Crime_Category", each
+                    let
+                        incidentText = try
+                            if List.Contains(AvailableColumns, "IncidentType1") and [IncidentType1] <> null then Text.Upper([IncidentType1])
+                            else if List.Contains(AvailableColumns, "IncidentType") and [IncidentType] <> null then Text.Upper([IncidentType])
+                            else ""
+                        otherwise ""
+                    in
+                        if Text.Contains(incidentText,"MOTOR VEHICLE THEFT") then "Motor Vehicle Theft"
+                        else if List.AnyTrue({
+                            Text.Contains(incidentText,"BURGLARY - AUTO"),
+                            Text.Contains(incidentText,"THEFT FROM MOTOR VEHICLE")
+                        }) then "Burglary Auto"
+                        else if List.AnyTrue({
+                            Text.Contains(incidentText,"BURGLARY - COMMERCIAL"),
+                            Text.Contains(incidentText,"BURGLARY - RESIDENCE")
+                        }) then "Burglary - Comm & Res"
+                        else if Text.Contains(incidentText,"ROBBERY") then "Robbery"
+                        else if List.AnyTrue({
+                            Text.Contains(incidentText,"SEXUAL"),
+                            Text.Contains(incidentText,"RAPE")
+                        }) then "Sexual Offenses"
+                        else "Other", type text),
+
+                // Safe incident date conversion - check multiple possible date columns
+                WithIncidentDate = Table.AddColumn(WithCrimeCategory, "Incident_Date", each
+                    try
+                        if List.Contains(AvailableColumns, "IncidentDate") and [IncidentDate] <> null then
+                            Date.From([IncidentDate])
+                        else if List.Contains(AvailableColumns, "IncidentDateBetween") and [IncidentDateBetween] <> null then
+                            Date.From([IncidentDateBetween])
+                        else if List.Contains(AvailableColumns, "ReportDate") and [ReportDate] <> null then
+                            Date.From([ReportDate])
+                        else if List.Contains(AvailableColumns, "Incident Date") and [Incident Date] <> null then
+                            Date.From([Incident Date])
+                        else null
+                    otherwise null, type date),
+
+                // Safe period calculation
+                WithPeriod = Table.AddColumn(WithIncidentDate, "Period", each
+                    try
+                        let
+                            incDate = [Incident_Date],
+                            today = Date.From(DateTime.LocalNow()),
+                            daysDiff = if incDate <> null then Duration.Days(today - incDate) else 999
+                        in
+                            if daysDiff <= 7 then "7-Day"
+                            else if daysDiff <= 28 then "28-Day"
+                            else if incDate <> null and Date.Year(incDate) = Date.Year(today) then "YTD"
+                            else "Historical"
+                    otherwise "Historical", type text),
+
+                // Add ALL_INCIDENTS field safely
+                WithAllIncidents = Table.AddColumn(WithPeriod, "ALL_INCIDENTS", each
+                    try
+                        if List.Contains(AvailableColumns, "IncidentType1") and [IncidentType1] <> null then [IncidentType1]
+                        else if List.Contains(AvailableColumns, "IncidentType") and [IncidentType] <> null then [IncidentType]
+                        else "Unknown"
+                    otherwise "Unknown", type text),
+
+                // Add Block calculation if address exists
+                WithBlock = if List.Contains(AvailableColumns, "FullAddress") then
+                    Table.AddColumn(WithAllIncidents, "Block", each
+                        try
+                            let
+                                addr = if [FullAddress] <> null then [FullAddress] else "",
+                                streetNum = try Number.FromText(Text.BeforeDelimiter(addr, " ")) otherwise null,
+                                streetName = Text.Trim(Text.BeforeDelimiter(Text.AfterDelimiter(addr, " "), ","))
+                            in
+                                if streetNum <> null and streetName <> "" then
+                                    streetName & ", " & Text.From(Number.IntegerDivide(streetNum, 100) * 100) & " Block"
+                                else if streetName <> "" then
+                                    streetName & ", Unknown Block"
+                                else "Unknown Block"
+                        otherwise "Unknown Block", type text)
+                else
+                    Table.AddColumn(WithAllIncidents, "Block", each "Unknown Block", type text),
+
+                // Standardize column names - handle both naming conventions
+                StandardizedColumns = Table.RenameColumns(WithBlock,
+                    List.Select({
+                        {"CaseNumber", "Case Number"},
+                        {"OfficerOfRecord", "Officer"},
+                        {"Incident Date", "Incident_Date_Original"}
+                    }, each List.Contains(Table.ColumnNames(WithBlock), _{0})), MissingField.Ignore)
+            in
+                StandardizedColumns,
+
+        InvokedRMS = Table.AddColumn(LatestFile, "RMS_Data", each TransformRMS([Content]), type table),
+        ExpandedRMS = Table.ExpandTableColumn(InvokedRMS, "RMS_Data",
+            Table.ColumnNames(TransformRMS(LatestFile{0}[Content]))),
+        FinalRMS = Table.SelectColumns(ExpandedRMS,
+            Table.ColumnNames(TransformRMS(LatestFile{0}[Content]))),
+        #"Trimmed Text" = Table.TransformColumns(FinalRMS,{{"Narrative", Text.Trim, type text}}),
+        #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+    in
+        #"Cleaned Text"
+
+        // 🕒 2025-07-23-06-00-00
+        // SCRPA_Time_v2/Actual_CAD_RMS_MCode_Solutions
+        // Author: R. A. Carucci
+        // Purpose: M Code solutions based on actual CAD and RMS export structures from your samples
+
+        // =============================================================================
+        // CAD EXPORT PROCESSING - Based on Your Actual Sample Data
+        // =============================================================================
+        // CAD Structure: Single "Incident" column with values like "Motor Vehicle Theft - 2C:20-3"
+        // Key Columns: ReportNumberNew, Incident, FullAddress2, PDZone, Grid, Time of Call, Officer, Disposition
+
+        // ALL_CRIMES_CAD Query (Master for CAD exports)
+        let
+            Source = Excel.Workbook(File.Contents("C:\Users\carucci_r\OneDrive - City of Hackensack\_EXPORTS\_LawSoft_EXPORT\CAD\latest_cad_export.xlsx"), null, true),
+            Data = Source{[Item="Sheet1", Kind="Sheet"]}[Data],
+            PromotedHeaders = Table.PromoteHeaders(Data, [PromoteAllScalars=true]),
+            ChangedType = Table.TransformColumnTypes(PromotedHeaders,{}, "en-US"),
+
+            // Remove excluded case (using correct CAD case number column)
+            FilteredRows = Table.SelectRows(ChangedType, each ([ReportNumberNew] <> "25-057654")),
+
+            // NO UNPIVOTING - CAD has single "Incident" column
+            // Add case-insensitive crime categorization
+            AddCrimeCategory = Table.AddColumn(FilteredRows, "Crime_Category", each
+                let
+                    UpperIncident = Text.Upper([Incident] ?? "")
+                in
+                    if Text.Contains(UpperIncident, "MOTOR VEHICLE THEFT") or Text.Contains(UpperIncident, "AUTO THEFT") or Text.Contains(UpperIncident, "MV THEFT") then "Motor Vehicle Theft"
+                    else if Text.Contains(UpperIncident, "BURGLARY") and (Text.Contains(UpperIncident, "AUTO") or Text.Contains(UpperIncident, "VEHICLE")) then "Burglary Auto"
+                    else if Text.Contains(UpperIncident, "BURGLARY") and Text.Contains(UpperIncident, "COMMERCIAL") then "Burglary Commercial"
+                    else if Text.Contains(UpperIncident, "BURGLARY") and Text.Contains(UpperIncident, "RESIDENCE") then "Burglary Residence"
+                    else if Text.Contains(UpperIncident, "ROBBERY") then "Robbery"
+                    else if Text.Contains(UpperIncident, "SEXUAL") then "Sexual Offenses"
+                    else "Other"
+            ),
+
+            // Add ArcGIS Pro compatible filtering (disposition = "See Report")
+            FinalFiltered = Table.SelectRows(AddCrimeCategory, each
+                Text.Contains(Text.Upper([Disposition] ?? ""), "SEE REPORT")
+            ),
+
+            // Add standardized fields for compatibility
+            AddStandardFields = Table.AddColumn(FinalFiltered, "Case_Number", each [ReportNumberNew]),
+            AddTimeField = Table.AddColumn(AddStandardFields, "Incident_DateTime", each [Time of Call]),
+            AddAddressField = Table.AddColumn(AddTimeField, "Address", each [FullAddress2])
+        in
+            AddAddressField
+
+this has an error of DataSource.NotFound: File or Folder: Could not find a part of the path 'C:\Users\carucci_r\OneDrive - City of Hackensack\_EXPORTS\_LawSoft_EXPORT\CAD\latest_cad_export.xlsx'.
+Details:
+    C:\Users\carucci_r\OneDrive - City of Hackensack\_EXPORTS\_LawSoft_EXPORT\CAD\latest_cad_export.xlsx
+
+    // 🕒 2025-07-22-14-30-00
+    // Project: SCRPA_Analysis/Corrected_RMS_Data_Final
+    // Author: R. A. Carucci
+    // Purpose: RMS_Data query using actual column names from your data structure
+
+    let
+        RMS = ALL_CRIMES,
+        CAD = CAD_Data,
+
+        // ✅ LEFT JOIN using actual column names: Case Number (RMS) = ReportNumberNew (CAD)
+        JoinedData = Table.Join(
+            RMS, {"Case Number"},
+            CAD, {"ReportNumberNew"},
+            JoinKind.LeftOuter
+        ),
+
+        // ✅ Add flag for CAD data availability
+        WithCADFlag = Table.AddColumn(JoinedData, "Has_CAD_DATA", each
+            if [ReportNumberNew] <> null then "Yes" else "No", type text),
+
+        // ✅ Select relevant columns for analysis
+        FinalColumns = Table.SelectColumns(WithCADFlag, {
+            "Case Number",
+            "Incident_Date",
+            "Incident_Time",
+            "IncidentType",
+            "ALL_INCIDENTS",
+            "Crime_Category",
+            "TimeOfDay",
+            "Period",
+            "Block",
+            "Has_CAD_Data",
+            "Time Spent",
+            "Time Response",
+            "CADNotes",
+            "Officer of Record"
+        })
+    in
+        FinalColumns
+
+has an error of Expression.Error: The import CAD_Data matches no exports. Did you miss a module reference?
+
+
+also the fall back to CAD data when the block logic is incorrect is not working:
+
+CAD:
+ReportNumberNew	Incident	How Reported	FullAddress2	PDZone	Grid	Time of Call	cYear	cMonth	HourMinuetsCalc	DayofWeek	Time Dispatched	Time Out	Time In	Time Spent	Time Response	Officer	Disposition	Response Type	CADNotes	Block
+25-035499	Robbery - 2C:15-1	Walk-In	Gamewell Street & South Park Street, Hackensack, NJ, 07601	null	null	4/30/2025 4:19:23 PM	2025	April	16:19	Wednesday	4/30/2025 4:25:15 PM	4/30/2025 4:28:25 PM	4/30/2025 5:28:50 PM	null	null	P.O. Angie Tabares 363	See Report	Emergency	"spanish speaking officer, 17 year old reporting that two parties assaulted him and stole his phone - cavallo_f - 4/30/2025 4:23 PM
+He believes one party had a knife - cavallo_f - 4/30/2025 4:24:06 PM
+? - ? - ?"	Street & South Park Street, Unknown Block
+
+RMS:
+Case Number	Incident_Date_Original	Incident Time	Incident Date_Between	Incident Time_Between	Report Date	Report Time	Incident Type_1	Incident Type_2	Incident Type_3	FullAddress	Grid	Zone	Narrative	Total Value Stolen	Total Value Recover	Registration 1	Make1	Model1	Reg State 1	Registration 2	Reg State 2	Make2	Model2	Reviewed By	CompleteCalc	Officer of Record	Squad	Det_Assigned	Case_Status	NIBRS Classification	Crime_Category	Incident_Date	Period	ALL_INCIDENTS	Block
+25-035499	4/30/2025	12/31/1899 4:19:23 PM	null	null	4/30/2025	12/31/1899 4:19:23 PM	Robbery - 2C:15-1	null	null	Park Street & , Hackensack, NJ, 07601	null	null	Suspects description: (1) Black Male wearing a black hoodie and a black ski mask black sweatpants and unknown sneakers. Possibly 20-30 yrs of age but difficult to tell with the ski masks.  (2) Black male wearing a black hoodie with black jeans and unknown sneakers with a maroon and black military pattern ski mask. Possibly 20-30 years of age but difficult to tell with the ski mask         The complainant and the victim responded to police headquarters to report a robbery. The victim stated he was walking West on Gamewell coming to the intersection of South Park street at approximately 1400-1430 hours when two Suspects approached him one standing behind him holding a sharp object to his back and another in front of him raiding his pockets. He stated the suspects were saying something to him in English but he did not understand any of it since he only speaks Spanish. The victim stated he was too afraid to fight back and the suspects took approximately $385-$387 cash and his blue IPhone 15 with a gray case fr...	null	null	null	null	null	null	null	null	null	null	levis_r	Complete	P.O. Angie Tabares 363	A3	Det. Felix Katsaroans 326	Ex-Cleared / Closed	120 = Robbery	Other	4/30/2025	YTD	Unknown	Street &, Unknown Block
+
+
+doesn't the project knowledge contain scripts for cleaning, normalizing/enriching and combining CAD and RMS data? I thought we were going to do this using m code rather than python.  Because it is not happening

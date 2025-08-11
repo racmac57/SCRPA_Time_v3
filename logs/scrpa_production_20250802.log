@@ -1,0 +1,15 @@
+2025-08-02 23:44:41,143 - SCRPA_Production - INFO - Production pipeline initialized
+2025-08-02 23:44:41,144 - SCRPA_Production - INFO - Starting SCRPA production pipeline
+2025-08-02 23:44:41,145 - SCRPA_Production - INFO - Using CAD file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_cad_data_standardized.csv
+2025-08-02 23:44:41,145 - SCRPA_Production - INFO - Using RMS file: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\C08W31_20250802_7Day_rms_data_standardized.csv
+2025-08-02 23:44:41,198 - SCRPA_Production - INFO - Input file validation passed
+2025-08-02 23:44:41,211 - SCRPA_Production - INFO - Backup created: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\backups\backup_20250802_234441
+2025-08-02 23:44:41,212 - SCRPA_Production - INFO - Loading data files
+2025-08-02 23:44:41,228 - SCRPA_Production - INFO - Data quality validation: PASS
+2025-08-02 23:44:41,228 - SCRPA_Production - INFO - Applying hybrid filtering
+2025-08-02 23:44:41,237 - SCRPA_Production - WARNING - Validation rate 35.5% below threshold 70.0%
+2025-08-02 23:44:41,237 - SCRPA_Production - INFO - Hybrid filtering completed: WARNING
+2025-08-02 23:44:41,237 - SCRPA_Production - INFO - Creating PowerBI exports
+2025-08-02 23:44:41,248 - SCRPA_Production - INFO - PowerBI exports created successfully
+2025-08-02 23:44:41,248 - SCRPA_Production - INFO - Pipeline completed: SUCCESS
+2025-08-02 23:44:41,250 - SCRPA_Production - INFO - Pipeline completed successfully: SCRPA_Pipeline_Results_20250802_234441.json

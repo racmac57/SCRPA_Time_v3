@@ -1,0 +1,32 @@
+let
+    Source = Excel.CurrentWorkbook(){[Name="MV_THEFT"]}[Content],
+    SelectedColumns = Table.SelectColumns(Source, {
+        "BLOCK", "INC_DATE", "Day Name", "TIME_OF_DAY", "VEHICLE", "Narrative"
+    }),
+    RenamedColumns = Table.RenameColumns(SelectedColumns, {
+        {"BLOCK", "Block Incident Occurred On"},
+        {"INC_DATE", "Incident Date"},
+        {"Day Name", "Day of Week"},
+        {"TIME_OF_DAY", "Time of Day Incident Occurred"},
+        {"VEHICLE", "Victim's Vehicle Description"},
+        {"Narrative", "Notes"}
+    }),
+    AddVehicleParked = Table.AddColumn(RenamedColumns, "Vehicle Was Parked", each null, type text),
+    AddEntryMethod = Table.AddColumn(AddVehicleParked, "Entry Method", each null, type text),
+    AddSuspectDesc = Table.AddColumn(AddEntryMethod, "Suspect Description", each null, type text),
+    AddSuspectVehicle = Table.AddColumn(AddSuspectDesc, "Suspect Vehicle Description", each null, type text),
+    AddKeysWithVehicle = Table.AddColumn(AddSuspectVehicle, "Keys with Vehicle", each null, type text),
+    AddOffenseCompleted = Table.AddColumn(AddKeysWithVehicle, "Offense Completed", each null, type text),
+    TypedColumns = Table.TransformColumnTypes(AddOffenseCompleted, {{"Incident Date", type date}}),
+
+    CycleTable = _7Day_28Day_250414_,
+    CycleTableTyped = Table.TransformColumnTypes(CycleTable, {
+        {"28_Day_Start", type date},
+        {"28_Day_End", type date}
+    }),
+    CurrentCycle = Table.SelectRows(CycleTableTyped, each [Is_Due] = true),
+    StartDate = CurrentCycle{0}[28_Day_Start],
+    EndDate = Date.AddDays(CurrentCycle{0}[28_Day_End], -1),
+    FilteredRows = Table.SelectRows(TypedColumns, each [Incident Date] >= StartDate and [Incident Date] <= EndDate)
+in
+    FilteredRows

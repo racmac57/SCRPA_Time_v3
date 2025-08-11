@@ -1,0 +1,38 @@
+--- a/master_scrpa_processor_backup.py
++++ b/master_scrpa_processor_backup.py
+@@ -612,6 +612,7 @@ class MasterSCRPAProcessor:
+ 
+     def setup_logging(self):
+         """Setup comprehensive logging system."""
++        self.dirs['logs'].mkdir(parents=True, exist_ok=True)
+         log_file = self.dirs['logs'] / f"master_processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+ 
+         self.logger = logging.getLogger('MasterProcessor')
+@@ -752,6 +753,8 @@ class MasterSCRPAProcessor:
+                 null_count = df['Time of Call'].isnull().sum()
+                 if null_count > 0:
+                     self.logger.warning(f"{null_count} null values in Time of Call (unexpected for CAD exports)")
++                for col in ['cYear','cMonth','DayofWeek','HourMinutesCalc']:
++                    if col in df.columns: df.drop(columns=[col], inplace=True)
+ 
+             # Remove unnecessary columns early
+             columns_to_remove = ['cYear', 'cMonth', 'DayofWeek', 'case_number', 'Case_Number2', 'Day_Name', 'Month_Name', 'Year', 'Month', 'Day']
+@@ -979,6 +982,19 @@ class MasterSCRPAProcessor:
+         enhanced_df = self.add_geographic_enhancements(enhanced_df)
+ 
+         self.logger.info("All enhancements complete")
++        for c in ['case_number','Case_Number2','Incident','FullAddress2','address','HourMinuetsCalc']:
++            if c in enhanced_df.columns: enhanced_df.drop(columns=[c], inplace=True)
++        final_cols = [
++            'Case_Number','Location','Reported_Via','PDZone',
++            'Time of Call','Incident_Date','Incident_Time','Incident_DateTime',
++            'TimeOfDay','Enhanced_Block','Period','ALL_INCIDENTS',
++            'Incident_Type','Crime_Category',
++            'Time_Response_Minutes','Response_Time_Formatted',
++            'Time_On_Scene_Minutes','Time_On_Scene_Formatted',
++            'CAD_Username','CAD_Timestamp','CAD_Notes_Cleaned'
++        ]
++        enhanced_df = enhanced_df[[c for c in final_cols if c in enhanced_df.columns]]
+         return enhanced_df
+ 
+     def add_incident_date(self, df: pd.DataFrame) -> pd.DataFrame:

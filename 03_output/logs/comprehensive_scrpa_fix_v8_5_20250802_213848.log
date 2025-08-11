@@ -1,0 +1,38 @@
+2025-08-02 21:38:48,328 - ComprehensiveSCRPAFixV8_5 - INFO - === Comprehensive SCRPA Fix V8.5 - Cycle Calendar Integration Version ===
+2025-08-02 21:38:49,200 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded call type reference: 592 records
+2025-08-02 21:38:49,201 - ComprehensiveSCRPAFixV8_5 - INFO - Reference file columns after standardization: ['incident', 'category_type', 'response_type']
+2025-08-02 21:38:49,354 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-02 21:38:49,362 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded cycle calendar: 52 records
+2025-08-02 21:38:49,363 - ComprehensiveSCRPAFixV8_5 - INFO - Cycle calendar columns: ['Report_Due_Date', '7_Day_Start', '7_Day_End', '28_Day_Start', '28_Day_End', 'Report_Name']
+2025-08-02 21:38:49,369 - ComprehensiveSCRPAFixV8_5 - INFO - Current cycle: C08W31, Date: 20250802
+2025-08-02 21:38:49,370 - ComprehensiveSCRPAFixV8_5 - INFO - Starting Comprehensive SCRPA Fix V8.5 pipeline...
+2025-08-02 21:38:49,374 - ComprehensiveSCRPAFixV8_5 - INFO - Latest CAD file: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-02 21:38:49,378 - ComprehensiveSCRPAFixV8_5 - INFO - Latest RMS file: 2025_07_29_13_02_46_SCRPA_RMS.xlsx
+2025-08-02 21:38:49,381 - ComprehensiveSCRPAFixV8_5 - INFO - Processing RMS data: 2025_07_29_13_02_46_SCRPA_RMS.xlsx
+2025-08-02 21:38:49,515 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded RMS file with 136 rows and 31 columns
+2025-08-02 21:38:49,516 - ComprehensiveSCRPAFixV8_5 - INFO - RMS columns found: ['Case Number', 'Incident Date', 'Incident Time', 'Incident Date_Between', 'Incident Time_Between', 'Report Date', 'Report Time', 'Incident Type_1', 'Incident Type_2', 'Incident Type_3', 'FullAddress', 'Grid', 'Zone', 'Narrative', 'Total Value Stolen', 'Total Value Recover', 'Registration 1', 'Make1', 'Model1', 'Reg State 1', 'Registration 2', 'Reg State 2', 'Make2', 'Model2', 'Reviewed By', 'CompleteCalc', 'Officer of Record', 'Squad', 'Det_Assigned', 'Case_Status', 'NIBRS Classification']
+2025-08-02 21:38:49,518 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping: {'Case Number': 'case_number', 'Incident Date': 'incident_date_raw', 'Incident Time': 'incident_time_raw', 'Incident Date_Between': 'incident_date_between_raw', 'Incident Time_Between': 'incident_time_between_raw', 'Report Date': 'report_date_raw', 'Report Time': 'report_time_raw', 'Incident Type_1': 'incident_type_1_raw', 'Incident Type_2': 'incident_type_2_raw', 'Incident Type_3': 'incident_type_3_raw', 'FullAddress': 'full_address_raw', 'Grid': 'grid_raw', 'Zone': 'zone_raw', 'Narrative': 'narrative_raw', 'Total Value Stolen': 'total_value_stolen', 'Total Value Recover': 'total_value_recovered', 'Registration 1': 'registration_1', 'Make1': 'make_1', 'Model1': 'model_1', 'Reg State 1': 'reg_state_1', 'Registration 2': 'registration_2', 'Reg State 2': 'reg_state_2', 'Make2': 'make_2', 'Model2': 'model_2', 'Reviewed By': 'reviewed_by', 'CompleteCalc': 'complete_calc', 'Officer of Record': 'officer_of_record', 'Squad': 'squad', 'Det_Assigned': 'det_assigned', 'Case_Status': 'case_status', 'NIBRS Classification': 'nibrs_classification'}
+2025-08-02 21:38:49,658 - ComprehensiveSCRPAFixV8_5 - WARNING - Removing Jersey City address: 128 Christopher Columbus Drive, Jersey City, NJ 07302, Hackensack, NJ, 07601
+2025-08-02 21:38:49,716 - ComprehensiveSCRPAFixV8_5 - INFO - RMS processing complete: 134 records after filtering
+2025-08-02 21:38:49,717 - ComprehensiveSCRPAFixV8_5 - INFO - Final RMS columns: ['case_number', 'incident_date', 'incident_time', 'time_of_day', 'time_of_day_sort_order', 'period', 'season', 'day_of_week', 'day_type', 'location', 'block', 'grid', 'post', 'incident_type', 'all_incidents', 'vehicle_1', 'vehicle_2', 'vehicle_1_and_vehicle_2', 'narrative', 'total_value_stolen', 'total_value_recovered', 'squad', 'officer_of_record', 'nibrs_classification', 'cycle_name']
+2025-08-02 21:38:49,717 - ComprehensiveSCRPAFixV8_5 - INFO - REMOVED CAD-specific columns: incident_type, crime_category, response_type
+2025-08-02 21:38:49,737 - ComprehensiveSCRPAFixV8_5 - WARNING - Found 30 duplicate incidents in reference file. Keeping first occurrence of each.
+2025-08-02 21:38:49,737 - ComprehensiveSCRPAFixV8_5 - WARNING - Duplicate incidents: {'SIMPLE ASSAULT 2C:12-1A': 4, 'TERRORISTIC THREATS 2C:12-3': 3, 'DOMESTIC DISPUTE': 3, 'SHOPLIFTING 2C:20-11': 3, 'TARGETED AREA PATROL': 3, 'WITNESS TAMPERING - 2C:28-5': 2, 'WIDESPREAD DAMAGE - 2C:17-2': 2, 'WEAPONS SEIZURE - 2C:25-21D': 2, 'WRONGFUL IMPERSONATING - 2C:21-1': 2, 'WEATHER ALERTS': 2, 'WELFARE CHECK': 2, 'WIRE DOWN': 2}
+2025-08-02 21:38:49,752 - ComprehensiveSCRPAFixV8_5 - INFO - Enhanced call type reference loaded successfully:
+2025-08-02 21:38:49,752 - ComprehensiveSCRPAFixV8_5 - INFO -   - Total records: 592
+2025-08-02 21:38:49,752 - ComprehensiveSCRPAFixV8_5 - INFO -   - Unique incidents: 574
+2025-08-02 21:38:49,752 - ComprehensiveSCRPAFixV8_5 - INFO -   - Duplicates removed: 30
+2025-08-02 21:38:49,753 - ComprehensiveSCRPAFixV8_5 - INFO -   - Normalized columns: ['incident', 'category_type', 'response_type']
+2025-08-02 21:38:49,754 - ComprehensiveSCRPAFixV8_5 - INFO - Processing CAD data: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-02 21:38:49,870 - ComprehensiveSCRPAFixV8_5 - INFO - Loaded CAD file with 114 rows and 20 columns
+2025-08-02 21:38:49,870 - ComprehensiveSCRPAFixV8_5 - INFO - CAD columns found: ['ReportNumberNew', 'Incident', 'How Reported', 'FullAddress2', 'PDZone', 'Grid', 'Time of Call', 'cYear', 'cMonth', 'HourMinuetsCalc', 'DayofWeek', 'Time Dispatched', 'Time Out', 'Time In', 'Time Spent', 'Time Response', 'Officer', 'Disposition', 'Response Type', 'CADNotes']
+2025-08-02 21:38:49,871 - ComprehensiveSCRPAFixV8_5 - INFO - Applied column mapping: {'ReportNumberNew': 'case_number', 'Incident': 'incident', 'How Reported': 'how_reported', 'FullAddress2': 'full_address_raw', 'PDZone': 'post', 'Grid': 'grid_raw', 'Time of Call': 'time_of_call', 'cYear': 'call_year', 'cMonth': 'call_month', 'HourMinuetsCalc': 'hour_minutes_calc', 'DayofWeek': 'day_of_week_raw', 'Time Dispatched': 'time_dispatched', 'Time Out': 'time_out', 'Time In': 'time_in', 'Time Spent': 'time_spent_raw', 'Time Response': 'time_response_raw', 'Officer': 'officer', 'Disposition': 'disposition', 'Response Type': 'response_type_fallback', 'CADNotes': 'cad_notes_raw'}
+2025-08-02 21:38:49,884 - ComprehensiveSCRPAFixV8_5 - INFO - Starting enhanced call type mapping for 114 CAD records
+2025-08-02 21:38:49,885 - ComprehensiveSCRPAFixV8_5 - INFO - Sample incident values: ['Motor Vehicle Theft - 2C:20-3', 'Criminal Sexual Contact - 2C:14-3a', 'Burglary - Auto - 2C:18-2', 'Burglary - Residence - 2C:18-2', 'Motor Vehicle Theft - 2C:20-3']
+2025-08-02 21:38:49,887 - ComprehensiveSCRPAFixV8_5 - INFO - Enhanced mapping results:
+2025-08-02 21:38:49,887 - ComprehensiveSCRPAFixV8_5 - INFO -   - Total incidents: 114
+2025-08-02 21:38:49,888 - ComprehensiveSCRPAFixV8_5 - INFO -   - Mapped incidents: 114
+2025-08-02 21:38:49,888 - ComprehensiveSCRPAFixV8_5 - INFO -   - Unmapped incidents: 0
+2025-08-02 21:38:49,889 - ComprehensiveSCRPAFixV8_5 - INFO -   - Mapping rate: 100.0%
+2025-08-02 21:38:49,890 - ComprehensiveSCRPAFixV8_5 - INFO - Category type distribution: {'Criminal Incidents': 114}
+2025-08-02 21:38:49,892 - ComprehensiveSCRPAFixV8_5 - INFO - Top 10 response types: {'Emergency': 80, 'Routine': 34}

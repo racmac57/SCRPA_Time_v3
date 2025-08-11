@@ -1,0 +1,58 @@
+Hackensack PD Crime Analysis Processing Summary
+============================================================
+Generated: 2025-06-22 01:36:18
+Excel Integration: ENABLED
+Crime Subfolder Organization: ENABLED
+Incident Table Automation: ENABLED
+
+Crime Types Processed: 5
+Successful: 5
+Failed: 0
+
+Detailed Results:
+----------------------------------------
+
+MV Theft:
+  Overall Success: True
+  Maps: True
+  Charts: True
+  Incident Tables: True
+  Processing Time: 48.91 seconds
+
+Burglary - Auto:
+  Overall Success: True
+  Maps: True
+  Charts: True
+  Incident Tables: True
+  Processing Time: 7.12 seconds
+
+Burglary - Comm & Res:
+  Overall Success: True
+  Maps: True
+  Charts: True
+  Incident Tables: True
+  Processing Time: 6.60 seconds
+
+Robbery:
+  Overall Success: True
+  Maps: True
+  Charts: True
+  Incident Tables: True
+  Processing Time: 6.72 seconds
+
+Sexual Offenses:
+  Overall Success: True
+  Maps: True
+  Charts: True
+  Incident Tables: True
+  Processing Time: 7.95 seconds
+
+Processing Times:
+----------------------------------------
+Total Processing Time: 77.30 seconds
+Average Time per Crime Type: 15.46 seconds
+MV Theft: 48.91 seconds
+Burglary - Auto: 7.12 seconds
+Burglary - Comm & Res: 6.60 seconds
+Robbery: 6.72 seconds
+Sexual Offenses: 7.95 seconds

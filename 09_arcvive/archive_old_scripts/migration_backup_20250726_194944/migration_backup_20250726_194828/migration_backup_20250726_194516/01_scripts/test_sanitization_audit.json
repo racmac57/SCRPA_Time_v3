@@ -1,0 +1,292 @@
+{
+  "sanitization_report": {
+    "summary": {
+      "total_operations": 33,
+      "unique_names_processed": 20,
+      "processing_time_seconds": 0.002
+    },
+    "operations_by_type": {
+      "name": 20,
+      "phone": 3,
+      "ssn": 1,
+      "email": 2,
+      "license_plate": 6,
+      "credit_card": 1
+    },
+    "operations_by_field": {
+      "narrative": 13,
+      "officer_notes": 8,
+      "address": 4,
+      "witness_info": 8
+    },
+    "name_mappings_count": 20,
+    "timestamp": "2025-07-25T14:42:35.452067"
+  },
+  "operations": [
+    {
+      "field_name": "narrative",
+      "original_hash": "7d57f789a1882c0f",
+      "replacement_value": "SUBJECT_1",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "695a50bdbf0d7ca2",
+      "replacement_value": "SUBJECT_2",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "3742ea49c73cc661",
+      "replacement_value": "SUBJECT_3",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "c67bdeff2ee716ae",
+      "replacement_value": "SUBJECT_4",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "e5654a8c627904fc",
+      "replacement_value": "SUBJECT_5",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "f83da0d19cf1e396",
+      "replacement_value": "SUBJECT_6",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "d36e83082288d9f2",
+      "replacement_value": "XXX-XXX-XXXX",
+      "data_type": "phone",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "01a54629efb95228",
+      "replacement_value": "XXX-XX-XXXX",
+      "data_type": "ssn",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "55f537baf75630a8",
+      "replacement_value": "EMAIL_REDACTED",
+      "data_type": "email",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "0695b563acde461f",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "e0bebd2281999342",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:42:35.447067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "6da4674e1bfe4c9b",
+      "replacement_value": "SUBJECT_7",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "5c83cd27a54ce084",
+      "replacement_value": "SUBJECT_8",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "4249a5b864b0f338",
+      "replacement_value": "SUBJECT_9",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "3a9964d875e497f4",
+      "replacement_value": "SUBJECT_10",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "5d444387a5d39f5d",
+      "replacement_value": "XXXX-XXXX-XXXX-XXXX",
+      "data_type": "credit_card",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "address",
+      "original_hash": "87fe24aa4c97fe80",
+      "replacement_value": "SUBJECT_11",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "address",
+      "original_hash": "d6a460428499e2d4",
+      "replacement_value": "SUBJECT_12",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "392eff97acfd300e",
+      "replacement_value": "SUBJECT_13",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "9d4846a88dcf53db",
+      "replacement_value": "SUBJECT_14",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "263444aab629f3a1",
+      "replacement_value": "XXX-XXX-XXXX",
+      "data_type": "phone",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "c011d6097bfbc8e9",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "3b56c3520006aaeb",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-001"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "12381c3d75abd7b5",
+      "replacement_value": "SUBJECT_15",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "narrative",
+      "original_hash": "1b0b1585d3957295",
+      "replacement_value": "SUBJECT_16",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "7261da4dea4f47c5",
+      "replacement_value": "XXX-XXX-XXXX",
+      "data_type": "phone",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "9fe4c68ec20dda7c",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "officer_notes",
+      "original_hash": "358100c210df061d",
+      "replacement_value": "PLATE_XXX",
+      "data_type": "license_plate",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "address",
+      "original_hash": "2f76387e2d3e02f5",
+      "replacement_value": "SUBJECT_17",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "address",
+      "original_hash": "b213d6d38fae0fac",
+      "replacement_value": "SUBJECT_18",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "a2dd3acadb1c9dcd",
+      "replacement_value": "SUBJECT_19",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "36435b0446203466",
+      "replacement_value": "SUBJECT_20",
+      "data_type": "name",
+      "timestamp": "2025-07-25T14:42:35.448067",
+      "record_id": "CASE-002"
+    },
+    {
+      "field_name": "witness_info",
+      "original_hash": "b5b2d69c654c7be2",
+      "replacement_value": "EMAIL_REDACTED",
+      "data_type": "email",
+      "timestamp": "2025-07-25T14:42:35.449067",
+      "record_id": "CASE-002"
+    }
+  ],
+  "name_mapping_count": 20
+}

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, May 6, 2025 6:41:23 AM</msg><msg code="-2147467259" type="100">﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\weekly_crime_report.py", line 8
+    Set paths
+        ^^^^^
+﻿SyntaxError: invalid syntax
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Tuesday, May 6, 2025 6:41:24 AM (Elapsed Time: 0.09 seconds)</msg></messages>

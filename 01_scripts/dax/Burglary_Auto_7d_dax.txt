@@ -1,0 +1,137 @@
+// 🕒 2025-08-02-15-35-00
+// SCRPA_Time_v2/DAX Queries for Burglary_Auto_7d
+// Author: R. A. Carucci
+// Purpose: DAX measures and calculated columns for Burglary Auto 7-Day analysis
+// ✅ UPDATED: Matches current M code structure and column names
+
+// ============================================================================
+// CALCULATED COLUMNS
+// ============================================================================
+
+// Convert Unix timestamp to Date (if needed for additional date calculations)
+Incident_Date_From_Unix = 
+VAR UnixMs = [calldate]
+VAR UnixSeconds = UnixMs / 1000
+VAR BaseDate = DATE(1970,1,1)
+VAR DaysToAdd = UnixSeconds / 86400
+RETURN BaseDate + DaysToAdd
+
+// Response Time in MM:SS format
+Response_Time_MMSS = 
+VAR Minutes = INT([Response_Time_Minutes])
+VAR Seconds = ([Response_Time_Minutes] - Minutes) * 60
+RETURN FORMAT(Minutes, "0") & ":" & FORMAT(ROUND(Seconds,0), "00")
+
+// Response Time Category
+Response_Time_Category = 
+SWITCH(
+    TRUE(),
+    [Response_Time_Minutes] <= 5, "0-5 Min (Excellent)",
+    [Response_Time_Minutes] <= 10, "5-10 Min (Good)",
+    [Response_Time_Minutes] <= 15, "10-15 Min (Average)",
+    [Response_Time_Minutes] > 15, "15+ Min (Needs Attention)",
+    "Unknown"
+)
+
+// Time of Day Category
+Time_Of_Day_Category = 
+VAR Hour = HOUR([Call_Date])
+RETURN
+SWITCH(
+    TRUE(),
+    Hour < 4, "00:00–03:59 Early Morning",
+    Hour < 8, "04:00–07:59 Morning",
+    Hour < 12, "08:00–11:59 Morning Peak",
+    Hour < 16, "12:00–15:59 Afternoon",
+    Hour < 20, "16:00–19:59 Evening Peak",
+    "20:00–23:59 Night"
+)
+
+// Day of Week
+Day_Of_Week = FORMAT([Call_Date], "dddd")
+
+// Month Name
+Month_Name = FORMAT([Call_Date], "mmmm")
+
+// Year
+Year = YEAR([Call_Date])
+
+// ============================================================================
+// MEASURES
+// ============================================================================
+
+// Total Incidents
+Total_Burglary_Auto_Incidents = COUNTROWS('Burglary_Auto_7d')
+
+// Average Response Time (Minutes)
+Average_Response_Time_Minutes = AVERAGE('Burglary_Auto_7d'[Response_Time_Minutes])
+
+// Average Response Time (MM:SS format)
+Average_Response_Time_MMSS = 
+VAR AvgMinutes = [Average_Response_Time_Minutes]
+VAR Minutes = INT(AvgMinutes)
+VAR Seconds = (AvgMinutes - Minutes) * 60
+RETURN FORMAT(Minutes, "0") & ":" & FORMAT(ROUND(Seconds,0), "00")
+
+// Incidents by Beat
+Incidents_By_Beat = 
+COUNTROWS('Burglary_Auto_7d')
+
+// Incidents by District
+Incidents_By_District = 
+COUNTROWS('Burglary_Auto_7d')
+
+// Incidents by Time of Day
+Incidents_By_Time_Of_Day = 
+COUNTROWS('Burglary_Auto_7d')
+
+// Incidents by Response Time Category
+Incidents_By_Response_Time = 
+COUNTROWS('Burglary_Auto_7d')
+
+// ============================================================================
+// FILTER MEASURES
+// ============================================================================
+
+// Filter for 7-Day Period Only
+Seven_Day_Incidents = 
+CALCULATE(
+    [Total_Burglary_Auto_Incidents],
+    'Burglary_Auto_7d'[period] = "7-Day"
+)
+
+// Filter for Current Cycle
+Current_Cycle_Incidents = 
+CALCULATE(
+    [Total_Burglary_Auto_Incidents],
+    'Burglary_Auto_7d'[cycle_name] = "CURRENT"
+)
+
+// ============================================================================
+// TREND MEASURES
+// ============================================================================
+
+// Incidents by Date
+Incidents_By_Date = 
+COUNTROWS('Burglary_Auto_7d')
+
+// Rolling 7-Day Average
+Rolling_7_Day_Average = 
+AVERAGEX(
+    DATESINPERIOD('Burglary_Auto_7d'[Call_Date], MAX('Burglary_Auto_7d'[Call_Date]), -7, DAY),
+    [Incidents_By_Date]
+)
+
+// ============================================================================
+// GEOGRAPHIC MEASURES
+// ============================================================================
+
+// Incidents by Location (using coordinates)
+Incidents_By_Location = 
+COUNTROWS('Burglary_Auto_7d')
+
+// Average Latitude (for mapping)
+Average_Latitude = AVERAGE('Burglary_Auto_7d'[Latitude_DD])
+
+// Average Longitude (for mapping)
+Average_Longitude = AVERAGE('Burglary_Auto_7d'[Longitude_DD])

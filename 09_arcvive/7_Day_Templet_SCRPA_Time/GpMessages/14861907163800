@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Monday, May 5, 2025 9:26:20 PM</msg><msg code="0" type="0">Legend elements found: ['MainLegend']</msg><msg code="0" type="0">[INFO] Map Frame successfully re-linked to map.</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\weekly_crime_report.py", line 157, in &lt;module&gt;
+﻿    layout.exportToJPEG(
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\utils.py", line 186, in fn_
+﻿    return fn(*args, **kw)
+﻿           ^^^^^^^^^^^^^^^
+﻿TypeError: Layout.exportToJPEG() got an unexpected keyword argument 'color_mode'
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Monday, May 5, 2025 9:26:21 PM (Elapsed Time: 1.24 seconds)</msg></messages>

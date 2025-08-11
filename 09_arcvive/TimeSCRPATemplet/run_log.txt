@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\crime_report_tool\main.py", line 10, in <module>
+    from map_export import export_maps
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\ScriptsTimeSCRPATemplet\crime_report_tool\map_export.py", line 51
+    f'("calltype" LIKE '%Burglary - Residence%' OR "calltype" LIKE '%Burglary - Commercial%') '
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?

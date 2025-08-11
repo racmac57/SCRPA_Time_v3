@@ -1,0 +1,5 @@
+let
+    Source = Folder.Files("C:\Users\carucci_r\OneDrive - City of Hackensack\_LawSoft_EXPORT\RMS\EXPORT_RMS"),
+    Navigation1 = Source{0}[Content]
+in
+    Navigation1

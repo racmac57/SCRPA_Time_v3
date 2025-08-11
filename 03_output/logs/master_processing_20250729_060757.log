@@ -1,0 +1,7 @@
+2025-07-29 06:07:57,052 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250729_060757.log
+2025-07-29 06:07:57,055 - MasterProcessor - INFO - Master SCRPA Processor initialized with datetime fixes
+2025-07-29 06:07:57,055 - MasterProcessor - INFO - Searching for latest auto export files
+2025-07-29 06:07:57,056 - MasterProcessor - INFO - Latest CAD file: 2025_07_29_00_53_07_SCRPA_CAD.xlsx
+2025-07-29 06:07:57,849 - MasterProcessor - INFO - Processing CAD data structure...
+2025-07-29 06:07:57,849 - MasterProcessor - INFO - Using CAD 'Time of Call' for Incident DateTime.
+2025-07-29 06:07:57,850 - MasterProcessor - INFO - Successfully created Incident_DateTime for 114 CAD records

@@ -1,0 +1,305 @@
+{
+  "dashboard": {
+    "pipeline_summary": {
+      "status": "SUCCESS",
+      "start_time": "2025-08-02T23:44:41.144067",
+      "end_time": "2025-08-02T23:44:41.248611",
+      "total_processing_time": 0.1,
+      "performance_status": "GOOD"
+    },
+    "quality_metrics": {
+      "data_quality_status": "PASS",
+      "validation_rate": 35.53,
+      "quality_threshold_met": "False"
+    },
+    "processing_metrics": {
+      "cad_retention_rate": 100.0,
+      "rms_retention_rate": 64.17910447761194,
+      "total_target_crimes": 6,
+      "crimes_processed": 6
+    },
+    "export_status": {
+      "powerbi_ready": true,
+      "files_created": 3,
+      "export_location": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports"
+    }
+  },
+  "quality_report": {
+    "timestamp": "2025-08-02T23:44:41.223566",
+    "cad_validation": {
+      "record_count": 114,
+      "required_columns": {
+        "status": true,
+        "required_columns": [
+          "case_number",
+          "incident",
+          "response_type",
+          "category_type"
+        ],
+        "missing_columns": [],
+        "total_columns": 25
+      },
+      "data_completeness": {
+        "total_records": 114,
+        "total_columns": 25,
+        "completeness_rate": 96.21,
+        "missing_values": 108,
+        "status": "True"
+      },
+      "header_compliance": {
+        "status": true,
+        "compliance_rate": 100.0,
+        "total_headers": 25,
+        "compliant_headers": 25,
+        "non_compliant_headers": []
+      }
+    },
+    "rms_validation": {
+      "record_count": 134,
+      "required_columns": {
+        "status": true,
+        "required_columns": [
+          "case_number",
+          "incident_type",
+          "nibrs_classification"
+        ],
+        "missing_columns": [],
+        "total_columns": 24
+      },
+      "data_completeness": {
+        "total_records": 134,
+        "total_columns": 24,
+        "completeness_rate": 55.94,
+        "missing_values": 1417,
+        "status": "False"
+      },
+      "header_compliance": {
+        "status": true,
+        "compliance_rate": 100.0,
+        "total_headers": 24,
+        "compliant_headers": 24,
+        "non_compliant_headers": []
+      }
+    },
+    "overall_status": "PASS"
+  },
+  "processing_stats": {
+    "processing_time": 0.01,
+    "cad_original_records": 114,
+    "cad_filtered_records": 114,
+    "cad_retention_rate": 100.0,
+    "rms_original_records": 134,
+    "rms_matched_records": 86,
+    "rms_retention_rate": 64.17910447761194,
+    "overall_validation_rate": 35.53,
+    "quality_status": "WARNING",
+    "validation_rates": {
+      "Motor Vehicle Theft": 77.42,
+      "Robbery": 54.55,
+      "Burglary \u2013 Auto": 57.69,
+      "Sexual": 23.53,
+      "Burglary \u2013 Commercial": 0.0,
+      "Burglary \u2013 Residence": 0.0
+    },
+    "detailed_metrics": {
+      "Motor Vehicle Theft": {
+        "cad_cases": 31,
+        "rms_cases": 28,
+        "validated_cases": 24,
+        "validation_rate": 77.42
+      },
+      "Robbery": {
+        "cad_cases": 11,
+        "rms_cases": 15,
+        "validated_cases": 6,
+        "validation_rate": 54.55
+      },
+      "Burglary \u2013 Auto": {
+        "cad_cases": 26,
+        "rms_cases": 21,
+        "validated_cases": 15,
+        "validation_rate": 57.69
+      },
+      "Sexual": {
+        "cad_cases": 17,
+        "rms_cases": 4,
+        "validated_cases": 4,
+        "validation_rate": 23.53
+      },
+      "Burglary \u2013 Commercial": {
+        "cad_cases": 7,
+        "rms_cases": 0,
+        "validated_cases": 0,
+        "validation_rate": 0.0
+      },
+      "Burglary \u2013 Residence": {
+        "cad_cases": 22,
+        "rms_cases": 0,
+        "validated_cases": 0,
+        "validation_rate": 0.0
+      }
+    }
+  },
+  "export_info": {
+    "cad_export": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\SCRPA_CAD_Filtered_20250802_234441.csv",
+    "rms_export": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\SCRPA_RMS_Matched_20250802_234441.csv",
+    "summary_export": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\SCRPA_Processing_Summary_20250802_234441.json",
+    "processing_summary": {
+      "export_timestamp": "2025-08-02T23:44:41.244573",
+      "processing_stats": {
+        "processing_time": 0.01,
+        "cad_original_records": 114,
+        "cad_filtered_records": 114,
+        "cad_retention_rate": 100.0,
+        "rms_original_records": 134,
+        "rms_matched_records": 86,
+        "rms_retention_rate": 64.17910447761194,
+        "overall_validation_rate": 35.53,
+        "quality_status": "WARNING",
+        "validation_rates": {
+          "Motor Vehicle Theft": 77.42,
+          "Robbery": 54.55,
+          "Burglary \u2013 Auto": 57.69,
+          "Sexual": 23.53,
+          "Burglary \u2013 Commercial": 0.0,
+          "Burglary \u2013 Residence": 0.0
+        },
+        "detailed_metrics": {
+          "Motor Vehicle Theft": {
+            "cad_cases": 31,
+            "rms_cases": 28,
+            "validated_cases": 24,
+            "validation_rate": 77.42
+          },
+          "Robbery": {
+            "cad_cases": 11,
+            "rms_cases": 15,
+            "validated_cases": 6,
+            "validation_rate": 54.55
+          },
+          "Burglary \u2013 Auto": {
+            "cad_cases": 26,
+            "rms_cases": 21,
+            "validated_cases": 15,
+            "validation_rate": 57.69
+          },
+          "Sexual": {
+            "cad_cases": 17,
+            "rms_cases": 4,
+            "validated_cases": 4,
+            "validation_rate": 23.53
+          },
+          "Burglary \u2013 Commercial": {
+            "cad_cases": 7,
+            "rms_cases": 0,
+            "validated_cases": 0,
+            "validation_rate": 0.0
+          },
+          "Burglary \u2013 Residence": {
+            "cad_cases": 22,
+            "rms_cases": 0,
+            "validated_cases": 0,
+            "validation_rate": 0.0
+          }
+        }
+      },
+      "file_info": {
+        "cad_filtered": {
+          "filename": "SCRPA_CAD_Filtered_20250802_234441.csv",
+          "path": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\SCRPA_CAD_Filtered_20250802_234441.csv",
+          "records": 114,
+          "columns": [
+            "case_number",
+            "incident",
+            "response_type",
+            "category_type",
+            "response_type_cad",
+            "category_type_cad",
+            "how_reported",
+            "location",
+            "block",
+            "grid",
+            "post",
+            "time_of_call",
+            "time_dispatched",
+            "time_out",
+            "time_in",
+            "time_spent_minutes",
+            "time_response_minutes",
+            "time_spent_formatted",
+            "time_response_formatted",
+            "officer",
+            "disposition",
+            "cad_notes_cleaned",
+            "cad_notes_username",
+            "cad_notes_timestamp",
+            "cycle_name"
+          ]
+        },
+        "rms_matched": {
+          "filename": "SCRPA_RMS_Matched_20250802_234441.csv",
+          "path": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\05_Exports\\SCRPA_RMS_Matched_20250802_234441.csv",
+          "records": 86,
+          "columns": [
+            "case_number",
+            "incident_date",
+            "incident_time",
+            "time_of_day",
+            "time_of_day_sort_order",
+            "period",
+            "season",
+            "day_of_week",
+            "day_type",
+            "location",
+            "block",
+            "grid",
+            "post",
+            "incident_type",
+            "all_incidents",
+            "vehicle_1",
+            "vehicle_2",
+            "vehicle_1_and_vehicle_2",
+            "narrative",
+            "total_value_stolen",
+            "squad",
+            "officer_of_record",
+            "nibrs_classification",
+            "cycle_name"
+          ]
+        }
+      },
+      "crime_distribution": {
+        "Motor Vehicle Theft": {
+          "count": 31,
+          "percentage": 27.19
+        },
+        "Robbery": {
+          "count": 11,
+          "percentage": 9.65
+        },
+        "Burglary \u2013 Auto": {
+          "count": 26,
+          "percentage": 22.81
+        },
+        "Sexual": {
+          "count": 17,
+          "percentage": 14.91
+        },
+        "Burglary \u2013 Commercial": {
+          "count": 7,
+          "percentage": 6.14
+        },
+        "Burglary \u2013 Residence": {
+          "count": 22,
+          "percentage": 19.3
+        }
+      },
+      "powerbi_integration": {
+        "ready": true,
+        "refresh_timestamp": "2025-08-02T23:44:41.246701",
+        "data_freshness": "Current"
+      }
+    }
+  },
+  "backup_location": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\backups\\backup_20250802_234441"
+}

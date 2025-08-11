@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Friday, May 2, 2025 10:28:12 PM</msg><msg code="-2147467259" type="100">﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\Refrence\TimeSCRPT\Code\Python\weekly_crime_report.py", line 84
+    geom = row[0]
+    ^
+﻿IndentationError: expected an indented block after 'for' statement on line 83
+</msg><msg code="0" type="0">Failed script ScriptWeekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Friday, May 2, 2025 10:28:12 PM (Elapsed Time: 0.09 seconds)</msg></messages>

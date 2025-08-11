@@ -1,0 +1,218 @@
+==========================================
+   SCRPA Data Processing Pipeline
+   Author: R. A. Carucci
+==========================================
+
+≡ƒÉì Python version:
+Python 3.13.5
+
+Please select processing mode:
+
+1. ≡ƒº¬ Test Mode (Validate setup)
+2. ≡ƒöì Validation Mode (Check data quality)
+3. ≡ƒÜÇ Full Processing Mode (Process latest exports)
+4. ≡ƒôü Process Specific File
+5. ≡ƒöä Process CAD Only
+6. ≡ƒôè Process RMS Only
+7. Γ¥î Exit
+
+Enter your choice (1-7): 3
+
+≡ƒÜÇ Running Full Processing Mode...
+==========================================
+2025-07-27 16:06:55,589 - MasterProcessor - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_160655.log
+2025-07-27 16:06:55,589 - INFO - Logging initialized: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\master_processing_20250727_160655.log
+2025-07-27 16:06:55,600 - MasterProcessor - INFO - 🚀 Master SCRPA Processor initialized
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1755, in main
+    processor = MasterSCRPAProcessor(args.project_path)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 968, in __init__
+    self.logger.info("🚀 Master SCRPA Processor initialized")
+Message: '🚀 Master SCRPA Processor initialized'
+Arguments: ()
+2025-07-27 16:06:55,600 - INFO - 🚀 Master SCRPA Processor initialized
+🚀 Running full processing mode...
+2025-07-27 16:06:55,700 - MasterProcessor - INFO - ================================================================================
+2025-07-27 16:06:55,700 - INFO - ================================================================================
+2025-07-27 16:06:55,702 - MasterProcessor - INFO - 🚀 STARTING COMPLETE SCRPA PROCESSING PIPELINE
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1795, in main
+    final_df, stats = processor.process_complete_pipeline(
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1084, in process_complete_pipeline
+    self.logger.info("🚀 STARTING COMPLETE SCRPA PROCESSING PIPELINE")
+Message: '🚀 STARTING COMPLETE SCRPA PROCESSING PIPELINE'
+Arguments: ()
+2025-07-27 16:06:55,702 - INFO - 🚀 STARTING COMPLETE SCRPA PROCESSING PIPELINE
+2025-07-27 16:06:55,709 - MasterProcessor - INFO - ================================================================================
+2025-07-27 16:06:55,709 - INFO - ================================================================================
+2025-07-27 16:06:55,711 - MasterProcessor - INFO - 🔍 Step 1: Auto-detecting data source and loading data
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1795, in main
+    final_df, stats = processor.process_complete_pipeline(
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1091, in process_complete_pipeline
+    df, data_source, structure_info = self.auto_detect_and_load_data(input_file, export_type)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1123, in auto_detect_and_load_data
+    self.logger.info("🔍 Step 1: Auto-detecting data source and loading data")
+Message: '🔍 Step 1: Auto-detecting data source and loading data'
+Arguments: ()
+2025-07-27 16:06:55,711 - INFO - 🔍 Step 1: Auto-detecting data source and loading data
+2025-07-27 16:06:55,717 - MasterProcessor - INFO - 🔍 Searching for latest auto export files
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1795, in main
+    final_df, stats = processor.process_complete_pipeline(
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1091, in process_complete_pipeline
+    df, data_source, structure_info = self.auto_detect_and_load_data(input_file, export_type)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1133, in auto_detect_and_load_data
+    latest_file, detected_source = self.find_latest_export_file(export_type)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 997, in find_latest_export_file
+    self.logger.info(f"🔍 Searching for latest {export_type} export files")
+Message: '🔍 Searching for latest auto export files'
+Arguments: ()
+2025-07-27 16:06:55,717 - INFO - 🔍 Searching for latest auto export files
+2025-07-27 16:06:55,726 - MasterProcessor - INFO -    📁 Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c1' in position 36: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1795, in main
+    final_df, stats = processor.process_complete_pipeline(
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1091, in process_complete_pipeline
+    df, data_source, structure_info = self.auto_detect_and_load_data(input_file, export_type)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1133, in auto_detect_and_load_data
+    latest_file, detected_source = self.find_latest_export_file(export_type)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1007, in find_latest_export_file
+    self.logger.info(f"   📁 Latest CAD file: {latest_cad.name}")
+Message: '   📁 Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx'
+Arguments: ()
+2025-07-27 16:06:55,726 - INFO -    📁 Latest CAD file: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:06:55,733 - MasterProcessor - INFO -    📂 Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c2' in position 36: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1795, in main
+    final_df, stats = processor.process_complete_pipeline(
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1091, in process_complete_pipeline
+    df, data_source, structure_info = self.auto_detect_and_load_data(input_file, export_type)
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1134, in auto_detect_and_load_data
+    self.logger.info(f"   📂 Loading latest export: {Path(latest_file).name}")
+Message: '   📂 Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx'
+Arguments: ()
+2025-07-27 16:06:55,733 - INFO -    📂 Loading latest export: 2025_07_25_13_24_20_ALL_CADS.xlsx
+2025-07-27 16:06:57,275 - INFO - Detected CAD structure (score: 5/5)
+2025-07-27 16:06:57,288 - MasterProcessor - ERROR - Failed to auto-detect and load data: Can only use .dt accessor with datetimelike values
+2025-07-27 16:06:57,288 - ERROR - Failed to auto-detect and load data: Can only use .dt accessor with datetimelike values
+2025-07-27 16:06:57,290 - MasterProcessor - ERROR - ❌ PIPELINE FAILED: Can only use .dt accessor with datetimelike values
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1091, in process_complete_pipeline
+    df, data_source, structure_info = self.auto_detect_and_load_data(input_file, export_type)
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1166, in auto_detect_and_load_data
+    df['Time of Call'] = df['Time of Call'].dt.strftime('%m/%d/%Y %H:%M:%S')
+                         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\core\generic.py", line 6318, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\core\accessor.py", line 224, in __get__
+    accessor_obj = self._accessor(obj)
+  File "C:\Users\carucci_r\AppData\Roaming\Python\Python313\site-packages\pandas\core\indexes\accessors.py", line 643, in __new__
+    raise AttributeError("Can only use .dt accessor with datetimelike values")
+AttributeError: Can only use .dt accessor with datetimelike values. Did you mean: 'at'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 34: character maps to <undefined>
+Call stack:
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1814, in <module>
+    main()
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1795, in main
+    final_df, stats = processor.process_complete_pipeline(
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\master_scrpa_processor.py", line 1116, in process_complete_pipeline
+    self.logger.error(f"❌ PIPELINE FAILED: {str(e)}")
+Message: '❌ PIPELINE FAILED: Can only use .dt accessor with datetimelike values'
+Arguments: ()
+2025-07-27 16:06:57,290 - ERROR - ❌ PIPELINE FAILED: Can only use .dt accessor with datetimelike values
+
+❌ Processing failed: Can only use .dt accessor with datetimelike values
+Check the log files in: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs
+
+==========================================
+Γ¥î ERROR: Processing failed with error code 1
+
+≡ƒöì Check log files for details:
+   C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\03_output\logs\
+
+≡ƒô₧ Common issues:
+   - Missing Python packages: pip install pandas openpyxl pathlib
+   - Export files not found in CAD/RMS directories
+   - Incorrect file permissions
+
+Press any key to exit...

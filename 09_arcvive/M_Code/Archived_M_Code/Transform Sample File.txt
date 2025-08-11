@@ -1,0 +1,8 @@
+let
+    Source = Excel.Workbook(Parameter2, null, true),
+    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+    #"Trimmed Text" = Table.TransformColumns(#"Promoted Headers",{{"Narrative", Text.Trim, type text}}),
+    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"Narrative", Text.Clean, type text}})
+in
+    #"Cleaned Text"

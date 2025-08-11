@@ -1,0 +1,39 @@
+let
+    Source = Excel.CurrentWorkbook(){[Name="Sexual_Offenses"]}[Content],
+    CycleTable = Excel.CurrentWorkbook(){[Name="_7Day_28Day_250414_"]}[Content],
+    CurrentCycle = Table.SelectRows(CycleTable, each [Is_Due] = true),
+    StartDate = CurrentCycle{0}[28_Day_Start],
+    EndDate = Date.AddDays(CurrentCycle{0}[28_Day_End], -1),
+    Filtered = Table.SelectRows(Source, each [INC_DATE] >= StartDate and [INC_DATE] <= EndDate),
+    
+    Selected = Table.SelectColumns(Filtered, {"BLOCK", "INC_DATE", "Day Name", "TIME_OF_DAY", "Suspect", "VEHICLE", "Narrative"}),
+    Renamed = Table.RenameColumns(Selected, {{"VEHICLE", "Vehicle Involved"}}, MissingField.Ignore),
+    
+    Add1 = Table.AddColumn(Renamed, "Type of Offense", each "", type text),
+    Add2 = Table.AddColumn(Add1, "Victim-Offender Relationship", each "", type text),
+    Add3 = Table.AddColumn(Add2, "Location Type", each "", type text),
+    Add4 = Table.AddColumn(Add3, "Method of Coercion", each "", type text),
+    Add5 = Table.AddColumn(Add4, "Multiple Offenders vs. Single Offender", each "", type text),
+    Add6 = Table.AddColumn(Add5, "Repeat Offender or Known Suspect", each "", type text),
+    Add7 = Table.AddColumn(Add6, "Use of Technology", each "", type text),
+    Add8 = Table.AddColumn(Add7, "Victim Demographics", each "", type text),
+
+    Reordered = Table.SelectColumns(Add8, {
+        "BLOCK", "INC_DATE", "Day Name", "TIME_OF_DAY", "Suspect", "Vehicle Involved",
+        "Type of Offense", "Victim-Offender Relationship", "Location Type", "Method of Coercion",
+        "Multiple Offenders vs. Single Offender", "Repeat Offender or Known Suspect",
+        "Use of Technology", "Victim Demographics", "Narrative"
+    }),
+
+    ChangedTypes = Table.TransformColumnTypes(Reordered, {
+        {"BLOCK", type text}, {"INC_DATE", type datetime}, {"Day Name", type text},
+        {"TIME_OF_DAY", type text}, {"Suspect", type text}, {"Vehicle Involved", type any},
+        {"Type of Offense", type any}, {"Victim-Offender Relationship", type any},
+        {"Location Type", type any}, {"Method of Coercion", type any},
+        {"Multiple Offenders vs. Single Offender", type any},
+        {"Repeat Offender or Known Suspect", type any},
+        {"Use of Technology", type any}, {"Victim Demographics", type any},
+        {"Narrative", type text}
+    })
+in
+    ChangedTypes

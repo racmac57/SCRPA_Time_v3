@@ -1,0 +1,25 @@
+2025-08-01 17:06:19,601 - ComprehensiveSCRPAFixV8_0 - INFO - === Comprehensive SCRPA Fix V8.0 - Column Standardization Version ===
+2025-08-01 17:06:20,498 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded call type reference: 592 records
+2025-08-01 17:06:20,582 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded zone/grid reference: 1368 records
+2025-08-01 17:06:20,582 - ComprehensiveSCRPAFixV8_0 - INFO - Starting Comprehensive SCRPA Fix V8.0 pipeline...
+2025-08-01 17:06:20,583 - ComprehensiveSCRPAFixV8_0 - INFO - Latest cad file: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-01 17:06:20,592 - ComprehensiveSCRPAFixV8_0 - WARNING - No Excel files found in C:\Users\carucci_r\OneDrive - City of Hackensack\05_EXPORTS\_RMS\SCRPA
+2025-08-01 17:06:20,593 - ComprehensiveSCRPAFixV8_0 - INFO - Processing CAD data: 2025_07_29_13_02_40_SCRPA_CAD.xlsx
+2025-08-01 17:06:20,619 - ComprehensiveSCRPAFixV8_0 - INFO - Loaded CAD file with 114 rows and 20 columns
+2025-08-01 17:06:20,619 - ComprehensiveSCRPAFixV8_0 - INFO - CAD columns found: ['ReportNumberNew', 'Incident', 'How Reported', 'FullAddress2', 'PDZone', 'Grid', 'Time of Call', 'cYear', 'cMonth', 'HourMinuetsCalc', 'DayofWeek', 'Time Dispatched', 'Time Out', 'Time In', 'Time Spent', 'Time Response', 'Officer', 'Disposition', 'Response Type', 'CADNotes']
+2025-08-01 17:06:20,620 - ComprehensiveSCRPAFixV8_0 - INFO - Applied column mapping: {'ReportNumberNew': 'case_number', 'Incident': 'incident_raw', 'How Reported': 'how_reported', 'FullAddress2': 'full_address_raw', 'PDZone': 'post', 'Grid': 'grid_raw', 'Time of Call': 'time_of_call', 'cYear': 'call_year', 'cMonth': 'call_month', 'HourMinuetsCalc': 'hour_minutes_calc', 'DayofWeek': 'day_of_week_raw', 'Time Dispatched': 'time_dispatched', 'Time Out': 'time_out', 'Time In': 'time_in', 'Time Spent': 'time_spent_raw', 'Time Response': 'time_response_raw', 'Officer': 'officer', 'Disposition': 'disposition', 'Response Type': 'response_type_fallback', 'CADNotes': 'cad_notes_raw'}
+2025-08-01 17:06:20,695 - ComprehensiveSCRPAFixV8_0 - INFO - CAD response_type populated in 114/114 records
+2025-08-01 17:06:20,696 - ComprehensiveSCRPAFixV8_0 - INFO - CAD grid populated in 107/114 records
+2025-08-01 17:06:20,696 - ComprehensiveSCRPAFixV8_0 - INFO - CAD post populated in 110/114 records
+2025-08-01 17:06:20,698 - ComprehensiveSCRPAFixV8_0 - INFO - CAD processing complete: 114 records
+2025-08-01 17:06:20,698 - ComprehensiveSCRPAFixV8_0 - INFO - Final CAD columns: ['case_number', 'response_type', 'category_type', 'how_reported', 'location', 'block', 'grid', 'post', 'time_of_call', 'time_dispatched', 'time_out', 'time_in', 'time_spent_minutes', 'time_response_minutes', 'time_spent_formatted', 'time_response_formatted', 'officer', 'disposition']
+2025-08-01 17:06:20,707 - ComprehensiveSCRPAFixV8_0 - INFO - CAD data saved: C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\04_powerbi\cad_data_standardized.csv
+2025-08-01 17:06:20,708 - ComprehensiveSCRPAFixV8_0 - ERROR - Fatal error in main execution: cannot access local variable 'joined_result' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Comprehensive_SCRPA_Fix_v8.0_Standardized.py", line 1364, in <module>
+    results = processor.process_final_pipeline()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\carucci_r\OneDrive - City of Hackensack\01_DataSources\SCRPA_Time_v2\01_scripts\Comprehensive_SCRPA_Fix_v8.0_Standardized.py", line 1132, in process_final_pipeline
+    if joined_result is None and not rms_data.empty and not cad_data.empty:
+       ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'joined_result' where it is not associated with a value

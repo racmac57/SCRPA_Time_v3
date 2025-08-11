@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Monday, May 5, 2025 9:11:27 PM</msg><msg code="0" type="0">Legend elements found: ['MainLegend']</msg><msg code="0" type="0">[INFO] Map Frame successfully re-linked to map.</msg><msg code="-2147467259" type="100">﻿Traceback (most recent call last):
+﻿  File "C:\Users\carucci_r\OneDrive - City of Hackensack\_Hackensack_Data_Repository\GIS_Tools\Scripts\weekly_crime_report.py", line 163, in &lt;module&gt;
+﻿    pixel_size = width / map_frame.camera.width if map_frame.camera.width &gt; 0 else 0.0001
+﻿                                                   ^^^^^^^^^^^^^^^^^^^^^^
+﻿AttributeError: 'Camera' object has no attribute 'width'
+</msg><msg code="0" type="0">Failed script Weekly Crime Report...</msg><msg code="-2147467259" type="100">Failed to execute (WeeklyCrimeReport).</msg><msg code="0" type="3">Failed at Monday, May 5, 2025 9:11:29 PM (Elapsed Time: 1.39 seconds)</msg></messages>

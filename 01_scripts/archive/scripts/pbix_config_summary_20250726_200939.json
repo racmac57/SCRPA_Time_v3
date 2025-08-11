@@ -1,0 +1,103 @@
+{
+  "session_id": "20250726_200939_882",
+  "operation_type": "pbix_parameter_update",
+  "start_timestamp": "2025-07-26T20:09:39.882839",
+  "end_timestamp": "2025-07-26T20:09:39.885590",
+  "duration_seconds": 0.003,
+  "success": false,
+  "system_environment": {
+    "platform": "Windows",
+    "platform_version": "10.0.26200",
+    "python_version": "3.13.5",
+    "working_directory": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\scripts",
+    "user_name": "Carucci_R",
+    "computer_name": "PD_BCI_LTP",
+    "total_memory_gb": 0.0,
+    "available_memory_gb": 0.0,
+    "disk_usage_gb": {
+      "info": "psutil not available"
+    },
+    "environment_variables": {
+      "PATH": "c:\\Users\\carucci_r\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Python313\\Scripts\\;C:\\Python313\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\GitHub CLI\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\DAX Studio;C:\\Program Files\\Git\\cmd;C:\\Users\\carucci_r\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\carucci_r\\AppData\\Local\\GitHubDesktop\\bin;...[truncated]",
+      "TEMP": "C:\\Users\\CARUCC~1\\AppData\\Local\\Temp",
+      "TMP": "C:\\Users\\CARUCC~1\\AppData\\Local\\Temp",
+      "USERPROFILE": "C:\\Users\\carucci_r",
+      "COMPUTERNAME": "PD_BCI_LTP",
+      "USERNAME": "Carucci_R",
+      "USERDOMAIN": "HPD"
+    },
+    "timestamp": "2025-07-26T20:09:40.147416",
+    "psutil_available": false
+  },
+  "input_file": {
+    "path": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\scripts\\nonexistent.pbix",
+    "exists": false,
+    "size_bytes": 0,
+    "size_mb": 0.0,
+    "created_time": "",
+    "modified_time": "",
+    "checksum_md5": "",
+    "permissions": "",
+    "is_readable": false,
+    "is_writable": false
+  },
+  "output_file": {
+    "path": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\scripts\\test_output.pbix",
+    "exists": false,
+    "size_bytes": 0,
+    "size_mb": 0.0,
+    "created_time": "",
+    "modified_time": "",
+    "checksum_md5": "",
+    "permissions": "",
+    "is_readable": false,
+    "is_writable": false
+  },
+  "parameters": [],
+  "backups": [],
+  "errors": [
+    {
+      "error_id": "ERR_200939_883",
+      "timestamp": "2025-07-26T20:09:39.883544",
+      "error_type": "FileNotFoundError",
+      "error_message": "File does not exist: nonexistent.pbix",
+      "operation_step": "input_validation",
+      "file_context": "nonexistent.pbix",
+      "stack_trace": null,
+      "severity": "error"
+    }
+  ],
+  "warnings": [],
+  "validation_results": {
+    "success": false,
+    "session_id": "20250726_200939_882",
+    "operation_start": "2025-07-26T20:09:39.883325",
+    "pre_validation": {
+      "input_file": {
+        "file_exists": false,
+        "is_pbix": false,
+        "is_valid_zip": false,
+        "has_common_files": false,
+        "datamashup_found": false,
+        "datamashup_location": null,
+        "file_size": 0,
+        "parameters_detected": [],
+        "validation_timestamp": "2025-07-26T20:09:39.883469",
+        "errors": [
+          "File does not exist: nonexistent.pbix"
+        ]
+      }
+    },
+    "post_validation": {},
+    "processing_log": [],
+    "backup_info": null,
+    "parameter_info": null,
+    "rollback_performed": false,
+    "errors": [
+      "File does not exist: nonexistent.pbix"
+    ]
+  },
+  "rollback_performed": false,
+  "rollback_successful": false,
+  "summary_file_path": "C:\\Users\\carucci_r\\OneDrive - City of Hackensack\\01_DataSources\\SCRPA_Time_v2\\scripts\\pbix_config_summary_20250726_200939.json"
+}
