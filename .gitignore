@@ -14,6 +14,5 @@ Thumbs.db
 logs/
 05_Exports/
 _large_offrepo/
-08_json/arcgis_pro_layers/*.geojson
-08_json/arcgis_pro_layers/*.zip
+08_json/arcgis_pro_layers/
 10_Refrence_Files/NJ_Geocode/*.loz
