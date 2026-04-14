@@ -158,7 +158,13 @@ completeness_threshold = 80.0 # Minimum data completeness
 
 ## Version History
 
-### Version 3.0 (Current)
+### Version 3.1 (Current) — April 2026
+- Git history rewritten to remove large files (GeoJSON, geocoder binaries) over 100 MB
+- Clean `main` branch established on GitHub (`racmac57/SCRPA_Time_v3`)
+- `desktop.ini` files removed from tracking; `.gitignore` updated
+- `_large_offrepo/`, `08_json/arcgis_pro_layers/`, `10_Refrence_Files/NJ_Geocode/*.loz` confirmed excluded
+
+### Version 3.0 — August 2025
 - Production-ready automated pipeline
 - Comprehensive quality assurance
 - PowerBI integration
@@ -171,7 +177,7 @@ completeness_threshold = 80.0 # Minimum data completeness
 
 ---
 
-**Last Updated**: August 2025  
-**Version**: 3.0  
-**Status**: Production Ready  
-**Next Review**: September 2025
+**Last Updated**: April 2026
+**Version**: 3.1
+**Status**: Production Ready
+**Next Review**: As needed
